@@ -30,7 +30,7 @@ export default function ProductOnePage() {
     <div className="bg-white">
       
       {/* Product Hero */}
-      <section className="bg-section-bg py-24 border-b border-slate-100 mt-16">
+      <section className="bg-section-bg pt-32 pb-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <span className="text-xs font-bold text-primary tracking-wider uppercase bg-light-blue px-3.5 py-1.5 rounded-full border border-primary/10 inline-block">
             SaaS Infrastructure

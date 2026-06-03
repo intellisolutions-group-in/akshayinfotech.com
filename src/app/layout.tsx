@@ -95,8 +95,7 @@ export default function RootLayout({
         <Preloader />
         <ScrollAnimationProvider />
         <Navbar />
-        {/* Padding-top to account for the sticky navbar */}
-        <main className="flex-grow pt-[80px]">
+        <main className="flex-grow">
           {children}
         </main>
         <Footer />

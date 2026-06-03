@@ -62,8 +62,8 @@ interface BlogCardProps {
 function BlogCard({ post, index }: BlogCardProps) {
   return (
     <AnalyticalCard
-      initialHeight={450}
-      expandedHeight={450}
+      initialHeight={500}
+      expandedHeight={500}
       stableLayout={true}
       imageSrc={post.image}
       category={post.category}
@@ -74,7 +74,7 @@ function BlogCard({ post, index }: BlogCardProps) {
       date={post.date}
       ctaText="Read Article"
       ctaHref={post.href}
-      glowColor="rgba(37,99,235,0.12)"
+      glowColor="rgba(37,99,235,0.15)"
       containerClassName="w-full"
     />
   );

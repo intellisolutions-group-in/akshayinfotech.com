@@ -50,7 +50,7 @@ export default function PortfolioPage() {
     <div className="bg-white">
       
       {/* Page Header */}
-      <section className="bg-section-bg py-20 border-b border-slate-100">
+      <section className="bg-section-bg pt-32 pb-20 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-sm font-bold text-primary tracking-wider uppercase mb-3 block">
             Our Case Studies

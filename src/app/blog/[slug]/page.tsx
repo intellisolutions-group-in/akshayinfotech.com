@@ -107,10 +107,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-    <article className="bg-white min-h-screen mt-16">
+    <article className="bg-white min-h-screen">
       
       {/* Article Header Hero */}
-      <header className="bg-section-bg py-20 border-b border-slate-100">
+      <header className="bg-section-bg pt-32 pb-20 border-b border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           <Link
             href="/blog"

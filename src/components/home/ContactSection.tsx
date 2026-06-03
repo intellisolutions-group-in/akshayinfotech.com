@@ -862,22 +862,25 @@ export default function ContactSection() {
                 </motion.div>
               </div>
 
-              {/* Congratulate Header */}
-              <h3 className="text-xl font-bold text-slate-100 mb-3 leading-snug z-10 relative">
-                Secure Handshake Staged
+              {/* Title */}
+              <h3 className="text-2xl font-black text-slate-100 mb-3 leading-snug z-10 relative">
+                Thank You!
               </h3>
               
-              {/* Congratulate Body */}
-              <p className="text-xs text-slate-400 leading-relaxed mb-6 font-light z-10 relative">
-                Gateway transaction initialized successfully! Your system request has been routed to our development nodes. We will reach back within 24 hours.
+              {/* Body */}
+              <p className="text-sm text-slate-400 leading-relaxed mb-2 font-light z-10 relative">
+                Your message has been submitted successfully.
+              </p>
+              <p className="text-xs text-slate-500 leading-relaxed mb-6 font-light z-10 relative">
+                Thank you for contacting Nexora Technologies. Our team has received your inquiry and will get back to you shortly.
               </p>
 
-              {/* CTA Close Button */}
+              {/* Close Button */}
               <button
                 onClick={() => setIsSubmitted(false)}
-                className="relative z-10 w-full px-6 py-4 text-xs font-bold uppercase tracking-[0.15em] text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:shadow-[0_0_25px_rgba(16,185,129,0.25)] transition-all duration-300 cursor-pointer"
+                className="relative z-10 w-full px-6 py-4 text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl shadow-[0_0_20px_rgba(16,185,129,0.15)] hover:shadow-[0_0_25px_rgba(16,185,129,0.25)] transition-all duration-300 cursor-pointer"
               >
-                Acknowledge Node Connection
+                Close
               </button>
 
             </motion.div>

@@ -287,7 +287,7 @@ export default function HeroSection() {
     <section
       id="hero"
       ref={containerRef}
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#050814] text-white overflow-hidden py-24 select-none -mt-20"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#050814] text-white overflow-hidden py-24 select-none"
     >
       {/* Minimal background gradients — reduced 70% */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(37,99,235,0.06)_0%,transparent_65%)] pointer-events-none z-[1]" />

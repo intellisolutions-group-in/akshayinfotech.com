@@ -176,8 +176,8 @@ export function ImageReveal({
 
   return (
     <motion.div
-      initial={selected.initial as any}
-      whileInView={selected.animate as any}
+      initial={selected.initial as Record<string, string | number>}
+      whileInView={selected.animate as Record<string, string | number>}
       viewport={{ once: true, amount: 0.2 }}
       transition={{
         duration,

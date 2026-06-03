@@ -278,10 +278,10 @@ SecItemAdd(query as CFDictionary, nil)`}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {lifecycleSteps.map((step, idx) => (
               <div key={idx} className="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl relative space-y-4">
-                <div className="text-3xl font-black text-neutral-800 absolute top-4 right-6 font-mono select-none">
-                  {step.step}
+                <div className="text-xs font-black text-neutral-700 absolute top-3 right-4 font-mono select-none tracking-widest uppercase">
+                  Step {step.step}
                 </div>
-                <h4 className="text-sm font-bold text-white pr-8">{step.name}</h4>
+                <h4 className="text-sm font-bold text-white pt-4">{step.name}</h4>
                 <p className="text-xs text-neutral-400 leading-relaxed">{step.desc}</p>
               </div>
             ))}

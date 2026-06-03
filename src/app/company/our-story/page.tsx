@@ -176,7 +176,7 @@ export default function OurStoryPage() {
                   >
                     <div>
                       <span className="text-[10px] font-mono text-indigo-400 font-bold uppercase tracking-widest block mb-2">
-                        CHAPTER {chap.num} // {chap.name}
+                        CHAPTER {chap.num} {"//"} {chap.name}
                       </span>
                       <h4 className="text-xl font-bold text-white mb-4">
                         {chap.title}
@@ -208,7 +208,7 @@ export default function OurStoryPage() {
 
                     <div className="space-y-2">
                       <span className="text-[9px] font-mono text-blue-400 uppercase font-bold tracking-widest">
-                        Technical Detail // {chap.num}
+                        Technical Detail {"//"} {chap.num}
                       </span>
                       <h5 className="text-base font-bold text-white">{chap.subTitle}</h5>
                       <p className="text-xs text-slate-550 leading-relaxed font-light">{chap.subDesc}</p>

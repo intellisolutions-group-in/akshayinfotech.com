@@ -95,7 +95,7 @@ export default function ServicesPage() {
     <div className="bg-white">
       
       {/* Page Header */}
-      <section className="bg-section-bg py-20 border-b border-slate-100">
+      <section className="bg-section-bg pt-32 pb-20 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
             <span className="text-sm font-bold text-primary tracking-wider uppercase mb-3 block">
@@ -242,9 +242,9 @@ export default function ServicesPage() {
               return (
                 <StaggerItem key={m.step}>
                   <AnalyticalCard
-                    initialHeight={130}
-                    expandedHeight={195}
-                    className="bg-white group"
+                    initialHeight={160}
+                    expandedHeight={240}
+                    className="bg-white group h-full"
                   >
                     <div className="h-full flex flex-col justify-between w-full relative">
                       <div className="absolute top-4 right-6 text-3xl font-black transition-colors duration-300 font-mono select-none text-slate-100 group-hover:text-primary/10">

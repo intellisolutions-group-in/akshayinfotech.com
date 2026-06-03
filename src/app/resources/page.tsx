@@ -33,7 +33,7 @@ export default function ResourcesOverview() {
     <div className="bg-white min-h-screen">
       
       {/* Hero Section */}
-      <section className="bg-section-bg py-24 border-b border-slate-100">
+      <section className="bg-section-bg pt-32 pb-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-sm font-bold text-primary tracking-wider uppercase mb-3 block">
             Knowledge Hub

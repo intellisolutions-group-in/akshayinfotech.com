@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import {
   Code2, BrainCircuit, Cloud, Shield, Smartphone,
-  Server, Palette, ArrowUpRight, ArrowRight
+  Server, Palette, ArrowUpRight, ArrowRight, Database, Building2
 } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -161,7 +161,7 @@ const services: ServiceItem[] = [
   },
   {
     id: "cloud",
-    title: "Elastic Cloud Infrastructures",
+    title: "Cloud & DevOps",
     href: "/services/cloud-solutions",
     Icon: Cloud,
     color: "#3B82F6",
@@ -175,6 +175,57 @@ const services: ServiceItem[] = [
     description: "Designing elastic AWS/GCP serverless architectures, custom event routing systems, and auto-replicating globally distributed databases.",
     features: ["Multi-Region Kubernetes", "CI/CD Orchestration Pipelines", "Terraform IaC Configurations", "Automatic Scaling Groups"],
     benefits: ["99.99% Node Orchestration Uptime", "-35% Infrastructure Cost"],
+  },
+  {
+    id: "enterprise",
+    title: "Enterprise Solutions",
+    href: "/services/it-consulting",
+    Icon: Building2,
+    color: "#0891B2",
+    rgbColor: "8, 145, 178",
+    metric: "87%",
+    metricLabel: "Workflow Efficiency Gain",
+    change: "+3.2x",
+    changeLabel: "ROI Multiplier",
+    positive: true,
+    chartType: "bar",
+    description: "End-to-end enterprise software transformation—from ERP integrations to custom SaaS platforms and digital workforce automation strategies.",
+    features: ["Custom ERP & CRM Integrations", "Enterprise API Architecture", "Legacy System Modernization", "Digital Transformation Consulting"],
+    benefits: ["87% Workflow Efficiency Gain", "+3.2x ROI Multiplier"],
+    chartData: {
+      data: [55, 90, 130, 210, 160],
+      labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+      max: 280,
+      peakIdx: 3,
+      tooltipVal: "$210K saved",
+      tooltipChange: "↑ 18.5%"
+    }
+  },
+  {
+    id: "data-analytics",
+    title: "Data Analytics & AI",
+    href: "/services/ai-automation",
+    Icon: Database,
+    color: "#14B8A6",
+    rgbColor: "20, 184, 166",
+    metric: "4.8B+",
+    metricLabel: "Data Points Processed",
+    change: "<50ms",
+    changeLabel: "Query Latency",
+    positive: true,
+    chartType: "line",
+    description: "Real-time data pipelines, predictive analytics dashboards, and automated reporting engines powered by machine learning and event-driven architectures.",
+    features: ["Real-Time ETL Pipelines", "Predictive ML Models", "Interactive BI Dashboards", "Automated Data Governance"],
+    benefits: ["4.8B+ Data Points Processed", "<50ms Query Latency"],
+    chartData: {
+      data: [30, 60, 95, 175, 140],
+      labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+      max: 220,
+      peakIdx: 3,
+      tooltipVal: "175K events/s",
+      tooltipChange: "↑ 22%",
+      ySuffix: "K"
+    }
   }
 ];
 
@@ -525,116 +576,118 @@ function ServiceCard({ s, index }: { s: ServiceItem; index: number }) {
   const { Icon } = s;
 
   return (
-    <AnalyticalCard
-      initialHeight={420}
-      expandedHeight={420}
-      stableLayout={true}
-      containerClassName={`service-card float-card-${index} w-full`}
-      glowColor={`rgba(${s.rgbColor}, 0.15)`}
-    >
-      {(isHovered) => (
-        <div className="relative w-full h-full flex flex-col justify-between" style={{ transformStyle: "preserve-3d" }}>
-          {/* Header row (always visible) */}
-          <div className="flex items-center justify-between gap-2 mb-2" style={{ transform: "translateZ(25px)" }}>
-            <div className="flex items-center gap-2 min-w-0">
-              <div 
-                className="h-8.5 w-8.5 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300"
-                style={{
-                  background: isHovered ? `rgba(${s.rgbColor}, 0.15)` : `rgba(${s.rgbColor}, 0.08)`,
-                  borderColor: isHovered ? `rgba(${s.rgbColor}, 0.35)` : `rgba(${s.rgbColor}, 0.15)`,
-                  boxShadow: isHovered ? `0 0 12px rgba(${s.rgbColor}, 0.2)` : `0 0 8px rgba(${s.rgbColor}, 0.1)`
-                }}
-              >
-                <Icon className="h-4.5 w-4.5" style={{ color: s.color }} />
-              </div>
-              <h3 className="text-[13px] font-bold text-slate-800 transition-colors duration-300 truncate" style={{ color: isHovered ? s.color : "#1E293B" }}>
-                {s.title}
-              </h3>
-            </div>
-            
-            <div className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-slate-100/80 border border-slate-200/50 text-[8px] text-slate-500 font-semibold select-none shrink-0">
-              <span>SaaS Data</span>
-            </div>
-          </div>
-
-          {/* Reveal Area (Always rendered, but elements animate on hover) */}
-          <div
-            className="flex-grow flex flex-col justify-between space-y-3 pt-2"
-            style={{ transformStyle: "preserve-3d" }}
-          >
-            {/* Description */}
-            <p className="text-xs text-slate-500 font-normal leading-relaxed" style={{ transform: "translateZ(15px)" }}>
-              {s.description}
-            </p>
-
-            {/* Metric and Trend */}
-            {s.chartType !== "donut" ? (
-              <div className="flex items-start justify-between" style={{ transform: "translateZ(20px)" }}>
-                <div>
-                  <div className="text-xl font-black text-slate-800 tracking-tight leading-none">{s.metric}</div>
-                  <div className="text-[8px] text-slate-400 font-bold mt-1 uppercase tracking-wider">{s.metricLabel}</div>
+    <Link href={s.href} className="block">
+      <AnalyticalCard
+        initialHeight={420}
+        expandedHeight={420}
+        stableLayout={true}
+        containerClassName={`service-card float-card-${index} w-full cursor-pointer`}
+        glowColor={`rgba(${s.rgbColor}, 0.15)`}
+      >
+        {(isHovered) => (
+          <div className="relative w-full h-full flex flex-col justify-between" style={{ transformStyle: "preserve-3d" }}>
+            {/* Header row (always visible) */}
+            <div className="flex items-center justify-between gap-2 mb-2" style={{ transform: "translateZ(25px)" }}>
+              <div className="flex items-center gap-2 min-w-0">
+                <div 
+                  className="h-8.5 w-8.5 rounded-lg flex items-center justify-center shrink-0 border transition-all duration-300"
+                  style={{
+                    background: isHovered ? `rgba(${s.rgbColor}, 0.15)` : `rgba(${s.rgbColor}, 0.08)`,
+                    borderColor: isHovered ? `rgba(${s.rgbColor}, 0.35)` : `rgba(${s.rgbColor}, 0.15)`,
+                    boxShadow: isHovered ? `0 0 12px rgba(${s.rgbColor}, 0.2)` : `0 0 8px rgba(${s.rgbColor}, 0.1)`
+                  }}
+                >
+                  <Icon className="h-4.5 w-4.5" style={{ color: s.color }} />
                 </div>
-                <div className="text-right">
-                  <div className="text-xs font-bold text-slate-700 leading-none">{s.change}</div>
-                  <div className="flex items-center justify-end gap-0.5 text-[8px] font-bold mt-1" style={{ color: s.positive ? "#10B981" : "#EF4444" }}>
-                    {s.positive ? "↑" : "↓"} {s.changeLabel}
+                <h3 className="text-[13px] font-bold text-slate-800 transition-colors duration-300 truncate" style={{ color: isHovered ? s.color : "#1E293B" }}>
+                  {s.title}
+                </h3>
+              </div>
+              
+              <div className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-slate-100/80 border border-slate-200/50 text-[8px] text-slate-500 font-semibold select-none shrink-0">
+                <span>Live Data</span>
+              </div>
+            </div>
+
+            {/* Content Area */}
+            <div
+              className="flex-grow flex flex-col justify-between space-y-3 pt-2"
+              style={{ transformStyle: "preserve-3d" }}
+            >
+              {/* Description */}
+              <p className="text-xs text-slate-500 font-normal leading-relaxed" style={{ transform: "translateZ(15px)" }}>
+                {s.description}
+              </p>
+
+              {/* Metric and Trend */}
+              {s.chartType !== "donut" ? (
+                <div className="flex items-start justify-between" style={{ transform: "translateZ(20px)" }}>
+                  <div>
+                    <div className="text-xl font-black text-slate-800 tracking-tight leading-none">{s.metric}</div>
+                    <div className="text-[8px] text-slate-400 font-bold mt-1 uppercase tracking-wider">{s.metricLabel}</div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-xs font-bold text-slate-700 leading-none">{s.change}</div>
+                    <div className="flex items-center justify-end gap-0.5 text-[8px] font-bold mt-1" style={{ color: s.positive ? "#10B981" : "#EF4444" }}>
+                      {s.positive ? "↑" : "↓"} {s.changeLabel}
+                    </div>
                   </div>
                 </div>
+              ) : (
+                <div className="h-[25px]" />
+              )}
+
+              {/* Chart Area */}
+              <div 
+                className="relative flex-1 flex flex-col justify-end min-h-[90px] mt-auto transition-all duration-300"
+                style={{ 
+                  transform: isHovered ? "translateZ(30px) scale(1.02)" : "translateZ(15px) scale(1)",
+                  opacity: isHovered ? 1 : 0.8
+                }}
+              >
+                {s.chartType === "bar" && s.chartData && (
+                  <BarChart 
+                    data={s.chartData.data} 
+                    labels={s.chartData.labels} 
+                    max={s.chartData.max} 
+                    peakIdx={s.chartData.peakIdx} 
+                    tooltipVal={s.chartData.tooltipVal} 
+                    tooltipChange={s.chartData.tooltipChange} 
+                    color={s.color} 
+                  />
+                )}
+                {s.chartType === "line" && s.chartData && (
+                  <AreaLineChart 
+                    data={s.chartData.data} 
+                    labels={s.chartData.labels} 
+                    max={s.chartData.max} 
+                    peakIdx={s.chartData.peakIdx} 
+                    tooltipVal={s.chartData.tooltipVal} 
+                    tooltipChange={s.chartData.tooltipChange} 
+                    color={s.color}
+                    ySuffix={s.chartData.ySuffix} 
+                  />
+                )}
+                {s.chartType === "donut" && (
+                  <DonutChart color={s.color} />
+                )}
+                {s.chartType === "orb" && (
+                  <GlowingOrbChart color={s.color} />
+                )}
               </div>
-            ) : (
-              <div className="h-[25px]" />
-            )}
 
-            {/* Chart Area */}
-            <div 
-              className="relative flex-1 flex flex-col justify-end min-h-[90px] mt-auto transition-all duration-300"
-              style={{ 
-                transform: isHovered ? "translateZ(30px) scale(1.02)" : "translateZ(15px) scale(1)",
-                opacity: isHovered ? 1 : 0.8
-              }}
-            >
-              {s.chartType === "bar" && s.chartData && (
-                <BarChart 
-                  data={s.chartData.data} 
-                  labels={s.chartData.labels} 
-                  max={s.chartData.max} 
-                  peakIdx={s.chartData.peakIdx} 
-                  tooltipVal={s.chartData.tooltipVal} 
-                  tooltipChange={s.chartData.tooltipChange} 
-                  color={s.color} 
-                />
-              )}
-              {s.chartType === "line" && s.chartData && (
-                <AreaLineChart 
-                  data={s.chartData.data} 
-                  labels={s.chartData.labels} 
-                  max={s.chartData.max} 
-                  peakIdx={s.chartData.peakIdx} 
-                  tooltipVal={s.chartData.tooltipVal} 
-                  tooltipChange={s.chartData.tooltipChange} 
-                  color={s.color}
-                  ySuffix={s.chartData.ySuffix} 
-                />
-              )}
-              {s.chartType === "donut" && (
-                <DonutChart color={s.color} />
-              )}
-              {s.chartType === "orb" && (
-                <GlowingOrbChart color={s.color} />
-              )}
-            </div>
-
-            {/* Action CTA */}
-            <div className="pt-2 border-t border-slate-100 flex items-center justify-between" style={{ transform: "translateZ(25px)" }}>
-              <span className="inline-flex items-center text-[10px] font-bold text-blue-600 hover:text-blue-700 tracking-wider uppercase group/btn">
-                Explore Architecture
-                <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-0.5" />
-              </span>
+              {/* Action CTA */}
+              <div className="pt-2 border-t border-slate-100 flex items-center justify-between" style={{ transform: "translateZ(25px)" }}>
+                <span className="inline-flex items-center text-[10px] font-bold text-blue-600 hover:text-blue-700 tracking-wider uppercase group/btn">
+                  Explore Service
+                  <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-0.5" />
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </AnalyticalCard>
+        )}
+      </AnalyticalCard>
+    </Link>
   );
 }
 
@@ -776,7 +829,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Responsive Grid */}
-        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((s, idx) => <ServiceCard key={s.id} s={s} index={idx} />)}
         </div>
       </div>

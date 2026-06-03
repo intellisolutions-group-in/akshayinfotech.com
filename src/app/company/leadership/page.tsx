@@ -10,8 +10,22 @@ import {
   CpuIcon, Lock, Database, Code, BookOpen, Heart, Activity
 } from "lucide-react";
 
+interface LeaderSkill {
+  name: string;
+  val: string;
+}
+
+interface Leader {
+  name: string;
+  role: string;
+  dept: string;
+  bio: string;
+  avatar: string;
+  skills: LeaderSkill[];
+}
+
 // Interactive 3D Tilting Card Component
-function TiltingLeaderCard({ leader }: { leader: any }) {
+function TiltingLeaderCard({ leader }: { leader: Leader }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
@@ -72,7 +86,7 @@ function TiltingLeaderCard({ leader }: { leader: any }) {
             <span className="text-[9px] uppercase font-mono tracking-widest text-slate-500 font-bold block">
               Core Expertise Metrics
             </span>
-            {leader.skills.map((skill: any, idx: number) => (
+            {leader.skills.map((skill: LeaderSkill, idx: number) => (
               <div key={idx} className="space-y-1">
                 <div className="flex justify-between text-[9px] text-slate-400 font-mono">
                   <span>{skill.name}</span>

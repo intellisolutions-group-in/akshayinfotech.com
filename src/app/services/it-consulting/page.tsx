@@ -282,10 +282,10 @@ export default function ITConsultingPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {consultingSteps.map((step, idx) => (
               <div key={idx} className="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative space-y-4">
-                <div className="text-3xl font-black text-slate-800 absolute top-4 right-6 font-mono select-none">
+                <div className="text-xs font-black text-slate-700 absolute top-3 right-4 font-mono select-none tracking-widest uppercase">
                   {step.phase}
                 </div>
-                <h4 className="text-sm font-bold text-white pr-8">{step.title}</h4>
+                <h4 className="text-sm font-bold text-white pt-4">{step.title}</h4>
                 <p className="text-xs text-slate-400 leading-relaxed">{step.desc}</p>
               </div>
             ))}
