@@ -73,7 +73,7 @@ export default function BlogPage() {
             The AuraDev Tech Blog
           </h1>
           <p className="text-base sm:text-lg text-text-body max-w-2xl mx-auto">
-            Deep-dives into modern web architectures, compliance-level security designs, and serverless compute deployments.
+            Deep-divesss into modern web architectures, compliance-level security designs, and serverless compute deployments.
           </p>
         </div>
       </section>
