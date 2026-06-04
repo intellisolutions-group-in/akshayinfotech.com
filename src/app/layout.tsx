@@ -20,8 +20,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nexora Technologies | Engineering Digital Excellence",
-    template: "%s | Nexora Technologies",
+    default: "Akshay Infotech | Engineering Digital Excellence",
+    template: "%s | Akshay Infotech",
   },
   description: "Akshay Infotech is a premium IT consulting and software engineering firm specializing in enterprise web development, mobile apps, cloud migrations, and AI automation.",
   keywords: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "AI Automation",
     "SEO Optimization",
     "E-commerce Solutions",
-    "Nexora Technologies",
+    "Akshay Infotech",
   ],
   authors: [{ name: "Akshay Infotech Team" }],
   creator: "Akshay Infotech",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Nexora Technologies - Engineering Digital Excellence",
+        alt: "Akshay Infotech - Engineering Digital Excellence",
       },
     ],
     locale: "en_US",
@@ -64,10 +64,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nexora Technologies | Engineering Digital Excellence",
+    title: "Akshay Infotech | Engineering Digital Excellence",
     description: "Enterprise-ready software engineering, cloud computing, AI automation, and custom digital transformation.",
     images: ["/og-image.jpg"],
-    creator: "@NexoraTechnologies",
+    creator: "@AkshayInfotech",
   },
   robots: {
     index: true,
@@ -81,14 +81,69 @@ export const metadata: Metadata = {
     },
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://akshayinfotech.com/#organization",
+        "name": "Akshay Infotech",
+        "url": "https://akshayinfotech.com",
+        "logo": {
+          "@type": "ImageObject",
+          "@id": "https://akshayinfotech.com/#logo",
+          "url": "https://akshayinfotech.com/logo.svg",
+          "caption": "Akshay Infotech Logo"
+        },
+        "sameAs": [
+          "https://twitter.com/AkshayInfotech",
+          "https://www.linkedin.com/company/akshayinfotech"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://akshayinfotech.com/#website",
+        "url": "https://akshayinfotech.com",
+        "name": "Akshay Infotech",
+        "description": "Akshay Infotech is a premium IT consulting and software engineering firm specializing in enterprise web development, mobile apps, cloud migrations, and AI automation.",
+        "publisher": {
+          "@id": "https://akshayinfotech.com/#organization"
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://akshayinfotech.com/#service",
+        "name": "Akshay Infotech",
+        "url": "https://akshayinfotech.com",
+        "image": "https://akshayinfotech.com/logo.svg",
+        "priceRange": "$$$",
+        "telephone": "+1 (617) 555-0192",
+        "email": "info@domain.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "75 State Street, Suite 100",
+          "addressLocality": "Boston",
+          "addressRegion": "MA",
+          "postalCode": "02109",
+          "addressCountry": "US"
+        }
+      }
+    ]
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white`}>
         <Preloader />
         <ScrollAnimationProvider />

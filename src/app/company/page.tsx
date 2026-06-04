@@ -16,7 +16,7 @@ const companyLinks = [
 
 export default function CompanyOverview() {
   React.useEffect(() => {
-    document.title = "Company | Nexora Technologies";
+    document.title = "Company | Akshay Infotech";
   }, []);
 
   return (
@@ -32,7 +32,7 @@ export default function CompanyOverview() {
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-text-main tracking-tight mb-6">
-              Nexora <span className="text-gradient">Technologies</span>
+              Akshay <span className="text-gradient">Technologies</span>
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>

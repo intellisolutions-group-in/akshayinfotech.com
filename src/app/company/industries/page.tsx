@@ -15,7 +15,7 @@ export default function IndustriesWeServe() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "Industries We Serve | Nexora Technologies";
+    document.title = "Industries We Serve | Akshay Infotech";
   }, []);
 
   const industries = [

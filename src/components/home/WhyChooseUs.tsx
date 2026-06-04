@@ -482,7 +482,7 @@ export default function WhyChooseUs() {
             }}
             className="text-[14vw] font-black text-white/[0.02] tracking-[0.15em] uppercase whitespace-nowrap"
           >
-            NEXORA TECHNOLOGIES
+            AKSHAY INFOTECH
           </motion.h1>
         </div>
 
@@ -502,7 +502,7 @@ export default function WhyChooseUs() {
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
               Why Partner With{" "}
               <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                Nexora Technologies
+                Akshay Infotech
               </span>
             </h2>
           </div>

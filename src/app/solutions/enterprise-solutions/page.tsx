@@ -20,7 +20,7 @@ export default function EnterpriseSolutionsPage() {
 
   // Document title
   useEffect(() => {
-    document.title = "Enterprise Growth Solution | Nexora Technologies";
+    document.title = "Enterprise Growth Solution | Akshay Infotech";
   }, []);
 
   // Calculator logic
@@ -37,7 +37,7 @@ export default function EnterpriseSolutionsPage() {
     {
       title: "2. Custom Schema Blueprinting",
       subtitle: "High throughput design phase",
-      description: "Nexora database architects construct active-active database configurations, multi-region database replications, and microservice network pathways. We layout secure subnets, VPN gateways, and ingress configurations designed for low-latency queries."
+      description: "Akshay database architects construct active-active database configurations, multi-region database replications, and microservice network pathways. We layout secure subnets, VPN gateways, and ingress configurations designed for low-latency queries."
     },
     {
       title: "3. Rolling Zero-Downtime Migration",
@@ -53,7 +53,7 @@ export default function EnterpriseSolutionsPage() {
 
   const faqs = [
     {
-      q: "How does Nexora guarantee zero downtime during cloud migration?",
+      q: "How does Akshay guarantee zero downtime during cloud migration?",
       a: "We employ side-by-side infrastructure setup (Blue-Green deployment models). By maintaining active synchronization between your legacy systems and our newly built cloud clusters, we redirect traffic gradually using weighted DNS routing. If any issues are detected, traffic is reverted instantly."
     },
     {
@@ -237,7 +237,7 @@ export default function EnterpriseSolutionsPage() {
           <div className="p-8 bg-emerald-950/10 border border-emerald-500/10 rounded-3xl">
             <h3 className="text-lg font-bold text-emerald-400 mb-6 flex items-center gap-2">
               <ShieldCheck className="h-5 w-5" />
-              Nexora Scale Engineering
+              Akshay Scale Engineering
             </h3>
             <div className="space-y-6 text-left">
               <div className="flex items-start space-x-3.5">
@@ -437,7 +437,7 @@ export default function EnterpriseSolutionsPage() {
             <div className="space-y-8 text-left">
               <div>
                 <h3 className="text-xl font-extrabold text-white mb-2">ROI Savings Calculator</h3>
-                <p className="text-xs text-slate-400 leading-relaxed font-light">Estimate infrastructure savings and operational latency reductions with Nexora scale architecture.</p>
+                <p className="text-xs text-slate-400 leading-relaxed font-light">Estimate infrastructure savings and operational latency reductions with Akshay scale architecture.</p>
               </div>
 
               {/* Monthly User Traffic Slider */}
@@ -503,7 +503,7 @@ export default function EnterpriseSolutionsPage() {
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Comparative Scaling Analysis</h2>
-          <p className="text-sm text-slate-400 mt-2">How Nexora architectures redefine base level operational capabilities.</p>
+          <p className="text-sm text-slate-400 mt-2">How Akshay architectures redefine base level operational capabilities.</p>
         </div>
 
         <div className="overflow-x-auto border border-white/10 rounded-2xl bg-slate-900/50 backdrop-blur-md">
@@ -512,7 +512,7 @@ export default function EnterpriseSolutionsPage() {
               <tr className="border-b border-white/10 bg-slate-950/50">
                 <th className="p-4 font-bold text-slate-400">Operational Metric</th>
                 <th className="p-4 font-bold text-red-400">Legacy Architecture</th>
-                <th className="p-4 font-bold text-emerald-400">Nexora Scale Solution</th>
+                <th className="p-4 font-bold text-emerald-400">Akshay Scale Solution</th>
               </tr>
             </thead>
             <tbody>
@@ -610,7 +610,7 @@ export default function EnterpriseSolutionsPage() {
         <div className="p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
           <h4 className="text-xl sm:text-2xl font-bold mb-2">Ready to scale your business operations?</h4>
-          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Review your current legacy constraints and database bottlenecks with a Nexora systems engineer.</p>
+          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Review your current legacy constraints and database bottlenecks with a Akshay systems engineer.</p>
           <Link 
             href="/contact"
             className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-blue-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-blue-900/20"

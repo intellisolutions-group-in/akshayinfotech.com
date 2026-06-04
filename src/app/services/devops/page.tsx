@@ -52,7 +52,7 @@ const faqs = [
 
 export default function DevOpsPage() {
   useEffect(() => {
-    document.title = "DevOps Engineering & CI/CD Pipelines | Nexora Technologies";
+    document.title = "DevOps Engineering & CI/CD Pipelines | Akshay Infotech";
   }, []);
 
   return (
@@ -74,7 +74,7 @@ export default function DevOpsPage() {
                 </span>
               </h1>
               <p className="text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
-                Nexora configures automated deployment pipelines. By writing infrastructure as code and setting up container orchestration, we deliver reliable release cycles.
+                Akshay configures automated deployment pipelines. By writing infrastructure as code and setting up container orchestration, we deliver reliable release cycles.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">

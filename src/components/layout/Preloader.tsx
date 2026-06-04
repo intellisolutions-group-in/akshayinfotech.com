@@ -88,24 +88,34 @@ export default function Preloader() {
     cyanLight.position.set(2.5, -2.5, 2.5);
     scene.add(cyanLight);
 
-    // ── 3D NEXORA LOGO (Stylized "N" in a Diamond Frame) ─────────────────────
+    // ── 3D AKSHAY LOGO (Stylized "A" in a Diamond Frame) ─────────────────────
     const logoGroup = new THREE.Group();
     logoGroup.scale.set(0, 0, 0); // Animated by GSAP
     scene.add(logoGroup);
 
-    // Modern geometric 'N' path
-    const shape = new THREE.Shape();
-    shape.moveTo(-0.35, -0.45);
-    shape.lineTo(-0.18, -0.45);
-    shape.lineTo(0.18, 0.28);
-    shape.lineTo(0.18, -0.45);
-    shape.lineTo(0.35, -0.45);
-    shape.lineTo(0.35, 0.45);
-    shape.lineTo(0.18, 0.45);
-    shape.lineTo(-0.18, -0.28);
-    shape.lineTo(-0.18, 0.45);
-    shape.lineTo(-0.35, 0.45);
-    shape.closePath();
+    // Left leg of A
+    const leftLeg = new THREE.Shape();
+    leftLeg.moveTo(0, 0.42);
+    leftLeg.lineTo(-0.36, -0.42);
+    leftLeg.lineTo(-0.192, -0.42);
+    leftLeg.lineTo(0, 0.024);
+    leftLeg.closePath();
+
+    // Right leg of A
+    const rightLeg = new THREE.Shape();
+    rightLeg.moveTo(0, 0.42);
+    rightLeg.lineTo(0.36, -0.42);
+    rightLeg.lineTo(0.192, -0.42);
+    rightLeg.lineTo(0, 0.024);
+    rightLeg.closePath();
+
+    // Floating crossbar of A
+    const crossbar = new THREE.Shape();
+    crossbar.moveTo(-0.132, -0.096);
+    crossbar.lineTo(0.132, -0.096);
+    crossbar.lineTo(0.084, 0.0);
+    crossbar.lineTo(-0.084, 0.0);
+    crossbar.closePath();
 
     const extrudeSettings = {
       depth: 0.12,
@@ -116,60 +126,58 @@ export default function Preloader() {
       bevelThickness: 0.015,
     };
 
-    const logoGeo = new THREE.ExtrudeGeometry(shape, extrudeSettings);
-    logoGeo.center();
+    const leftLegGeo = new THREE.ExtrudeGeometry(leftLeg, extrudeSettings);
+    const rightLegGeo = new THREE.ExtrudeGeometry(rightLeg, extrudeSettings);
+    const crossbarGeo = new THREE.ExtrudeGeometry(crossbar, extrudeSettings);
 
-    const logoMat = new THREE.MeshPhysicalMaterial({
-      color: 0x3b82f6,
-      emissive: 0x1d4ed8,
+    const logoMatLeft = new THREE.MeshPhysicalMaterial({
+      color: 0x2563EB,
+      emissive: 0x4f46e5,
       emissiveIntensity: 0.2,
       roughness: 0.1,
       metalness: 0.92,
       clearcoat: 1.0,
       clearcoatRoughness: 0.08,
       transparent: true,
-      opacity: 0, // Animated by GSAP
+      opacity: 0,
     });
-    const logoMesh = new THREE.Mesh(logoGeo, logoMat);
-    logoGroup.add(logoMesh);
 
-    // Surrounding elegant diamond frame
-    const frameShape = new THREE.Shape();
-    frameShape.moveTo(0, 0.82);
-    frameShape.lineTo(0.72, 0);
-    frameShape.lineTo(0, -0.82);
-    frameShape.lineTo(-0.72, 0);
-    frameShape.closePath();
-
-    const holePath = new THREE.Path();
-    holePath.moveTo(0, 0.74);
-    holePath.lineTo(-0.64, 0);
-    holePath.lineTo(0, -0.74);
-    holePath.lineTo(0.64, 0);
-    holePath.closePath();
-    frameShape.holes.push(holePath);
-
-    const frameGeo = new THREE.ExtrudeGeometry(frameShape, {
-      depth: 0.06,
-      bevelEnabled: true,
-      bevelSegments: 2,
-      steps: 1,
-      bevelSize: 0.008,
-      bevelThickness: 0.008,
-    });
-    frameGeo.center();
-
-    const frameMat = new THREE.MeshPhysicalMaterial({
-      color: 0x60a5fa,
-      emissive: 0x2563eb,
-      emissiveIntensity: 0.3,
+    const logoMatRight = new THREE.MeshPhysicalMaterial({
+      color: 0x3B82F6,
+      emissive: 0x06b6d4,
+      emissiveIntensity: 0.2,
       roughness: 0.1,
-      metalness: 0.88,
+      metalness: 0.92,
+      clearcoat: 1.0,
+      clearcoatRoughness: 0.08,
       transparent: true,
-      opacity: 0, // Animated by GSAP
+      opacity: 0,
     });
-    const frameMesh = new THREE.Mesh(frameGeo, frameMat);
-    logoGroup.add(frameMesh);
+
+    const logoMatCross = new THREE.MeshPhysicalMaterial({
+      color: 0x22D3EE,
+      emissive: 0x38bdf8,
+      emissiveIntensity: 0.2,
+      roughness: 0.1,
+      metalness: 0.92,
+      clearcoat: 1.0,
+      clearcoatRoughness: 0.08,
+      transparent: true,
+      opacity: 0,
+    });
+
+    const leftLegMesh = new THREE.Mesh(leftLegGeo, logoMatLeft);
+    const rightLegMesh = new THREE.Mesh(rightLegGeo, logoMatRight);
+    const crossbarMesh = new THREE.Mesh(crossbarGeo, logoMatCross);
+
+    // Center mesh positions in Z
+    leftLegMesh.position.z = -0.06;
+    rightLegMesh.position.z = -0.06;
+    crossbarMesh.position.z = -0.06;
+
+    logoGroup.add(leftLegMesh);
+    logoGroup.add(rightLegMesh);
+    logoGroup.add(crossbarMesh);
 
     // ── 3D DIGITAL GLOBE (Supporting Structure) ──────────────────────────────
     const globeGroup = new THREE.Group();
@@ -270,12 +278,10 @@ export default function Preloader() {
 
       // STEP 4: 3D logo appears inside globe (scale 0 -> 100%, 1s duration)
       tl.to(logoGroup.scale, { x: 1, y: 1, z: 1, duration: 1.0, ease: "back.out(1.5)" }, 1.3);
-      tl.to(logoMat, { opacity: 0.95, duration: 0.8, ease: "power2.out" }, 1.3);
-      tl.to(frameMat, { opacity: 0.85, duration: 0.8, ease: "power2.out" }, 1.4);
+      tl.to([logoMatLeft, logoMatRight, logoMatCross], { opacity: 0.95, duration: 0.8, ease: "power2.out", stagger: 0.05 }, 1.3);
 
       // STEP 5: Soft glow pulse around logo
-      tl.to(logoMat, { emissiveIntensity: 0.85, duration: 0.6, yoyo: true, repeat: 1, ease: "power2.inOut" }, 2.0);
-      tl.to(frameMat, { emissiveIntensity: 0.95, duration: 0.6, yoyo: true, repeat: 1, ease: "power2.inOut" }, 2.0);
+      tl.to([logoMatLeft, logoMatRight, logoMatCross], { emissiveIntensity: 0.85, duration: 0.6, yoyo: true, repeat: 1, ease: "power2.inOut", stagger: 0.05 }, 2.0);
 
       // STEP 6: Company name fades upward
       tl.to(".preloader-title", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, 2.3);
@@ -311,7 +317,7 @@ export default function Preloader() {
 
       // STEP 9 & 10: Entire scene reaches full brightness, then smooth transition out
       tl.to(camera.position, { z: 6.8, duration: 0.8, ease: "power2.out" }, 3.8);
-      tl.to(logoMat, { emissiveIntensity: 1.1, duration: 0.5, ease: "power2.out" }, 3.8);
+      tl.to([logoMatLeft, logoMatRight, logoMatCross], { emissiveIntensity: 1.1, duration: 0.5, ease: "power2.out" }, 3.8);
 
       tl.to(
         {},
@@ -365,8 +371,8 @@ export default function Preloader() {
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", onResize);
       renderer.dispose();
-      [sphereGeo, dotGeo, lineGeo, logoGeo, frameGeo].forEach((g) => g.dispose());
-      [sphereWireMat, globeDotMat, globeLineMat, logoMat, frameMat, bgGridMat].forEach((m) => m.dispose());
+      [sphereGeo, dotGeo, lineGeo, leftLegGeo, rightLegGeo, crossbarGeo].forEach((g) => g.dispose());
+      [sphereWireMat, globeDotMat, globeLineMat, logoMatLeft, logoMatRight, logoMatCross, bgGridMat].forEach((m) => m.dispose());
     };
   }, [isVisible]);
 
@@ -402,9 +408,9 @@ export default function Preloader() {
             <div className="flex flex-col items-center justify-center text-center px-6 mt-4">
               {/* STEP 6: Company Name */}
               <h1 className="preloader-title opacity-0 translate-y-6 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-[0.16em] text-white uppercase mb-3 font-sans">
-                NEXORA{" "}
+                AKSHAY{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-500">
-                  TECHNOLOGIES
+                  INFOTECH
                 </span>
               </h1>
 

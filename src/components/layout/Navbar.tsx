@@ -10,6 +10,7 @@ import {
   Info, Workflow, Code2, Network, Award, Phone, Shield
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import TechALogo from "@/components/ui/TechALogo";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -110,10 +111,10 @@ export default function Navbar() {
         {/* Brand Logo */}
         <Link href="/" className="flex items-center space-x-2 group shrink-0">
           <div className="h-9 w-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-md shadow-primary/20 group-hover:scale-105 transition-transform duration-200">
-            <Cpu className="h-5.5 w-5.5" />
+            <TechALogo className="h-6 w-6" />
           </div>
           <span className={`text-base sm:text-lg font-bold tracking-tight transition-colors duration-300 ${useDarkNavbar ? "text-white" : "text-text-main"}`}>
-            Nexora<span className="text-primary font-medium">Technologies</span>
+            Akshay<span className="text-primary font-medium">Infotech</span>
           </span>
         </Link>
 

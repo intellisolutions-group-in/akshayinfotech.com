@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | AuraDev Systems",
+  title: "Industries We Serve | Akshay Infotech",
   description: "Specialized software development and cloud solutions built for Healthcare compliance, SaaS scaling, FinTech security, Education portals, and Headless Retail.",
 };
 

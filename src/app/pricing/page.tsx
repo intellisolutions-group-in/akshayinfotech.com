@@ -73,7 +73,7 @@ const featuresMatrix = [
 
 export default function PricingPage() {
   React.useEffect(() => {
-    document.title = "Pricing Plans | Nexora Technologies";
+    document.title = "Pricing Plans | Akshay Infotech";
   }, []);
 
   return (

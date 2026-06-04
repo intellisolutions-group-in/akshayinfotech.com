@@ -16,7 +16,7 @@ export default function WhyChooseUs() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "Why Choose Us | Nexora Technologies";
+    document.title = "Why Choose Us | Akshay Infotech";
   }, []);
 
   const coreReasons = [
@@ -65,14 +65,14 @@ export default function WhyChooseUs() {
   ];
 
   const competitiveEdge = [
-    { label: "Feature", nexora: "Nexora Technologies", others: "Typical Agency" },
-    { label: "Team Composition", nexora: "100% senior engineers (5+ yrs)", others: "Mix of juniors and contractors" },
-    { label: "Code Ownership", nexora: "Full IP transfer from day one", others: "Vendor-locked proprietary code" },
-    { label: "Deployment Strategy", nexora: "Zero-downtime blue-green deploys", others: "Weekend maintenance windows" },
-    { label: "Test Coverage", nexora: "80%+ enforced via CI/CD", others: "Manual QA, <30% coverage" },
-    { label: "Security Auditing", nexora: "Automated OWASP + SOC2 compliance", others: "Annual manual pen-test" },
-    { label: "Post-Launch Support", nexora: "Structured SLA retainers", others: "Pay-per-incident billing" },
-    { label: "Documentation", nexora: "Auto-generated + living ADR logs", others: "Minimal, often outdated" }
+    { label: "Feature", akshay: "Akshay Infotech", others: "Typical Agency" },
+    { label: "Team Composition", akshay: "100% senior engineers (5+ yrs)", others: "Mix of juniors and contractors" },
+    { label: "Code Ownership", akshay: "Full IP transfer from day one", others: "Vendor-locked proprietary code" },
+    { label: "Deployment Strategy", akshay: "Zero-downtime blue-green deploys", others: "Weekend maintenance windows" },
+    { label: "Test Coverage", akshay: "80%+ enforced via CI/CD", others: "Manual QA, <30% coverage" },
+    { label: "Security Auditing", akshay: "Automated OWASP + SOC2 compliance", others: "Annual manual pen-test" },
+    { label: "Post-Launch Support", akshay: "Structured SLA retainers", others: "Pay-per-incident billing" },
+    { label: "Documentation", akshay: "Auto-generated + living ADR logs", others: "Minimal, often outdated" }
   ];
 
   const clientResults = [
@@ -83,7 +83,7 @@ export default function WhyChooseUs() {
   ];
 
   const testimonials = [
-    { name: "Sarah Chen", role: "CTO, MedVault Health", quote: "Nexora rebuilt our entire patient portal in 14 weeks. The HIPAA compliance was baked in from day one — no afterthought security patches needed.", avatar: "SC" },
+    { name: "Sarah Chen", role: "CTO, MedVault Health", quote: "Akshay rebuilt our entire patient portal in 14 weeks. The HIPAA compliance was baked in from day one — no afterthought security patches needed.", avatar: "SC" },
     { name: "Marcus Rivera", role: "VP Engineering, TradeFlow", quote: "Their senior engineers understood our payment processing requirements immediately. We went from legacy Rails to modern microservices without a single minute of downtime.", avatar: "MR" },
     { name: "Emily Watson", role: "Founder, LogiTrack", quote: "The code quality is exceptional. When we brought in external auditors for our Series B due diligence, they praised the documentation and test coverage.", avatar: "EW" }
   ];
@@ -107,7 +107,7 @@ export default function WhyChooseUs() {
 
       {/* Background */}
       <div className="absolute top-20 left-6 pointer-events-none select-none -z-10">
-        <div className="text-[90px] font-black tracking-widest text-blue-500/[0.02] uppercase transform rotate-90 origin-left">WHY NEXORA</div>
+        <div className="text-[90px] font-black tracking-widest text-blue-500/[0.02] uppercase transform rotate-90 origin-left">WHY AKSHAY</div>
       </div>
       <div className="absolute bottom-20 right-6 pointer-events-none select-none -z-10 text-right">
         <div className="text-[9vw] font-black tracking-widest text-indigo-500/[0.015] uppercase leading-none">EXCELLENCE</div>
@@ -123,14 +123,14 @@ export default function WhyChooseUs() {
               <Award className="h-3.5 w-3.5" /> Our Advantages
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent">
-              Why Choose Nexora Technologies
+              Why Choose Akshay Infotech
             </h1>
             <p className="text-base text-slate-400 leading-relaxed font-light max-w-xl">
               We prioritize engineering excellence, clean documentation, strict security compliance, and direct honest communication. We build software assets that drive actual business growth — not liabilities that drain resources.
             </p>
           </div>
           <div className="relative rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
-            <Image src="/images/hero-why-choose.png" alt="Why Choose Nexora" width={700} height={400} className="w-full h-auto object-cover" />
+            <Image src="/images/hero-why-choose.png" alt="Why Choose Akshay" width={700} height={400} className="w-full h-auto object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent" />
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function WhyChooseUs() {
       {/* ═══════════════ 2. CORE REASONS EXPLORER ═══════════════ */}
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">The Nexora Difference</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">The Akshay Difference</h2>
           <p className="text-sm text-slate-400 mt-2">Six core differentiators that separate us from traditional agencies.</p>
         </div>
 
@@ -223,7 +223,7 @@ export default function WhyChooseUs() {
       {/* ═══════════════ 4. COMPARISON TABLE ═══════════════ */}
       <section className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 mb-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Nexora vs. Traditional Agencies</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Akshay vs. Traditional Agencies</h2>
           <p className="text-sm text-slate-400 mt-2">A transparent, side-by-side comparison of our engineering standards.</p>
         </div>
         <div className="overflow-x-auto rounded-2xl border border-white/5">
@@ -231,7 +231,7 @@ export default function WhyChooseUs() {
             <thead>
               <tr className="bg-slate-900/60">
                 <th className="px-6 py-4 text-slate-400 font-bold uppercase tracking-wider">Feature</th>
-                <th className="px-6 py-4 text-blue-400 font-bold uppercase tracking-wider">Nexora</th>
+                <th className="px-6 py-4 text-blue-400 font-bold uppercase tracking-wider">Akshay</th>
                 <th className="px-6 py-4 text-slate-500 font-bold uppercase tracking-wider">Typical Agency</th>
               </tr>
             </thead>
@@ -239,7 +239,7 @@ export default function WhyChooseUs() {
               {competitiveEdge.slice(1).map((row, i) => (
                 <tr key={i} className="bg-slate-950/40 hover:bg-slate-900/40 transition-colors">
                   <td className="px-6 py-4 text-white font-bold">{row.label}</td>
-                  <td className="px-6 py-4 text-slate-300 font-light">{row.nexora}</td>
+                  <td className="px-6 py-4 text-slate-300 font-light">{row.akshay}</td>
                   <td className="px-6 py-4 text-slate-500 font-light">{row.others}</td>
                 </tr>
               ))}
@@ -339,7 +339,7 @@ export default function WhyChooseUs() {
         <div className="p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
           <h4 className="text-xl sm:text-2xl font-bold mb-2">Ready to Build With Experts?</h4>
-          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Collaborate with Nexora Technologies to scope, engineer, and deploy your custom cloud platform.</p>
+          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Collaborate with Akshay Infotech to scope, engineer, and deploy your custom cloud platform.</p>
           <Link href="/contact" className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-blue-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-blue-900/20">
             Start Technical Discussion <ArrowRight className="h-4 w-4 text-blue-700" />
           </Link>

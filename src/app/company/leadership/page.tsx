@@ -118,7 +118,7 @@ export default function LeadershipPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "Leadership Team | Nexora Technologies";
+    document.title = "Leadership Team | Akshay Infotech";
   }, []);
 
   const departments = [
@@ -133,7 +133,7 @@ export default function LeadershipPage() {
       name: "Dr. Elena Rostova",
       role: "Chief Systems Architect",
       dept: "engineering",
-      bio: "Dr. Elena has spent 14 years auditing and structuring global database networks. Formerly an infrastructure consultant at AWS, she directs Nexora's strangler pattern database migration tools.",
+      bio: "Dr. Elena has spent 14 years auditing and structuring global database networks. Formerly an infrastructure consultant at AWS, she directs Akshay's strangler pattern database migration tools.",
       avatar: "ER",
       skills: [
         { name: "System Design", val: "98%" },
@@ -190,7 +190,7 @@ export default function LeadershipPage() {
     },
     {
       q: "Where is the core systems engineering team located?",
-      a: "Nexora operates as a distributed network. Our primary systems engineering teams are situated across the United States, United Kingdom, and Germany."
+      a: "Akshay operates as a distributed network. Our primary systems engineering teams are situated across the United States, United Kingdom, and Germany."
     }
   ];
 
@@ -206,7 +206,7 @@ export default function LeadershipPage() {
       {/* Background Watermark Vertical Left */}
       <div className="absolute top-12 left-6 h-[400px] w-[100px] pointer-events-none select-none overflow-hidden -z-10 origin-left">
         <div className="text-[100px] font-black tracking-widest text-indigo-500/[0.02] uppercase transform rotate-90 origin-left">
-          NEXORA TEAM
+          AKSHAY TEAM
         </div>
       </div>
 
@@ -237,7 +237,7 @@ export default function LeadershipPage() {
             </p>
           </div>
           <div className="relative rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
-            <Image src="/images/hero-leadership.png" alt="Nexora Leadership Team" width={700} height={400} className="w-full h-auto object-cover" />
+            <Image src="/images/hero-leadership.png" alt="Akshay Leadership Team" width={700} height={400} className="w-full h-auto object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent" />
           </div>
         </div>
@@ -397,7 +397,7 @@ export default function LeadershipPage() {
         <div className="p-8 md:p-12 bg-gradient-to-r from-indigo-600 to-blue-750 rounded-3xl text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
           <h4 className="text-xl sm:text-2xl font-bold mb-2">Want to work with our architects?</h4>
-          <p className="text-xs sm:text-sm text-indigo-150 mb-8 max-w-lg mx-auto font-light leading-relaxed">Book a consultation session with a Nexora systems engineer to review your legacy database configurations.</p>
+          <p className="text-xs sm:text-sm text-indigo-150 mb-8 max-w-lg mx-auto font-light leading-relaxed">Book a consultation session with a Akshay systems engineer to review your legacy database configurations.</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link 
               href="/contact"

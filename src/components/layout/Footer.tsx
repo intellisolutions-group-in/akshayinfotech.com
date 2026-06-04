@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Cpu, Linkedin, Twitter, Facebook, Github, Instagram, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
 import MagneticWrapper from "@/components/ui/MagneticWrapper";
+import TechALogo from "@/components/ui/TechALogo";
 
 const logoText = "Akshay".split("");
 const techText = "Infotech".split("");
@@ -129,7 +130,7 @@ export default function Footer() {
                   transition={{ duration: 0.6, ease: "easeInOut" }}
                   className="h-10 w-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20"
                 >
-                  <Cpu className="h-5.5 w-5.5" />
+                  <TechALogo className="h-6 w-6" />
                 </motion.div>
                 <span className="text-xl font-bold text-white tracking-tight">
                   {logoText.map((char, i) => (
@@ -175,90 +176,10 @@ export default function Footer() {
             ))}
           </motion.div>
 
-          {/* Centered Social Icons */}
-          
-            {[
-              {
-                Icon: Facebook, label: "Facebook",
-                glowColor: "rgba(59, 130, 246, 0.5)",
-                hoverBorder: "rgba(59, 130, 246, 0.5)",
-                hoverBg: "rgba(59, 130, 246, 0.12)",
-                hoverText: "#93C5FD",
-                tooltip: "Follow on Facebook",
-              },
-              {
-                Icon: Instagram, label: "Instagram",
-                glowColor: "rgba(236, 72, 153, 0.45)",
-                hoverBorder: "rgba(236, 72, 153, 0.45)",
-                hoverBg: "rgba(236, 72, 153, 0.1)",
-                hoverText: "#F9A8D4",
-                tooltip: "Follow on Instagram",
-              },
-              {
-                Icon: Linkedin, label: "LinkedIn",
-                glowColor: "rgba(14, 118, 188, 0.5)",
-                hoverBorder: "rgba(14, 118, 188, 0.5)",
-                hoverBg: "rgba(14, 118, 188, 0.12)",
-                hoverText: "#7DD3FC",
-                tooltip: "Connect on LinkedIn",
-              },
-              {
-                Icon: Github, label: "GitHub",
-                glowColor: "rgba(255, 255, 255, 0.35)",
-                hoverBorder: "rgba(255, 255, 255, 0.3)",
-                hoverBg: "rgba(255, 255, 255, 0.07)",
-                hoverText: "#FFFFFF",
-                tooltip: "View on GitHub",
-              },
-              {
-                Icon: Twitter, label: "Twitter / X",
-                glowColor: "rgba(34, 211, 238, 0.45)",
-                hoverBorder: "rgba(34, 211, 238, 0.4)",
-                hoverBg: "rgba(34, 211, 238, 0.08)",
-                hoverText: "#67E8F9",
-                tooltip: "Follow on Twitter / X",
-              },
-              {
-                Icon: Youtube, label: "YouTube",
-                glowColor: "rgba(239, 68, 68, 0.5)",
-                hoverBorder: "rgba(239, 68, 68, 0.45)",
-                hoverBg: "rgba(239, 68, 68, 0.1)",
-                hoverText: "#FCA5A5",
-                tooltip: "Watch on YouTube",
-              },
-            ].map(({ Icon, label, glowColor, hoverBorder, hoverBg, hoverText, tooltip }, idx) => (
-              <MagneticWrapper key={idx} range={20} strength={0.25}>
-                <div className="relative group/social">
-                  <motion.a
-                    href="#"
-                    whileHover={{
-                      scale: 1.18,
-                      y: -3,
-                      boxShadow: `0 0 20px ${glowColor}`,
-                      borderColor: hoverBorder,
-                      backgroundColor: hoverBg,
-                      color: hoverText,
-                    }}
-                    transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="h-10 w-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 transition-all duration-200 cursor-pointer"
-                    aria-label={label}
-                  >
-                    <Icon className="h-4.5 w-4.5" />
-                  </motion.a>
-                  {/* Tooltip */}
-                  <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-900 border border-white/10 text-white/80 text-[9px] font-bold tracking-wide px-2.5 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover/social:opacity-100 transition-all duration-200 pointer-events-none shadow-xl">
-                    {tooltip}
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-slate-900" />
-                  </div>
-                </div>
-              </MagneticWrapper>
-            ))}
-          </div>
-
           {/* Bottom Divider & Copyright inside capsule */}
           <div className="w-full border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/35 space-y-4 sm:space-y-0">
             <div>
-              &copy; {currentYear} Nexora Technologies. All rights reserved.
+              &copy; {currentYear} Akshay Infotech. All rights reserved.
             </div>
             <div className="flex space-x-6">
               <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>

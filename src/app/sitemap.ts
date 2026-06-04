@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://nexoratech.com";
+  const baseUrl = "https://akshayinfotech.com";
   const now = new Date();
   
   const coreRoutes = [
@@ -12,6 +12,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/resources`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 },
     { url: `${baseUrl}/company`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { url: `${baseUrl}/careers`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${baseUrl}/privacy`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.3 },
+    { url: `${baseUrl}/terms`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.3 },
+    { url: `${baseUrl}/security`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.5 },
+    { url: `${baseUrl}/pricing`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${baseUrl}/portfolio`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.7 },
+    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.8 },
   ];
 
   const serviceRoutes = [
@@ -22,7 +29,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "devops",
     "ai-automation",
     "seo-optimization",
-    "ecommerce"
+    "ecommerce",
+    "cyber-security",
+    "it-consulting"
   ].map((service) => ({
     url: `${baseUrl}/services/${service}`,
     lastModified: now,
@@ -34,7 +43,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "business-software",
     "cloud-solutions",
     "enterprise-applications",
-    "custom-platforms"
+    "custom-platforms",
+    "product-one",
+    "product-two"
   ].map((product) => ({
     url: `${baseUrl}/products/${product}`,
     lastModified: now,
@@ -69,12 +80,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "our-process",
     "technologies",
     "industries",
-    "why-choose-us"
+    "why-choose-us",
+    "leadership",
+    "our-story"
   ].map((company) => ({
     url: `${baseUrl}/company/${company}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.7,
+  }));
+
+  const blogRoutes = [
+    "maximizing-lighthouse-scores",
+    "secure-telehealth-pipelines",
+    "headless-commerce-conversions",
+    "kubernetes-deployment-pipelines"
+  ].map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
   }));
 
   return [
@@ -83,6 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...productRoutes,
     ...solutionRoutes,
     ...resourceRoutes,
-    ...companyRoutes
+    ...companyRoutes,
+    ...blogRoutes
   ];
 }

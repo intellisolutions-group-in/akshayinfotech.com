@@ -134,7 +134,7 @@ export default function FAQSection() {
               transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
               className="text-sm text-slate-500 leading-relaxed mb-8"
             >
-              Everything you need to know about working with Nexora Technologies. Can&apos;t find the answer you&apos;re looking for?
+              Everything you need to know about working with Akshay Infotech. Can&apos;t find the answer you&apos;re looking for?
             </motion.p>
 
             <motion.div
@@ -153,22 +153,7 @@ export default function FAQSection() {
               </MagneticWrapper>
             </motion.div>
 
-            {/* Decorative block */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.93 }}
-              animate={isSectionInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.7, delay: 0.7, ease: "easeOut" }}
-              className="hidden lg:block mt-10"
-            >
-              <div className="relative h-48 w-48">
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-100 flex items-center justify-center shadow-inner">
-                  <div className="text-center">
-                    <div className="text-3xl font-black text-primary animate-pulse" style={{ animationDuration: "3s" }}>6+</div>
-                    <div className="text-xs text-slate-500 font-medium mt-1">Years of<br />Experience</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+
           </div>
 
           {/* Right: FAQ items */}

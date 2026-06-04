@@ -10,11 +10,11 @@ import { motion } from "framer-motion";
 
 // Custom typed lines for simulated IDE
 const typingLines = [
-  "const nexoraProject = new Project('Web App');",
-  "await nexoraProject.optimizePerformance();",
+  "const akshayProject = new Project('Web App');",
+  "await akshayProject.optimizePerformance();",
   "// Output: LCP 0.6s, CLS 0.0, FCP 0.2s",
   "console.log('Production bundles compiled successfully.');",
-  "export default nexoraProject.deployToEdge();"
+  "export default akshayProject.deployToEdge();"
 ];
 
 const timelineSteps = [
@@ -54,7 +54,7 @@ const faqs = [
     a: "Yes. We design headless e-commerce architectures by decoupling customer frontends from transaction backends. Using platforms like Shopify Plus API or customized database platforms, we build fast, secure store layouts that handle thousands of concurrent checkouts."
   },
   {
-    q: "How does Nexora optimize web platforms for Core Web Vitals?",
+    q: "How does Akshay optimize web platforms for Core Web Vitals?",
     a: "We address layout shifts (CLS), initial page displays (FCP), and main content loads (LCP). We implement asset lazy-loading, optimize responsive images, specify width/height tags to prevent shifts, code lightweight CSS, and cache files on CDN networks."
   }
 ];
@@ -64,7 +64,7 @@ export default function WebDevelopmentPage() {
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
 
   useEffect(() => {
-    document.title = "Enterprise Software & Web Development | Nexora Technologies";
+    document.title = "Enterprise Software & Web Development | Akshay Infotech";
   }, []);
 
   useEffect(() => {
@@ -96,7 +96,7 @@ export default function WebDevelopmentPage() {
                 </span>
               </h1>
               <p className="text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
-                Nexora builds fast, secure web solutions using modern architectures. By shifting database calculations to Next.js server components and compiling strict TypeScript configurations, we deliver secure web portals.
+                Akshay builds fast, secure web solutions using modern architectures. By shifting database calculations to Next.js server components and compiling strict TypeScript configurations, we deliver secure web portals.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -127,7 +127,7 @@ export default function WebDevelopmentPage() {
                     <span className="w-3 h-3 rounded-full bg-emerald-500/80 block"></span>
                   </div>
                   <span className="text-[10px] text-slate-500 font-mono tracking-wider font-semibold">
-                    nexora-compiler.ts — editor
+                    akshay-compiler.ts — editor
                   </span>
                   <Terminal className="h-4 w-4 text-slate-600" />
                 </div>
@@ -170,7 +170,7 @@ export default function WebDevelopmentPage() {
                 High-Concurrency Operations Designed for Business Growth
               </h2>
               <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
-                Generic web templates are insufficient for complex digital needs. At Nexora, we construct custom web platforms using modular React patterns, ensuring clean code structures and rapid page loads.
+                Generic web templates are insufficient for complex digital needs. At Akshay, we construct custom web platforms using modular React patterns, ensuring clean code structures and rapid page loads.
               </p>
               <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
                 By optimizing database operations, establishing CDN caching configurations, and implementing automated testing scripts, we build performant platforms ready to scale.

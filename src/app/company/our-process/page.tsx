@@ -16,7 +16,7 @@ export default function OurProcess() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "Our Process | Nexora Technologies";
+    document.title = "Our Process | Akshay Infotech";
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -144,7 +144,7 @@ export default function OurProcess() {
             </div>
           </div>
           <div className="relative rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
-            <Image src="/images/hero-process.png" alt="Nexora Development Process" width={700} height={400} className="w-full h-auto object-cover" />
+            <Image src="/images/hero-process.png" alt="Akshay Development Process" width={700} height={400} className="w-full h-auto object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent" />
           </div>
         </div>
@@ -340,7 +340,7 @@ export default function OurProcess() {
       {/* ═══════════════ 7. COMPARISON TABLE ═══════════════ */}
       <section className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 mb-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Nexora vs. Traditional Agencies</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Akshay vs. Traditional Agencies</h2>
           <p className="text-sm text-slate-400 mt-2">A transparent comparison of our development practices.</p>
         </div>
         <div className="overflow-x-auto rounded-2xl border border-white/5">
@@ -348,7 +348,7 @@ export default function OurProcess() {
             <thead>
               <tr className="bg-slate-900/60">
                 <th className="px-6 py-4 text-slate-400 font-bold uppercase tracking-wider">Practice</th>
-                <th className="px-6 py-4 text-indigo-400 font-bold uppercase tracking-wider">Nexora</th>
+                <th className="px-6 py-4 text-indigo-400 font-bold uppercase tracking-wider">Akshay</th>
                 <th className="px-6 py-4 text-slate-500 font-bold uppercase tracking-wider">Traditional</th>
               </tr>
             </thead>
@@ -360,10 +360,10 @@ export default function OurProcess() {
                 ["Deployment Strategy", "Blue-green zero-downtime", "Weekend maintenance windows"],
                 ["Post-Launch Support", "Structured SLA retainers", "Pay-per-incident billing"],
                 ["Documentation", "Auto-generated + ADR logs", "Minimal or outdated"]
-              ].map(([practice, nexora, traditional], i) => (
+              ].map(([practice, akshay, traditional], i) => (
                 <tr key={i} className="bg-slate-950/40 hover:bg-slate-900/40 transition-colors">
                   <td className="px-6 py-4 text-white font-bold">{practice}</td>
-                  <td className="px-6 py-4 text-slate-300 font-light">{nexora}</td>
+                  <td className="px-6 py-4 text-slate-300 font-light">{akshay}</td>
                   <td className="px-6 py-4 text-slate-500 font-light">{traditional}</td>
                 </tr>
               ))}

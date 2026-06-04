@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { Building2, CheckCircle, ArrowRight, ShieldCheck, Cpu, GitPullRequest } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Enterprise Applications | Nexora Technologies",
+  title: "Enterprise Applications | Akshay Infotech",
   description: "Enterprise legacy integrations, core bank systems, secure inventory networks, and custom portals built for global companies.",
 };
 

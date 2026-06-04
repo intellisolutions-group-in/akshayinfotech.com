@@ -37,7 +37,7 @@ const faqs = [
     a: "Supervised models analyze input data to predict outcomes (such as categorizing text or forecasting numbers). Generative models (like large language models) process patterns in source materials to create new content."
   },
   {
-    q: "How does Nexora protect company data when training custom language models?",
+    q: "How does Akshay protect company data when training custom language models?",
     a: "We train language models inside isolated virtual private cloud (VPC) networks. Customer datasets are not sent to public APIs, ensuring private IP remains secure."
   },
   {
@@ -52,7 +52,7 @@ const faqs = [
 
 export default function AIMachineLearningPage() {
   useEffect(() => {
-    document.title = "AI & Machine Learning Engineering | Nexora Technologies";
+    document.title = "AI & Machine Learning Engineering | Akshay Infotech";
   }, []);
 
   return (
@@ -74,7 +74,7 @@ export default function AIMachineLearningPage() {
                 </span>
               </h1>
               <p className="text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
-                Nexora engineers customized machine learning systems. By training private model weights and deploying high-performance classification endpoints, we build intelligent business solutions.
+                Akshay engineers customized machine learning systems. By training private model weights and deploying high-performance classification endpoints, we build intelligent business solutions.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">

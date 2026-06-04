@@ -29,7 +29,7 @@ const faqs = [
 
 export default function EcommercePage() {
   React.useEffect(() => {
-    document.title = "E-Commerce Solutions | Nexora Technologies";
+    document.title = "E-Commerce Solutions | Akshay Infotech";
   }, []);
 
   return (

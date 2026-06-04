@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
-import { Calendar, User, ArrowRight, BookOpen } from "lucide-react";
+import { ArrowRight, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog & Insights | AuraDev Systems",
-  description: "Read the latest engineering articles, DevOps setup tutorials, and cloud architecture reviews from our technical team.",
+  title: "Blog & Insights | Akshay Infotech",
+  description: "Read the latest engineering articles, DevOps setup tutorials, and cloud architecture reviews from the Akshay Infotech technical team.",
 };
 
 const blogPosts = [
@@ -14,8 +14,7 @@ const blogPosts = [
     title: "How We Achieved a Perfect 100/100 Lighthouse Performance Rating on Next.js 15",
     desc: "A detailed breakdown of server component optimization, route segment configs, code splitting triggers, and modern WebP image sizing rules.",
     category: "Engineering",
-    date: "May 25, 2026",
-    author: "Elena Rostova",
+
     readTime: "6 min read"
   },
   {
@@ -23,8 +22,7 @@ const blogPosts = [
     title: "Engineering Telehealth Applications: Setting Up HIPAA-Compliant WebRTC Video Consultations",
     desc: "A walkthrough of setting up secure TURN servers, database logging rules, JWT token generation, and secure socket gateways.",
     category: "Security",
-    date: "May 18, 2026",
-    author: "Marcus Vance",
+ 
     readTime: "9 min read"
   },
   {
@@ -32,8 +30,7 @@ const blogPosts = [
     title: "Headless E-Commerce: Migrating from Legacy Retail Templates to Headless Next.js Commerce",
     desc: "Why sub-second page loads directly reduce abandoned carts, and how to connect Next.js APIs to Shopify store catalogs seamlessly.",
     category: "E-Commerce",
-    date: "May 10, 2026",
-    author: "Sarah Jenkins",
+    
     readTime: "8 min read"
   },
   {
@@ -41,8 +38,7 @@ const blogPosts = [
     title: "Automating Multi-Cloud Infrastructure Deployments with Terraform and Kubernetes",
     desc: "How we configure continuous integration pipelines to lint infrastructure templates, check AWS IAM roles, and roll upgrades automatically.",
     category: "Cloud",
-    date: "April 29, 2026",
-    author: "Devon Miller",
+    
     readTime: "11 min read"
   }
 ];
@@ -52,8 +48,7 @@ const featuredPost = {
   title: "How We Achieved a Perfect 100/100 Lighthouse Performance Rating on Next.js 15",
   desc: "A detailed breakdown of server component optimization, route segment configs, code splitting triggers, and modern WebP image sizing rules. Read our step-by-step optimization roadmap to secure top Google search listings.",
   category: "Engineering",
-  date: "May 25, 2026",
-  author: "Elena Rostova",
+  
   readTime: "6 min read"
 };
 
@@ -70,7 +65,7 @@ export default function BlogPage() {
             Engineering Insights
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-text-main tracking-tight">
-            The AuraDev Tech Blog
+            The Akshay Infotech Tech Blog
           </h1>
           <p className="text-base sm:text-lg text-text-body max-w-2xl mx-auto">
             Deep-divesss into modern web architectures, compliance-level security designs, and serverless compute deployments.
@@ -99,14 +94,7 @@ export default function BlogPage() {
               
               <div className="flex flex-wrap items-center gap-6 text-xs text-text-muted pt-2">
                 <div className="flex items-center space-x-1.5">
-                  <User className="h-4 w-4 text-primary" />
-                  <span>By {featuredPost.author}</span>
-                </div>
-                <div className="flex items-center space-x-1.5">
-                  <Calendar className="h-4 w-4 text-primary" />
-                  <span>{featuredPost.date}</span>
-                </div>
-                <div>
+                  <BookOpen className="h-4 w-4 text-primary" />
                   <span>{featuredPost.readTime}</span>
                 </div>
               </div>
@@ -169,9 +157,8 @@ export default function BlogPage() {
                 </div>
 
                 <div className="border-t border-slate-100 pt-6 mt-6 flex items-center justify-between">
-                  <div className="flex items-center space-x-4 text-[11px] text-text-muted">
-                    <span>By {post.author}</span>
-                    <span>•</span>
+                  <div className="flex items-center space-x-2 text-[11px] text-text-muted">
+                    <BookOpen className="h-3.5 w-3.5 text-primary" />
                     <span>{post.readTime}</span>
                   </div>
                   

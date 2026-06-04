@@ -52,7 +52,7 @@ const faqs = [
 
 export default function UIUXDesignPage() {
   useEffect(() => {
-    document.title = "Bespoke UI/UX Design & User Research | Nexora Technologies";
+    document.title = "Bespoke UI/UX Design & User Research | Akshay Infotech";
   }, []);
 
   return (
@@ -74,7 +74,7 @@ export default function UIUXDesignPage() {
                 </span>
               </h1>
               <p className="text-sm sm:text-base text-zinc-650 max-w-2xl leading-relaxed">
-                Nexora designs intuitive, pixel-perfect user interfaces based on behavioral research. We construct comprehensive design libraries to ensure brand consistency and reduce development costs.
+                Akshay designs intuitive, pixel-perfect user interfaces based on behavioral research. We construct comprehensive design libraries to ensure brand consistency and reduce development costs.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -270,7 +270,7 @@ export default function UIUXDesignPage() {
                 <tr>
                   <th className="px-6 py-4 font-semibold uppercase tracking-wider">Usability Heuristics</th>
                   <th className="px-6 py-4 font-semibold uppercase tracking-wider">Target Objective</th>
-                  <th className="px-6 py-4 font-semibold uppercase tracking-wider">Nexora Design Solutions</th>
+                  <th className="px-6 py-4 font-semibold uppercase tracking-wider">Akshay Design Solutions</th>
                   <th className="px-6 py-4 font-semibold uppercase tracking-wider">Usability Impact</th>
                 </tr>
               </thead>

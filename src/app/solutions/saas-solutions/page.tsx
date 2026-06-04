@@ -18,7 +18,7 @@ export default function DataIntelligenceDashboardPage() {
 
   // Document Title
   useEffect(() => {
-    document.title = "Data Intelligence Dashboard | Nexora Technologies";
+    document.title = "Data Intelligence Dashboard | Akshay Infotech";
   }, []);
 
   // System Booting Sequence Handler
@@ -28,7 +28,7 @@ export default function DataIntelligenceDashboardPage() {
     setCpuLoad(0);
 
     const bootLogs = [
-      "INITIALIZING NEXORA INGRESS CONTROLLER...",
+      "INITIALIZING AKSHAY INGRESS CONTROLLER...",
       "CONNECTING KAFKA MESSAGE BROKERS [PORT 9092]...",
       "TUNNELING SECURE TLS ENDPOINTS...",
       "SPAWNING APACHE SPARK STREAMING ENGINE...",
@@ -140,7 +140,7 @@ export default function DataIntelligenceDashboardPage() {
               <div className="h-3 w-3 rounded-full bg-red-500" />
               <div className="h-3 w-3 rounded-full bg-yellow-500" />
               <div className="h-3 w-3 rounded-full bg-green-500" />
-              <span className="text-xs text-slate-500 font-mono pl-3">SYSTEM_ID // NEXORA-INTEL-DB-09</span>
+              <span className="text-xs text-slate-500 font-mono pl-3">SYSTEM_ID // AKSHAY-INTEL-DB-09</span>
             </div>
 
             {bootState === "dormant" && (
@@ -396,7 +396,7 @@ export default function DataIntelligenceDashboardPage() {
           {/* Solutions */}
           <div className="p-8 bg-emerald-950/10 border border-emerald-500/15 rounded-3xl">
             <h3 className="text-lg font-bold text-emerald-400 mb-6 flex items-center gap-2">
-              Nexora Telemetry Engineering
+              Akshay Telemetry Engineering
             </h3>
             <div className="space-y-6 text-left">
               <div className="flex items-start space-x-3.5">
@@ -512,7 +512,7 @@ export default function DataIntelligenceDashboardPage() {
         <div className="p-8 md:p-12 bg-gradient-to-r from-indigo-600 to-blue-700 rounded-3xl text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
           <h4 className="text-xl sm:text-2xl font-bold mb-2">Ready to streamline your metrics?</h4>
-          <p className="text-xs sm:text-sm text-indigo-100 mb-8 max-w-lg mx-auto font-light">Review your data pipelines, query bottlenecks, and dashboard latency specs with a Nexora telemetry architect.</p>
+          <p className="text-xs sm:text-sm text-indigo-100 mb-8 max-w-lg mx-auto font-light">Review your data pipelines, query bottlenecks, and dashboard latency specs with a Akshay telemetry architect.</p>
           <Link 
             href="/contact"
             className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-indigo-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-indigo-900/20"

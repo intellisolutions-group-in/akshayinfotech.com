@@ -29,7 +29,7 @@ const faqs = [
 
 export default function SeoOptimizationPage() {
   React.useEffect(() => {
-    document.title = "SEO Optimization Services | Nexora Technologies";
+    document.title = "SEO Optimization Services | Akshay Infotech";
   }, []);
 
   return (

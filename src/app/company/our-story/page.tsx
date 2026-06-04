@@ -15,7 +15,7 @@ export default function OurStoryPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "Our Story | Nexora Technologies";
+    document.title = "Our Story | Akshay Infotech";
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -78,7 +78,7 @@ export default function OurStoryPage() {
 
   const faqs = [
     {
-      q: "What makes Nexora's engineering approach different from traditional consultants?",
+      q: "What makes Akshay's engineering approach different from traditional consultants?",
       a: "We write clean, production-ready infrastructure-as-code instead of plain consulting reports. Every architectural recommendation comes with Terraform files and Docker setups ready to run."
     },
     {
@@ -86,7 +86,7 @@ export default function OurStoryPage() {
       a: "We deploy incremental facade proxies. This routes traffic slowly, letting us test and replace system components piece-by-piece, completely avoiding big bang release failures."
     },
     {
-      q: "Is Nexora structured to support global operations?",
+      q: "Is Akshay structured to support global operations?",
       a: "Yes. Our cloud engineering and server monitoring networks operate globally, providing 24/7 telemetry support and database sync auditing."
     }
   ];
@@ -100,7 +100,7 @@ export default function OurStoryPage() {
           style={{ y: textOffset }}
           className="text-[90px] font-black tracking-widest text-blue-500/[0.02] uppercase transform rotate-90 origin-left"
         >
-          NEXORA TECHNOLOGIES
+          AKSHAY INFOTECH
         </motion.div>
       </div>
 
@@ -127,14 +127,14 @@ export default function OurStoryPage() {
               Our Corporate Narrative
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none bg-gradient-to-r from-white via-indigo-100 to-indigo-300 bg-clip-text text-transparent">
-              The History of Nexora
+              The History of Akshay
             </h1>
             <p className="text-base text-slate-400 leading-relaxed font-light max-w-xl">
               From a tiny loft operation to a leading global software systems integrator. Read how our dedication to zero-downtime database modernization shaped our technical paradigms.
             </p>
           </div>
           <div className="relative rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
-            <Image src="/images/hero-story.png" alt="Nexora Story Timeline" width={700} height={400} className="w-full h-auto object-cover" />
+            <Image src="/images/hero-story.png" alt="Akshay Story Timeline" width={700} height={400} className="w-full h-auto object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent" />
           </div>
         </div>
@@ -255,7 +255,7 @@ export default function OurStoryPage() {
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24">
         <div className="absolute top-0 left-10 pointer-events-none select-none overflow-hidden -z-10 opacity-3">
           <div className="text-[120px] font-black tracking-widest text-blue-500/5 uppercase leading-none">
-            NEXORA
+            AKSHAY
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">

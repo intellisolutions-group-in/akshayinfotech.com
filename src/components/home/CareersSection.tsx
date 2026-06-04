@@ -65,7 +65,7 @@ export default function CareersSection() {
                 Build the Future of Digital Infrastructure
               </h2>
               <p className="text-base text-text-body leading-relaxed">
-                At AuraDev Systems, we hire engineers who love solving complex problems. We foster a collaborative, zero-ego culture focused on building beautiful, fast, and secure products.
+                At Akshay Infotech, we hire engineers who love solving complex problems. We foster a collaborative, zero-ego culture focused on building beautiful, fast, and secure products.
               </p>
             </div>
 
@@ -114,7 +114,7 @@ export default function CareersSection() {
             >
               <Image
                 src="/careers-bg.png"
-                alt="AuraDev software team collaboration"
+                alt="Akshay Infotech software team collaboration"
                 fill
                 className="object-cover"
                 sizes="(max-w-7xl) 40vw, 100vw"

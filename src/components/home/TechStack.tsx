@@ -124,7 +124,7 @@ export default function TechStack() {
   const [textPhase, setTextPhase] = useState(0);
   const [rotationSpeed, setRotationSpeed] = useState(40);
   const packetRef = useRef<number>(0);
-  const animFrameRef = useRef<number>();
+  const animFrameRef = useRef<number>(0);
   const lastTimeRef = useRef<number>(0);
 
   useEffect(() => {
@@ -332,8 +332,8 @@ export default function TechStack() {
                   key={tech.name}
                   className="absolute"
                   style={{
-                    left: `calc(50% + ${cos} * var(--orbit-radius))`,
-                    top: `calc(50% + ${sin} * var(--orbit-radius))`,
+                    left: `calc(50% + ${cos.toFixed(6)} * var(--orbit-radius))`,
+                    top: `calc(50% + ${sin.toFixed(6)} * var(--orbit-radius))`,
                     transform: "translate(-50%, -50%)",
                     pointerEvents: "auto",
                   }}

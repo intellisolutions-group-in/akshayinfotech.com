@@ -14,7 +14,7 @@ const privacySections = [
       { label: "Personal Information", desc: "Name, email, phone number, and company details provided through contact forms, project inquiries, or account registration." },
       { label: "Technical Data", desc: "IP addresses, browser type, device identifiers, operating system, referral URLs, and pages visited collected automatically via server logs and analytics." },
       { label: "Communication Data", desc: "Records of correspondence including emails, support tickets, and meeting notes exchanged during project engagements." },
-      { label: "Payment Information", desc: "Billing details processed through secure third-party payment processors. Nexora does not store complete card numbers on our servers." },
+      { label: "Payment Information", desc: "Billing details processed through secure third-party payment processors. Akshay does not store complete card numbers on our servers." },
     ],
   },
   {
@@ -71,7 +71,7 @@ const privacySections = [
     color: "#EC4899",
     title: "Your Rights",
     items: [
-      { label: "Right to Access", desc: "Request a copy of all personal data we hold about you at any time by emailing privacy@nexoratech.com." },
+      { label: "Right to Access", desc: "Request a copy of all personal data we hold about you at any time by emailing privacy@akshayinfotech.com." },
       { label: "Right to Rectification", desc: "Request correction of inaccurate or incomplete personal data in our records." },
       { label: "Right to Erasure", desc: "Request deletion of your personal data, subject to our legal retention obligations." },
       { label: "Right to Portability", desc: "Receive your personal data in a machine-readable format (JSON or CSV) upon request." },
@@ -84,7 +84,7 @@ const privacySections = [
     title: "GDPR Compliance",
     items: [
       { label: "Legal Basis", desc: "We process personal data under legitimate interest, contractual necessity, legal obligation, and explicit consent where required." },
-      { label: "Data Protection Officer", desc: "Our DPO can be reached at dpo@nexoratech.com for any GDPR-related inquiries or complaints." },
+      { label: "Data Protection Officer", desc: "Our DPO can be reached at dpo@akshayinfotech.com for any GDPR-related inquiries or complaints." },
       { label: "Cross-Border Transfers", desc: "Data transfers outside the EEA are protected by Standard Contractual Clauses (SCCs) approved by the European Commission." },
       { label: "Supervisory Authority", desc: "EU residents have the right to lodge complaints with their national Data Protection Authority." },
     ],
@@ -116,7 +116,7 @@ export default function PrivacyPolicyPage() {
       {/* Hero */}
       <section className="relative pt-32 pb-24 overflow-hidden" style={{ background: "linear-gradient(135deg, #050814 0%, #0d1b35 100%)" }}>
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-          <div className="text-[18vw] font-black text-white/[0.025] tracking-widest leading-none">NEXORA</div>
+          <div className="text-[18vw] font-black text-white/[0.025] tracking-widest leading-none">AKSHAY</div>
         </div>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 rounded-full bg-purple-600/10 blur-[120px]" />
@@ -211,7 +211,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-xl font-bold text-slate-900 mb-3">Questions About Your Privacy?</h2>
           <p className="text-sm text-slate-500 mb-6">Our Data Protection Officer is available to address any privacy-related concerns you may have.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="mailto:privacy@nexoratech.com" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white text-sm font-semibold rounded-xl hover:bg-blue-700 transition-colors">
+            <a href="mailto:privacy@akshayinfotech.com" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white text-sm font-semibold rounded-xl hover:bg-blue-700 transition-colors">
               <Shield className="h-4 w-4" /> Contact DPO
             </a>
             <a href="/contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-200 text-slate-700 text-sm font-semibold rounded-xl hover:bg-slate-50 transition-colors">

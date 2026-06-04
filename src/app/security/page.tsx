@@ -20,7 +20,7 @@ const securitySections = [
     icon: Shield,
     color: "#3B82F6",
     title: "Security Overview",
-    desc: "Nexora Technologies maintains a comprehensive, defense-in-depth security posture across all layers of our infrastructure, application code, and operational processes. Security is not an afterthought — it is an architectural requirement embedded from day one.",
+    desc: "Akshay Infotech maintains a comprehensive, defense-in-depth security posture across all layers of our infrastructure, application code, and operational processes. Security is not an afterthought — it is an architectural requirement embedded from day one.",
     points: [
       "Multi-layer security architecture across infrastructure, application, and data tiers",
       "Continuous security monitoring with 24/7 SOC coverage",
@@ -168,7 +168,7 @@ export default function SecurityPage() {
       {/* Hero */}
       <section className="relative pt-32 pb-24 overflow-hidden" style={{ background: "linear-gradient(135deg, #020810 0%, #070f1f 50%, #0d1b35 100%)" }}>
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
-          <div className="text-[18vw] font-black text-white/[0.02] tracking-widest leading-none">NEXORA</div>
+          <div className="text-[18vw] font-black text-white/[0.02] tracking-widest leading-none">AKSHAY</div>
         </div>
         {/* Cybersecurity grid */}
         <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "linear-gradient(rgba(34,211,238,1) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,1) 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
@@ -182,7 +182,7 @@ export default function SecurityPage() {
             <span className="inline-flex items-center gap-2 text-xs font-bold text-cyan-400 tracking-widest uppercase bg-cyan-500/10 border border-cyan-500/20 px-4 py-1.5 rounded-full mb-6">
               <Shield className="h-3.5 w-3.5" /> Enterprise Security
             </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">Security at Nexora</h1>
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">Security at Akshay</h1>
             <p className="text-slate-400 text-base leading-relaxed max-w-2xl mx-auto">
               Enterprise-grade security is not optional — it is foundational. Discover how we protect your data, systems, and infrastructure across every layer of our operations.
             </p>
@@ -316,7 +316,7 @@ export default function SecurityPage() {
           <p className="text-sm text-slate-500 mb-6 leading-relaxed">
             Discovered a security vulnerability? We take all reports seriously and will investigate and respond within 24 hours. Please do not disclose vulnerabilities publicly before giving us an opportunity to address them.
           </p>
-          <a href="mailto:security@nexoratech.com" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-xl hover:bg-slate-800 transition-colors">
+          <a href="mailto:security@akshayinfotech.com" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-xl hover:bg-slate-800 transition-colors">
             <Shield className="h-4 w-4" /> Report a Vulnerability
           </a>
         </div>

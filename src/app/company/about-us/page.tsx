@@ -19,7 +19,7 @@ export default function AboutUsPage() {
 
   // Document Title
   useEffect(() => {
-    document.title = "About Nexora | Nexora Technologies";
+    document.title = "About Akshay | Akshay Infotech";
   }, []);
 
   // Scroll Progress for growing timeline line
@@ -67,7 +67,7 @@ export default function AboutUsPage() {
     {
       period: "THE BEGINNING (2018)",
       title: "Bridging Backend Scales & Interfaces",
-      desc: "Nexora was founded by database architects who wanted to replace slow enterprise SQL systems with decoupled, low-latency microservice meshes wrapped under fast user interfaces."
+      desc: "Akshay was founded by database architects who wanted to replace slow enterprise SQL systems with decoupled, low-latency microservice meshes wrapped under fast user interfaces."
     },
     {
       period: "TRANSITION PHASE (2020)",
@@ -120,11 +120,11 @@ export default function AboutUsPage() {
               Engineering High-Capacity Digital Ecosystems
             </h1>
             <p className="text-base text-slate-400 leading-relaxed font-light max-w-xl">
-              Nexora Technologies designs, audits, and deploys zero-downtime database architectures and cloud infrastructure meshes to help modern enterprises scale compute boundaries safely.
+              Akshay Infotech designs, audits, and deploys zero-downtime database architectures and cloud infrastructure meshes to help modern enterprises scale compute boundaries safely.
             </p>
           </div>
           <div className="relative rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
-            <Image src="/images/hero-about.png" alt="About Nexora Technologies" width={700} height={400} className="w-full h-auto object-cover" />
+            <Image src="/images/hero-about.png" alt="About Akshay Infotech" width={700} height={400} className="w-full h-auto object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent" />
           </div>
         </div>
@@ -133,13 +133,13 @@ export default function AboutUsPage() {
       {/* ---------------- 2. COMPANY INTRODUCTION ---------------- */}
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24 text-left">
         <div className="absolute top-0 right-10 pointer-events-none select-none overflow-hidden -z-10 opacity-5">
-          <div className="text-[120px] font-black tracking-wider text-blue-550 uppercase">NEXORA</div>
+          <div className="text-[120px] font-black tracking-wider text-blue-550 uppercase">AKSHAY</div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Documenting Our Philosophy</h2>
             <p className="text-sm text-slate-405 leading-relaxed font-light">
-              Founded in 2018, Nexora Technologies emerged from a simple observation: modern business applications grow exponentially, yet database syncs and server configurations lag behind. Traditional setups rely on oversized computing instances to manage spikes, which results in excessive cloud spending.
+              Founded in 2018, Akshay Infotech emerged from a simple observation: modern business applications grow exponentially, yet database syncs and server configurations lag behind. Traditional setups rely on oversized computing instances to manage spikes, which results in excessive cloud spending.
             </p>
             <p className="text-sm text-slate-405 leading-relaxed font-light">
               We replace monoliths with lightweight, containerized microservices and automated database proxies. This ensures that client interfaces render in milliseconds while maintaining zero packet loss during infrastructure migrations.
@@ -166,11 +166,11 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* ---------------- 3. WHY NEXORA EXISTS ---------------- */}
+      {/* ---------------- 3. WHY AKSHAY EXISTS ---------------- */}
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24 text-left">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-1 space-y-4">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Why Nexora Exists</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Why Akshay Exists</h2>
             <p className="text-sm text-slate-400 leading-relaxed font-light">
               Legacy mainframes lock valuable operational metrics away in fragmented database silos. We build proxy API gates that connect databases, making business insights available immediately.
             </p>
@@ -354,7 +354,7 @@ export default function AboutUsPage() {
           <div className="lg:col-span-1 space-y-6">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Global Footprint</h2>
             <p className="text-sm text-slate-400 leading-relaxed font-light">
-              Nexora databases are active globally. With main clusters set up in North America, Western Europe, and Asia Pacific, we guarantee consistent data synchronization across all boundaries.
+              Akshay databases are active globally. With main clusters set up in North America, Western Europe, and Asia Pacific, we guarantee consistent data synchronization across all boundaries.
             </p>
             <div className="flex gap-4">
               <div>
@@ -411,7 +411,7 @@ export default function AboutUsPage() {
           <div className="p-8 bg-slate-900/30 border border-white/5 rounded-3xl space-y-6">
             <h3 className="text-xl font-bold text-white flex items-center gap-2">
               <Cpu className="h-5 w-5 text-indigo-400" />
-              Nexora Labs
+              Akshay Labs
             </h3>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
               We allocate 15% of our monthly sprint times to open-source database connectors and proxy benchmarks. Our team believes that high-quality telemetry libraries should be shared to benefit the broader developer community.
@@ -428,7 +428,7 @@ export default function AboutUsPage() {
           <div className="space-y-6">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Innovation Culture</h2>
             <p className="text-sm text-slate-400 leading-relaxed font-light">
-              At Nexora, we avoid endless status syncs and management blocks. We believe in running asynchronous, deep-work sprints that prioritize writing clean, well-tested code over empty documentation folders.
+              At Akshay, we avoid endless status syncs and management blocks. We believe in running asynchronous, deep-work sprints that prioritize writing clean, well-tested code over empty documentation folders.
             </p>
           </div>
         </div>
@@ -438,7 +438,7 @@ export default function AboutUsPage() {
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24 text-left">
         <div className="absolute top-10 left-10 pointer-events-none select-none overflow-hidden -z-10 opacity-3">
           <div className="text-[120px] font-black tracking-widest text-indigo-500/5 uppercase leading-none">
-            NEXORA TECHNOLOGIES
+            AKSHAY INFOTECH
           </div>
         </div>
         <div className="p-8 md:p-12 bg-slate-900/40 border border-white/5 rounded-3xl relative overflow-hidden">
@@ -472,7 +472,7 @@ export default function AboutUsPage() {
         <div className="p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
           <h4 className="text-xl sm:text-2xl font-bold mb-2">Want to partner with our team?</h4>
-          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Schedule a technical consulting call with a Nexora database architect to trace latency bottlenecks.</p>
+          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Schedule a technical consulting call with a Akshay database architect to trace latency bottlenecks.</p>
           <Link 
             href="/contact"
             className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-blue-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-blue-900/20"

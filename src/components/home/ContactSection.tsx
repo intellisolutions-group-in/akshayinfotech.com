@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, ArrowRight, CheckCircle2, X } from "lucide-react";
+import { Send, ArrowRight, CheckCircle2, X } from "lucide-react";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -409,7 +409,6 @@ function SuccessBlast() {
 export default function ContactSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const elementsRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
 
   const [formData, setFormData] = useState({
@@ -423,6 +422,7 @@ export default function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [toast, setToast] = useState<{ message: string; type: "success" | "error" } | null>(null);
 
   // Floating background spotlight effect coordinates
   const handleSectionMouseMove = (e: React.MouseEvent<HTMLElement>) => {
@@ -439,11 +439,18 @@ export default function ContactSection() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    setTimeout(() => {
+    try {
+      // Simulate fake API call with 2.5 second delay
+      await new Promise((resolve) => setTimeout(resolve, 2500));
+
+      if (formData.email.toLowerCase().includes("error") || formData.message.toLowerCase().includes("error")) {
+        throw new Error("Simulation error triggered");
+      }
+
       setLoading(false);
       setIsSubmitted(true);
       setFormData({
@@ -453,7 +460,15 @@ export default function ContactSection() {
         company: "",
         message: "",
       });
-    }, 1400);
+
+      // Show backup toast notification
+      setToast({ message: "Form submitted successfully!", type: "success" });
+      setTimeout(() => setToast(null), 4000);
+    } catch (err) {
+      setLoading(false);
+      setToast({ message: "Something went wrong. Please try again.", type: "error" });
+      setTimeout(() => setToast(null), 4000);
+    }
   };
 
   useEffect(() => {
@@ -478,12 +493,6 @@ export default function ContactSection() {
         { y: 50, opacity: 0 },
         { y: 0, opacity: 1, duration: 1.1, ease: "power3.out" }
       )
-        .fromTo(
-          ".contact-card-anim",
-          { y: 40, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.9, stagger: 0.15, ease: "power2.out" },
-          "-=0.6"
-        )
         .fromTo(
           ".contact-form-anim",
           { y: 40, opacity: 0 },
@@ -543,7 +552,7 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Left Side Info Panel */}
-          <div className="lg:col-span-4 space-y-12 flex flex-col justify-between self-stretch">
+          <div className="lg:col-span-4 space-y-6 flex flex-col justify-center self-stretch">
             
             <div className="space-y-6 contact-reveal-title">
               <span className="text-[11px] font-bold text-blue-400 tracking-[0.2em] uppercase bg-blue-500/5 border border-blue-500/10 px-3.5 py-1.5 rounded-full w-fit block shadow-sm">
@@ -555,87 +564,6 @@ export default function ContactSection() {
               <p className="text-sm text-slate-400 leading-relaxed font-light">
                 Ready to engineer custom React infrastructure, build scalable cloud architecture, or establish enterprise micro-services? Fill out the portal specs.
               </p>
-            </div>
-
-            {/* Interactive Contact cards with 3D Tilt */}
-            <div ref={cardsRef} className="space-y-5">
-              
-              {/* Card 1: Email */}
-              <TiltCard className="contact-card-anim">
-                <div className="flex items-center space-x-5 bg-slate-900/90 border border-slate-700/50 p-5 rounded-2xl shadow-xl hover:border-blue-500/40 hover:bg-slate-800/90 transition-all duration-300 group">
-                  <div className="h-11 w-11 rounded-xl bg-blue-500/5 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/10 shadow-[0_0_15px_rgba(59,130,246,0)] group-hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:border-blue-500/30 group-hover:text-blue-300 transition-all duration-300">
-                    <Mail className="h-5.5 w-5.5" />
-                  </div>
-                  <div>
-                    <h4 className="text-[9px] font-bold text-slate-500 uppercase tracking-[0.15em]">Secure Terminal</h4>
-                    <p className="text-sm font-semibold text-slate-200 mt-0.5 tracking-wide">contact@nexoratech.com</p>
-                  </div>
-                </div>
-              </TiltCard>
-
-              {/* Card 2: Phone */}
-              <TiltCard className="contact-card-anim">
-                <div className="flex items-center space-x-5 bg-slate-900/90 border border-slate-700/50 p-5 rounded-2xl shadow-xl hover:border-blue-500/40 hover:bg-slate-800/90 transition-all duration-300 group">
-                  <div className="h-11 w-11 rounded-xl bg-blue-500/5 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/10 shadow-[0_0_15px_rgba(59,130,246,0)] group-hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:border-blue-500/30 group-hover:text-blue-300 transition-all duration-300">
-                    <Phone className="h-5.5 w-5.5" />
-                  </div>
-                  <div>
-                    <h4 className="text-[9px] font-bold text-slate-500 uppercase tracking-[0.15em]">Direct Trunk</h4>
-                    <p className="text-sm font-semibold text-slate-200 mt-0.5 tracking-wide">+1 (555) 019-2834</p>
-                  </div>
-                </div>
-              </TiltCard>
-
-              {/* Card 3: HQ Location */}
-              <TiltCard className="contact-card-anim">
-                <div className="flex items-center space-x-5 bg-slate-900/90 border border-slate-700/50 p-5 rounded-2xl shadow-xl hover:border-blue-500/40 hover:bg-slate-800/90 transition-all duration-300 group">
-                  <div className="h-11 w-11 rounded-xl bg-blue-500/5 text-blue-400 flex items-center justify-center shrink-0 border border-blue-500/10 shadow-[0_0_15px_rgba(59,130,246,0)] group-hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] group-hover:border-blue-500/30 group-hover:text-blue-300 transition-all duration-300">
-                    <MapPin className="h-5.5 w-5.5" />
-                  </div>
-                  <div>
-                    <h4 className="text-[9px] font-bold text-slate-500 uppercase tracking-[0.15em]">HQ Coordinates</h4>
-                    <p className="text-sm font-semibold text-slate-200 mt-0.5 tracking-wide">100 Tech Plaza, San Francisco, CA</p>
-                  </div>
-                </div>
-              </TiltCard>
-            </div>
-
-            {/* Social Media Links with Magnetic interaction */}
-            <div className="pt-2 flex items-center space-x-4">
-              <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-slate-500">Nodes:</span>
-              
-              <MagneticWrapper>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="h-10 w-10 rounded-full bg-white/[0.01] border border-white/[0.05] hover:border-blue-500/30 hover:bg-blue-500/5 text-slate-400 hover:text-blue-400 flex items-center justify-center transition-colors duration-300 shadow-lg"
-                >
-                  <Github className="h-4.5 w-4.5" />
-                </a>
-              </MagneticWrapper>
-
-              <MagneticWrapper>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="h-10 w-10 rounded-full bg-white/[0.01] border border-white/[0.05] hover:border-blue-500/30 hover:bg-blue-500/5 text-slate-400 hover:text-blue-400 flex items-center justify-center transition-colors duration-300 shadow-lg"
-                >
-                  <Linkedin className="h-4.5 w-4.5" />
-                </a>
-              </MagneticWrapper>
-
-              <MagneticWrapper>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="h-10 w-10 rounded-full bg-white/[0.01] border border-white/[0.05] hover:border-blue-500/30 hover:bg-blue-500/5 text-slate-400 hover:text-blue-400 flex items-center justify-center transition-colors duration-300 shadow-lg"
-                >
-                  <Twitter className="h-4.5 w-4.5" />
-                </a>
-              </MagneticWrapper>
             </div>
 
           </div>
@@ -871,11 +799,11 @@ export default function ContactSection() {
               </h3>
               
               {/* Body */}
-              <p className="text-sm text-slate-400 leading-relaxed mb-2 font-light z-10 relative">
+              <p className="text-sm text-slate-300 leading-relaxed mb-1 font-light z-10 relative">
                 Your message has been submitted successfully.
               </p>
-              <p className="text-xs text-slate-500 leading-relaxed mb-6 font-light z-10 relative">
-                Thank you for contacting Nexora Technologies. Our team has received your inquiry and will get back to you shortly.
+              <p className="text-sm text-slate-400 leading-relaxed mb-6 font-light z-10 relative">
+                Our team will contact you shortly.
               </p>
 
               {/* Close Button */}
@@ -889,6 +817,25 @@ export default function ContactSection() {
             </motion.div>
 
           </div>
+        )}
+      </AnimatePresence>
+
+      {/* Toast Notification Backup */}
+      <AnimatePresence>
+        {toast && (
+          <motion.div
+            initial={{ opacity: 0, y: -20, x: 20 }}
+            animate={{ opacity: 1, y: 0, x: 0 }}
+            exit={{ opacity: 0, y: -20, x: 20 }}
+            className={`fixed top-6 right-6 z-[10000] flex items-center gap-3 px-5 py-3.5 rounded-xl border shadow-xl backdrop-blur-md ${
+              toast.type === "success"
+                ? "bg-emerald-950/90 border-emerald-500/30 text-emerald-300"
+                : "bg-rose-950/90 border-rose-500/30 text-rose-300"
+            }`}
+          >
+            <CheckCircle2 className={`h-4.5 w-4.5 ${toast.type === "success" ? "text-emerald-400" : "text-rose-400"}`} />
+            <span className="text-xs font-semibold">{toast.message}</span>
+          </motion.div>
         )}
       </AnimatePresence>
 

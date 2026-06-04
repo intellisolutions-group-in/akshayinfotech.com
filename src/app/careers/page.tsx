@@ -66,7 +66,7 @@ export default function CareersPage() {
   const [hoveredBenefit, setHoveredBenefit] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "Careers | Nexora Technologies";
+    document.title = "Careers | Akshay Infotech";
   }, []);
 
   const employeeJourney = [
@@ -95,7 +95,7 @@ export default function CareersPage() {
   ];
 
   const employeeStories = [
-    { name: "Kaelen Mercer", role: "Staff DevOps Architect", quote: "Nexora cut out the standard management friction. I can spend my days refactoring Kubernetes configs and Terraform modules instead of attending endless planning loops.", avatar: "KM" },
+    { name: "Kaelen Mercer", role: "Staff DevOps Architect", quote: "Akshay cut out the standard management friction. I can spend my days refactoring Kubernetes configs and Terraform modules instead of attending endless planning loops.", avatar: "KM" },
     { name: "Elena Rostova", role: "Chief Systems Architect", quote: "Our engineering guilds are structured to value real technical performance. We run tests, analyze latency logs, and optimize database syncs with complete autonomy.", avatar: "ER" }
   ];
 
@@ -138,7 +138,7 @@ export default function CareersPage() {
       {/* Background Watermark Vertical Left */}
       <div className="absolute top-12 left-6 h-[400px] w-[100px] pointer-events-none select-none overflow-hidden -z-10 origin-left">
         <div className="text-[100px] font-black tracking-widest text-indigo-500/[0.02] uppercase transform rotate-90 origin-left">
-          NEXORA JOBS
+          AKSHAY JOBS
         </div>
       </div>
 
@@ -153,7 +153,7 @@ export default function CareersPage() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.06)_0%,transparent_60%)] pointer-events-none" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.006)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.006)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 
-      {/* Page Header (Why Join Nexora) */}
+      {/* Page Header (Why Join Akshay) */}
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-20 text-center">
         <div className="max-w-3xl mx-auto space-y-6">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-semibold text-indigo-400 uppercase tracking-widest">
@@ -169,7 +169,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* ---------------- SECTION: Why Join Nexora ---------------- */}
+      {/* ---------------- SECTION: Why Join Akshay ---------------- */}
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24 text-left">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
@@ -185,7 +185,7 @@ export default function CareersPage() {
             <Terminal className="h-8 w-8 text-indigo-400" />
             <h4 className="text-lg font-bold text-white">Interactive Terminal Mock</h4>
             <div className="bg-slate-950 p-4 rounded-xl border border-white/10 font-mono text-[11px] text-slate-400 space-y-1">
-              <div>$ nexora team --status</div>
+              <div>$ akshay team --status</div>
               <div className="text-indigo-400">⚡ Retrieving active developer guild metrics...</div>
               <div>- Database latency target: &lt;15ms [OK]</div>
               <div>- Concurrent test pipeline slots: 24 [OK]</div>

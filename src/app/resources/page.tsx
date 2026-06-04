@@ -26,7 +26,7 @@ const resourcesTypes = [
 
 export default function ResourcesOverview() {
   React.useEffect(() => {
-    document.title = "Resources | Nexora Technologies";
+    document.title = "Resources | Akshay Infotech";
   }, []);
 
   return (
@@ -39,7 +39,7 @@ export default function ResourcesOverview() {
             Knowledge Hub
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-text-main tracking-tight mb-6">
-            Nexora <span className="text-gradient">Resources</span>
+            Akshay <span className="text-gradient">Resources</span>
           </h1>
           <p className="text-lg text-text-body max-w-3xl mx-auto leading-relaxed">
             Gain deep engineering knowledge, read real-world technical success stories, and stay up to date with modern software and cloud architectures.

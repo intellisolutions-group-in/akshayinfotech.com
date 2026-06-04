@@ -52,7 +52,7 @@ const faqs = [
 
 export default function MobileDevelopmentPage() {
   useEffect(() => {
-    document.title = "Mobile-First Application Development | Nexora Technologies";
+    document.title = "Mobile-First Application Development | Akshay Infotech";
   }, []);
 
   return (
@@ -74,7 +74,7 @@ export default function MobileDevelopmentPage() {
                 </span>
               </h1>
               <p className="text-sm sm:text-base text-neutral-400 max-w-2xl leading-relaxed">
-                Nexora builds high-performance, responsive mobile applications for iOS and Android. By leveraging cross-platform frameworks and coding native module integrations, we deliver robust app performance.
+                Akshay builds high-performance, responsive mobile applications for iOS and Android. By leveraging cross-platform frameworks and coding native module integrations, we deliver robust app performance.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -110,7 +110,7 @@ export default function MobileDevelopmentPage() {
                 {/* Phone Screen Mockup Content */}
                 <div className="flex-grow pt-8 flex flex-col justify-between h-full font-mono text-[10px] text-neutral-400 space-y-4">
                   <div className="bg-neutral-900/60 p-3 rounded-2xl border border-neutral-800/80">
-                    <div className="text-[9px] text-primary font-bold uppercase tracking-wider mb-1">Nexora Mobile App</div>
+                    <div className="text-[9px] text-primary font-bold uppercase tracking-wider mb-1">Akshay Mobile App</div>
                     <div className="text-white text-xs font-bold">User Dashboard</div>
                   </div>
                   

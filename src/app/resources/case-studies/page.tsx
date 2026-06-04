@@ -14,7 +14,7 @@ export default function CaseStudiesPage() {
 
   // Document Title
   useEffect(() => {
-    document.title = "Case Studies | Nexora Technologies";
+    document.title = "Case Studies | Akshay Infotech";
   }, []);
 
   const learningRoadmap = [
@@ -78,7 +78,7 @@ export default function CaseStudiesPage() {
 
   const faqs = [
     {
-      q: "How does Nexora guarantee zero data loss during financial database syncs?",
+      q: "How does Akshay guarantee zero data loss during financial database syncs?",
       a: "We configure double-write database syncs. Transactions are written to both old databases and new AWS replicas, using Kafka broker logs to reconcile transaction order."
     },
     {
@@ -98,14 +98,14 @@ export default function CaseStudiesPage() {
       <div className="absolute bottom-4 right-4 h-[300px] w-[300px] pointer-events-none select-none overflow-hidden -z-20 opacity-[0.022]">
         <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" className="text-blue-400">
           <rect x="15" y="15" width="70" height="70" rx="12" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M 30 65 L 45 35 L 55 55 L 70 25" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          <path d="M 30 72 L 50 28 L 70 72 M 40 55 H 60" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       </div>
 
       {/* Center Giant Transparent Watermark */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden -z-10">
         <div className="text-[10vw] font-black tracking-widest text-blue-500/[0.015] blur-[1px] uppercase">
-          NEXORA SOLUTIONS
+          AKSHAY SOLUTIONS
         </div>
       </div>
 
@@ -317,7 +317,7 @@ export default function CaseStudiesPage() {
         <div className="p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-750 rounded-3xl text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
           <h4 className="text-xl sm:text-2xl font-bold mb-2">Want to build similar systems?</h4>
-          <p className="text-xs sm:text-sm text-blue-155 mb-8 max-w-lg mx-auto font-light leading-relaxed">Book a scoping call with a Nexora systems architect to review your legacy constraints.</p>
+          <p className="text-xs sm:text-sm text-blue-155 mb-8 max-w-lg mx-auto font-light leading-relaxed">Book a scoping call with a Akshay systems architect to review your legacy constraints.</p>
           <Link 
             href="/contact"
             className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-blue-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-blue-900/20"

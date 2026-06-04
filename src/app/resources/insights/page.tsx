@@ -15,7 +15,7 @@ export default function KnowledgeHubPage() {
 
   // Document Title
   useEffect(() => {
-    document.title = "Knowledge Hub | Nexora Technologies";
+    document.title = "Knowledge Hub | Akshay Infotech";
   }, []);
 
   const triggerDownload = (id: string) => {
@@ -118,7 +118,7 @@ export default function KnowledgeHubPage() {
             Technology Publications <br />& Whitepapers
           </h1>
           <p className="text-base text-slate-400 leading-relaxed font-light">
-            In-depth guides, telemetry analysis, and research publications authored by Nexora systems architects. Free resources built to clarify structural scaling queries.
+            In-depth guides, telemetry analysis, and research publications authored by Akshay systems architects. Free resources built to clarify structural scaling queries.
           </p>
         </div>
       </section>
@@ -343,7 +343,7 @@ export default function KnowledgeHubPage() {
         <div className="p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-750 rounded-3xl text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
           <h4 className="text-xl sm:text-2xl font-bold mb-2 font-sans">Want custom telemetry audits?</h4>
-          <p className="text-xs sm:text-sm text-blue-150 mb-8 max-w-lg mx-auto font-light leading-relaxed">Book a consultation session with a Nexora systems engineer to review your legacy database configurations.</p>
+          <p className="text-xs sm:text-sm text-blue-150 mb-8 max-w-lg mx-auto font-light leading-relaxed">Book a consultation session with a Akshay systems engineer to review your legacy database configurations.</p>
           <Link 
             href="/contact"
             className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-blue-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-blue-900/20"

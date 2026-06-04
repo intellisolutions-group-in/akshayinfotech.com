@@ -37,7 +37,7 @@ const faqs = [
     a: "Auditing enterprise systems reveals resource waste, identifies security vulnerabilities, and highlights technical debt, providing a clear path to modernization."
   },
   {
-    q: "How does Nexora calculate ROI for digital transformation migrations?",
+    q: "How does Akshay calculate ROI for digital transformation migrations?",
     a: "We compare legacy hosting and support costs with proposed cloud configurations, modeling compute resource efficiencies and maintenance savings."
   },
   {
@@ -52,7 +52,7 @@ const faqs = [
 
 export default function ITConsultingPage() {
   useEffect(() => {
-    document.title = "IT Consulting & Digital Strategy | Nexora Technologies";
+    document.title = "IT Consulting & Digital Strategy | Akshay Infotech";
   }, []);
 
   return (
@@ -74,7 +74,7 @@ export default function ITConsultingPage() {
                 </span>
               </h1>
               <p className="text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
-                Nexora designs technology modernizations. By auditing legacy software architecture, optimizing license allocations, and coordinating migrations, we align IT infrastructure with business goals.
+                Akshay designs technology modernizations. By auditing legacy software architecture, optimizing license allocations, and coordinating migrations, we align IT infrastructure with business goals.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">

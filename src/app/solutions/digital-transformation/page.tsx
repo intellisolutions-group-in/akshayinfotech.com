@@ -15,7 +15,7 @@ export default function DigitalTransformationJourneyPage() {
 
   // Document Title
   useEffect(() => {
-    document.title = "Digital Transformation Journey | Nexora Technologies";
+    document.title = "Digital Transformation Journey | Akshay Infotech";
   }, []);
 
   // Scroll Telemetry for growing line
@@ -120,7 +120,7 @@ export default function DigitalTransformationJourneyPage() {
       {/* Background Vertical Watermark */}
       <div className="absolute top-12 left-6 h-[400px] w-[200px] pointer-events-none select-none overflow-hidden -z-10 origin-top-left">
         <div className="text-[120px] font-black tracking-widest text-blue-500/[0.025] blur-[0.5px] uppercase transform rotate-90 origin-left mt-24">
-          NEXORA
+          AKSHAY
         </div>
       </div>
 
@@ -146,7 +146,7 @@ export default function DigitalTransformationJourneyPage() {
             Digital Transformation Storytelling
           </h1>
           <p className="text-base text-slate-400 leading-relaxed font-light max-w-2xl mx-auto">
-            Scroll down to explore how Nexora system engineers migrate legacy SQL clusters, proxy backend queues, and scale microservices with zero downtime.
+            Scroll down to explore how Akshay system engineers migrate legacy SQL clusters, proxy backend queues, and scale microservices with zero downtime.
           </p>
         </div>
       </section>
@@ -234,7 +234,7 @@ export default function DigitalTransformationJourneyPage() {
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Comparative Transformation Analysis</h2>
-          <p className="text-sm text-slate-400 mt-2">Observing structural limits before vs after Nexora strangler patterns.</p>
+          <p className="text-sm text-slate-400 mt-2">Observing structural limits before vs after Akshay strangler patterns.</p>
         </div>
 
         <div className="overflow-x-auto border border-white/10 rounded-2xl bg-slate-900/50 backdrop-blur-md">
@@ -314,7 +314,7 @@ export default function DigitalTransformationJourneyPage() {
         <div className="p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
           <h4 className="text-xl sm:text-2xl font-bold mb-2">Ready to modernise your legacy setup?</h4>
-          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Arrange a structural audit of database code limits and proxy configuration checkpoints with Nexora engineers.</p>
+          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Arrange a structural audit of database code limits and proxy configuration checkpoints with Akshay engineers.</p>
           <Link 
             href="/contact"
             className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-blue-750 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-blue-900/20"

@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { Cpu, CheckCircle, HelpCircle, ArrowRight, GitFork, Users, MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AuraFlow | AuraDev Systems",
+  title: "AuraFlow | Akshay Infotech",
   description: "Cognitive AI Agent Platform & Visual Workflow Builder. Deploy conversational AI chatbots, automate email parsing, and link databases in minutes.",
 };
 

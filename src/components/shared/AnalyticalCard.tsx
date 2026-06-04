@@ -376,22 +376,10 @@ export default function AnalyticalCard({
             >
               {title}
             </h3>
-            <p className="text-xs text-slate-500 leading-relaxed line-clamp-3">
+            <p className="text-xs text-slate-500 leading-relaxed line-clamp-5">
               {description}
             </p>
           </div>
-
-          {author && (
-            <div className="flex items-center gap-2 py-2 border-t border-slate-100/60">
-              <div className="relative h-6 w-6 rounded-full overflow-hidden border border-slate-100 shrink-0">
-                <img src={author.avatar} alt={author.name} className="h-full w-full object-cover" />
-              </div>
-              <div className="flex flex-col min-w-0">
-                <span className="text-[10px] font-bold text-slate-800 leading-tight">{author.name}</span>
-                {date && <span className="text-[8px] font-medium text-slate-400">{date}</span>}
-              </div>
-            </div>
-          )}
 
           {/* CTA — Always Visible, arrow animates on hover */}
           {ctaHref && (

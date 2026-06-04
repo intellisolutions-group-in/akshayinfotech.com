@@ -15,7 +15,7 @@ export default function TechnologiesPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    document.title = "Technologies | Nexora Technologies";
+    document.title = "Technologies | Akshay Infotech";
   }, []);
 
   const stackCategories = [
@@ -265,7 +265,7 @@ export default function TechnologiesPage() {
             <div className="h-3 w-3 rounded-full bg-green-500/80" />
           </div>
           <div className="font-mono text-[11px] text-slate-400 space-y-1.5">
-            <div>$ nexora stack --audit</div>
+            <div>$ akshay stack --audit</div>
             <div className="text-cyan-400">⚡ Scanning active technology stack...</div>
             <div> </div>
             <div>Frontend:     React 19 + Next.js 15 (Turbopack)  <span className="text-emerald-400">[OK]</span></div>

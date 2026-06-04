@@ -14,7 +14,7 @@ export default function EnterpriseArchitecturePage() {
 
   // Document Title
   useEffect(() => {
-    document.title = "Enterprise Architecture | Nexora Technologies";
+    document.title = "Enterprise Architecture | Akshay Infotech";
   }, []);
 
   const architectureLayers = [
@@ -67,7 +67,7 @@ export default function EnterpriseArchitecturePage() {
 
   const faqs = [
     {
-      q: "How does Nexora protect transaction databases from data loss during sync?",
+      q: "How does Akshay protect transaction databases from data loss during sync?",
       a: "We configure double-write databases. Our application writes logs to both local database nodes and new AWS cloud replicas, resolving transaction drift using Kafka message brokers."
     },
     {
@@ -86,7 +86,7 @@ export default function EnterpriseArchitecturePage() {
       {/* Giant Diagonal Watermark branding placement */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-12 pointer-events-none select-none overflow-hidden -z-10 w-full text-center">
         <div className="text-[12vw] font-black tracking-widest text-indigo-500/[0.022] blur-[1px] uppercase">
-          NEXORA TECHNOLOGIES
+          AKSHAY INFOTECH
         </div>
       </div>
 
@@ -180,7 +180,7 @@ export default function EnterpriseArchitecturePage() {
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Cloud Infrastructure Comparison</h2>
-          <p className="text-sm text-slate-400 mt-2">How Nexora container grids outperform static legacy virtualization setups.</p>
+          <p className="text-sm text-slate-400 mt-2">How Akshay container grids outperform static legacy virtualization setups.</p>
         </div>
 
         <div className="overflow-x-auto border border-white/10 rounded-2xl bg-slate-900/50 backdrop-blur-md">
@@ -189,7 +189,7 @@ export default function EnterpriseArchitecturePage() {
               <tr className="border-b border-white/10 bg-slate-950/50">
                 <th className="p-4 font-bold text-slate-400">Architectural Metric</th>
                 <th className="p-4 font-bold text-red-400">Standard Virtual Machines</th>
-                <th className="p-4 font-bold text-emerald-400">Nexora Managed Cluster</th>
+                <th className="p-4 font-bold text-emerald-400">Akshay Managed Cluster</th>
               </tr>
             </thead>
             <tbody>
@@ -260,7 +260,7 @@ export default function EnterpriseArchitecturePage() {
         <div className="p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl text-white shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
           <h4 className="text-xl sm:text-2xl font-bold mb-2">Ready to deploy secure cloud clusters?</h4>
-          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Analyze VM workloads, database queries, and network security boundaries with a Nexora cloud engineer.</p>
+          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Analyze VM workloads, database queries, and network security boundaries with a Akshay cloud engineer.</p>
           <Link 
             href="/contact"
             className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-blue-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-blue-900/20"

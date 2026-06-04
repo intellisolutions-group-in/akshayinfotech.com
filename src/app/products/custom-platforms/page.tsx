@@ -15,7 +15,7 @@ const benefits = [
 
 export default function CustomPlatformsPage() {
   React.useEffect(() => {
-    document.title = "Custom Platforms | Nexora Technologies";
+    document.title = "Custom Platforms | Akshay Infotech";
   }, []);
 
   return (

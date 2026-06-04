@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { Brain, CheckCircle, ArrowRight, ShieldCheck, Cpu, Briefcase } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Business Software | Nexora Technologies",
+  title: "Business Software | Akshay Infotech",
   description: "Enterprise business intelligence tools, CRM dashboards, and automated operational software to optimize organizational efficiency.",
 };
 

@@ -113,7 +113,7 @@ function MissionTab() {
     >
       <h3 className="text-xl font-black text-slate-900 tracking-tight">Our Mission</h3>
       <p className="text-sm text-slate-600 leading-relaxed">
-        Nexora Technologies exists to architect and deliver world-class digital infrastructure for enterprises navigating the complexities of modern technology. We bridge the gap between ambitious business objectives and the technical depth required to achieve them.
+        Akshay Infotech exists to architect and deliver world-class digital infrastructure for enterprises navigating the complexities of modern technology. We bridge the gap between ambitious business objectives and the technical depth required to achieve them.
       </p>
       <p className="text-sm text-slate-600 leading-relaxed">
         Our purpose is to enable enterprise-grade transformation by engineering software systems that are not only technically superior but strategically aligned with long-term growth. Every platform we build is designed to scale intelligently, adapt continuously, and perform reliably under real-world conditions.
@@ -298,7 +298,7 @@ function ValuesTab() {
     >
       <h3 className="text-xl font-black text-slate-900 tracking-tight">Core Values</h3>
       <p className="text-sm text-slate-600 leading-relaxed">
-        Six principles that govern how we think, work, and deliver at Nexora Technologies.
+        Six principles that govern how we think, work, and deliver at Akshay Infotech.
         <span className="text-[11px] text-slate-400 ml-1">(Click &ldquo;Read More&rdquo; to expand each value)</span>
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
@@ -351,7 +351,7 @@ export default function AboutSection() {
             >
               <Image
                 src="/about-bg.png"
-                alt="Nexora innovation hub"
+                alt="Akshay innovation hub"
                 fill
                 className="object-cover group-hover:scale-[1.06] transition-transform duration-[800ms]"
                 sizes="(max-width: 1280px) 40vw, 100vw"
@@ -419,7 +419,7 @@ export default function AboutSection() {
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.55 }}
               className="text-base text-slate-500 leading-relaxed"
             >
-              Founded with a vision to redefine software delivery, Nexora Technologies brings together elite product engineers, cloud architects, and UX designers to help companies navigate the complex tech landscape with clean code, robust development, and production-ready applications.
+              Founded with a vision to redefine software delivery, Akshay Infotech brings together elite product engineers, cloud architects, and UX designers to help companies navigate the complex tech landscape with clean code, robust development, and production-ready applications.
             </motion.p>
 
             <motion.div

@@ -52,7 +52,7 @@ const faqs = [
 
 export default function CyberSecurityPage() {
   useEffect(() => {
-    document.title = "Enterprise Cybersecurity & Zero-Trust | Nexora Technologies";
+    document.title = "Enterprise Cybersecurity & Zero-Trust | Akshay Infotech";
   }, []);
 
   return (
@@ -81,7 +81,7 @@ export default function CyberSecurityPage() {
                 </span>
               </h1>
               <p className="text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
-                Nexora builds comprehensive cybersecurity configurations. By designing secure database subnets, enforcing contextual multi-factor checks, and monitoring system traffic, we protect corporate data.
+                Akshay builds comprehensive cybersecurity configurations. By designing secure database subnets, enforcing contextual multi-factor checks, and monitoring system traffic, we protect corporate data.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -208,7 +208,7 @@ encrypted += cipher.final('hex');`}
               Enterprise Risk & Mitigation Matrix
             </h2>
             <p className="text-slate-400 text-xs sm:text-sm mt-2">
-              Evaluate key vulnerability types, business impacts, and Nexora security mitigations.
+              Evaluate key vulnerability types, business impacts, and Akshay security mitigations.
             </p>
           </div>
 
@@ -218,7 +218,7 @@ encrypted += cipher.final('hex');`}
                 <tr>
                   <th className="px-6 py-4 font-semibold uppercase tracking-wider">Vulnerability Type</th>
                   <th className="px-6 py-4 font-semibold uppercase tracking-wider">Business Risk / Impact</th>
-                  <th className="px-6 py-4 font-semibold uppercase tracking-wider">Nexora Security Mitigation</th>
+                  <th className="px-6 py-4 font-semibold uppercase tracking-wider">Akshay Security Mitigation</th>
                   <th className="px-6 py-4 font-semibold uppercase tracking-wider">Residual Risk Status</th>
                 </tr>
               </thead>

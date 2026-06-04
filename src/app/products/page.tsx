@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { Cloud, Zap, ArrowRight, CheckCircle2, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Products | AuraDev Systems",
+  title: "Products | Akshay Infotech",
   description: "Discover our enterprise software products engineered to automate business workflows and orchestrate cloud environments.",
 };
 

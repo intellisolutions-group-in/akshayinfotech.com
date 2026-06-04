@@ -52,7 +52,7 @@ const faqs = [
 
 export default function CloudSolutionsPage() {
   useEffect(() => {
-    document.title = "Cloud Infrastructure & Migration | Nexora Technologies";
+    document.title = "Cloud Infrastructure & Migration | Akshay Infotech";
   }, []);
 
   return (
@@ -74,7 +74,7 @@ export default function CloudSolutionsPage() {
                 </span>
               </h1>
               <p className="text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
-                Nexora designs and manages optimized cloud environments. By writing Terraform configurations and setting up automated scaling rules, we deliver resilient cloud architectures.
+                Akshay designs and manages optimized cloud environments. By writing Terraform configurations and setting up automated scaling rules, we deliver resilient cloud architectures.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -260,12 +260,14 @@ export default function CloudSolutionsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {migrationStages.map((stage, idx) => (
-              <div key={idx} className="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative space-y-4">
-                <div className="text-3xl font-black text-slate-800 absolute top-4 right-6 font-mono select-none">
+              <div key={idx} className="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative overflow-hidden min-h-[220px] flex flex-col justify-between">
+                <div>
+                  <h4 className="text-sm font-bold text-white relative z-10 pr-6">{stage.title}</h4>
+                  <p className="text-xs text-slate-400 leading-relaxed mt-3 relative z-10 font-light">{stage.desc}</p>
+                </div>
+                <div className="text-4xl font-black text-slate-950/40 absolute bottom-3 right-4 font-mono select-none z-0">
                   {stage.phase}
                 </div>
-                <h4 className="text-sm font-bold text-white pr-8">{stage.title}</h4>
-                <p className="text-xs text-slate-400 leading-relaxed">{stage.desc}</p>
               </div>
             ))}
           </div>

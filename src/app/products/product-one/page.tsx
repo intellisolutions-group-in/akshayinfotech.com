@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { Cloud, CheckCircle, Database, ShieldAlert, Cpu, ArrowRight, HelpCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AuraCloud | AuraDev Systems",
+  title: "AuraCloud | Akshay Infotech",
   description: "Enterprise Multi-Cloud Orchestration & Real-Time Sync. Deploy resources across AWS, Google Cloud, and Azure with zero-downtime database replication.",
 };
 

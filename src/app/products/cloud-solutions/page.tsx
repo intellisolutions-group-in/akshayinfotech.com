@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { Cloud, CheckCircle, ArrowRight, Server, ShieldAlert, Cpu } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Cloud Solutions | Nexora Technologies",
+  title: "Cloud Solutions | Akshay Infotech",
   description: "Secure, elastic multi-cloud environments, container orchestrations, serverless pipelines, and deployment scaling solutions.",
 };
 

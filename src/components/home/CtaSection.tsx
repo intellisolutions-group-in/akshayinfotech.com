@@ -67,7 +67,7 @@ export default function CtaSection() {
             {/* Tagline Badge */}
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/15 px-3.5 py-1.5 rounded-full text-xs font-semibold text-blue-200 w-fit mx-auto">
               <Sparkles className="h-3.5 w-3.5 text-blue-300 animate-pulse" />
-              <span>Partner With Nexora</span>
+              <span>Partner With Akshay</span>
             </div>
 
             {/* Title */}
@@ -80,7 +80,7 @@ export default function CtaSection() {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto font-light">
-              Partner with Nexora Technologies to translate complex engineering challenges into secure, scalable, and high-performance digital realities.
+              Partner with Akshay Infotech to translate complex engineering challenges into secure, scalable, and high-performance digital realities.
             </p>
 
             {/* CTA Buttons */}
