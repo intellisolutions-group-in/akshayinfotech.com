@@ -6,8 +6,8 @@ import { Cpu, Linkedin, Twitter, Facebook, Github, Instagram, Youtube } from "lu
 import { motion } from "framer-motion";
 import MagneticWrapper from "@/components/ui/MagneticWrapper";
 
-const logoText = "Nexora".split("");
-const techText = "Technologies".split("");
+const logoText = "Akshay".split("");
+const techText = "Infotech".split("");
 
 const logoContainerVariants = {
   initial: {},
@@ -105,7 +105,7 @@ export default function Footer() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            NEXORA
+            AKSHAY
           </motion.div>
         </div>
 
@@ -176,7 +176,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Centered Social Icons */}
-          <div className="flex justify-center items-center flex-wrap gap-4 mb-12">
+          
             {[
               {
                 Icon: Facebook, label: "Facebook",

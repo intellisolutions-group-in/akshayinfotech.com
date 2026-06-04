@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: "Nexora Technologies | Engineering Digital Excellence",
     template: "%s | Nexora Technologies",
   },
-  description: "Nexora Technologies is a premium IT consulting and software engineering firm specializing in enterprise web development, mobile apps, cloud migrations, and AI automation.",
+  description: "Akshay Infotech is a premium IT consulting and software engineering firm specializing in enterprise web development, mobile apps, cloud migrations, and AI automation.",
   keywords: [
     "IT Company",
     "Software Development",
@@ -37,20 +37,20 @@ export const metadata: Metadata = {
     "E-commerce Solutions",
     "Nexora Technologies",
   ],
-  authors: [{ name: "Nexora Technologies Team" }],
-  creator: "Nexora Technologies",
-  publisher: "Nexora Technologies",
+  authors: [{ name: "Akshay Infotech Team" }],
+  creator: "Akshay Infotech",
+  publisher: "Akshay Infotech",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://nexoratech.com"),
+  metadataBase: new URL("https://akshayinfotech.com"),
   openGraph: {
-    title: "Nexora Technologies | Engineering Digital Excellence",
+    title: "Akshay Infotech | Engineering Digital Excellence",
     description: "Enterprise-ready software engineering, cloud computing, AI automation, and custom digital transformation.",
-    url: "https://nexoratech.com",
-    siteName: "Nexora Technologies",
+    url: "https://akshayinfotech.com",
+    siteName: "Akshay Infotech",
     images: [
       {
         url: "/og-image.jpg",
@@ -89,9 +89,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white`}>
         <Preloader />
         <ScrollAnimationProvider />
         <Navbar />

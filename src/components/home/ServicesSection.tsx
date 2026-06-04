@@ -752,7 +752,7 @@ export default function ServicesSection() {
   const floatingStyles = `
     @keyframes cardFloat {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+      50% { transform: translateY(-4px); }
     }
     .float-card-0 { animation: cardFloat 7s ease-in-out infinite; }
     .float-card-1 { animation: cardFloat 8s ease-in-out infinite 0.8s; }
@@ -771,7 +771,7 @@ export default function ServicesSection() {
   `;
 
   return (
-    <section ref={sectionRef} id="services" className="py-28 overflow-hidden relative select-none"
+    <section ref={sectionRef} id="services" className="py-28 overflow-visible relative select-none"
       style={{ background: "linear-gradient(160deg, #070B19 0%, #050814 50%, #03050C 100%)" }}>
       
       {/* Top Blend Transition Overlay */}

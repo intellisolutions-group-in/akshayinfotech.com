@@ -186,14 +186,14 @@ function GlobeBackground() {
   return (
     <div
       ref={mountRef}
-      className="absolute inset-0 w-full h-full pointer-events-none"
+      className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block"
       style={{ zIndex: 0 }}
     />
   );
 }
 
-// --- Interactive 2D Particle Background Canvas ---
-function InteractiveParticles() {
+// --- Directional Glowing Star Field ---
+function StarField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -202,113 +202,113 @@ function InteractiveParticles() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
+    let width = (canvas.width = canvas.offsetWidth);
+    let height = (canvas.height = canvas.offsetHeight);
 
-    const COLORS = [
-      "rgba(59, 130, 246, 0.9)",   // blue
-      "rgba(99, 102, 241, 0.85)",  // indigo
-      "rgba(139, 92, 246, 0.85)",  // purple
-      "rgba(34, 211, 238, 0.8)",   // cyan
-      "rgba(96, 165, 250, 0.9)",   // light blue
-    ];
+    // 4 direction groups: right, left, down, up
+    type Direction = "right" | "left" | "down" | "up";
 
-    const particles: Array<{
-      x: number; y: number;
-      baseX: number; baseY: number;
-      size: number; density: number;
-      color: string; vx: number; vy: number;
-    }> = [];
-
-    const numParticles = 130;
-    const mouse = { x: -1000, y: -1000, radius: 160 };
-
-    for (let i = 0; i < numParticles; i++) {
-      const pX = Math.random() * width;
-      const pY = Math.random() * height;
-      particles.push({
-        x: pX, y: pY, baseX: pX, baseY: pY,
-        size: Math.random() * 3 + 1.5,
-        density: Math.random() * 20 + 5,
-        color: COLORS[Math.floor(Math.random() * COLORS.length)],
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-      });
+    interface Star {
+      x: number;
+      y: number;
+      size: number;
+      speed: number;
+      opacity: number;
+      dir: Direction;
+      tail: number; // tail length multiplier
+      twinkle: number; // phase offset for twinkle
     }
 
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    };
-    const handleMouseLeave = () => { mouse.x = -1000; mouse.y = -1000; };
-    const handleResize = () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+    const isMobile = width < 768;
+    const TOTAL = isMobile ? 60 : 120;
+    const dirs: Direction[] = ["right", "left", "down", "up"];
+
+    const spawnStar = (dir: Direction, randomPos = true): Star => {
+      let x = 0, y = 0;
+      if (dir === "right") { x = randomPos ? Math.random() * width : -20; y = Math.random() * height; }
+      else if (dir === "left") { x = randomPos ? Math.random() * width : width + 20; y = Math.random() * height; }
+      else if (dir === "down") { x = Math.random() * width; y = randomPos ? Math.random() * height : -20; }
+      else { x = Math.random() * width; y = randomPos ? Math.random() * height : height + 20; }
+
+      return {
+        x, y,
+        size: Math.random() * 1.4 + 0.4,
+        speed: Math.random() * 0.6 + 0.3,
+        opacity: Math.random() * 0.55 + 0.3,
+        dir,
+        tail: Math.random() * 8 + 4,
+        twinkle: Math.random() * Math.PI * 2,
+      };
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseleave", handleMouseLeave);
+    const stars: Star[] = [];
+    for (let i = 0; i < TOTAL; i++) {
+      const dir = dirs[i % 4];
+      stars.push(spawnStar(dir, true));
+    }
+
+    const handleResize = () => {
+      width = canvas.width = canvas.offsetWidth;
+      height = canvas.height = canvas.offsetHeight;
+    };
     window.addEventListener("resize", handleResize);
 
     let animationId: number;
+    let frame = 0;
+
     const animate = () => {
       ctx.clearRect(0, 0, width, height);
+      frame++;
 
-      // Draw connection lines between close particles
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 110) {
-            const alpha = (1 - dist / 110) * 0.3;
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(99, 102, 241, ${alpha})`;
-            ctx.lineWidth = 0.6;
-            ctx.stroke();
-          }
-        }
-      }
+      for (const s of stars) {
+        // Twinkle opacity
+        const twinkled = s.opacity * (0.75 + 0.25 * Math.sin(frame * 0.04 + s.twinkle));
 
-      // Draw particles with glow
-      for (let i = 0; i < particles.length; i++) {
-        const p = particles[i];
+        // Move
+        if (s.dir === "right") s.x += s.speed;
+        else if (s.dir === "left") s.x -= s.speed;
+        else if (s.dir === "down") s.y += s.speed;
+        else s.y -= s.speed;
 
-        p.baseX += p.vx;
-        p.baseY += p.vy;
-        if (p.baseX < 0) p.baseX = width;
-        if (p.baseX > width) p.baseX = 0;
-        if (p.baseY < 0) p.baseY = height;
-        if (p.baseY > height) p.baseY = 0;
+        // Wrap around
+        if (s.x > width + 30) { Object.assign(s, spawnStar("right", false)); s.x = -20; }
+        else if (s.x < -30) { Object.assign(s, spawnStar("left", false)); s.x = width + 20; }
+        else if (s.y > height + 30) { Object.assign(s, spawnStar("down", false)); s.y = -20; }
+        else if (s.y < -30) { Object.assign(s, spawnStar("up", false)); s.y = height + 20; }
 
-        const dx = mouse.x - p.x;
-        const dy = mouse.y - p.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        const force = (mouse.radius - distance) / mouse.radius;
+        // Draw tail (motion streak)
+        let tx = s.x, ty = s.y;
+        if (s.dir === "right") tx = s.x - s.tail;
+        else if (s.dir === "left") tx = s.x + s.tail;
+        else if (s.dir === "down") ty = s.y - s.tail;
+        else ty = s.y + s.tail;
 
-        if (distance < mouse.radius) {
-          p.x -= (dx / distance) * force * p.density * 0.8;
-          p.y -= (dy / distance) * force * p.density * 0.8;
-        } else {
-          p.x += (p.baseX - p.x) * 0.05;
-          p.y += (p.baseY - p.y) * 0.05;
-        }
+        const grad = ctx.createLinearGradient(tx, ty, s.x, s.y);
+        grad.addColorStop(0, `rgba(147, 197, 253, 0)`);
+        grad.addColorStop(1, `rgba(219, 234, 254, ${twinkled * 0.5})`);
 
-        // Outer glow halo
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size * 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = p.color.replace(/[\d.]+\)$/, "0.12)");
+        ctx.moveTo(tx, ty);
+        ctx.lineTo(s.x, s.y);
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = s.size * 0.7;
+        ctx.stroke();
+
+        // Glow halo
+        const halo = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.size * 3.5);
+        halo.addColorStop(0, `rgba(186, 230, 253, ${twinkled * 0.45})`);
+        halo.addColorStop(1, `rgba(99, 102, 241, 0)`);
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.size * 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = halo;
         ctx.fill();
 
-        // Core dot with glow
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = p.color.replace(/[\d.]+\)$/, "1)");
+        // Core bright dot
+        ctx.shadowBlur = 6;
+        ctx.shadowColor = `rgba(219, 234, 254, ${twinkled})`;
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
+        ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${twinkled})`;
         ctx.fill();
         ctx.shadowBlur = 0;
       }
@@ -320,8 +320,6 @@ function InteractiveParticles() {
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseleave", handleMouseLeave);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -516,8 +514,8 @@ export default function ContactSection() {
       {/* Three.js Globe in background */}
       <GlobeBackground />
 
-      {/* 2D Interactive Dust Particles */}
-      <InteractiveParticles />
+      {/* Directional Glowing Star Field */}
+      <StarField />
 
       {/* Futuristic Background Spotlights & Gradients */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
@@ -542,7 +540,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         
         {/* Split Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Left Side Info Panel */}
           <div className="lg:col-span-4 space-y-12 flex flex-col justify-between self-stretch">
@@ -642,8 +640,13 @@ export default function ContactSection() {
 
           </div>
 
-          {/* Right Side Glassmorphic Portal Form — pushed to far right, globe visible in center */}
-          <div className="lg:col-span-4 lg:col-start-9">
+          {/* Center Globe Column — only visible on lg+ */}
+          <div className="hidden lg:flex lg:col-span-4 items-center justify-center contact-3d-anim" style={{ minHeight: '420px' }}>
+            {/* Globe renders as absolute background on lg+ — this spacer keeps the grid balanced */}
+          </div>
+
+          {/* Right Side Glassmorphic Portal Form */}
+          <div className="lg:col-span-4">
             <div
               ref={formRef}
               className="relative bg-slate-900/95 border border-slate-700/40 rounded-3xl p-6 sm:p-8 shadow-2xl overflow-hidden"

@@ -9,6 +9,111 @@ import {
   CheckCircle, FileText, Calendar, ChevronRight
 } from "lucide-react";
 
+// --- Directional Glowing Star Field ---
+function StarField() {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    let width = (canvas.width = canvas.offsetWidth);
+    let height = (canvas.height = canvas.offsetHeight);
+
+    type Direction = "right" | "left" | "down" | "up";
+    interface Star {
+      x: number; y: number;
+      size: number; speed: number;
+      opacity: number; dir: Direction;
+      tail: number; twinkle: number;
+    }
+
+    const isMobile = width < 768;
+    const TOTAL = isMobile ? 60 : 120;
+    const dirs: Direction[] = ["right", "left", "down", "up"];
+
+    const spawnStar = (dir: Direction, randomPos = true): Star => {
+      let x = 0, y = 0;
+      if (dir === "right") { x = randomPos ? Math.random() * width : -20; y = Math.random() * height; }
+      else if (dir === "left") { x = randomPos ? Math.random() * width : width + 20; y = Math.random() * height; }
+      else if (dir === "down") { x = Math.random() * width; y = randomPos ? Math.random() * height : -20; }
+      else { x = Math.random() * width; y = randomPos ? Math.random() * height : height + 20; }
+      return {
+        x, y,
+        size: Math.random() * 1.4 + 0.4,
+        speed: Math.random() * 0.6 + 0.3,
+        opacity: Math.random() * 0.55 + 0.3,
+        dir,
+        tail: Math.random() * 8 + 4,
+        twinkle: Math.random() * Math.PI * 2,
+      };
+    };
+
+    const stars: Star[] = [];
+    for (let i = 0; i < TOTAL; i++) stars.push(spawnStar(dirs[i % 4], true));
+
+    const handleResize = () => {
+      width = canvas.width = canvas.offsetWidth;
+      height = canvas.height = canvas.offsetHeight;
+    };
+    window.addEventListener("resize", handleResize);
+
+    let animationId: number;
+    let frame = 0;
+    const animate = () => {
+      ctx.clearRect(0, 0, width, height);
+      frame++;
+      for (const s of stars) {
+        const twinkled = s.opacity * (0.75 + 0.25 * Math.sin(frame * 0.04 + s.twinkle));
+        if (s.dir === "right") s.x += s.speed;
+        else if (s.dir === "left") s.x -= s.speed;
+        else if (s.dir === "down") s.y += s.speed;
+        else s.y -= s.speed;
+
+        if (s.x > width + 30) { Object.assign(s, spawnStar("right", false)); s.x = -20; }
+        else if (s.x < -30) { Object.assign(s, spawnStar("left", false)); s.x = width + 20; }
+        else if (s.y > height + 30) { Object.assign(s, spawnStar("down", false)); s.y = -20; }
+        else if (s.y < -30) { Object.assign(s, spawnStar("up", false)); s.y = height + 20; }
+
+        let tx = s.x, ty = s.y;
+        if (s.dir === "right") tx = s.x - s.tail;
+        else if (s.dir === "left") tx = s.x + s.tail;
+        else if (s.dir === "down") ty = s.y - s.tail;
+        else ty = s.y + s.tail;
+
+        const grad = ctx.createLinearGradient(tx, ty, s.x, s.y);
+        grad.addColorStop(0, `rgba(147, 197, 253, 0)`);
+        grad.addColorStop(1, `rgba(219, 234, 254, ${twinkled * 0.5})`);
+        ctx.beginPath(); ctx.moveTo(tx, ty); ctx.lineTo(s.x, s.y);
+        ctx.strokeStyle = grad; ctx.lineWidth = s.size * 0.7; ctx.stroke();
+
+        const halo = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.size * 3.5);
+        halo.addColorStop(0, `rgba(186, 230, 253, ${twinkled * 0.45})`);
+        halo.addColorStop(1, `rgba(99, 102, 241, 0)`);
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.size * 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = halo; ctx.fill();
+
+        ctx.shadowBlur = 6;
+        ctx.shadowColor = `rgba(219, 234, 254, ${twinkled})`;
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${twinkled})`; ctx.fill();
+        ctx.shadowBlur = 0;
+      }
+      animationId = requestAnimationFrame(animate);
+    };
+    animate();
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 0 }} />;
+}
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -20,99 +125,10 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   // Document Title
   useEffect(() => {
     document.title = "Contact Us | Nexora Technologies";
-  }, []);
-
-  // Canvas Mouse Tracker Particles Effect
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    let animationFrameId: number;
-    let width = (canvas.width = canvas.offsetWidth);
-    let height = (canvas.height = canvas.offsetHeight);
-
-    const particles: Array<{
-      x: number;
-      y: number;
-      size: number;
-      color: string;
-      speedX: number;
-      speedY: number;
-      alpha: number;
-    }> = [];
-
-    const handleResize = () => {
-      if (!canvas) return;
-      width = canvas.width = canvas.offsetWidth;
-      height = canvas.height = canvas.offsetHeight;
-    };
-    window.addEventListener("resize", handleResize);
-
-    // Initialize particles
-    for (let i = 0; i < 40; i++) {
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        size: Math.random() * 2 + 1,
-        color: "rgba(99, 102, 241, 0.15)",
-        speedX: (Math.random() - 0.5) * 0.3,
-        speedY: (Math.random() - 0.5) * 0.3,
-        alpha: Math.random() * 0.5 + 0.1
-      });
-    }
-
-    const mouse = { x: -1000, y: -1000 };
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      mouse.x = e.clientX - rect.left;
-      mouse.y = e.clientY - rect.top;
-    };
-    canvas.addEventListener("mousemove", handleMouseMove);
-
-    const render = () => {
-      ctx.clearRect(0, 0, width, height);
-
-      // Draw connections
-      particles.forEach((p) => {
-        p.x += p.speedX;
-        p.y += p.speedY;
-
-        if (p.x < 0 || p.x > width) p.speedX *= -1;
-        if (p.y < 0 || p.y > height) p.speedY *= -1;
-
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(99, 102, 241, ${p.alpha})`;
-        ctx.fill();
-
-        // Mouse attraction/repulsion line
-        const distToMouse = Math.hypot(p.x - mouse.x, p.y - mouse.y);
-        if (distToMouse < 120) {
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = `rgba(99, 102, 241, ${(1 - distToMouse / 120) * 0.15})`;
-          ctx.stroke();
-        }
-      });
-
-      animationFrameId = requestAnimationFrame(render);
-    };
-    render();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      if (canvas) canvas.removeEventListener("mousemove", handleMouseMove);
-      cancelAnimationFrame(animationFrameId);
-    };
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -180,6 +196,8 @@ export default function ContactPage() {
 
   return (
     <div className="relative min-h-screen bg-[#030712] text-white pt-28 pb-16 overflow-hidden">
+      {/* Directional Star Field */}
+      <StarField />
       
       {/* Background Watermark Vertical Left */}
       <div className="absolute top-12 left-6 h-[400px] w-[100px] pointer-events-none select-none overflow-hidden -z-10 origin-left">
@@ -221,8 +239,6 @@ export default function ContactPage() {
           
           {/* Left: Input Form */}
           <div className="lg:col-span-7 bg-slate-950/80 border border-white/10 rounded-3xl p-8 backdrop-blur-xl relative overflow-hidden shadow-2xl">
-            {/* Canvas overlay */}
-            <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none z-0" />
             
             <div className="relative z-10 text-left">
               <h3 className="text-lg font-bold text-white mb-6">Send A Message</h3>
