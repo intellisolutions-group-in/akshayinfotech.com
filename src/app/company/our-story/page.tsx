@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 export default function OurStoryPage() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [element, setElement] = useState<HTMLDivElement | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function OurStoryPage() {
   }, []);
 
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: element ? { current: element } : undefined,
     offset: ["start start", "end end"]
   });
 
@@ -92,7 +92,7 @@ export default function OurStoryPage() {
   ];
 
   return (
-    <div ref={containerRef} className="relative min-h-screen bg-[#030712] text-white pt-28 pb-16 overflow-hidden">
+    <div ref={(node) => { if (node) setElement(node); }} className="relative min-h-screen bg-[#030712] text-white pt-28 pb-16 overflow-hidden">
       
       {/* Background Watermark Vertical Left */}
       <div className="absolute top-24 left-6 h-[400px] w-[100px] pointer-events-none select-none overflow-hidden -z-10 origin-left">

@@ -412,7 +412,7 @@ function WhyPartnerHorizontalCard({
 }
 
 export default function WhyChooseUs() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [element, setElement] = useState<HTMLElement | null>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const [scrollRange, setScrollRange] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -447,7 +447,7 @@ export default function WhyChooseUs() {
 
   // Set up Framer Motion scroll binding
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: element ? { current: element } : undefined,
   });
 
   // Smooth spring physics for the horizontal scroll translation
@@ -464,7 +464,7 @@ export default function WhyChooseUs() {
   });
 
   return (
-    <section ref={containerRef} className="relative h-[300vh] bg-slate-950 text-white overflow-visible">
+    <section ref={(node) => { if (node) setElement(node); }} className="relative h-[300vh] bg-slate-950 text-white overflow-visible">
       {/* Sticky container that keeps section in viewport during scroll-storytelling */}
       <div className="sticky top-0 h-screen w-full flex flex-col justify-between py-12 md:py-16 overflow-hidden z-10">
         
@@ -552,9 +552,9 @@ export default function WhyChooseUs() {
               <button
                 key={idx}
                 onClick={() => {
-                  if (containerRef.current) {
-                    const sectionTop = containerRef.current.offsetTop;
-                    const sectionHeight = containerRef.current.scrollHeight - window.innerHeight;
+                  if (element) {
+                    const sectionTop = element.offsetTop;
+                    const sectionHeight = element.scrollHeight - window.innerHeight;
                     const targetScroll = sectionTop + (idx / (cards.length - 1)) * sectionHeight;
                     window.scrollTo({
                       top: targetScroll,

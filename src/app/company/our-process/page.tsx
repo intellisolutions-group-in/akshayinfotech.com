@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 export default function OurProcess() {
-  const timelineRef = useRef<HTMLDivElement>(null);
+  const [element, setElement] = useState<HTMLElement | null>(null);
   const [activePhase, setActivePhase] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -20,7 +20,7 @@ export default function OurProcess() {
   }, []);
 
   const { scrollYProgress } = useScroll({
-    target: timelineRef,
+    target: element ? { current: element } : undefined,
     offset: ["start center", "end center"]
   });
 
@@ -178,7 +178,7 @@ export default function OurProcess() {
       </section>
 
       {/* ═══════════════ 3. SIX-PHASE DEEP DIVE ═══════════════ */}
-      <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24">
+      <section ref={(node) => { if (node) setElement(node); }} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">The Six-Phase Lifecycle</h2>
           <p className="text-sm text-slate-400 mt-2">Click each phase to explore deliverables, tooling, and detailed explanations.</p>

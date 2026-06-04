@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 export default function DigitalTransformationJourneyPage() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [element, setElement] = useState<HTMLElement | null>(null);
   const [activeTab, setActiveTab] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -20,7 +20,7 @@ export default function DigitalTransformationJourneyPage() {
 
   // Scroll Telemetry for growing line
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: element ? { current: element } : undefined,
     offset: ["start center", "end center"]
   });
 
@@ -152,7 +152,7 @@ export default function DigitalTransformationJourneyPage() {
       </section>
 
       {/* Scroll Triggered Roadmap Journey (Vertical Timeline) */}
-      <section ref={containerRef} className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 mb-24">
+      <section ref={(node) => { if (node) setElement(node); }} className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 mb-24">
         
         {/* Timeline Center Line */}
         <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] bg-slate-900 transform -translate-x-1/2">

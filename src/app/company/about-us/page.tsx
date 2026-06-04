@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 export default function AboutUsPage() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const [element, setElement] = useState<HTMLElement | null>(null);
   const [activeValue, setActiveValue] = useState<number>(0);
   const [calculatorInput, setCalculatorInput] = useState({ servers: 10, databaseSize: 5 });
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -24,7 +24,7 @@ export default function AboutUsPage() {
 
   // Scroll Progress for growing timeline line
   const { scrollYProgress } = useScroll({
-    target: scrollRef,
+    target: element ? { current: element } : undefined,
     offset: ["start center", "end center"]
   });
 
@@ -267,7 +267,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* ---------------- 7. GROWTH JOURNEY (TIMELINE) ---------------- */}
-      <section ref={scrollRef} className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 mb-24">
+      <section ref={(node) => { if (node) setElement(node); }} className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 mb-24">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Our Timeline Journey</h2>
           <p className="text-sm text-slate-400 mt-2">Watch our key checkpoints and operational growth patterns reveal as you scroll.</p>
