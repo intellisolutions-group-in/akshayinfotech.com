@@ -71,7 +71,7 @@ const privacySections = [
     color: "#EC4899",
     title: "Your Rights",
     items: [
-      { label: "Right to Access", desc: "Request a copy of all personal data we hold about you at any time by emailing privacy@akshayinfotech.com." },
+      { label: "Right to Access", desc: "Request a copy of all personal data we hold about you at any time by emailing info@akshayinfoctech.net." },
       { label: "Right to Rectification", desc: "Request correction of inaccurate or incomplete personal data in our records." },
       { label: "Right to Erasure", desc: "Request deletion of your personal data, subject to our legal retention obligations." },
       { label: "Right to Portability", desc: "Receive your personal data in a machine-readable format (JSON or CSV) upon request." },
@@ -84,7 +84,7 @@ const privacySections = [
     title: "GDPR Compliance",
     items: [
       { label: "Legal Basis", desc: "We process personal data under legitimate interest, contractual necessity, legal obligation, and explicit consent where required." },
-      { label: "Data Protection Officer", desc: "Our DPO can be reached at dpo@akshayinfotech.com for any GDPR-related inquiries or complaints." },
+      { label: "Data Protection Officer", desc: "Our DPO can be reached at info@akshayinfoctech.net for any GDPR-related inquiries or complaints." },
       { label: "Cross-Border Transfers", desc: "Data transfers outside the EEA are protected by Standard Contractual Clauses (SCCs) approved by the European Commission." },
       { label: "Supervisory Authority", desc: "EU residents have the right to lodge complaints with their national Data Protection Authority." },
     ],
@@ -210,11 +210,8 @@ export default function PrivacyPolicyPage() {
         <div className="max-w-2xl mx-auto px-6 text-center">
           <h2 className="text-xl font-bold text-slate-900 mb-3">Questions About Your Privacy?</h2>
           <p className="text-sm text-slate-500 mb-6">Our Data Protection Officer is available to address any privacy-related concerns you may have.</p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a href="mailto:privacy@akshayinfotech.com" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white text-sm font-semibold rounded-xl hover:bg-blue-700 transition-colors">
-              <Shield className="h-4 w-4" /> Contact DPO
-            </a>
-            <a href="/contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-200 text-slate-700 text-sm font-semibold rounded-xl hover:bg-slate-50 transition-colors">
+          <div className="flex justify-center">
+            <a href="/contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white text-sm font-semibold rounded-xl hover:bg-blue-700 transition-colors">
               General Inquiry
             </a>
           </div>
