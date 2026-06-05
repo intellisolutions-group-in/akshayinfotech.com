@@ -73,7 +73,7 @@ const sections = [
     icon: Mail,
     color: "#3B82F6",
     title: "10. Contact Information",
-    content: `For questions, concerns, or legal notices regarding these Terms and Conditions, please contact us:\n\nAkshay Infotech Legal Department\nEmail: legal@akshayinfotech.com\nPhone: +1 (555) 019-2834\nAddress: 100 Tech Plaza, San Francisco, CA 94107\n\nFor general inquiries: contact@akshayinfotech.com\nFor security matters: security@akshayinfotech.com\n\nWe aim to respond to all legal inquiries within 5 business days.`,
+    content: `For questions, concerns, or legal notices regarding these Terms and Conditions, please contact us:\n\nAkshay Infotech Legal Department\nEmail: info@akshayinfoctech.net\nPhone: +1 (555) 019-2834\nAddress: 100 Tech Plaza, San Francisco, CA 94107\n\nFor general inquiries: info@akshayinfoctech.net\nFor security matters: info@akshayinfoctech.net\n\nWe aim to respond to all legal inquiries within 5 business days.`,
   },
 ];
 

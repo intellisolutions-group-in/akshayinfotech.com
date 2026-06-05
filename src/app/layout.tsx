@@ -123,7 +123,7 @@ export default function RootLayout({
         "image": "https://akshayinfotech.com/logo.svg",
         "priceRange": "$$$",
         "telephone": "+1 (617) 555-0192",
-        "email": "info@domain.com",
+        "email": "info@akshayinfoctech.net",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "75 State Street, Suite 100",
