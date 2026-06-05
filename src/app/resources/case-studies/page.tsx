@@ -69,7 +69,7 @@ export default function CaseStudiesPage() {
       challenge: "Patient portal databases experienced write-locks during simultaneous record requests, causing login timeouts.",
       solution: "Structured GraphQL query facades and partitioned databases to segment read/write loads.",
       metrics: {
-        uptime: "SOC2 Certified",
+        uptime: "Security Audited",
         savings: "85% CPU Load Reduction",
         latency: "8ms Portal Retrieval"
       }

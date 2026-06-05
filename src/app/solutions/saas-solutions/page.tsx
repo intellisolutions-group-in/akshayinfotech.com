@@ -83,7 +83,7 @@ export default function DataIntelligenceDashboardPage() {
       a: "We implement dynamic partition replication and local storage buffers. If consumer microservices or database sync targets slow down, the message broker buffers incoming logs safely, scaling up consumers to clear the backlog."
     },
     {
-      q: "Is real-time BI reporting fully secure under GDPR and HIPAA?",
+      q: "Is real-time BI reporting fully secure under standard privacy guidelines?",
       a: "Yes. All data streams can be passed through anonymization pipelines that mask personally identifiable information (PII) before storage. Data is encrypted using AES-256 both inside queues and in the warehouse."
     }
   ];
@@ -246,7 +246,7 @@ export default function DataIntelligenceDashboardPage() {
                     <div className="text-[9px] text-emerald-400 mt-1">Healthy buffers maintained</div>
                   </div>
                   <div className="p-4 bg-slate-900/50 border border-white/5 rounded-2xl text-left">
-                    <div className="text-[10px] uppercase font-bold text-slate-400">SOC2 Audit Check</div>
+                    <div className="text-[10px] uppercase font-bold text-slate-400">Security Audit Check</div>
                     <div className="text-xl font-bold text-white font-mono mt-1.5 flex items-center gap-1.5">
                       100% SECURE
                     </div>

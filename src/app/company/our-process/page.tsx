@@ -59,8 +59,8 @@ export default function OurProcess() {
       num: "04",
       title: "Quality Audits",
       subtitle: "Continuous",
-      desc: "Quality isn't a phase — it's embedded into every sprint. We run automated unit testing suites, performance stress tests, accessibility audits, and HIPAA/SOC2 compliance checks. Our CI/CD pipelines enforce 80%+ code coverage thresholds, and every pull request requires two senior engineer approvals before merging.",
-      deliverables: ["Automated test suites", "Lighthouse performance reports", "Security penetration test results", "Compliance certification docs"],
+      desc: "Quality isn't a phase — it's embedded into every sprint. We run automated unit testing suites, performance stress tests, accessibility audits, and security scan checks. Our CI/CD pipelines enforce 80%+ code coverage thresholds, and every pull request requires two senior engineer approvals before merging.",
+      deliverables: ["Automated test suites", "Lighthouse performance reports", "Security penetration test results", "Security verification docs"],
       tools: ["Cypress", "Lighthouse", "OWASP ZAP"]
     },
     {

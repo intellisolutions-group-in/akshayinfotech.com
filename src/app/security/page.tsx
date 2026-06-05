@@ -101,7 +101,7 @@ const securitySections = [
     desc: "Our Incident Response Plan (IRP) defines clear escalation paths, roles, and communication protocols for handling security events. We conduct quarterly tabletop exercises to validate our response capabilities.",
     points: [
       "Defined SLAs: P1 incidents acknowledged within 15 minutes",
-      "GDPR-compliant breach notification within 72 hours",
+      "Incident breach notification in accordance with standard privacy protocols",
       "Automated incident ticket creation and assignment workflows",
       "Post-incident reviews with root cause analysis documentation",
     ],
@@ -122,12 +122,12 @@ const securitySections = [
 ];
 
 const complianceItems = [
-  { label: "SOC 2 Type II", status: "In Progress", color: "#F59E0B" },
-  { label: "ISO 27001", status: "Aligned", color: "#10B981" },
-  { label: "GDPR", status: "Compliant", color: "#10B981" },
-  { label: "CCPA", status: "Compliant", color: "#10B981" },
-  { label: "OWASP Top 10", status: "Addressed", color: "#10B981" },
-  { label: "PCI DSS", status: "Partial", color: "#3B82F6" },
+  { label: "OWASP Top 10 Mitigation", status: "Active", color: "#10B981" },
+  { label: "Static Code Analysis", status: "Enforced", color: "#10B981" },
+  { label: "Dynamic Telemetry Scan", status: "Automated", color: "#10B981" },
+  { label: "Dependency Audit", status: "Continuous", color: "#10B981" },
+  { label: "SQL Injection Guard", status: "Active", color: "#10B981" },
+  { label: "Encrypted Backups", status: "Automated", color: "#10B981" },
 ];
 
 function AnimatedMetric({ target, suffix, decimals = 0 }: { target: number; suffix: string; decimals?: number }) {
@@ -283,8 +283,8 @@ export default function SecurityPage() {
       <section className="py-20 bg-slate-950 border-t border-white/5">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-extrabold text-white mb-3">Compliance & Certifications</h2>
-            <p className="text-sm text-white/50">Our security program is aligned with globally recognized frameworks and standards</p>
+            <h2 className="text-2xl font-extrabold text-white mb-3">Verified Security Standards</h2>
+            <p className="text-sm text-white/50">Our security program is aligned with modern software security frameworks and standards</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {complianceItems.map((item, i) => (

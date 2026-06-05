@@ -8,28 +8,20 @@ import AnalyticalCard from "../shared/AnalyticalCard";
 
 const previewPlans = [
   {
-    name: "Starter",
-    price: "$49",
-    period: "/month",
-    desc: "Perfect for scaling startups needing specialized developers.",
-    features: ["Dedicated React developer resources", "Weekly sprint progress reviews", "Direct Slack channel integration", "Standard 8/5 email support"],
+    name: "Free Evaluation",
+    price: "Free",
+    period: "",
+    desc: "Standard evaluation and developer testing of our capabilities.",
+    features: ["Access to standard open-source boilerplates", "Documentation templates and guides", "Standard community discussion forums", "Email support for setup and discovery queries"],
     popular: false
   },
   {
-    name: "Growth",
-    price: "$199",
-    period: "/month",
-    desc: "Designed for rapid product scaling and multi-platform launches.",
-    features: ["Multiple developer sprint allocations", "Full-time project manager support", "DevOps container cluster setups", "Priority 24/7 Slack support"],
-    popular: true
-  },
-  {
-    name: "Enterprise",
+    name: "Enterprise Retainer",
     price: "Custom",
     period: "",
-    desc: "Compliance-heavy architecture audits and dedicated clusters.",
-    features: ["HIPAA & FinTech compliance audits", "Dedicated cloud replication databases", "Dedicated infrastructure engineers", "Custom SLA response guarantees"],
-    popular: false
+    desc: "Bespoke architectures and dedicated engineering allocations.",
+    features: ["Unlimited dedicated developer options", "Dedicated solutions architect resource", "Dedicated VPC and cloud setups", "Custom SLA support guarantees"],
+    popular: true
   }
 ];
 
@@ -52,7 +44,7 @@ export default function PricingPreview() {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
           {previewPlans.map((plan, index) => {
             const isPopular = plan.popular;
             
@@ -68,7 +60,7 @@ export default function PricingPreview() {
                 {(isHovered) => (
                   <div className="h-full flex flex-col justify-between w-full relative">
                     {isPopular && (
-                      <span className="absolute -top-9 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full z-20 shadow-sm">
+                       <span className="absolute -top-9 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full z-20 shadow-sm">
                         Most Popular
                       </span>
                     )}
@@ -130,7 +122,7 @@ export default function PricingPreview() {
             href="/pricing"
             className="inline-flex items-center text-sm font-bold text-primary hover:text-primary/95 group"
           >
-            View Detailed Pricing Comparison
+            View Pricing Details
             <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>

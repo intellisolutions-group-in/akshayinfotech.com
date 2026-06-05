@@ -81,7 +81,7 @@ export default function AboutUsPage() {
     },
     {
       period: "GLOBAL REACH (2024)",
-      title: "ISO & SOC2 Telemetry Integration",
+      title: "Telemetry & Performance Integration",
       desc: "Consolidated infrastructure layouts under zero-trust credential rules, monitoring query latency limits across 120+ active clusters."
     },
     {
@@ -237,7 +237,7 @@ export default function AboutUsPage() {
             </div>
             <div className="md:col-span-2">
               <p className="text-sm text-slate-300 leading-relaxed font-light">
-                To design, audit, and deploy high-reliability microservice pipelines under SOC2 and ISO compliance bounds. We provide ongoing support retainers, regular code audits, and telemetry mapping to ensure cloud systems operate cleanly, transparently, and cost-effectively.
+                To design, audit, and deploy high-reliability microservice pipelines under strict data security and telemetry standards. We provide ongoing support retainers, regular code audits, and telemetry mapping to ensure cloud systems operate cleanly, transparently, and cost-effectively.
               </p>
             </div>
           </div>

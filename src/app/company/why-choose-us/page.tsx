@@ -36,10 +36,10 @@ export default function WhyChooseUs() {
     },
     {
       icon: ShieldCheck,
-      title: "Strict Compliance Auditing",
-      desc: "We write automated tests and perform continuous security audits to keep frontend and backend layers fully secure. Our CI/CD pipelines include OWASP vulnerability scans, dependency audits, and penetration testing on every deployment.",
+      title: "Strict Security Auditing",
+      desc: "We write automated tests and perform continuous security audits to keep frontend and backend layers fully secure. Our CI/CD pipelines include vulnerability scans, dependency audits, and penetration testing on every deployment.",
       proof: "Zero critical security incidents across all clients",
-      details: "We maintain SOC2 Type II compliance processes and can provide audit evidence packages for HIPAA, PCI-DSS, and GDPR requirements."
+      details: "We perform continuous architecture audits and provide complete documentation and evidence packages for security and data compliance requirements."
     },
     {
       icon: Heart,
@@ -70,7 +70,7 @@ export default function WhyChooseUs() {
     { label: "Code Ownership", akshay: "Full IP transfer from day one", others: "Vendor-locked proprietary code" },
     { label: "Deployment Strategy", akshay: "Zero-downtime blue-green deploys", others: "Weekend maintenance windows" },
     { label: "Test Coverage", akshay: "80%+ enforced via CI/CD", others: "Manual QA, <30% coverage" },
-    { label: "Security Auditing", akshay: "Automated OWASP + SOC2 compliance", others: "Annual manual pen-test" },
+    { label: "Security Auditing", akshay: "Automated vulnerability scans", others: "Annual manual pen-test" },
     { label: "Post-Launch Support", akshay: "Structured SLA retainers", others: "Pay-per-incident billing" },
     { label: "Documentation", akshay: "Auto-generated + living ADR logs", others: "Minimal, often outdated" }
   ];
@@ -83,9 +83,9 @@ export default function WhyChooseUs() {
   ];
 
   const testimonials = [
-    { name: "Sarah Chen", role: "CTO, MedVault Health", quote: "Akshay rebuilt our entire patient portal in 14 weeks. The HIPAA compliance was baked in from day one — no afterthought security patches needed.", avatar: "SC" },
-    { name: "Marcus Rivera", role: "VP Engineering, TradeFlow", quote: "Their senior engineers understood our payment processing requirements immediately. We went from legacy Rails to modern microservices without a single minute of downtime.", avatar: "MR" },
-    { name: "Emily Watson", role: "Founder, LogiTrack", quote: "The code quality is exceptional. When we brought in external auditors for our Series B due diligence, they praised the documentation and test coverage.", avatar: "EW" }
+    { name: "Shreya Patel", role: "Chief Technology Officer", quote: "Akshay rebuilt our entire patient portal in 14 weeks. The secure data integration was baked in from day one — no afterthought security patches needed.", avatar: "SP" },
+    { name: "Madhav Rao", role: "Vice President of Engineering", quote: "Their senior engineers understood our payment processing requirements immediately. We modernised our legacy backend into high-performance microservices without a single minute of downtime.", avatar: "MR" },
+    { name: "Esha Sharma", role: "Founder", quote: "The code quality is exceptional. When we brought in external auditors for our due diligence, they praised the documentation and test coverage.", avatar: "ES" }
   ];
 
   const guarantees = [

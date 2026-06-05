@@ -81,7 +81,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "technologies",
     "industries",
     "why-choose-us",
-    "leadership",
     "our-story"
   ].map((company) => ({
     url: `${baseUrl}/company/${company}`,

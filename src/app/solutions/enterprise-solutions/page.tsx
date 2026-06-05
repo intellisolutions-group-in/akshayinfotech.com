@@ -9,12 +9,12 @@ import {
 } from "lucide-react";
 
 // ROI Calculator Values
-const INITIAL_TRAFFIC = 500000;
-const INITIAL_COST = 8500;
+const INITIAL_NODES = 80;
+const INITIAL_UTILIZATION = 45;
 
 export default function EnterpriseSolutionsPage() {
-  const [traffic, setTraffic] = useState(INITIAL_TRAFFIC);
-  const [infraCost, setInfraCost] = useState(INITIAL_COST);
+  const [nodes, setNodes] = useState(INITIAL_NODES);
+  const [utilization, setUtilization] = useState(INITIAL_UTILIZATION);
   const [activeStep, setActiveStep] = useState(0);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -24,9 +24,10 @@ export default function EnterpriseSolutionsPage() {
   }, []);
 
   // Calculator logic
-  const estimatedSavings = Math.floor((infraCost * 0.42)); // 42% average cloud infra savings
-  const scalabilityIndex = Math.min(100, Math.floor((traffic / 10000) * 1.5));
-  const estimatedResponseTime = Math.max(12, Math.floor(180 - (traffic / 12000)));
+  const efficiencyGain = Math.min(88, Math.floor((100 - utilization) * 0.85));
+  const nodesOptimized = Math.floor(nodes * (efficiencyGain / 100));
+  const scalabilityIndex = Math.min(100, Math.floor((nodes / 5) + 30));
+  const responseLatency = Math.max(12, Math.floor(120 - (utilization * 0.8)));
 
   const growthSteps = [
     {
@@ -47,7 +48,7 @@ export default function EnterpriseSolutionsPage() {
     {
       title: "4. Continuous Telemetry & Optimization",
       subtitle: "Real-time query optimization",
-      description: "AI-driven load balancers actively route request streams, optimizing server usage patterns, auto-scaling container configurations, and lowering cloud resource bills while maintaining SOC2 and ISO compliance."
+      description: "AI-driven load balancers actively route request streams, optimizing server usage patterns, auto-scaling container configurations, and lowering cloud resource bills while maintaining high security compliance standards."
     }
   ];
 
@@ -57,7 +58,7 @@ export default function EnterpriseSolutionsPage() {
       a: "We employ side-by-side infrastructure setup (Blue-Green deployment models). By maintaining active synchronization between your legacy systems and our newly built cloud clusters, we redirect traffic gradually using weighted DNS routing. If any issues are detected, traffic is reverted instantly."
     },
     {
-      q: "Are these enterprise growth frameworks SOC2 and ISO compliant?",
+      q: "Are these enterprise growth frameworks aligned with industry security standards?",
       a: "Yes. All of our infrastructure layouts follow zero-trust network boundaries, rootless container executions, encrypted data storage both at rest and in transit, and active vulnerability tracking pipelines. We build standard audit logs directly into your system telemetry."
     },
     {
@@ -179,7 +180,7 @@ export default function EnterpriseSolutionsPage() {
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24">
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
           {[
-            { value: "$2.4M", label: "Average Infrastructure Savings", desc: "For mid-to-large size enterprises transitioning to optimized cloud containerization." },
+            { value: "42%", label: "Average Overhead Reduction", desc: "Average decrease in infrastructure allocation costs after cloud containerization optimization." },
             { value: "14ms", label: "Average Response Time", desc: "Maintained under a load of 150,000 concurrent API query requests." },
             { value: "99.999%", label: "Uptime SLA Maintained", desc: "Active-active regional cluster nodes routing around hardware breakdowns." },
             { value: "85%", label: "Decrease in CPU Idle Time", desc: "Automated container systems shut down redundant VM nodes during quiet intervals." }
@@ -282,7 +283,7 @@ export default function EnterpriseSolutionsPage() {
             },
             {
               title: "High-Volume FinTech Portals",
-              desc: "Integrating SOC2 secure multi-signature payment processing frameworks. We structure private Virtual Private Cloud (VPC) subnets, isolation systems, and audit logging databases."
+              desc: "Integrating secure multi-signature payment processing frameworks. We structure private Virtual Private Cloud (VPC) subnets, isolation systems, and audit logging databases."
             },
             {
               title: "Multi-Tenant SaaS Environments",
@@ -436,40 +437,40 @@ export default function EnterpriseSolutionsPage() {
             {/* Input Sliders */}
             <div className="space-y-8 text-left">
               <div>
-                <h3 className="text-xl font-extrabold text-white mb-2">ROI Savings Calculator</h3>
-                <p className="text-xs text-slate-400 leading-relaxed font-light">Estimate infrastructure savings and operational latency reductions with Akshay scale architecture.</p>
+                <h3 className="text-xl font-extrabold text-white mb-2">Compute Resource Optimizer</h3>
+                <p className="text-xs text-slate-400 leading-relaxed font-light">Estimate system capacity utilization improvements and idle node reclamation with Akshay infrastructure blueprints.</p>
               </div>
 
-              {/* Monthly User Traffic Slider */}
+              {/* Virtual Host Nodes Slider */}
               <div className="space-y-3">
                 <div className="flex justify-between items-center text-xs font-semibold">
-                  <span className="text-slate-400">Monthly Traffic</span>
-                  <span className="text-blue-400 font-mono font-bold">{traffic.toLocaleString()} requests</span>
+                  <span className="text-slate-400">Total Virtual Host Nodes</span>
+                  <span className="text-blue-400 font-mono font-bold">{nodes} nodes</span>
                 </div>
                 <input 
                   type="range" 
-                  min="50000" 
-                  max="10000000" 
-                  step="50000"
-                  value={traffic} 
-                  onChange={(e) => setTraffic(Number(e.target.value))}
+                  min="10" 
+                  max="500" 
+                  step="5"
+                  value={nodes} 
+                  onChange={(e) => setNodes(Number(e.target.value))}
                   className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
                 />
               </div>
 
-              {/* Monthly Infrastructure Cost Slider */}
+              {/* Core Node Utilization Rate Slider */}
               <div className="space-y-3">
                 <div className="flex justify-between items-center text-xs font-semibold">
-                  <span className="text-slate-400">Legacy Monthly Budget</span>
-                  <span className="text-blue-400 font-mono font-bold">${infraCost.toLocaleString()} USD</span>
+                  <span className="text-slate-400">Core Node Utilization Rate</span>
+                  <span className="text-blue-400 font-mono font-bold">{utilization}%</span>
                 </div>
                 <input 
                   type="range" 
-                  min="1000" 
-                  max="50000" 
-                  step="500"
-                  value={infraCost} 
-                  onChange={(e) => setInfraCost(Number(e.target.value))}
+                  min="10" 
+                  max="100" 
+                  step="5"
+                  value={utilization} 
+                  onChange={(e) => setUtilization(Number(e.target.value))}
                   className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
                 />
               </div>
@@ -478,15 +479,15 @@ export default function EnterpriseSolutionsPage() {
             {/* Calculated Output Display */}
             <div className="flex flex-col justify-between bg-blue-950/20 border border-blue-500/10 p-6 rounded-2xl text-left">
               <div className="space-y-4">
-                <div className="text-[10px] uppercase font-bold tracking-widest text-blue-400">Simulated Annual Savings</div>
-                <div className="text-4xl sm:text-5xl font-black text-white font-mono">${(estimatedSavings * 12).toLocaleString()}</div>
-                <p className="text-[11px] text-slate-500 leading-relaxed font-light">Based on average client database optimization metrics and server reduction data.</p>
+                <div className="text-[10px] uppercase font-bold tracking-widest text-blue-400">Simulated Efficiency Increase</div>
+                <div className="text-4xl sm:text-5xl font-black text-white font-mono">+{efficiencyGain}%</div>
+                <p className="text-[11px] text-slate-500 leading-relaxed font-light">Estimated reduction in idle node overhead based on container cluster scaling metrics.</p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/5 mt-6 text-left">
                 <div>
-                  <div className="text-xs text-slate-500">Latency Index</div>
-                  <div className="text-lg font-bold text-white font-mono">{estimatedResponseTime}ms</div>
+                  <div className="text-xs text-slate-500">Reclaimed Nodes</div>
+                  <div className="text-lg font-bold text-white font-mono">{nodesOptimized} nodes</div>
                 </div>
                 <div>
                   <div className="text-xs text-slate-500">Scalability Rating</div>

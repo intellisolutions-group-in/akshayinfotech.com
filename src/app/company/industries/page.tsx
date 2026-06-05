@@ -22,13 +22,13 @@ export default function IndustriesWeServe() {
     {
       icon: HeartPulse,
       title: "Healthcare & MedTech",
-      tagline: "HIPAA-Compliant Digital Health Platforms",
+      tagline: "Highly Secure Digital Health Platforms",
       gradient: "from-rose-500 to-pink-500",
-      heroDesc: "We build telemedicine platforms, electronic health record (EHR) integrations, patient portal dashboards, and secure messaging systems. Every medical application we deliver meets strict HIPAA compliance requirements with end-to-end encryption, audit logging, and role-based access controls.",
-      challenges: ["HIPAA compliance requirements", "HL7/FHIR data interoperability", "Real-time patient monitoring", "PHI data encryption standards"],
-      solutions: ["End-to-end encrypted messaging", "FHIR-compliant API gateways", "Real-time vitals dashboards", "SOC2 audit trail logging"],
+      heroDesc: "We build telemedicine platforms, electronic health record (EHR) integrations, patient portal dashboards, and secure messaging systems. Every medical application we deliver meets strict data security standards with end-to-end encryption, audit logging, and role-based access controls.",
+      challenges: ["Secure data transmission requirements", "HL7/FHIR data interoperability", "Real-time patient monitoring", "PHI data encryption standards"],
+      solutions: ["End-to-end encrypted messaging", "FHIR-compliant API gateways", "Real-time vitals dashboards", "Secure audit trail logging"],
       metrics: [
-        { label: "HIPAA Compliance", value: "100%" },
+        { label: "Data Protection", value: "100%" },
         { label: "Data Encryption", value: "AES-256" },
         { label: "Avg Response Time", value: "<200ms" }
       ],
@@ -37,15 +37,15 @@ export default function IndustriesWeServe() {
     {
       icon: Landmark,
       title: "FinTech & Banking",
-      tagline: "SOC2-Compliant Financial Infrastructure",
+      tagline: "Highly Secure Financial Infrastructure",
       gradient: "from-amber-500 to-orange-500",
-      heroDesc: "We deliver robust payment processing integrations, subscription lifecycle engines, transaction ledger systems, and SOC2-compliant financial platforms. Our systems handle high-frequency trading data, real-time fraud detection pipelines, and multi-currency settlement workflows.",
-      challenges: ["PCI-DSS payment compliance", "Real-time fraud detection", "Multi-currency settlements", "Regulatory reporting requirements"],
+      heroDesc: "We deliver robust payment processing integrations, subscription lifecycle engines, transaction ledger systems, and secure financial platforms. Our systems handle high-frequency trading data, real-time fraud detection pipelines, and multi-currency settlement workflows.",
+      challenges: ["Secure payment gateway compliance", "Real-time fraud detection", "Multi-currency settlements", "Regulatory reporting requirements"],
       solutions: ["Tokenized payment processing", "ML-powered fraud scoring", "Automated compliance reports", "Real-time transaction monitoring"],
       metrics: [
         { label: "Daily Transactions", value: "10M+" },
         { label: "Fraud Detection", value: "<50ms" },
-        { label: "SOC2 Compliance", value: "Type II" }
+        { label: "Security Alignment", value: "100%" }
       ],
       caseStudy: "Architected a payment gateway handling $2.3B in annual transaction volume with 99.999% uptime and real-time fraud scoring."
     },
@@ -97,16 +97,16 @@ export default function IndustriesWeServe() {
   ];
 
   const complianceStandards = [
-    { name: "HIPAA", desc: "Health Insurance Portability and Accountability Act", industries: "Healthcare" },
-    { name: "SOC2 Type II", desc: "Service Organization Control audit certification", industries: "FinTech, SaaS" },
-    { name: "PCI-DSS", desc: "Payment Card Industry Data Security Standard", industries: "E-Commerce, Banking" },
-    { name: "GDPR", desc: "General Data Protection Regulation compliance", industries: "All European clients" },
-    { name: "ISO 27001", desc: "Information Security Management System standard", industries: "Enterprise clients" }
+    { name: "Data Security", desc: "Secure health data transmission and storage standards", industries: "Healthcare" },
+    { name: "Access Controls", desc: "Zero-trust user and admin access controls", industries: "FinTech, SaaS" },
+    { name: "Payment Security", desc: "Secure tokenized transactions and checkout paths", industries: "E-Commerce, Banking" },
+    { name: "Privacy Protection", desc: "User data deletion rights and privacy protocols", industries: "All enterprise clients" },
+    { name: "Information Security", desc: "Unified threat auditing and encryption key management", industries: "Enterprise clients" }
   ];
 
   const faqs = [
     { q: "Do you have direct domain expertise in my industry?", a: "Our engineering team includes specialists with backgrounds in healthcare IT, financial services, e-commerce platforms, and logistics systems. We pair domain experts with technical architects on every industry-specific project." },
-    { q: "How do you handle industry-specific compliance requirements?", a: "We build compliance into our architecture from day one — not as an afterthought. Our CI/CD pipelines include automated security scans, and we maintain relationships with third-party auditors for SOC2, HIPAA, and PCI-DSS certifications." },
+    { q: "How do you handle industry-specific compliance requirements?", a: "We build compliance into our architecture from day one — not as an afterthought. Our CI/CD pipelines include automated security scans, and we maintain active alignments with modern data security and payment privacy standards." },
     { q: "Can you work with our existing industry-specific software?", a: "Yes. We regularly integrate with EHR systems (Epic, Cerner), payment processors (Stripe, Adyen), logistics platforms (SAP TM), and e-commerce engines (Shopify Plus, commercetools). Our API-first approach ensures clean integrations." },
     { q: "Do you offer industry benchmarking reports?", a: "Yes. During discovery, we benchmark your current system performance against industry standards and competitor metrics. This data drives our architectural recommendations and helps measure ROI post-launch." }
   ];

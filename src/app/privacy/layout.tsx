@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy & GDPR/CCPA Compliance | Akshay Infotech",
+  title: "Privacy Policy & Data Security | Akshay Infotech",
   description: "Read our privacy guidelines detailing secure data storage, log audits, client cookie usage, and encryption parameters.",
   alternates: {
     canonical: "https://akshayinfotech.com/privacy",
   },
   openGraph: {
-    title: "Privacy Policy & GDPR/CCPA Compliance | Akshay Infotech",
+    title: "Privacy Policy & Data Security | Akshay Infotech",
     description: "Read our privacy guidelines detailing secure data storage, log audits, client cookie usage, and encryption parameters.",
     url: "https://akshayinfotech.com/privacy",
     type: "website",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacy Policy & GDPR/CCPA Compliance | Akshay Infotech",
+    title: "Privacy Policy & Data Security | Akshay Infotech",
     description: "Read our privacy guidelines detailing secure data storage, log audits, client cookie usage, and encryption parameters.",
   }
 };

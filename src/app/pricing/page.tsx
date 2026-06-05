@@ -3,72 +3,45 @@
 import React from "react";
 import Link from "next/link";
 import { Check, ArrowRight, HelpCircle } from "lucide-react";
-import ScrollReveal, { StaggerContainer, StaggerItem, TableReveal, CountUp } from "../../components/ui/ScrollReveal";
+import ScrollReveal, { StaggerContainer, StaggerItem } from "../../components/ui/ScrollReveal";
 
 const plans = [
   {
-    name: "Starter",
-    price: "$49",
-    period: "/month",
-    desc: "Perfect for scaling startups needing specialized developers.",
+    name: "Free Evaluation",
+    price: "Free",
+    period: "",
+    desc: "Standard evaluation and developer testing of our capabilities.",
     features: [
-      "1 Dedicated React developer resource",
-      "Weekly sprint progress reviews",
-      "Direct Slack channel integration",
-      "Standard 8/5 email support",
-      "Shared database instances"
+      "Access to standard open-source boilerplates",
+      "Documentation templates and guides",
+      "Standard community discussion forums",
+      "Email support for setup and discovery queries"
     ],
     popular: false,
-    cta: "Select Starter Plan"
+    cta: "Start Evaluation"
   },
   {
-    name: "Growth",
-    price: "$199",
-    period: "/month",
-    desc: "Designed for rapid product scaling and multi-platform launches.",
-    features: [
-      "3 Dedicated engineer resources",
-      "Full-time project manager support",
-      "DevOps container cluster setups",
-      "Priority 24/7 Slack support",
-      "Dedicated database replication",
-      "Stripe payment integration audits"
-    ],
-    popular: true,
-    cta: "Select Growth Plan"
-  },
-  {
-    name: "Enterprise",
+    name: "Enterprise Retainer",
     price: "Custom",
     period: "",
-    desc: "Compliance-heavy architecture audits and dedicated clusters.",
+    desc: "Bespoke architectures and dedicated engineering allocations.",
     features: [
       "Unlimited dedicated developers",
-      "Dedicated solutions architect",
-      "HIPAA & FinTech compliance audits",
-      "Dedicated secure VPC setups",
-      "Custom SLA response guarantees",
-      "Unlimited secure secrets tokens"
+      "Dedicated solutions architect resource",
+      "Dedicated secure VPC setups and cloud isolation",
+      "Custom SLA support response guarantees",
+      "Weekly and monthly sprint performance reviews",
+      "Direct communication channel integrations"
     ],
-    popular: false,
+    popular: true,
     cta: "Contact Solutions Architect"
   }
 ];
 
 const faqs = [
-  { q: "How does billing work for custom developer resources?", a: "Developer allocations are billed on a monthly rolling retainer. You can scale up or scale down active engineers assigned to your project with 14 days' notice." },
+  { q: "How does billing work for custom developer resources?", a: "Developer allocations are billed on a monthly rolling retainer basis. You can scale up or scale down active engineers assigned to your project with 14 days' notice." },
   { q: "Are custom integrations included in the plans?", a: "Yes, standard API endpoints and hooks are included. Custom legacy database migrations or custom ERP middleware systems are evaluated and scoped by our architect during onboarding." },
-  { q: "Can we migrate between Starter and Growth plans anytime?", a: "Absolutely. You can request a tier change directly inside your dashboard. Plan alterations are prorated and updated on your subsequent billing cycle." }
-];
-
-const featuresMatrix = [
-  { category: "Resources", name: "Dedicated Engineers", starter: "1", growth: "3", enterprise: "Unlimited" },
-  { category: "Resources", name: "Project Manager", starter: "Weekly Audit", growth: "Full-Time", enterprise: "Dedicated Architect" },
-  { category: "Infrastructure", name: "VPC Outposts", starter: "Shared", growth: "Dedicated", enterprise: "Isolated Private VPC" },
-  { category: "Infrastructure", name: "Database Replicas", starter: "None", growth: "1 Target Node", enterprise: "Multi-Region Sync" },
-  { category: "Security", name: "Secrets (KMS)", starter: "Standard Keys", growth: "KMS Backed", enterprise: "Dedicated Vault HSM" },
-  { category: "Security", name: "Compliance Audits", starter: "No", growth: "Basic Check", enterprise: "Full HIPAA / FinTech" },
-  { category: "Support", name: "Communication Channel", starter: "Email & Slack", growth: "Priority 24/7 Slack", enterprise: "Dedicated SLA Hotline" }
+  { q: "How do we scale our development resources?", a: "You can request additional developer allocations or change support response parameters at any time. Adjustments are discussed and applied dynamically by your dedicated solutions architect." }
 ];
 
 export default function PricingPage() {
@@ -89,7 +62,7 @@ export default function PricingPage() {
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-text-main tracking-tight">
-              Flexible Pricing Built for Growth
+              Flexible Retainers Built for Growth
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={0.3}>
@@ -102,8 +75,8 @@ export default function PricingPage() {
 
       {/* Pricing Cards Grid */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <StaggerContainer staggerDelay={0.15} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <StaggerContainer staggerDelay={0.15} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {plans.map((plan) => (
               <StaggerItem key={plan.name} direction="scale">
                 <div
@@ -157,51 +130,8 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Feature Comparison Matrix */}
-      <section className="py-20 bg-slate-50 border-y border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <ScrollReveal>
-              <span className="text-xs font-bold text-primary tracking-wider uppercase mb-2 block">
-                Feature Check
-              </span>
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-text-main">
-                Detailed Feature Comparison
-              </h2>
-            </ScrollReveal>
-          </div>
-
-          <TableReveal>
-            <div className="overflow-x-auto bg-white border border-slate-100 rounded-3xl shadow-sm">
-              <table className="min-w-full divide-y divide-slate-100 text-left">
-                <thead className="bg-slate-50/50">
-                  <tr>
-                    <th className="px-6 py-4 text-xs font-bold text-text-main uppercase tracking-wider">Features</th>
-                    <th className="px-6 py-4 text-xs font-bold text-text-main uppercase tracking-wider">Starter</th>
-                    <th className="px-6 py-4 text-xs font-bold text-text-main uppercase tracking-wider">Growth</th>
-                    <th className="px-6 py-4 text-xs font-bold text-text-main uppercase tracking-wider">Enterprise</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100 text-xs">
-                  {featuresMatrix.map((item, idx) => (
-                    <tr key={`${item.name}-${idx}`} className="hover:bg-slate-50/30 transition-colors">
-                      <td className="px-6 py-4 font-semibold text-text-main">{item.name}</td>
-                      <td className="px-6 py-4 text-text-body">{item.starter}</td>
-                      <td className="px-6 py-4 text-text-body font-medium">{item.growth}</td>
-                      <td className="px-6 py-4 text-text-body">{item.enterprise}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </TableReveal>
-        </div>
-      </section>
-
       {/* FAQs */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white border-t border-slate-100">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <ScrollReveal>

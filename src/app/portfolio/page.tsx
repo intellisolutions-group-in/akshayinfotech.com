@@ -15,11 +15,11 @@ const detailedProjects = [
     title: "HealthPulse Telemedicine Portal",
     category: "Healthcare Technology",
     image: "/project-1.png",
-    challenge: "Developing an online consulting system that complies with strict HIPAA data transmission and health record encryption laws, while supporting low-latency video feeds.",
+    challenge: "Developing an online consulting system that complies with strict data transmission and health record encryption standards, while supporting low-latency video feeds.",
     solution: "We built a React-based client dashboard integrated with Node.js and WebRTC. Audio/video channels are encrypted using SRTP, and patient records are stored in a partitioned, encrypted PostgreSQL database.",
     impact: "Over 50,000 successful consultations with a 99.8% video transmission stability rate.",
     technologies: ["Next.js", "WebRTC", "PostgreSQL", "Node.js", "AWS KMS", "Tailwind CSS"],
-    results: ["HIPAA Compliant architecture", "Sub-200ms latency video feeds", "Automated patient intake charts"],
+    results: ["Highly secure data architecture", "Sub-200ms latency video feeds", "Automated patient intake charts"],
   },
   {
     id: "swift-route",

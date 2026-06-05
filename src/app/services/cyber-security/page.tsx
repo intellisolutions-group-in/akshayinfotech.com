@@ -41,8 +41,8 @@ const faqs = [
     a: "We use parameter binding and execute queries through ORMs (like Prisma) to prevent input variables from running as database command scripts. We run validation routines on all API requests before processing data."
   },
   {
-    q: "What industry compliance configurations do you support?",
-    a: "We configure systems to align with HIPAA health data guidelines, PCI-DSS payment rules, SOC 2 Type II trust principles, and general GDPR privacy specifications."
+    q: "What industry security standards do you support?",
+    a: "We configure systems to align with regulatory privacy standards, secure encryption protocols, and zero-trust identity verification architectures."
   },
   {
     q: "How do you conduct penetration tests and vulnerability checks?",
@@ -168,14 +168,14 @@ resource "aws_security_group_rule" "allow_db" {
           {/* Compliance Auditing */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
             <div className="lg:order-2 space-y-4">
-              <span className="text-xs font-bold text-emerald-400 tracking-widest uppercase">Compliance & Audits</span>
-              <h3 className="text-2xl font-bold text-white">Regulatory Framework Integrations</h3>
+              <span className="text-xs font-bold text-emerald-400 tracking-widest uppercase">Security Audits</span>
+              <h3 className="text-2xl font-bold text-white">Security Architecture Inspections</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                We align systems with regulatory requirements: configuring HIPAA access logs, PCI-DSS encryption rules, SOC 2 audit procedures, and general GDPR privacy settings. We implement key management services to secure encryption variables.
+                We align systems with security guidelines: configuring access logs, secure data encryption protocols, active audit logging, and general privacy settings. We implement key management services to secure encryption variables.
               </p>
               <ul className="space-y-2 text-xs text-slate-400">
-                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-emerald-400 mr-2" /> HIPAA-compliant database logs</li>
-                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-emerald-400 mr-2" /> PCI-DSS payment key security</li>
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-emerald-400 mr-2" /> Secure database audit logs</li>
+                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-emerald-400 mr-2" /> Payment key data protection</li>
                 <li className="flex items-center"><CheckCircle className="h-4 w-4 text-emerald-400 mr-2" /> KMS encryption key cycles</li>
               </ul>
             </div>
@@ -314,9 +314,9 @@ encrypted += cipher.final('hex');`}
 
             <div className="border border-emerald-950/60 bg-emerald-950/10 p-6 rounded-2xl space-y-3">
               <div className="text-3xl font-bold text-emerald-400">100%</div>
-              <h4 className="font-bold text-white text-sm">Regulatory Compliance</h4>
+              <h4 className="font-bold text-white text-sm">System Alignment</h4>
               <p className="text-xs text-slate-400 leading-relaxed">
-                Configurations align with HIPAA, SOC 2, and PCI-DSS requirements.
+                Configurations align with modern software security standards.
               </p>
             </div>
           </div>
