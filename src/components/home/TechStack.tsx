@@ -100,9 +100,9 @@ const technologies = [
 ];
 
 const CENTER_TEXTS = [
-  { main: "POWERED BY\nMODERN\nTECHNOLOGIES", sub: "Core Stack", color: "#60A5FA" },
-  { main: "TECH STACK\nACTIVATED", sub: "Deploying...", color: "#34D399" },
-  { main: "POWERED BY\nMODERN\nTECHNOLOGIES", sub: "Core Stack", color: "#60A5FA" },
+  { main: "INITIATE\nTECH STACK\nENGAGEMENT", sub: "SYSTEM STATUS: READY", color: "#60A5FA" },
+  { main: "TRANSMITTING\nCOMPUTE\nPACKETS", sub: "SYNCING CLUSTER...", color: "#34D399" },
+  { main: "AKSHAY ENGINE\nACTIVATED", sub: "COMPLEX MESH: STABLE", color: "#A78BFA" },
 ];
 
 interface DataPacket {

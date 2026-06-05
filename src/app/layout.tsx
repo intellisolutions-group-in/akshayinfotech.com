@@ -97,7 +97,7 @@ export default function RootLayout({
         "logo": {
           "@type": "ImageObject",
           "@id": "https://akshayinfotech.com/#logo",
-          "url": "https://akshayinfotech.com/logo.svg",
+          "url": "https://akshayinfotech.com/logo-light.png",
           "caption": "Akshay Infotech Logo"
         },
         "sameAs": [
@@ -120,7 +120,7 @@ export default function RootLayout({
         "@id": "https://akshayinfotech.com/#service",
         "name": "Akshay Infotech",
         "url": "https://akshayinfotech.com",
-        "image": "https://akshayinfotech.com/logo.svg",
+        "image": "https://akshayinfotech.com/logo-light.png",
         "priceRange": "$$$",
         "telephone": "+1 (617) 555-0192",
         "email": "info@akshayinfoctech.net",

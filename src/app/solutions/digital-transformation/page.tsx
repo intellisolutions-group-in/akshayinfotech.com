@@ -8,6 +8,109 @@ import {
   Settings, Code, Layers, Eye, RefreshCw, BarChart, Server, Workflow 
 } from "lucide-react";
 
+interface PhaseVisualProps {
+  phaseId: string;
+  color: string;
+  textColor: string;
+}
+
+function PhaseVisual({ phaseId, color, textColor }: PhaseVisualProps) {
+  return (
+    <div className="relative w-full h-48 flex items-center justify-center overflow-hidden">
+      {/* Background glow */}
+      <div className={`absolute w-32 h-32 rounded-full bg-gradient-to-br ${color} blur-3xl opacity-20`} />
+      
+      {/* Floating Twinkling Stars */}
+      <div className="absolute inset-0">
+        {[...Array(6)].map((_, i) => {
+          const seed = phaseId.charCodeAt(0) || 7;
+          return (
+            <motion.div
+              key={i}
+              className="absolute h-1 w-1 rounded-full bg-white"
+              style={{
+                top: `${20 + ((i * 11 + seed * 13) % 60)}%`,
+                left: `${20 + ((i * 17 + seed * 19) % 60)}%`,
+              }}
+              animate={{
+                scale: [0.5, 1.5, 0.5],
+                opacity: [0.2, 0.8, 0.2],
+                y: [0, -15 - ((i * 4 + seed * 5) % 15), 0],
+              }}
+              transition={{
+                duration: 3 + ((i * 2 + seed) % 3),
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: ((i * 3 + seed) % 5) * 0.4,
+              }}
+            />
+          );
+        })}
+      </div>
+
+      {/* Centerpiece themed icon or SVG with animated starlight rings */}
+      <div className="relative z-10 flex flex-col items-center">
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-0 flex items-center justify-center"
+        >
+          <svg className="w-24 h-24 opacity-30 stroke-current text-white/20" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="40" strokeDasharray="4 4" />
+            <circle cx="50" cy="50" r="25" strokeDasharray="3 6" />
+          </svg>
+        </motion.div>
+        
+        {phaseId === "phase-1" && (
+          <div className="relative">
+            <Server className={`h-12 w-12 ${textColor}`} />
+            <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75 animate-duration-2000"></span>
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-500"></span>
+            </span>
+          </div>
+        )}
+        {phaseId === "phase-2" && (
+          <div className="relative">
+            <Network className={`h-12 w-12 ${textColor}`} />
+            <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75 animate-duration-2000"></span>
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-blue-500"></span>
+            </span>
+          </div>
+        )}
+        {phaseId === "phase-3" && (
+          <div className="relative">
+            <Workflow className={`h-12 w-12 ${textColor}`} />
+            <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75 animate-duration-2000"></span>
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-purple-500"></span>
+            </span>
+          </div>
+        )}
+        {phaseId === "phase-4" && (
+          <div className="relative">
+            <Cpu className={`h-12 w-12 ${textColor}`} />
+            <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75 animate-duration-2000"></span>
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-cyan-500"></span>
+            </span>
+          </div>
+        )}
+        {phaseId === "phase-5" && (
+          <div className="relative">
+            <ShieldCheck className={`h-12 w-12 ${textColor}`} />
+            <span className="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-duration-2000"></span>
+              <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500"></span>
+            </span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function DigitalTransformationJourneyPage() {
   const [element, setElement] = useState<HTMLElement | null>(null);
   const [activeTab, setActiveTab] = useState(0);
@@ -183,8 +286,10 @@ export default function DigitalTransformationJourneyPage() {
                   />
                 </div>
 
-                {/* Left/Right Blank spacing on desktop */}
-                <div className="w-full md:w-1/2" />
+                {/* Left/Right Beautiful Visual Spacer with Twinkling Starlight on desktop */}
+                <div className="hidden md:block w-full md:w-1/2 px-8">
+                  <PhaseVisual phaseId={phase.id} color={phase.color} textColor={phase.textColor} />
+                </div>
 
                 {/* Narrative Card */}
                 <div className="w-full md:w-1/2 pl-12 md:pl-0 md:px-8">
@@ -309,21 +414,6 @@ export default function DigitalTransformationJourneyPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center mb-8">
-        <div className="p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-          <h4 className="text-xl sm:text-2xl font-bold mb-2">Ready to modernise your legacy setup?</h4>
-          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Arrange a structural audit of database code limits and proxy configuration checkpoints with Akshay engineers.</p>
-          <Link 
-            href="/contact"
-            className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-blue-750 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-blue-900/20"
-          >
-            Schedule Mainframe Assessment
-            <ArrowRight className="h-4 w-4 text-blue-700" />
-          </Link>
-        </div>
-      </section>
 
     </div>
   );

@@ -10,7 +10,6 @@ import {
   Info, Workflow, Code2, Network, Award, Phone, Shield
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import TechALogo from "@/components/ui/TechALogo";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -109,13 +108,12 @@ export default function Navbar() {
       <div className="flex items-center justify-between">
         
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center space-x-2 group shrink-0">
-          <div className="h-9 w-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-md shadow-primary/20 group-hover:scale-105 transition-transform duration-200">
-            <TechALogo className="h-6 w-6" />
-          </div>
-          <span className={`text-base sm:text-lg font-bold tracking-tight transition-colors duration-300 ${useDarkNavbar ? "text-white" : "text-text-main"}`}>
-            Akshay<span className="text-primary font-medium">Infotech</span>
-          </span>
+        <Link href="/" className="flex items-center group shrink-0">
+          <img
+            src={useDarkNavbar ? "/logo-dark.png" : "/logo-light.png"}
+            alt="Akshay Infotech Logo"
+            className="h-8 sm:h-9 w-auto object-contain transition-all duration-300 group-hover:scale-[1.02]"
+          />
         </Link>
 
         {/* Desktop Navigation Link List */}

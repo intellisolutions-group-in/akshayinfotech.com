@@ -5,6 +5,7 @@ import Link from "next/link";
 import { CheckCircle, HelpCircle, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import AnalyticalCard from "../../../components/shared/AnalyticalCard";
+import FAQItem from "@/components/shared/FAQItem";
 
 
 const features = [
@@ -243,13 +244,7 @@ export default function SeoOptimizationPage() {
 
           <div className="space-y-6">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-slate-50 border border-slate-100 rounded-2xl p-6.5 space-y-2.5">
-                <div className="flex items-center space-x-2 text-sm font-bold text-text-main">
-                  <HelpCircle className="h-4.5 w-4.5 text-primary shrink-0" />
-                  <span>{faq.q}</span>
-                </div>
-                <p className="text-xs sm:text-sm text-text-body leading-relaxed pl-7">{faq.a}</p>
-              </div>
+              <FAQItem key={faq.q} faq={faq} iconColor="text-primary" />
             ))}
           </div>
         </div>

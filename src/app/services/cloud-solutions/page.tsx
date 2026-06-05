@@ -7,6 +7,7 @@ import {
   ArrowRight, Globe, Award, Settings, Database, RefreshCw, Cpu
 } from "lucide-react";
 import { motion } from "framer-motion";
+import FAQItem from "@/components/shared/FAQItem";
 
 const migrationStages = [
   {
@@ -332,13 +333,7 @@ export default function CloudSolutionsPage() {
 
           <div className="space-y-6">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-slate-900 border border-slate-850 rounded-2xl p-6.5 space-y-2.5">
-                <div className="flex items-center space-x-2 text-sm font-bold text-white">
-                  <HelpCircle className="h-4.5 w-4.5 text-sky-400 shrink-0" />
-                  <span>{faq.q}</span>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pl-7">{faq.a}</p>
-              </div>
+              <FAQItem key={faq.q} faq={faq} iconColor="text-sky-400" />
             ))}
           </div>
         </div>

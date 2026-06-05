@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { BlogPost } from "../blogData";
-import TechALogo from "@/components/ui/TechALogo";
+
 
 // Animated Particle Background for Blog Details
 function DetailsParticleBackground() {
@@ -780,7 +780,7 @@ export default function BlogDetailClient({ post, relatedPosts }: { post: BlogPos
       {/* Section Divider with Corporate branding logo integration */}
       <div className="flex items-center justify-center my-16 gap-4">
         <div className="h-px bg-white/5 flex-grow" />
-        <TechALogo className="h-8 w-8 text-blue-500/70" glow={true} />
+        <img src="/logo-icon.png" alt="Akshay Infotech Icon" className="h-8 w-auto object-contain opacity-70" />
         <div className="h-px bg-white/5 flex-grow" />
       </div>
 

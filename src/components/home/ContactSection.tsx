@@ -444,11 +444,15 @@ export default function ContactSection() {
     setLoading(true);
 
     try {
-      // Simulate fake API call with 2.5 second delay
-      await new Promise((resolve) => setTimeout(resolve, 2500));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+      const data = await response.json();
 
-      if (formData.email.toLowerCase().includes("error") || formData.message.toLowerCase().includes("error")) {
-        throw new Error("Simulation error triggered");
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Failed to submit request.");
       }
 
       setLoading(false);
@@ -462,11 +466,12 @@ export default function ContactSection() {
       });
 
       // Show backup toast notification
-      setToast({ message: "Form submitted successfully!", type: "success" });
+      setToast({ message: data.message || "Form submitted successfully!", type: "success" });
       setTimeout(() => setToast(null), 4000);
     } catch (err) {
       setLoading(false);
-      setToast({ message: "Something went wrong. Please try again.", type: "error" });
+      const errorMsg = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setToast({ message: errorMsg, type: "error" });
       setTimeout(() => setToast(null), 4000);
     }
   };

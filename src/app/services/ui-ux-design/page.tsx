@@ -7,6 +7,7 @@ import {
   HelpCircle, Settings, Globe, Award, RefreshCw
 } from "lucide-react";
 import { motion } from "framer-motion";
+import FAQItem from "@/components/shared/FAQItem";
 
 const researchSteps = [
   {
@@ -451,13 +452,7 @@ export default function UIUXDesignPage() {
 
           <div className="space-y-6 text-left">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-slate-900/40 border border-slate-850 rounded-2xl p-6.5 space-y-2.5 backdrop-blur-md">
-                <div className="flex items-center space-x-2 text-sm font-bold text-white">
-                  <HelpCircle className="h-4.5 w-4.5 text-cyan-400 shrink-0" />
-                  <span>{faq.q}</span>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pl-7 font-light">{faq.a}</p>
-              </div>
+              <FAQItem key={faq.q} faq={faq} iconColor="text-cyan-400" />
             ))}
           </div>
         </div>

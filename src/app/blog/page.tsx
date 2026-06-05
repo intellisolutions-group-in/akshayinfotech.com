@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, BookOpen, Search, User, Calendar, Sparkles } from "lucide-react";
 import { blogPosts } from "@/app/blog/blogData";
-import TechALogo from "@/components/ui/TechALogo";
+
 
 const categories = ["All Insights", "Engineering", "AI", "Design", "Cloud", "Security", "Architecture", "DevOps"];
 
@@ -236,7 +236,7 @@ export default function BlogPage() {
                       <div className={`absolute inset-0 bg-gradient-to-br ${post.featuredImage} opacity-30 group-hover:scale-105 transition-transform duration-500`} />
                       <div className="absolute inset-0 bg-slate-950/20 group-hover:opacity-100 transition-opacity" />
                       <div className="absolute bottom-4 left-4 flex items-center space-x-1.5">
-                        <TechALogo className="h-4.5 w-4.5" glow={false} />
+                        <img src="/logo-icon.png" alt="Akshay Infotech Icon" className="h-4.5 w-auto object-contain" />
                         <span className="text-[9px] font-bold tracking-widest text-white/50 uppercase">Akshay Infotech</span>
                       </div>
                     </div>
