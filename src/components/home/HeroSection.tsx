@@ -229,11 +229,11 @@ export default function HeroSection() {
     };
     window.addEventListener("mousemove", onMouseMove);
 
-    const clock = new THREE.Clock();
+    const startTime = performance.now();
     let rafId: number;
 
     const tick = () => {
-      const t = clock.getElapsedTime();
+      const t = (performance.now() - startTime) / 1000;
       ring1.rotation.y = t * 0.18;
       ring1.rotation.x = t * 0.09;
       ring2.rotation.x = Math.PI / 4 - t * 0.12;

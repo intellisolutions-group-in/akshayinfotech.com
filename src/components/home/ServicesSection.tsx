@@ -427,12 +427,12 @@ function AreaLineChart({ data, labels, max, peakIdx, tooltipVal, tooltipChange, 
         return (
           <g key={idx}>
             <circle 
-              cx={p.x} 
-              cy={p.y} 
-              r={isPeak ? "3.5" : "2"} 
+              cx={isNaN(p.x) ? 0 : p.x} 
+              cy={isNaN(p.y) ? 0 : p.y} 
+              r={isPeak ? 3.5 : 2} 
               fill={isPeak ? "white" : color} 
               stroke={isPeak ? color : "none"}
-              strokeWidth={isPeak ? "2" : "0"}
+              strokeWidth={isPeak ? 2 : 0}
               style={{ filter: isPeak ? `drop-shadow(0 0 4px ${color})` : "none" }}
             />
             {isPeak && (

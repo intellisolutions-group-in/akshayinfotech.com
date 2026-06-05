@@ -107,9 +107,9 @@ export default function DevOpsPage() {
                   <circle cx="70" cy="50" r="3.5" stroke="#f43f5e" strokeWidth="1" fill="#0f172a" />
 
                   {/* Flow Pulses */}
-                  <motion.circle cx="30" cy="50" r="2.5" fill="#ffffff" animate={{ 
-                    cx: [30, 50, 70, 50, 30], 
-                    cy: [50, 35, 50, 65, 50] 
+                  <motion.circle r={2.5} fill="#ffffff" animate={{ 
+                    x: [30, 50, 70, 50, 30], 
+                    y: [50, 35, 50, 65, 50] 
                   }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} />
                 </svg>
                 <Terminal className="h-5 w-5 text-rose-500 absolute top-[43%] left-[46%]" />

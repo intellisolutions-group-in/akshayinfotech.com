@@ -210,7 +210,7 @@ export default function UIUXDesignPage() {
                     stroke="#334155" strokeWidth="0.5" strokeDasharray="2 2"
                   />
                   <motion.circle 
-                    cx="50" cy="50" r="15"
+                    cx={50} cy={50} r={15}
                     initial={{ pathLength: 0 }}
                     animate={{ pathLength: 1 }}
                     transition={{ duration: 2, delay: 0.8 }}

@@ -69,6 +69,16 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
     creator: "@AkshayInfotech",
   },
+  icons: {
+    icon: [
+      { url: "/logo-icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/logo-icon.png", type: "image/png" },
+    ],
+    shortcut: "/logo-icon.png",
+  },
   robots: {
     index: true,
     follow: true,
@@ -144,7 +154,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white`} suppressHydrationWarning>
         <Preloader />
         <ScrollAnimationProvider />
         <Navbar />

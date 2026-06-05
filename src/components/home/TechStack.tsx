@@ -309,7 +309,7 @@ export default function TechStack() {
               const y = p.progress * ty;
               if (p.progress >= 0.95) return null;
               return (
-                <circle key={p.id} cx={x} cy={y} r={4} fill="#60A5FA" opacity={0.9}
+                <circle key={p.id} cx={isNaN(x) ? 0 : x} cy={isNaN(y) ? 0 : y} r={4} fill="#60A5FA" opacity={0.9}
                   style={{ filter: "drop-shadow(0 0 6px #60A5FA)" }} />
               );
             })}

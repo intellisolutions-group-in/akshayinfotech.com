@@ -114,9 +114,9 @@ export default function CloudSolutionsPage() {
                   <path d="M 50 85 L 50 50" strokeDasharray="2 2" strokeWidth="0.5" />
 
                   {/* Moving Packets */}
-                  <motion.circle cx="20" cy="20" r="2.5" fill="#0ea5e9" animate={{ cx: [20, 50], cy: [20, 50] }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }} />
-                  <motion.circle cx="80" cy="20" r="2.5" fill="#0ea5e9" animate={{ cx: [80, 50], cy: [20, 50] }} transition={{ repeat: Infinity, duration: 2.2, ease: "linear" }} />
-                  <motion.circle cx="50" cy="85" r="2.5" fill="#6366f1" animate={{ cx: [50, 50], cy: [85, 50] }} transition={{ repeat: Infinity, duration: 1.8, ease: "linear" }} />
+                  <motion.circle r={2.5} fill="#0ea5e9" animate={{ x: [20, 50], y: [20, 50] }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }} />
+                  <motion.circle r={2.5} fill="#0ea5e9" animate={{ x: [80, 50], y: [20, 50] }} transition={{ repeat: Infinity, duration: 2.2, ease: "linear" }} />
+                  <motion.circle r={2.5} fill="#6366f1" animate={{ x: [50, 50], y: [85, 50] }} transition={{ repeat: Infinity, duration: 1.8, ease: "linear" }} />
                 </svg>
               </div>
               <div className="absolute -inset-4 bg-sky-500/10 rounded-full blur-3xl -z-10"></div>

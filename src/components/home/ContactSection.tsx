@@ -156,9 +156,9 @@ function GlobeBackground() {
 
     // Animate
     let rafId: number;
-    const clock = new THREE.Clock();
+    const startTime = performance.now();
     const tick = () => {
-      const t = clock.getElapsedTime();
+      const t = (performance.now() - startTime) / 1000;
       globeGroup.rotation.y = t * 0.09;
       renderer.render(scene, camera);
       rafId = requestAnimationFrame(tick);
@@ -413,7 +413,7 @@ export default function ContactSection() {
 
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    email: "info@akshayinfotech.net",
     phone: "",
     company: "",
     message: "",
@@ -556,22 +556,36 @@ export default function ContactSection() {
         {/* Split Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
-          {/* Left Side Info Panel */}
-          <div className="lg:col-span-4 space-y-6 flex flex-col justify-center self-stretch">
-            
-            <div className="space-y-6 contact-reveal-title">
-              <span className="text-[11px] font-bold text-blue-400 tracking-[0.2em] uppercase bg-blue-500/5 border border-blue-500/10 px-3.5 py-1.5 rounded-full w-fit block shadow-sm">
-                Get In Touch
-              </span>
-              <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-br from-white via-slate-100 to-slate-400">
-                Let&rsquo;s Build Next-Gen Systems
-              </h2>
-              <p className="text-sm text-slate-400 leading-relaxed font-light">
-                Ready to engineer custom React infrastructure, build scalable cloud architecture, or establish enterprise micro-services? Fill out the portal specs.
-              </p>
-            </div>
+            <div className="lg:col-span-4 space-y-6">
+             
+              <div className="space-y-6 contact-reveal-title">
+                <span className="text-[11px] font-bold text-blue-400 tracking-[0.2em] uppercase bg-blue-500/5 border border-blue-500/10 px-3.5 py-1.5 rounded-full w-fit block shadow-sm">
+                  Get In Touch
+                </span>
+                <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-br from-white via-slate-100 to-slate-400">
+                  Let&rsquo;s Build Next-Gen Systems
+                </h2>
+                <p className="text-sm text-slate-400 leading-relaxed font-light">
+                  Ready to engineer custom React infrastructure, build scalable cloud architecture, or establish enterprise micro-services? Fill out the portal specs.
+                </p>
+              </div>
 
-          </div>
+              {/* Left Side Info Panel */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="w-full h-40 bg-gradient-to-tr from-blue-600/20 to-indigo-600/20 border border-white/5 rounded-2xl flex flex-col justify-between p-6 relative overflow-hidden group"
+              >
+                <div className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                <div className="space-y-2">
+                  <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">LATEST PUBLICATION</span>
+                  <h4 className="text-lg font-bold text-white leading-tight">Next.js Enterprise scaling solutions</h4>
+                </div>
+                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-md rounded-2xl" />
+              </motion.div>
+
+            </div>
 
           {/* Center Globe Column — only visible on lg+ */}
           <div className="hidden lg:flex lg:col-span-4 items-center justify-center contact-3d-anim" style={{ minHeight: '420px' }}>

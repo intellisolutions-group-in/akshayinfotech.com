@@ -107,17 +107,21 @@ export default function CyberSecurityPage() {
               <div className="w-[340px] aspect-square bg-slate-950 rounded-3xl border border-emerald-900 p-6 shadow-2xl relative overflow-hidden flex items-center justify-center">
                 <svg className="w-full h-full stroke-emerald-900 fill-none" viewBox="0 0 100 100">
                   {/* Outer Orbit */}
-                  <motion.circle 
-                    cx="50" cy="50" r="40" strokeWidth="0.5" strokeDasharray="3 3"
+                  <motion.g
                     animate={{ rotate: 360 }}
                     transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
-                  />
+                    style={{ originX: "50px", originY: "50px" }}
+                  >
+                    <circle cx="50" cy="50" r="40" strokeWidth="0.5" strokeDasharray="3 3" />
+                  </motion.g>
                   {/* Inner Orbit */}
-                  <motion.circle 
-                    cx="50" cy="50" r="30" strokeWidth="0.5" strokeDasharray="2 2"
+                  <motion.g
                     animate={{ rotate: -360 }}
                     transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-                  />
+                    style={{ originX: "50px", originY: "50px" }}
+                  >
+                    <circle cx="50" cy="50" r="30" strokeWidth="0.5" strokeDasharray="2 2" />
+                  </motion.g>
 
                   {/* Shield shape in center */}
                   <path d="M 50 25 C 38 25, 30 29, 30 45 C 30 65, 50 78, 50 78 C 50 78, 70 65, 70 45 C 70 29, 62 25, 50 25 Z" stroke="#10b981" strokeWidth="2" className="animate-pulse" />

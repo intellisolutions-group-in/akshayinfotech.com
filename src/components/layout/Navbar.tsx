@@ -90,8 +90,7 @@ export default function Navbar() {
     setDropdownOpen(dropdownOpen === name ? null : name);
   };
 
-  const isHomepage = pathname === "/";
-  const useDarkNavbar = isHomepage && !scrolled && !mobileMenuOpen;
+  const useDarkNavbar = !scrolled && !mobileMenuOpen;
 
   return (
     <header
