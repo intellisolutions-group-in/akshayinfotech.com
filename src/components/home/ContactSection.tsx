@@ -413,7 +413,7 @@ export default function ContactSection() {
 
   const [formData, setFormData] = useState({
     name: "",
-    email: "info@akshayinfotech.net",
+    email: "",
     phone: "",
     company: "",
     message: "",
@@ -575,15 +575,52 @@ export default function ContactSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="w-full h-40 bg-gradient-to-tr from-blue-600/20 to-indigo-600/20 border border-white/5 rounded-2xl flex flex-col justify-between p-6 relative overflow-hidden group"
+                className="w-full h-44 bg-gradient-to-tr from-blue-600/20 to-indigo-600/20 border border-white/5 rounded-2xl relative overflow-hidden group cursor-pointer"
+                whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(59,130,246,0.12)" }}
               >
-                <div className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
-                <div className="space-y-2">
-                  <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">LATEST PUBLICATION</span>
-                  <h4 className="text-lg font-bold text-white leading-tight">Next.js Enterprise scaling solutions</h4>
+                {/* Background Image */}
+                <img 
+                  src="/images/featured-insight.png" 
+                  alt="Next.js Enterprise Architecture" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/50 to-transparent" />
+                
+                {/* Shimmer */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.05] to-transparent skew-x-12"
+                  animate={{ x: ["-150%", "250%"] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", repeatDelay: 4 }}
+                />
+
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-between p-5 z-10">
+                  <div className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                  <div className="space-y-1.5">
+                    <span className="text-[10px] font-mono text-cyan-300/80 uppercase tracking-wider">LATEST PUBLICATION</span>
+                    <h4 className="text-base font-bold text-white leading-tight drop-shadow-md">Next.js Enterprise scaling solutions</h4>
+                  </div>
                 </div>
-                <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-md rounded-2xl" />
+                <div className="absolute inset-0 rounded-2xl border border-blue-400/0 group-hover:border-blue-400/20 transition-all duration-500" />
               </motion.div>
+
+              {/* Email Contact Display */}
+              <motion.a
+                href="mailto:info@akshayinfotech.net"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+                className="flex items-center gap-3 px-5 py-4 bg-slate-900/60 border border-white/[0.06] rounded-2xl hover:border-blue-500/30 hover:bg-slate-800/50 transition-all duration-300 group/email"
+              >
+                <div className="h-10 w-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0 group-hover/email:bg-blue-500/20 transition-colors duration-300">
+                  <Send className="h-4 w-4 text-blue-400" />
+                </div>
+                <div className="space-y-0.5">
+                  <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wider block">Email Us</span>
+                  <span className="text-sm font-semibold text-slate-200 group-hover/email:text-blue-300 transition-colors duration-300">info@akshayinfotech.net</span>
+                </div>
+                <ArrowRight className="h-3.5 w-3.5 text-slate-500 ml-auto group-hover/email:text-blue-400 group-hover/email:translate-x-0.5 transition-all duration-300" />
+              </motion.a>
 
             </div>
 

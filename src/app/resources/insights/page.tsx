@@ -86,14 +86,96 @@ export default function KnowledgeHubPage() {
         <div className="p-8 bg-slate-900/40 border border-white/10 rounded-3xl backdrop-blur-md text-left flex flex-col lg:flex-row items-center gap-12 hover:border-blue-500/25 transition-all duration-300">
           
           {/* Featured Visual */}
-          <div className="w-full lg:w-2/5 h-64 bg-gradient-to-tr from-blue-600/20 to-indigo-600/20 border border-white/5 rounded-2xl flex flex-col justify-between p-6 relative overflow-hidden group">
-            <div className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
-            <div className="space-y-2">
-              <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">LATEST PUBLICATION</span>
-              <h4 className="text-lg font-bold text-white leading-tight">Next.js Enterprise scaling solutions</h4>
+          <motion.div 
+            className="w-full lg:w-2/5 h-72 lg:h-80 bg-gradient-to-tr from-blue-600/20 to-indigo-600/20 border border-white/5 rounded-2xl relative overflow-hidden group cursor-pointer"
+            whileHover={{ scale: 1.02, boxShadow: "0 0 40px rgba(59,130,246,0.15)" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+          >
+            {/* Background Image */}
+            <img 
+              src="/images/featured-insight.png" 
+              alt="Next.js Enterprise Architecture" 
+              className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+            />
+            
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/60 to-transparent" />
+            
+            {/* Animated Floating Particles */}
+            {[...Array(6)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute rounded-full bg-cyan-400/60"
+                style={{
+                  width: `${4 + i * 1.5}px`,
+                  height: `${4 + i * 1.5}px`,
+                  left: `${15 + i * 14}%`,
+                  top: `${20 + (i % 3) * 20}%`,
+                }}
+                animate={{
+                  y: [0, -12, 0, 8, 0],
+                  opacity: [0.3, 0.8, 0.5, 0.9, 0.3],
+                  scale: [1, 1.3, 1, 1.2, 1],
+                }}
+                transition={{
+                  duration: 4 + i * 0.7,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.5,
+                }}
+              />
+            ))}
+
+            {/* Shimmer Sweep Effect */}
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.06] to-transparent skew-x-12"
+              animate={{ x: ["-150%", "250%"] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", repeatDelay: 3 }}
+            />
+
+            {/* Scan Line */}
+            <motion.div
+              className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent"
+              animate={{ top: ["0%", "100%"] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+            />
+
+            {/* Content Overlay */}
+            <div className="absolute inset-0 flex flex-col justify-between p-6 z-10">
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                <motion.div 
+                  className="h-[1px] bg-gradient-to-r from-cyan-400/50 to-transparent flex-1"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 1.5, delay: 0.5 }}
+                  style={{ transformOrigin: "left" }}
+                />
+              </div>
+              <div className="space-y-2">
+                <motion.span 
+                  className="text-[10px] font-mono text-cyan-300/80 uppercase tracking-wider flex items-center gap-2"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  <BookOpen className="h-3 w-3" />
+                  LATEST PUBLICATION
+                </motion.span>
+                <motion.h4 
+                  className="text-lg font-bold text-white leading-tight drop-shadow-lg"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                  Next.js Enterprise scaling solutions
+                </motion.h4>
+              </div>
             </div>
-            <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-md rounded-2xl" />
-          </div>
+
+            {/* Hover border glow */}
+            <div className="absolute inset-0 rounded-2xl border border-blue-400/0 group-hover:border-blue-400/20 transition-all duration-500" />
+          </motion.div>
 
           {/* Featured Text */}
           <div className="w-full lg:w-3/5 space-y-4">
