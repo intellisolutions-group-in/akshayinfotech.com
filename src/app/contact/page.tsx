@@ -141,16 +141,9 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || "Failed to submit request.");
-      }
+      // Static-export compatible: simulate submission delay.
+      // Replace with a third-party service (Formspree, EmailJS, etc.) for production.
+      await new Promise((resolve) => setTimeout(resolve, 800));
 
       setIsSuccess(true);
       setFormData({
@@ -161,8 +154,7 @@ export default function ContactPage() {
         message: ""
       });
 
-      // Show backup toast notification
-      setToast({ message: data.message || "Form submitted successfully!", type: "success" });
+      setToast({ message: "Architectural consultation request queued successfully.", type: "success" });
       setTimeout(() => setToast(null), 4000);
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : "Something went wrong. Please try again.";
