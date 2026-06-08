@@ -70,8 +70,8 @@ const tabs = [
 ];
 
 const stats = [
-  { icon: TrendingUp, value: "200+", label: "Projects Delivered", color: "#2563EB" },
-  { icon: Users, value: "50+", label: "Expert Engineers", color: "#7C3AED" },
+  { icon: TrendingUp, value: "80+", label: "Projects Delivered", color: "#2563EB" },
+  { icon: Users, value: "25+", label: "Expert Engineers", color: "#7C3AED" },
   { icon: Award, value: "99.8%", label: "Client Retention", color: "#059669" },
 ];
 
@@ -389,7 +389,7 @@ export default function AboutSection() {
               </div>
               <div>
                 <div className="text-sm font-bold text-slate-800">
-                  <AnimatedCounter target={200} suffix="+" />
+                  <AnimatedCounter target={80} suffix="+" />
                 </div>
                 <div className="text-[10px] text-slate-400">Projects</div>
               </div>

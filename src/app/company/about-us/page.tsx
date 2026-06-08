@@ -11,6 +11,114 @@ import {
   Layers, Zap, Cpu, BarChart3, MapPin, CheckSquare
 } from "lucide-react";
 
+interface MilestoneVisualProps {
+  index: number;
+}
+
+function MilestoneVisual({ index }: MilestoneVisualProps) {
+  const colors = [
+    "from-blue-500 to-cyan-500",
+    "from-indigo-500 to-blue-500",
+    "from-purple-500 to-indigo-500",
+    "from-cyan-500 to-teal-500",
+    "from-emerald-500 to-teal-500"
+  ];
+  const color = colors[index] || "from-blue-500 to-indigo-500";
+
+  return (
+    <div className="relative w-full h-36 flex items-center justify-center overflow-hidden">
+      {/* Background glow */}
+      <div className={`absolute w-28 h-28 rounded-full bg-gradient-to-br ${color} blur-3xl opacity-20`} />
+      
+      {/* Twinkling stars */}
+      <div className="absolute inset-0">
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute h-1 w-1 rounded-full bg-white"
+            style={{
+              top: `${20 + ((i * 13 + index * 17) % 60)}%`,
+              left: `${20 + ((i * 19 + index * 23) % 60)}%`,
+            }}
+            animate={{
+              scale: [0.5, 1.3, 0.5],
+              opacity: [0.2, 0.7, 0.2],
+              y: [0, -10 - ((i * 5) % 15), 0],
+            }}
+            transition={{
+              duration: 3 + ((i * 3) % 3),
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: ((i * 2) % 4) * 0.4,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Decorative center rotation rings */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        className="absolute inset-0 flex items-center justify-center opacity-25"
+      >
+        <svg className="w-20 h-20 stroke-current text-white/10" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="35" strokeDasharray="3 3" />
+          <circle cx="50" cy="50" r="22" strokeDasharray="4 2" />
+        </svg>
+      </motion.div>
+
+      {/* Icon representing the phase */}
+      <div className="relative z-10">
+        {index === 0 && (
+          <div className="relative">
+            <Database className="h-10 w-10 text-blue-400" />
+            <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500"></span>
+            </span>
+          </div>
+        )}
+        {index === 1 && (
+          <div className="relative">
+            <Activity className="h-10 w-10 text-indigo-400" />
+            <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-500"></span>
+            </span>
+          </div>
+        )}
+        {index === 2 && (
+          <div className="relative">
+            <Layers className="h-10 w-10 text-purple-400" />
+            <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500"></span>
+            </span>
+          </div>
+        )}
+        {index === 3 && (
+          <div className="relative">
+            <Globe className="h-10 w-10 text-cyan-400" />
+            <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
+            </span>
+          </div>
+        )}
+        {index === 4 && (
+          <div className="relative">
+            <Cpu className="h-10 w-10 text-emerald-400" />
+            <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function AboutUsPage() {
   const [element, setElement] = useState<HTMLElement | null>(null);
   const [activeValue, setActiveValue] = useState<number>(0);
@@ -81,7 +189,7 @@ export default function AboutUsPage() {
     },
     {
       period: "GLOBAL REACH (2024)",
-      title: "ISO & SOC2 Telemetry Integration",
+      title: "Telemetry & Performance Integration",
       desc: "Consolidated infrastructure layouts under zero-trust credential rules, monitoring query latency limits across 120+ active clusters."
     },
     {
@@ -237,7 +345,7 @@ export default function AboutUsPage() {
             </div>
             <div className="md:col-span-2">
               <p className="text-sm text-slate-300 leading-relaxed font-light">
-                To design, audit, and deploy high-reliability microservice pipelines under SOC2 and ISO compliance bounds. We provide ongoing support retainers, regular code audits, and telemetry mapping to ensure cloud systems operate cleanly, transparently, and cost-effectively.
+                To design, audit, and deploy high-reliability microservice pipelines under strict data security and telemetry standards. We provide ongoing support retainers, regular code audits, and telemetry mapping to ensure cloud systems operate cleanly, transparently, and cost-effectively.
               </p>
             </div>
           </div>
@@ -301,7 +409,10 @@ export default function AboutUsPage() {
                     />
                   </div>
 
-                  <div className="w-full md:w-1/2" />
+                  {/* Left/Right Beautiful Visual Spacer with Twinkling Starlight on desktop */}
+                  <div className="hidden md:block w-full md:w-1/2 px-8">
+                    <MilestoneVisual index={idx} />
+                  </div>
 
                   <div className="w-full md:w-1/2 pl-12 md:pl-0 md:px-8 text-left">
                     <motion.div
@@ -348,43 +459,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* ---------------- 9. GLOBAL IMPACT ---------------- */}
-      <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24 text-left">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
-          <div className="lg:col-span-1 space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Global Footprint</h2>
-            <p className="text-sm text-slate-400 leading-relaxed font-light">
-              Akshay databases are active globally. With main clusters set up in North America, Western Europe, and Asia Pacific, we guarantee consistent data synchronization across all boundaries.
-            </p>
-            <div className="flex gap-4">
-              <div>
-                <h4 className="text-xl font-bold font-mono text-white">12+</h4>
-                <p className="text-[10px] text-slate-500 uppercase">Edge Zones</p>
-              </div>
-              <div>
-                <h4 className="text-xl font-bold font-mono text-white">120+</h4>
-                <p className="text-[10px] text-slate-500 uppercase">Live Systems</p>
-              </div>
-              <div>
-                <h4 className="text-xl font-bold font-mono text-white">99.999%</h4>
-                <p className="text-[10px] text-slate-500 uppercase">Uptime Compliance</p>
-              </div>
-            </div>
-          </div>
-          <div className="lg:col-span-2 p-8 bg-slate-900/30 border border-white/5 rounded-3xl flex flex-col items-center justify-center relative overflow-hidden min-h-[300px]">
-            {/* Visual representation of nodes */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0%,transparent_70%)] pointer-events-none" />
-            <div className="flex flex-wrap gap-8 justify-center relative z-10">
-              {["Boston, USA (HQ)", "London, UK", "Munich, Germany", "Singapore"].map((loc, i) => (
-                <div key={i} className="flex items-center gap-2 px-4 py-2 bg-slate-950/60 border border-white/10 rounded-xl">
-                  <MapPin className="h-4 w-4 text-blue-400 shrink-0" />
-                  <span className="text-xs font-mono text-slate-300 font-bold">{loc}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ---------------- 10. SUCCESS METRICS ---------------- */}
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24 text-left">
@@ -467,21 +541,6 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      {/* ---------------- 13. CTA SECTION ---------------- */}
-      <section className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center mb-8">
-        <div className="p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-          <h4 className="text-xl sm:text-2xl font-bold mb-2">Want to partner with our team?</h4>
-          <p className="text-xs sm:text-sm text-blue-100 mb-8 max-w-lg mx-auto font-light">Schedule a technical consulting call with a Akshay database architect to trace latency bottlenecks.</p>
-          <Link 
-            href="/contact"
-            className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-blue-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-blue-900/20"
-          >
-            Contact Systems Team
-            <ArrowRight className="h-4 w-4 text-blue-700" />
-          </Link>
-        </div>
-      </section>
 
     </div>
   );

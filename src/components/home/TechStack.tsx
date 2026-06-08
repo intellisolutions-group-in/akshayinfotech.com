@@ -100,9 +100,9 @@ const technologies = [
 ];
 
 const CENTER_TEXTS = [
-  { main: "POWERED BY\nMODERN\nTECHNOLOGIES", sub: "Core Stack", color: "#60A5FA" },
-  { main: "TECH STACK\nACTIVATED", sub: "Deploying...", color: "#34D399" },
-  { main: "POWERED BY\nMODERN\nTECHNOLOGIES", sub: "Core Stack", color: "#60A5FA" },
+  { main: "INITIATE\nTECH STACK\nENGAGEMENT", sub: "SYSTEM STATUS: READY", color: "#60A5FA" },
+  { main: "TRANSMITTING\nCOMPUTE\nPACKETS", sub: "SYNCING CLUSTER...", color: "#34D399" },
+  { main: "AKSHAY ENGINE\nACTIVATED", sub: "COMPLEX MESH: STABLE", color: "#A78BFA" },
 ];
 
 interface DataPacket {
@@ -309,7 +309,7 @@ export default function TechStack() {
               const y = p.progress * ty;
               if (p.progress >= 0.95) return null;
               return (
-                <circle key={p.id} cx={x} cy={y} r={4} fill="#60A5FA" opacity={0.9}
+                <circle key={p.id} cx={isNaN(x) ? 0 : x} cy={isNaN(y) ? 0 : y} r={4} fill="#60A5FA" opacity={0.9}
                   style={{ filter: "drop-shadow(0 0 6px #60A5FA)" }} />
               );
             })}

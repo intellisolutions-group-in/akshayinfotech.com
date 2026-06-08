@@ -141,12 +141,9 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      // Simulate fake API call with 2.5 second delay
-      await new Promise(resolve => setTimeout(resolve, 2500));
-
-      if (formData.email.toLowerCase().includes("error") || formData.message.toLowerCase().includes("error")) {
-        throw new Error("Simulation error triggered");
-      }
+      // Static-export compatible: simulate submission delay.
+      // Replace with a third-party service (Formspree, EmailJS, etc.) for production.
+      await new Promise((resolve) => setTimeout(resolve, 800));
 
       setIsSuccess(true);
       setFormData({
@@ -157,11 +154,11 @@ export default function ContactPage() {
         message: ""
       });
 
-      // Show backup toast notification
-      setToast({ message: "Form submitted successfully!", type: "success" });
+      setToast({ message: "Architectural consultation request queued successfully.", type: "success" });
       setTimeout(() => setToast(null), 4000);
     } catch (err) {
-      setToast({ message: "Something went wrong. Please try again.", type: "error" });
+      const errorMsg = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setToast({ message: errorMsg, type: "error" });
       setTimeout(() => setToast(null), 4000);
     } finally {
       setIsSubmitting(false);
@@ -248,124 +245,92 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
-
       {/* Contact Content Grid */}
-      <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <section className="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 mb-24">
+        <div className="bg-slate-950/80 border border-white/10 rounded-3xl p-8 backdrop-blur-xl relative overflow-hidden shadow-2xl">
           
-          {/* Left: Input Form */}
-          <div className="lg:col-span-7 bg-slate-950/80 border border-white/10 rounded-3xl p-8 backdrop-blur-xl relative overflow-hidden shadow-2xl">
-            
-            <div className="relative z-10 text-left">
-              <h3 className="text-lg font-bold text-white mb-6">Send A Message</h3>
+          <div className="relative z-10 text-left">
+            <h3 className="text-lg font-bold text-white mb-6">Send A Message</h3>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-[10px] font-bold text-slate-400 mb-1.5 uppercase tracking-wide">Full Name</label>
-                      <input 
-                        type="text" 
-                        name="name" 
-                        required
-                        value={formData.name}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-slate-900 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl text-xs text-white placeholder-slate-600 transition-all focus:outline-none"
-                        placeholder="John Doe"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-bold text-slate-400 mb-1.5 uppercase tracking-wide">Email Address</label>
-                      <input 
-                        type="email" 
-                        name="email" 
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-slate-900 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl text-xs text-white placeholder-slate-600 transition-all focus:outline-none"
-                        placeholder="john@example.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-[10px] font-bold text-slate-400 mb-1.5 uppercase tracking-wide">Company Name</label>
-                      <input 
-                        type="text" 
-                        name="company" 
-                        value={formData.company}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-slate-900 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl text-xs text-white placeholder-slate-600 transition-all focus:outline-none"
-                        placeholder="Enterprise Inc."
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-[10px] font-bold text-slate-400 mb-1.5 uppercase tracking-wide">Project Requirement</label>
-                      <select 
-                        name="projectType"
-                        value={formData.projectType}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 bg-slate-900 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl text-xs text-white placeholder-slate-600 transition-all focus:outline-none appearance-none"
-                      >
-                        <option value="migration">Database Migration</option>
-                        <option value="telemetry">Real-Time Ingestion / Telemetry</option>
-                        <option value="architecture">Enterprise Cloud Architecture</option>
-                        <option value="other">Other Software Engineering</option>
-                      </select>
-                    </div>
-                  </div>
-
+            <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-[10px] font-bold text-slate-400 mb-1.5 uppercase tracking-wide">Project Message</label>
-                    <textarea 
-                      name="message" 
-                      rows={5} 
+                    <label className="block text-[10px] font-bold text-slate-400 mb-1.5 uppercase tracking-wide">Full Name</label>
+                    <input 
+                      type="text" 
+                      name="name" 
                       required
-                      value={formData.message}
+                      value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-slate-900 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl text-xs text-white placeholder-slate-600 transition-all focus:outline-none resize-none"
-                      placeholder="Briefly details parameters, user numbers, and query requirements..."
+                      className="w-full px-4 py-3 bg-slate-900 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl text-xs text-white placeholder-slate-600 transition-all focus:outline-none"
+                      placeholder="John Doe"
                     />
                   </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-lg shadow-indigo-600/10 cursor-pointer"
-                  >
-                    {isSubmitting ? "Dispatching..." : "Send Secure Message"}
-                    <Send className="h-3.5 w-3.5" />
-                  </button>
-                </form>
-              </div>
-          </div>
-
-          {/* Right: Global Offices Info */}
-          <div className="lg:col-span-5 space-y-8 text-left">
-            <div>
-              <h4 className="text-base font-bold text-white mb-2">Our Locations</h4>
-              <p className="text-xs text-slate-450 leading-relaxed font-light">
-                Connect with our local regional offices for on-premise system reviews or direct developer interviews.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {officeLocations.map((loc, idx) => (
-                <div key={idx} className="p-6 bg-slate-900/30 border border-white/5 rounded-2xl space-y-3">
-                  <span className="text-[10px] font-mono text-indigo-400 uppercase tracking-widest font-bold">
-                    OFFICE // 0{idx + 1}
-                  </span>
-                  <h5 className="text-sm font-bold text-white">{loc.city}</h5>
-                  <div className="space-y-1 text-xs text-slate-500 font-light">
-                    <p className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5 text-slate-650" /> {loc.street}</p>
-                    <p className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5 text-slate-650" /> {loc.hours}</p>
-                    <p className="flex items-center gap-1.5"><Phone className="h-3.5 w-3.5 text-slate-650" /> {loc.phone}</p>
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-400 mb-1.5 uppercase tracking-wide">Email Address</label>
+                    <input 
+                      type="email" 
+                      name="email" 
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-slate-900 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl text-xs text-white placeholder-slate-600 transition-all focus:outline-none"
+                      placeholder="john@example.com"
+                    />
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
 
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-400 mb-1.5 uppercase tracking-wide">Company Name</label>
+                    <input 
+                      type="text" 
+                      name="company" 
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-slate-900 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl text-xs text-white placeholder-slate-600 transition-all focus:outline-none"
+                      placeholder="Enterprise Inc."
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-400 mb-1.5 uppercase tracking-wide">Project Requirement</label>
+                    <select 
+                      name="projectType"
+                      value={formData.projectType}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-slate-900 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl text-xs text-white placeholder-slate-600 transition-all focus:outline-none appearance-none"
+                    >
+                      <option value="migration">Database Migration</option>
+                      <option value="telemetry">Real-Time Ingestion / Telemetry</option>
+                      <option value="architecture">Enterprise Cloud Architecture</option>
+                      <option value="other">Other Software Engineering</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-[10px] font-bold text-slate-400 mb-1.5 uppercase tracking-wide">Project Message</label>
+                  <textarea 
+                    name="message" 
+                    rows={5} 
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-slate-900 border border-white/10 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-xl text-xs text-white placeholder-slate-600 transition-all focus:outline-none resize-none"
+                    placeholder="Briefly details parameters, user numbers, and query requirements..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-lg shadow-indigo-600/10 cursor-pointer"
+                >
+                  {isSubmitting ? "Dispatching..." : "Send Secure Message"}
+                  <Send className="h-3.5 w-3.5" />
+                </button>
+              </form>
+            </div>
         </div>
       </section>
 

@@ -5,37 +5,7 @@ import Link from "next/link";
 import { Cpu, Linkedin, Twitter, Facebook, Github, Instagram, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
 import MagneticWrapper from "@/components/ui/MagneticWrapper";
-import TechALogo from "@/components/ui/TechALogo";
 
-const logoText = "Akshay".split("");
-const techText = "Infotech".split("");
-
-const logoContainerVariants = {
-  initial: {},
-  hover: {},
-};
-
-function LogoLetter({ char, index }: { char: string; index: number }) {
-  return (
-    <motion.span
-      className="inline-block transition-colors duration-200"
-      variants={{
-        initial: { y: 0 },
-        hover: {
-          y: [0, -5, 0],
-          color: "#60A5FA",
-          transition: {
-            duration: 0.5,
-            delay: index * 0.025,
-            ease: "easeInOut",
-          },
-        },
-      }}
-    >
-      {char}
-    </motion.span>
-  );
-}
 
 // Stagger child variants for navigation links
 const listVariants = {
@@ -116,33 +86,11 @@ export default function Footer() {
           {/* Centered Brand Logo */}
           <div className="mb-8">
             <Link href="/" className="inline-block">
-              <motion.div 
-                variants={logoContainerVariants}
-                whileHover="hover"
-                initial="initial"
-                className="flex items-center space-x-2.5"
-              >
-                <motion.div 
-                  variants={{
-                    initial: { rotate: 0 },
-                    hover: { rotate: 180, scale: 1.05 }
-                  }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
-                  className="h-10 w-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20"
-                >
-                  <TechALogo className="h-6 w-6" />
-                </motion.div>
-                <span className="text-xl font-bold text-white tracking-tight">
-                  {logoText.map((char, i) => (
-                    <LogoLetter key={i} char={char} index={i} />
-                  ))}
-                  <span className="text-blue-400 font-medium ml-0.5">
-                    {techText.map((char, i) => (
-                      <LogoLetter key={i} char={char} index={i + logoText.length} />
-                    ))}
-                  </span>
-                </span>
-              </motion.div>
+              <img
+                src="/logo-dark.png"
+                alt="Akshay Infotech Logo"
+                className="h-9 w-auto object-contain transition-all duration-300 hover:scale-[1.02] mx-auto"
+              />
             </Link>
             <p className="text-xs text-white/40 mt-3 max-w-sm mx-auto font-light leading-relaxed">
               Building Intelligent Digital Ecosystems. Engineering premium high-fidelity software architectures.

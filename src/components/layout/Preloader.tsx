@@ -93,91 +93,29 @@ export default function Preloader() {
     logoGroup.scale.set(0, 0, 0); // Animated by GSAP
     scene.add(logoGroup);
 
-    // Left leg of A
-    const leftLeg = new THREE.Shape();
-    leftLeg.moveTo(0, 0.42);
-    leftLeg.lineTo(-0.36, -0.42);
-    leftLeg.lineTo(-0.192, -0.42);
-    leftLeg.lineTo(0, 0.024);
-    leftLeg.closePath();
+    // Load texture
+    const textureLoader = new THREE.TextureLoader();
+    const logoTexture = textureLoader.load("/logo-icon.png");
 
-    // Right leg of A
-    const rightLeg = new THREE.Shape();
-    rightLeg.moveTo(0, 0.42);
-    rightLeg.lineTo(0.36, -0.42);
-    rightLeg.lineTo(0.192, -0.42);
-    rightLeg.lineTo(0, 0.024);
-    rightLeg.closePath();
+    // Create a plane geometry for the logo (width: 0.85, height: 0.85)
+    const logoGeo = new THREE.PlaneGeometry(0.85, 0.85);
 
-    // Floating crossbar of A
-    const crossbar = new THREE.Shape();
-    crossbar.moveTo(-0.132, -0.096);
-    crossbar.lineTo(0.132, -0.096);
-    crossbar.lineTo(0.084, 0.0);
-    crossbar.lineTo(-0.084, 0.0);
-    crossbar.closePath();
-
-    const extrudeSettings = {
-      depth: 0.12,
-      bevelEnabled: true,
-      bevelSegments: 3,
-      steps: 1,
-      bevelSize: 0.015,
-      bevelThickness: 0.015,
-    };
-
-    const leftLegGeo = new THREE.ExtrudeGeometry(leftLeg, extrudeSettings);
-    const rightLegGeo = new THREE.ExtrudeGeometry(rightLeg, extrudeSettings);
-    const crossbarGeo = new THREE.ExtrudeGeometry(crossbar, extrudeSettings);
-
-    const logoMatLeft = new THREE.MeshPhysicalMaterial({
-      color: 0x2563EB,
-      emissive: 0x4f46e5,
-      emissiveIntensity: 0.2,
-      roughness: 0.1,
-      metalness: 0.92,
-      clearcoat: 1.0,
-      clearcoatRoughness: 0.08,
+    const logoMaterial = new THREE.MeshPhysicalMaterial({
+      map: logoTexture,
       transparent: true,
       opacity: 0,
+      roughness: 0.15,
+      metalness: 0.1,
+      side: THREE.DoubleSide,
+      depthWrite: false,
+      emissive: 0x2563eb,
+      emissiveMap: logoTexture,
+      emissiveIntensity: 0.15,
     });
 
-    const logoMatRight = new THREE.MeshPhysicalMaterial({
-      color: 0x3B82F6,
-      emissive: 0x06b6d4,
-      emissiveIntensity: 0.2,
-      roughness: 0.1,
-      metalness: 0.92,
-      clearcoat: 1.0,
-      clearcoatRoughness: 0.08,
-      transparent: true,
-      opacity: 0,
-    });
-
-    const logoMatCross = new THREE.MeshPhysicalMaterial({
-      color: 0x22D3EE,
-      emissive: 0x38bdf8,
-      emissiveIntensity: 0.2,
-      roughness: 0.1,
-      metalness: 0.92,
-      clearcoat: 1.0,
-      clearcoatRoughness: 0.08,
-      transparent: true,
-      opacity: 0,
-    });
-
-    const leftLegMesh = new THREE.Mesh(leftLegGeo, logoMatLeft);
-    const rightLegMesh = new THREE.Mesh(rightLegGeo, logoMatRight);
-    const crossbarMesh = new THREE.Mesh(crossbarGeo, logoMatCross);
-
-    // Center mesh positions in Z
-    leftLegMesh.position.z = -0.06;
-    rightLegMesh.position.z = -0.06;
-    crossbarMesh.position.z = -0.06;
-
-    logoGroup.add(leftLegMesh);
-    logoGroup.add(rightLegMesh);
-    logoGroup.add(crossbarMesh);
+    const logoMesh = new THREE.Mesh(logoGeo, logoMaterial);
+    logoMesh.position.z = -0.06;
+    logoGroup.add(logoMesh);
 
     // ── 3D DIGITAL GLOBE (Supporting Structure) ──────────────────────────────
     const globeGroup = new THREE.Group();
@@ -272,22 +210,21 @@ export default function Preloader() {
       const tl = gsap.timeline();
 
       // STEP 2 & 3: Digital globe forms using network lines and dots
-      tl.to(sphereWireMat, { opacity: 0.12, duration: 1.0, ease: "power2.out" }, 0.2);
-      tl.to(globeDotMat, { opacity: 0.65, duration: 1.0, ease: "power2.out" }, 0.4);
-      tl.to(globeLineMat, { opacity: 0.35, duration: 1.2, ease: "power2.out" }, 0.5);
+      tl.to(sphereWireMat, { opacity: 0.12, duration: 1.0, ease: "easeOut" }, 0.2);
+      tl.to(globeDotMat, { opacity: 0.65, duration: 1.0, ease: "easeOut" }, 0.4);
+      tl.to(globeLineMat, { opacity: 0.35, duration: 1.2, ease: "easeOut" }, 0.5);
 
-      // STEP 4: 3D logo appears inside globe (scale 0 -> 100%, 1s duration)
-      tl.to(logoGroup.scale, { x: 1, y: 1, z: 1, duration: 1.0, ease: "back.out(1.5)" }, 1.3);
-      tl.to([logoMatLeft, logoMatRight, logoMatCross], { opacity: 0.95, duration: 0.8, ease: "power2.out", stagger: 0.05 }, 1.3);
+      tl.to(logoGroup.scale, { x: 1, y: 1, z: 1, duration: 1.0, ease: "backOut" }, 1.3);
+      tl.to(logoMaterial, { opacity: 0.95, duration: 0.8, ease: "easeOut" }, 1.3);
 
       // STEP 5: Soft glow pulse around logo
-      tl.to([logoMatLeft, logoMatRight, logoMatCross], { emissiveIntensity: 0.85, duration: 0.6, yoyo: true, repeat: 1, ease: "power2.inOut", stagger: 0.05 }, 2.0);
+      tl.to(logoMaterial, { emissiveIntensity: 0.75, duration: 0.6, yoyo: true, repeat: 1, ease: "easeInOut" }, 2.0);
 
       // STEP 6: Company name fades upward
-      tl.to(".preloader-title", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, 2.3);
+      tl.to(".preloader-title", { opacity: 1, y: 0, duration: 0.8, ease: "easeOut" }, 2.3);
 
       // STEP 7: Tagline appears
-      tl.to(".preloader-tagline", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, 2.7);
+      tl.to(".preloader-tagline", { opacity: 1, y: 0, duration: 0.8, ease: "easeOut" }, 2.7);
 
       // STEP 8: Loading bar begins filling (0% -> 100%)
       const progressVal = { value: 0 };
@@ -316,8 +253,8 @@ export default function Preloader() {
       );
 
       // STEP 9 & 10: Entire scene reaches full brightness, then smooth transition out
-      tl.to(camera.position, { z: 6.8, duration: 0.8, ease: "power2.out" }, 3.8);
-      tl.to([logoMatLeft, logoMatRight, logoMatCross], { emissiveIntensity: 1.1, duration: 0.5, ease: "power2.out" }, 3.8);
+      tl.to(camera.position, { z: 6.8, duration: 0.8, ease: "easeOut" }, 3.8);
+      tl.to(logoMaterial, { emissiveIntensity: 0.9, duration: 0.5, ease: "easeOut" }, 3.8);
 
       tl.to(
         {},
@@ -336,19 +273,25 @@ export default function Preloader() {
 
     // ── Continuous Loop Animation (tick) ────────────────────────────────────
     let rafId: number;
-    const clock = new THREE.Clock();
+    const startTime = performance.now();
 
     const tick = () => {
-      const elapsed = clock.getElapsedTime();
+      const elapsed = (performance.now() - startTime) / 1000;
 
       // Slowly rotate digital globe: 20s full rotation infinite
       const globeSpeedMultiplier = (Math.PI * 2) / 20;
       globeGroup.rotation.y = elapsed * globeSpeedMultiplier;
       globeGroup.rotation.x = Math.sin(elapsed * 0.15) * 0.08;
 
-      // Inside logo rotates slowly on its own axis for depth/reflections
-      logoGroup.rotation.y = -elapsed * 0.22;
-      logoGroup.rotation.x = Math.sin(elapsed * 0.2) * 0.1;
+      // Inside logo floats and sways gently like a stable holographic core (never paper-thin)
+      logoGroup.position.y = Math.sin(elapsed * 1.2) * 0.05;
+      logoGroup.rotation.y = Math.sin(elapsed * 0.8) * 0.12;
+      logoGroup.rotation.x = Math.cos(elapsed * 0.6) * 0.08;
+
+      // Subtle breathing glow animation (blue brand glow)
+      if (logoMaterial) {
+        logoMaterial.emissiveIntensity = 0.12 + Math.abs(Math.sin(elapsed * 1.5)) * 0.22;
+      }
 
       // Render scene
       renderer.render(scene, camera);
@@ -371,8 +314,8 @@ export default function Preloader() {
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", onResize);
       renderer.dispose();
-      [sphereGeo, dotGeo, lineGeo, leftLegGeo, rightLegGeo, crossbarGeo].forEach((g) => g.dispose());
-      [sphereWireMat, globeDotMat, globeLineMat, logoMatLeft, logoMatRight, logoMatCross, bgGridMat].forEach((m) => m.dispose());
+      [sphereGeo, dotGeo, lineGeo, logoGeo].forEach((g) => g.dispose());
+      [sphereWireMat, globeDotMat, globeLineMat, logoMaterial, bgGridMat].forEach((m) => m.dispose());
     };
   }, [isVisible]);
 

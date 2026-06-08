@@ -59,8 +59,8 @@ export default function OurProcess() {
       num: "04",
       title: "Quality Audits",
       subtitle: "Continuous",
-      desc: "Quality isn't a phase — it's embedded into every sprint. We run automated unit testing suites, performance stress tests, accessibility audits, and HIPAA/SOC2 compliance checks. Our CI/CD pipelines enforce 80%+ code coverage thresholds, and every pull request requires two senior engineer approvals before merging.",
-      deliverables: ["Automated test suites", "Lighthouse performance reports", "Security penetration test results", "Compliance certification docs"],
+      desc: "Quality isn't a phase — it's embedded into every sprint. We run automated unit testing suites, performance stress tests, accessibility audits, and security scan checks. Our CI/CD pipelines enforce 80%+ code coverage thresholds, and every pull request requires two senior engineer approvals before merging.",
+      deliverables: ["Automated test suites", "Lighthouse performance reports", "Security penetration test results", "Security verification docs"],
       tools: ["Cypress", "Lighthouse", "OWASP ZAP"]
     },
     {
@@ -406,17 +406,6 @@ export default function OurProcess() {
         </div>
       </section>
 
-      {/* ═══════════════ 9. CTA SECTION ═══════════════ */}
-      <section className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center mb-8">
-        <div className="p-8 md:p-12 bg-gradient-to-r from-indigo-600 to-blue-700 rounded-3xl text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-          <h4 className="text-xl sm:text-2xl font-bold mb-2">Ready to Start Scoping?</h4>
-          <p className="text-xs sm:text-sm text-indigo-100 mb-8 max-w-lg mx-auto font-light">Partner with us to create detailed architectural mockups and milestone paths for your system.</p>
-          <Link href="/contact" className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-indigo-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-indigo-900/20">
-            Consult Our Architect <ArrowRight className="h-4 w-4 text-indigo-700" />
-          </Link>
-        </div>
-      </section>
 
     </div>
   );

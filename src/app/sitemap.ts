@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://akshayinfotech.com";
   const now = new Date();
@@ -81,7 +83,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "technologies",
     "industries",
     "why-choose-us",
-    "leadership",
     "our-story"
   ].map((company) => ({
     url: `${baseUrl}/company/${company}`,

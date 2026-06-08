@@ -7,6 +7,7 @@ import {
   ArrowRight, Globe, Award, Settings, Database, RefreshCw, BarChart
 } from "lucide-react";
 import { motion } from "framer-motion";
+import FAQItem from "@/components/shared/FAQItem";
 
 const trainingStages = [
   {
@@ -116,9 +117,9 @@ export default function AIMachineLearningPage() {
                   <path d="M 65 30 L 50 50 M 75 50 L 50 50 M 65 70 L 50 50" strokeWidth="0.5" />
 
                   {/* Synapse Pulses */}
-                  <motion.circle cx="35" cy="30" r="2" fill="#818cf8" animate={{ cx: [35, 50], cy: [30, 50] }} transition={{ repeat: Infinity, duration: 1.8, ease: "linear" }} />
-                  <motion.circle cx="75" cy="50" r="2" fill="#c084fc" animate={{ cx: [75, 50], cy: [50, 50] }} transition={{ repeat: Infinity, duration: 2.2, ease: "linear" }} />
-                  <motion.circle cx="65" cy="70" r="2" fill="#c084fc" animate={{ cx: [65, 50], cy: [70, 50] }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }} />
+                  <motion.circle r={2} fill="#818cf8" animate={{ x: [35, 50], y: [30, 50] }} transition={{ repeat: Infinity, duration: 1.8, ease: "linear" }} />
+                  <motion.circle r={2} fill="#c084fc" animate={{ x: [75, 50], y: [50, 50] }} transition={{ repeat: Infinity, duration: 2.2, ease: "linear" }} />
+                  <motion.circle r={2} fill="#c084fc" animate={{ x: [65, 50], y: [70, 50] }} transition={{ repeat: Infinity, duration: 2, ease: "linear" }} />
                 </svg>
               </div>
               <div className="absolute -inset-4 bg-indigo-500/10 rounded-full blur-3xl -z-10"></div>
@@ -331,13 +332,7 @@ const results = await index.query({
 
           <div className="space-y-6">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-slate-900 border border-slate-850 rounded-2xl p-6.5 space-y-2.5">
-                <div className="flex items-center space-x-2 text-sm font-bold text-white">
-                  <HelpCircle className="h-4.5 w-4.5 text-indigo-400 shrink-0" />
-                  <span>{faq.q}</span>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pl-7">{faq.a}</p>
-              </div>
+              <FAQItem key={faq.q} faq={faq} iconColor="text-indigo-400" />
             ))}
           </div>
         </div>

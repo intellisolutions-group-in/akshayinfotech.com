@@ -21,12 +21,15 @@ function FastExecutionVisual({ isActive }: { isActive: boolean }) {
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.circle
-        cx="20" cy="50" r="4"
+        r={4}
         fill="#3b82f6"
         animate={isActive ? {
-          cx: [20, 180, 20],
-          cy: [50, 30, 50]
-        } : {}}
+          x: [20, 180, 20],
+          y: [50, 30, 50]
+        } : {
+          x: 20,
+          y: 50
+        }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
       />
       <defs>
@@ -69,9 +72,9 @@ function ScalableVisual({ isActive }: { isActive: boolean }) {
       <path d="M40 40 H70 M130 40 H160 M70 40 L100 20 M70 40 L100 40 M70 40 L100 60 M130 40 L100 20 M130 40 L100 40 M130 40 L100 60" stroke="rgba(255,255,255,0.08)" strokeWidth="1.5" />
       <circle cx="40" cy="40" r="4" fill="#3b82f6" />
       <circle cx="160" cy="40" r="4" fill="#8b5cf6" />
-      <motion.circle cx="100" cy="20" r="3" fill="#3b82f6" animate={isActive ? { r: [3, 5, 3] } : {}} transition={{ duration: 1.5, repeat: Infinity }} />
-      <motion.circle cx="100" cy="40" r="3" fill="#6366f1" animate={isActive ? { r: [3, 5, 3] } : {}} transition={{ duration: 1.5, delay: 0.5, repeat: Infinity }} />
-      <motion.circle cx="100" cy="60" r="3" fill="#8b5cf6" animate={isActive ? { r: [3, 5, 3] } : {}} transition={{ duration: 1.5, delay: 1, repeat: Infinity }} />
+      <motion.circle cx={100} cy={20} r={3} fill="#3b82f6" initial={{ r: 3 }} animate={isActive ? { r: [3, 5, 3] } : { r: 3 }} transition={{ duration: 1.5, repeat: Infinity }} />
+      <motion.circle cx={100} cy={40} r={3} fill="#6366f1" initial={{ r: 3 }} animate={isActive ? { r: [3, 5, 3] } : { r: 3 }} transition={{ duration: 1.5, delay: 0.5, repeat: Infinity }} />
+      <motion.circle cx={100} cy={60} r={3} fill="#8b5cf6" initial={{ r: 3 }} animate={isActive ? { r: [3, 5, 3] } : { r: 3 }} transition={{ duration: 1.5, delay: 1, repeat: Infinity }} />
     </svg>
   );
 }
@@ -161,8 +164,8 @@ const cards = [
     number: "02",
     title: "Enterprise Security",
     icon: ShieldCheck,
-    desc: "Rigorous endpoint encryption, SOC2 compliance patterns, and absolute data protection.",
-    features: ["Endpoint TLS/SSL encryption", "Regular penetration tests", "GDPR & SOC2 compliance"],
+    desc: "Rigorous endpoint encryption, modern security patterns, and absolute data protection.",
+    features: ["Endpoint TLS/SSL encryption", "Regular penetration tests", "Modern security patterns"],
     accent: "rgba(16, 185, 129, 0.2)",
     iconBg: "rgba(16, 185, 129, 0.08)",
     iconColor: "#10b981",
@@ -213,8 +216,8 @@ const cards = [
     number: "06",
     title: "Innovation Focus",
     icon: Globe,
-    desc: "Integrating international compliance, high-availability multi-region hosting, and localization.",
-    features: ["Multi-region hosting nodes", "GDPR/HIPAA compliance", "Localization features"],
+    desc: "Integrating international data privacy standards, high-availability multi-region hosting, and localization.",
+    features: ["Multi-region hosting nodes", "Data privacy standards", "Localization features"],
     accent: "rgba(139, 92, 246, 0.2)",
     iconBg: "rgba(139, 92, 246, 0.08)",
     iconColor: "#8b5cf6",

@@ -69,7 +69,7 @@ export default function CaseStudiesPage() {
       challenge: "Patient portal databases experienced write-locks during simultaneous record requests, causing login timeouts.",
       solution: "Structured GraphQL query facades and partitioned databases to segment read/write loads.",
       metrics: {
-        uptime: "SOC2 Certified",
+        uptime: "Security Audited",
         savings: "85% CPU Load Reduction",
         latency: "8ms Portal Retrieval"
       }
@@ -312,21 +312,6 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center mb-8">
-        <div className="p-8 md:p-12 bg-gradient-to-r from-blue-600 to-indigo-750 rounded-3xl text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-          <h4 className="text-xl sm:text-2xl font-bold mb-2">Want to build similar systems?</h4>
-          <p className="text-xs sm:text-sm text-blue-155 mb-8 max-w-lg mx-auto font-light leading-relaxed">Book a scoping call with a Akshay systems architect to review your legacy constraints.</p>
-          <Link 
-            href="/contact"
-            className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-blue-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-blue-900/20"
-          >
-            Review Case Blueprints
-            <ArrowRight className="h-4 w-4 text-blue-700" />
-          </Link>
-        </div>
-      </section>
 
     </div>
   );
