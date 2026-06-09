@@ -195,7 +195,7 @@ export default function AboutUsPage() {
     {
       period: "FUTURE READY (2026+)",
       title: "Intelligent Auto-Scaling Blueprints",
-      desc: "Deploying predictive server scaling targets that spin up container environments 15 minutes before peak traffic intervals."
+      desc: "Deploying predictive server scaling targets that spin up container environments ahead of peak traffic intervals."
     }
   ];
 

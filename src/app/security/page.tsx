@@ -314,7 +314,7 @@ export default function SecurityPage() {
           </div>
           <h2 className="text-xl font-bold text-slate-900 mb-3">Responsible Disclosure</h2>
           <p className="text-sm text-slate-500 mb-6 leading-relaxed">
-            Discovered a security vulnerability? We take all reports seriously and will investigate and respond within 24 hours. Please do not disclose vulnerabilities publicly before giving us an opportunity to address them.
+            Discovered a security vulnerability? We take all reports seriously and will investigate and respond promptly. Please do not disclose vulnerabilities publicly before giving us an opportunity to address them.
           </p>
           <a href="mailto:info@akshayinfoctech.net" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-xl hover:bg-slate-800 transition-colors">
             <Shield className="h-4 w-4" /> Report a Vulnerability

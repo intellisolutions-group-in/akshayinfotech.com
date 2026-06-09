@@ -217,7 +217,7 @@ export default function TermsPage() {
                 ["IP Ownership", "Client owns deliverables after full payment", "§4"],
                 ["Payment", "40% deposit, milestone-based billing", "§7"],
                 ["Refunds", "No refunds for completed work", "§7"],
-                ["Liability", "Limited to 3 months of fees paid", "§6"],
+                ["Liability", "Limited to recent fees paid", "§6"],
                 ["Disputes", "Binding arbitration, no class actions", "§9"],
                 ["Data", "Client responsible for their users' data", "§5"],
               ].map(([topic, summary, section], i) => (

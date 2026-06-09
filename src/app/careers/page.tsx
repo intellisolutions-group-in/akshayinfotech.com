@@ -14,7 +14,7 @@ const benefits = [
   { icon: GraduationCap, title: "Annual Learn Budget", desc: "Generous allowance every year for books, courses, code bootcamps, and events." },
   { icon: Star, title: "Remote Flexibility", desc: "Work from anywhere in the world. We sponsor co-working desk memberships." },
   { icon: ShieldCheck, title: "Modern Workspaces", desc: "Receive allowances for modern computers, ergo chairs, and key monitors." },
-  { icon: Compass, title: "Generous Time Off", desc: "25 days of paid annual leave plus additional corporate mental rest days." },
+  { icon: Compass, title: "Generous Time Off", desc: "Competitive paid annual leave plus additional corporate mental rest days." },
   { icon: Trophy, title: "Equity & Performance", desc: "Generous early-stage equity grants and annual performance-based scaling bonuses." }
 ];
 

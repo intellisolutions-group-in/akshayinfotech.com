@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
       icon: Heart,
       title: "Post-Release Support Retainers",
       desc: "We sign structured SLA retainers for continuous log monitoring, database scaling checks, system optimization tasks, and feature enhancement sprints. Your systems are never left unsupported after launch.",
-      proof: "4-hour critical incident response SLA",
+      proof: "Rapid critical incident response SLA",
       details: "Our support tiers include weekly health reports, monthly security patches, quarterly performance audits, and annual architecture reviews."
     },
     {
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
       icon: Globe,
       title: "Global Delivery Capability",
       desc: "Our distributed engineering teams operate across US, UK, and European time zones, enabling near-24/7 development coverage. We use async-first communication models to eliminate timezone friction.",
-      proof: "Effective coverage: 18 hours/day across timezones",
+      proof: "Extended coverage across global timezones",
       details: "We maintain development centers in Boston, London, and Munich, with satellite contributors across Asia Pacific for round-the-clock incident response."
     }
   ];

@@ -77,7 +77,7 @@ export default function OurProcess() {
       num: "06",
       title: "Proactive Retainers",
       subtitle: "Ongoing",
-      desc: "Post-launch, we transition into structured support retainers. This includes active log auditing, security patch management, database maintenance windows, server scaling adjustments, and feature enhancement sprints. Our SLA guarantees 4-hour response times for critical incidents and weekly health report deliveries.",
+      desc: "Post-launch, we transition into structured support retainers. This includes active log auditing, security patch management, database maintenance windows, server scaling adjustments, and feature enhancement sprints. Our SLA guarantees rapid response times for critical incidents and regular health report deliveries.",
       deliverables: ["Weekly health reports", "Monthly security patches", "Quarterly performance audits", "Annual architecture reviews"],
       tools: ["PagerDuty", "Grafana", "Sentry"]
     }
@@ -98,7 +98,7 @@ export default function OurProcess() {
   ];
 
   const faqs = [
-    { q: "How long does a typical project take from discovery to launch?", a: "Most projects range from 8-16 weeks depending on complexity. Simple MVPs can launch in 6 weeks, while enterprise platforms with complex integrations typically require 12-20 weeks." },
+    { q: "How long does a typical project take from discovery to launch?", a: "Project timelines vary based on scope and complexity. Simple MVPs can launch quickly, while enterprise platforms with complex integrations require a longer engagement. We provide accurate estimates during our discovery phase." },
     { q: "Can we be involved in daily development decisions?", a: "Absolutely. We maintain shared Slack channels, provide access to our project management boards, and schedule weekly sync calls. You have full visibility into every sprint." },
     { q: "What happens if requirements change mid-project?", a: "Our agile methodology is designed for change. We re-prioritize backlogs every sprint, ensuring new requirements are evaluated and scheduled without disrupting active development work." },
     { q: "Do you provide source code access during development?", a: "Yes. From day one, you have full access to Git repositories, CI/CD pipelines, and staging environments. We believe in complete transparency throughout the build process." }
@@ -355,7 +355,7 @@ export default function OurProcess() {
             <tbody className="divide-y divide-white/5">
               {[
                 ["Code Ownership", "100% client-owned from day one", "Often vendor-locked"],
-                ["Sprint Demos", "Every 2 weeks on staging URLs", "Monthly or at project end"],
+                ["Sprint Demos", "Regular demos on staging URLs", "Monthly or at project end"],
                 ["Test Coverage", "80%+ enforced via CI/CD", "Manual QA only"],
                 ["Deployment Strategy", "Blue-green zero-downtime", "Weekend maintenance windows"],
                 ["Post-Launch Support", "Structured SLA retainers", "Pay-per-incident billing"],

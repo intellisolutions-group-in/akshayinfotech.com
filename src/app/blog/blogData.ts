@@ -793,9 +793,9 @@ jobs:
     codeSnippet: {
       code: `import { KMSClient, GenerateDataKeyCommand } from "@aws-sdk/client-kms";
 
-const kmsClient = new KMSClient({ region: "us-east-1" });
+const kmsClient = new KMSClient({ region: "your-region" });
 const command = new GenerateDataKeyCommand({
-  KeyId: "arn:aws:kms:us-east-1:123456789012:key/my-key-uuid",
+  KeyId: "arn:aws:kms:your-region:123456789012:key/my-key-uuid",
   KeySpec: "AES_256"
 });
 const response = await kmsClient.send(command);`,

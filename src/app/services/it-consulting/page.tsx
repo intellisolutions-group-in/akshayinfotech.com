@@ -242,25 +242,25 @@ export default function ITConsultingPage() {
                   <td className="px-6 py-4 font-medium text-white">Application Servers</td>
                   <td className="px-6 py-4">On-premise VM server racks</td>
                   <td className="px-6 py-4">AWS ECS / Fargate container nodes</td>
-                  <td className="px-6 py-4 text-emerald-400">35% cost saved / 3 months</td>
+                  <td className="px-6 py-4 text-emerald-400">35% cost reduction achieved</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-medium text-white">Customer Database</td>
                   <td className="px-6 py-4">Local SQL instances without replica sets</td>
                   <td className="px-6 py-4">Amazon RDS with multi-zone replicas</td>
-                  <td className="px-6 py-4 text-emerald-400">99.99% uptime / 2 months</td>
+                  <td className="px-6 py-4 text-emerald-400">99.99% uptime achieved</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-medium text-white">Release Workflow</td>
                   <td className="px-6 py-4">Manual server file copies via FTP</td>
                   <td className="px-6 py-4">GitHub Actions and Fastlane pipelines</td>
-                  <td className="px-6 py-4 text-emerald-400">90% build time saved / 1 month</td>
+                  <td className="px-6 py-4 text-emerald-400">90% build time reduction</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 font-medium text-white">Identity Access</td>
                   <td className="px-6 py-4">Local database user records</td>
                   <td className="px-6 py-4">Azure Active Directory and SSO auth</td>
-                  <td className="px-6 py-4 text-emerald-400">Reduced risk / 1.5 months</td>
+                  <td className="px-6 py-4 text-emerald-400">Reduced operational risk</td>
                 </tr>
               </tbody>
             </table>
