@@ -194,16 +194,16 @@ export default function IndustriesWeServe() {
                     <span className="text-xs font-mono text-violet-400 uppercase">{industries[activeIndustry].tagline}</span>
                   </div>
                 </div>
-                <p className="text-sm text-slate-400 leading-relaxed font-light">{industries[activeIndustry].heroDesc}</p>
+                <p className="text-base text-slate-400 leading-relaxed font-light">{industries[activeIndustry].heroDesc}</p>
               </div>
 
               {/* Metrics */}
               <div className="p-6 bg-[#090d1f]/60 border border-white/5 rounded-3xl backdrop-blur-md space-y-4">
-                <span className="text-[9px] uppercase font-mono tracking-widest text-violet-400 font-bold block">Key Metrics</span>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-violet-400 font-bold block">Key Metrics</span>
                 {industries[activeIndustry].metrics.map((met, i) => (
                   <div key={i} className="flex justify-between items-center p-3 bg-slate-900/40 border border-white/5 rounded-xl">
-                    <span className="text-xs text-slate-400 font-light">{met.label}</span>
-                    <span className="text-xs font-mono text-white font-bold">{met.value}</span>
+                    <span className="text-sm text-slate-400 font-light">{met.label}</span>
+                    <span className="text-sm font-mono text-white font-bold">{met.value}</span>
                   </div>
                 ))}
               </div>
@@ -212,17 +212,17 @@ export default function IndustriesWeServe() {
             {/* Challenges vs Solutions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="p-6 bg-slate-900/30 border border-white/5 rounded-2xl space-y-4">
-                <span className="text-[9px] uppercase font-mono tracking-widest text-red-400 font-bold block">Industry Challenges</span>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-red-400 font-bold block">Industry Challenges</span>
                 {industries[activeIndustry].challenges.map((c, i) => (
-                  <div key={i} className="flex items-center gap-3 text-xs text-slate-400 font-light">
+                  <div key={i} className="flex items-center gap-3 text-sm text-slate-400 font-light">
                     <Target className="h-3.5 w-3.5 text-red-400 shrink-0" /> {c}
                   </div>
                 ))}
               </div>
               <div className="p-6 bg-slate-900/30 border border-white/5 rounded-2xl space-y-4">
-                <span className="text-[9px] uppercase font-mono tracking-widest text-emerald-400 font-bold block">Our Solutions</span>
+                <span className="text-[10px] uppercase font-mono tracking-widest text-emerald-400 font-bold block">Our Solutions</span>
                 {industries[activeIndustry].solutions.map((s, i) => (
-                  <div key={i} className="flex items-center gap-3 text-xs text-slate-300 font-light">
+                  <div key={i} className="flex items-center gap-3 text-sm text-slate-300 font-light">
                     <CheckCircle className="h-3.5 w-3.5 text-emerald-400 shrink-0" /> {s}
                   </div>
                 ))}
@@ -231,8 +231,8 @@ export default function IndustriesWeServe() {
 
             {/* Case Study */}
             <div className="p-6 bg-violet-500/5 border border-violet-500/10 rounded-2xl">
-              <span className="text-[9px] uppercase font-mono tracking-widest text-violet-400 font-bold block mb-2">Case Study Highlight</span>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light italic">&ldquo;{industries[activeIndustry].caseStudy}&rdquo;</p>
+              <span className="text-[10px] uppercase font-mono tracking-widest text-violet-400 font-bold block mb-2">Case Study Highlight</span>
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-light italic">&ldquo;{industries[activeIndustry].caseStudy}&rdquo;</p>
             </div>
           </motion.div>
         </AnimatePresence>
