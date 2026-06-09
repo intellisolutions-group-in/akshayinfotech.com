@@ -83,7 +83,7 @@ export default function DataIntelligenceDashboardPage() {
       a: "We implement dynamic partition replication and local storage buffers. If consumer microservices or database sync targets slow down, the message broker buffers incoming logs safely, scaling up consumers to clear the backlog."
     },
     {
-      q: "Is real-time BI reporting fully secure?",
+      q: "Is real-time BI reporting fully secure under standard privacy guidelines?",
       a: "Yes. All data streams can be passed through anonymization pipelines that mask personally identifiable information (PII) before storage. Data is encrypted using AES-256 both inside queues and in the warehouse."
     }
   ];
@@ -507,21 +507,6 @@ export default function DataIntelligenceDashboardPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center mb-8">
-        <div className="p-8 md:p-12 bg-gradient-to-r from-indigo-600 to-blue-700 rounded-3xl text-white shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 h-48 w-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
-          <h4 className="text-xl sm:text-2xl font-bold mb-2">Ready to streamline your metrics?</h4>
-          <p className="text-xs sm:text-sm text-indigo-100 mb-8 max-w-lg mx-auto font-light">Review your data pipelines, query bottlenecks, and dashboard latency specs with a Akshay telemetry architect.</p>
-          <Link 
-            href="/contact"
-            className="inline-flex items-center gap-1.5 px-6 py-3 bg-white text-indigo-700 hover:bg-blue-50 transition-all rounded-xl font-bold text-xs cursor-pointer shadow-lg shadow-indigo-900/20"
-          >
-            Request Data Blueprint
-            <ArrowRight className="h-4 w-4 text-indigo-700" />
-          </Link>
-        </div>
-      </section>
 
     </div>
   );

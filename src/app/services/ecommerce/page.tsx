@@ -5,11 +5,12 @@ import Link from "next/link";
 import { CheckCircle, HelpCircle, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import AnalyticalCard from "../../../components/shared/AnalyticalCard";
+import FAQItem from "@/components/shared/FAQItem";
 
 
 const features = [
   { title: "Headless Storefronts", desc: "Build decoupled Next.js interfaces that pull products from headless Shopify, Strapi, or BigCommerce APIs for lightning-fast loads." },
-  { title: "Secure Payments", desc: "Embed secure checkout gateways using Stripe Elements, Apple Pay, and PayPal with custom middleware token checks." },
+  { title: "Secure Payment Systems", desc: "Embed secure checkout gateways using Stripe Elements, Apple Pay, and PayPal with custom middleware token checks." },
   { title: "Real-Time Inventory Hooks", desc: "Automate stock syncs with inventory warehouses (ERP/WMS) using secure, low-latency webhooks." },
   { title: "Global Multi-Currency Engine", desc: "Implement automated country routing, localized currency conversions, tax rules, and international languages." },
 ];
@@ -24,7 +25,7 @@ const processes = [
 const faqs = [
   { q: "Can we connect our existing ERP or warehouse tools to Next.js?", a: "Yes. We create Next.js API endpoints that sync product catalog data, customer details, and shipping updates directly with SAP, NetSuite, or Shopify backend structures." },
   { q: "What is the benefit of a headless storefront over standard Shopify templates?", a: "Standard templates load slow JS files that impact Lighthouse ratings. A headless Next.js storefront compiles statically, offering sub-second speeds that directly improve conversion metrics." },
-  { q: "How do you protect customer checkout transactions?", a: "We route transaction data securely through tokens using API Middleware, preventing direct client exposure to private credentials and complying with PCI-DSS guidelines." },
+  { q: "How do you protect customer checkout transactions?", a: "We route transaction data securely through tokens using API Middleware, preventing direct client exposure to private credentials and complying with industry payment guidelines." },
 ];
 
 export default function EcommercePage() {
@@ -243,13 +244,7 @@ export default function EcommercePage() {
 
           <div className="space-y-6">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-slate-50 border border-slate-100 rounded-2xl p-6.5 space-y-2.5">
-                <div className="flex items-center space-x-2 text-sm font-bold text-text-main">
-                  <HelpCircle className="h-4.5 w-4.5 text-primary shrink-0" />
-                  <span>{faq.q}</span>
-                </div>
-                <p className="text-xs sm:text-sm text-text-body leading-relaxed pl-7">{faq.a}</p>
-              </div>
+              <FAQItem key={faq.q} faq={faq} iconColor="text-primary" />
             ))}
           </div>
         </div>

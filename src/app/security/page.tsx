@@ -101,7 +101,7 @@ const securitySections = [
     desc: "Our Incident Response Plan (IRP) defines clear escalation paths, roles, and communication protocols for handling security events. We conduct quarterly tabletop exercises to validate our response capabilities.",
     points: [
       "Defined SLAs: P1 incidents acknowledged within 15 minutes",
-      "Breach notification within 72 hours",
+      "Incident breach notification in accordance with standard privacy protocols",
       "Automated incident ticket creation and assignment workflows",
       "Post-incident reviews with root cause analysis documentation",
     ],
@@ -121,6 +121,14 @@ const securitySections = [
   },
 ];
 
+const complianceItems = [
+  { label: "OWASP Top 10 Mitigation", status: "Active", color: "#10B981" },
+  { label: "Static Code Analysis", status: "Enforced", color: "#10B981" },
+  { label: "Dynamic Telemetry Scan", status: "Automated", color: "#10B981" },
+  { label: "Dependency Audit", status: "Continuous", color: "#10B981" },
+  { label: "SQL Injection Guard", status: "Active", color: "#10B981" },
+  { label: "Encrypted Backups", status: "Automated", color: "#10B981" },
+];
 
 function AnimatedMetric({ target, suffix, decimals = 0 }: { target: number; suffix: string; decimals?: number }) {
   const [count, setCount] = useState(0);
@@ -271,6 +279,32 @@ export default function SecurityPage() {
         </div>
       </section>
 
+      {/* Compliance Grid */}
+      <section className="py-20 bg-slate-950 border-t border-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-extrabold text-white mb-3">Verified Security Standards</h2>
+            <p className="text-sm text-white/50">Our security program is aligned with modern software security frameworks and standards</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {complianceItems.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.92 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="flex items-center justify-between rounded-2xl bg-white/5 border border-white/10 px-5 py-4"
+              >
+                <span className="text-sm font-semibold text-white/80">{item.label}</span>
+                <span className="text-[10px] font-bold px-2.5 py-1 rounded-full" style={{ background: `${item.color}20`, color: item.color }}>
+                  {item.status}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Report a Vulnerability CTA */}
       <section className="py-16 bg-white border-t border-slate-100">

@@ -7,6 +7,7 @@ import {
   ArrowRight, Globe, Award, Settings, Database, RefreshCw, Terminal
 } from "lucide-react";
 import { motion } from "framer-motion";
+import FAQItem from "@/components/shared/FAQItem";
 
 const pipelineStages = [
   {
@@ -106,9 +107,9 @@ export default function DevOpsPage() {
                   <circle cx="70" cy="50" r="3.5" stroke="#f43f5e" strokeWidth="1" fill="#0f172a" />
 
                   {/* Flow Pulses */}
-                  <motion.circle cx="30" cy="50" r="2.5" fill="#ffffff" animate={{ 
-                    cx: [30, 50, 70, 50, 30], 
-                    cy: [50, 35, 50, 65, 50] 
+                  <motion.circle r={2.5} fill="#ffffff" animate={{ 
+                    x: [30, 50, 70, 50, 30], 
+                    y: [50, 35, 50, 65, 50] 
                   }} transition={{ repeat: Infinity, duration: 4, ease: "linear" }} />
                 </svg>
                 <Terminal className="h-5 w-5 text-rose-500 absolute top-[43%] left-[46%]" />
@@ -329,13 +330,7 @@ spec:
 
           <div className="space-y-6">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-slate-900 border border-slate-850 rounded-2xl p-6.5 space-y-2.5">
-                <div className="flex items-center space-x-2 text-sm font-bold text-white">
-                  <HelpCircle className="h-4.5 w-4.5 text-rose-400 shrink-0" />
-                  <span>{faq.q}</span>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pl-7">{faq.a}</p>
-              </div>
+              <FAQItem key={faq.q} faq={faq} iconColor="text-rose-400" />
             ))}
           </div>
         </div>

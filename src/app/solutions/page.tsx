@@ -142,29 +142,6 @@ export default function SolutionsOverview() {
         </div>
       </section>
 
-      {/* General Solutions CTA */}
-      <section className="bg-white py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl p-12 sm:p-16 text-white shadow-xl shadow-blue-600/10">
-          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4">Ready to Transform Your Business?</h2>
-          <p className="text-base text-blue-100 max-w-2xl mx-auto mb-8">
-            Consult with our engineering experts to select, scope, and deploy the right custom solutions for your requirements.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link
-              href="/contact"
-              className="w-full sm:w-auto px-8 py-3.5 bg-white text-blue-700 font-bold hover:bg-blue-50 rounded-full shadow-md hover:translate-y-[-1px] transition-all"
-            >
-              Get Started
-            </Link>
-            <Link
-              href="/company/about"
-              className="w-full sm:w-auto px-8 py-3.5 border border-blue-200/50 hover:bg-white/10 font-bold rounded-full transition-all"
-            >
-              Learn About Us
-            </Link>
-          </div>
-        </div>
-      </section>
 
     </div>
   );

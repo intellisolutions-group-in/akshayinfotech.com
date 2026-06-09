@@ -156,9 +156,9 @@ function GlobeBackground() {
 
     // Animate
     let rafId: number;
-    const clock = new THREE.Clock();
+    const startTime = performance.now();
     const tick = () => {
-      const t = clock.getElapsedTime();
+      const t = (performance.now() - startTime) / 1000;
       globeGroup.rotation.y = t * 0.09;
       renderer.render(scene, camera);
       rafId = requestAnimationFrame(tick);
@@ -444,11 +444,15 @@ export default function ContactSection() {
     setLoading(true);
 
     try {
-      // Simulate fake API call with 2.5 second delay
-      await new Promise((resolve) => setTimeout(resolve, 2500));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+      const data = await response.json();
 
-      if (formData.email.toLowerCase().includes("error") || formData.message.toLowerCase().includes("error")) {
-        throw new Error("Simulation error triggered");
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Failed to submit request.");
       }
 
       setLoading(false);
@@ -462,11 +466,12 @@ export default function ContactSection() {
       });
 
       // Show backup toast notification
-      setToast({ message: "Form submitted successfully!", type: "success" });
+      setToast({ message: data.message || "Form submitted successfully!", type: "success" });
       setTimeout(() => setToast(null), 4000);
     } catch (err) {
       setLoading(false);
-      setToast({ message: "Something went wrong. Please try again.", type: "error" });
+      const errorMsg = err instanceof Error ? err.message : "Something went wrong. Please try again.";
+      setToast({ message: errorMsg, type: "error" });
       setTimeout(() => setToast(null), 4000);
     }
   };
@@ -551,22 +556,73 @@ export default function ContactSection() {
         {/* Split Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
-          {/* Left Side Info Panel */}
-          <div className="lg:col-span-4 space-y-6 flex flex-col justify-center self-stretch">
-            
-            <div className="space-y-6 contact-reveal-title">
-              <span className="text-[11px] font-bold text-blue-400 tracking-[0.2em] uppercase bg-blue-500/5 border border-blue-500/10 px-3.5 py-1.5 rounded-full w-fit block shadow-sm">
-                Get In Touch
-              </span>
-              <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-br from-white via-slate-100 to-slate-400">
-                Let&rsquo;s Build Next-Gen Systems
-              </h2>
-              <p className="text-sm text-slate-400 leading-relaxed font-light">
-                Ready to engineer custom React infrastructure, build scalable cloud architecture, or establish enterprise micro-services? Fill out the portal specs.
-              </p>
-            </div>
+            <div className="lg:col-span-4 space-y-6">
+             
+              <div className="space-y-6 contact-reveal-title">
+                <span className="text-[11px] font-bold text-blue-400 tracking-[0.2em] uppercase bg-blue-500/5 border border-blue-500/10 px-3.5 py-1.5 rounded-full w-fit block shadow-sm">
+                  Get In Touch
+                </span>
+                <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-none text-transparent bg-clip-text bg-gradient-to-br from-white via-slate-100 to-slate-400">
+                  Let&rsquo;s Build Next-Gen Systems
+                </h2>
+                <p className="text-sm text-slate-400 leading-relaxed font-light">
+                  Ready to engineer custom React infrastructure, build scalable cloud architecture, or establish enterprise micro-services? Fill out the portal specs.
+                </p>
+              </div>
 
-          </div>
+              {/* Left Side Info Panel */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="w-full h-44 bg-gradient-to-tr from-blue-600/20 to-indigo-600/20 border border-white/5 rounded-2xl relative overflow-hidden group cursor-pointer"
+                whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(59,130,246,0.12)" }}
+              >
+                {/* Background Image */}
+                <img 
+                  src="/images/featured-insight.png" 
+                  alt="Next.js Enterprise Architecture" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-90 transition-opacity duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-[#0a1628]/50 to-transparent" />
+                
+                {/* Shimmer */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.05] to-transparent skew-x-12"
+                  animate={{ x: ["-150%", "250%"] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", repeatDelay: 4 }}
+                />
+
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-between p-5 z-10">
+                  <div className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                  <div className="space-y-1.5">
+                    <span className="text-[10px] font-mono text-cyan-300/80 uppercase tracking-wider">LATEST PUBLICATION</span>
+                    <h4 className="text-base font-bold text-white leading-tight drop-shadow-md">Next.js Enterprise scaling solutions</h4>
+                  </div>
+                </div>
+                <div className="absolute inset-0 rounded-2xl border border-blue-400/0 group-hover:border-blue-400/20 transition-all duration-500" />
+              </motion.div>
+
+              {/* Email Contact Display */}
+              <motion.a
+                href="mailto:info@akshayinfotech.net"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+                className="flex items-center gap-3 px-5 py-4 bg-slate-900/60 border border-white/[0.06] rounded-2xl hover:border-blue-500/30 hover:bg-slate-800/50 transition-all duration-300 group/email"
+              >
+                <div className="h-10 w-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center shrink-0 group-hover/email:bg-blue-500/20 transition-colors duration-300">
+                  <Send className="h-4 w-4 text-blue-400" />
+                </div>
+                <div className="space-y-0.5">
+                  <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wider block">Email Us</span>
+                  <span className="text-sm font-semibold text-slate-200 group-hover/email:text-blue-300 transition-colors duration-300">info@akshayinfotech.net</span>
+                </div>
+                <ArrowRight className="h-3.5 w-3.5 text-slate-500 ml-auto group-hover/email:text-blue-400 group-hover/email:translate-x-0.5 transition-all duration-300" />
+              </motion.a>
+
+            </div>
 
           {/* Center Globe Column — only visible on lg+ */}
           <div className="hidden lg:flex lg:col-span-4 items-center justify-center contact-3d-anim" style={{ minHeight: '420px' }}>

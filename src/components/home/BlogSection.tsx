@@ -11,46 +11,46 @@ import AnalyticalCard from "@/components/shared/AnalyticalCard";
 
 const blogPosts = [
   {
-    id: "micro-frontends",
-    title: "Architecting Micro-Frontends with Next.js Turbopack",
-    excerpt: "Discover how we build scalable, modular React platforms with sub-second compilation times and optimized asset delivery pipelines.",
+    id: "nextjs-enterprise-architecture",
+    title: "Next.js Enterprise Architecture: Building Sub-Second Global Applications",
+    excerpt: "A blueprint for scaling Next.js 15 inside enterprise workloads. We analyze Incremental Static Regeneration (ISR), React Server Components (RSC) hydration loops, and distributed edge caching configurations.",
     category: "Engineering",
     image: "/project-1.png",
-    readTime: "5 min read",
-    href: "/blog/micro-frontends",
+    readTime: "12 min read",
+    href: "/blog/nextjs-enterprise-architecture",
     author: {
-      name: "Alex Chen",
+      name: "Akshay Patel",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80"
     },
     date: "June 2, 2026"
   },
   {
-    id: "cloud-native-security",
-    title: "Zero-Trust Cybersecurity in Cloud-Native Infrastructures",
-    excerpt: "A deep dive into Kubernetes network policies, identity federation, and secure cloud credentials access control setups.",
-    category: "Security",
-    image: "/project-2.png",
-    readTime: "7 min read",
-    href: "/blog/cloud-native-security",
+    id: "ai-powered-business-automation",
+    title: "AI-Powered Business Automation: Scaling Intelligent Agents in Enterprise",
+    excerpt: "A framework for coordinating autonomous AI agents to automate data processing, customer engagement, and transaction flows inside legacy infrastructure.",
+    category: "AI",
+    image: "/project-3.png",
+    readTime: "10 min read",
+    href: "/blog/ai-powered-business-automation",
     author: {
-      name: "Sarah Jenkins",
+      name: "Divya Sharma",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80"
     },
-    date: "May 28, 2026"
+    date: "May 30, 2026"
   },
   {
-    id: "ai-workflows-scale",
-    title: "Optimizing AI LLM Agents for Enterprise Workloads",
-    excerpt: "Learn how we build scalable AI processing nodes with LangChain, memory orchestration patterns, and token caching.",
-    category: "AI & Automation",
-    image: "/project-3.png",
-    readTime: "6 min read",
-    href: "/blog/ai-workflows-scale",
+    id: "modern-ui-ux-design-systems",
+    title: "Modern UI/UX Design Systems: Tokenized Layouts & Seamless Handoffs",
+    excerpt: "How tokenized typography, responsive layouts, and Figma variables accelerate developer handoff, eliminating styling bugs.",
+    category: "Design",
+    image: "/project-2.png",
+    readTime: "9 min read",
+    href: "/blog/modern-ui-ux-design-systems",
     author: {
-      name: "Marcus Vance",
+      name: "Priya Patel",
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80"
     },
-    date: "May 24, 2026"
+    date: "May 28, 2026"
   },
 ];
 
@@ -194,10 +194,21 @@ export default function BlogSection() {
         </div>
 
         {/* Blog Cards Grid: Step 4 */}
-        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {blogPosts.map((post, index) => (
             <BlogCard key={post.id} post={post} index={index} />
           ))}
+        </div>
+
+        {/* Centered More Button */}
+        <div className="flex justify-center">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-slate-950 text-white hover:bg-slate-900 transition-all rounded-xl font-bold text-sm shadow-xl shadow-slate-900/10 group border border-white/10"
+          >
+            More Articles
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
 
       </div>

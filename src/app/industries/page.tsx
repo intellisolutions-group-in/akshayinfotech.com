@@ -8,7 +8,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Industries We Serve | Akshay Infotech",
-  description: "Specialized software development and cloud solutions built for Healthcare compliance, SaaS scaling, FinTech security, Education portals, and Headless Retail.",
+  description: "Specialized software development and cloud solutions built for Healthcare data privacy, SaaS scaling, FinTech security, Education portals, and Headless Retail.",
 };
 
 const industries = [
@@ -16,10 +16,10 @@ const industries = [
     id: "healthcare",
     title: "Healthcare Technology",
     icon: Heart,
-    subtitle: "HIPAA Compliant & Secure Telemetry Systems",
-    desc: "We design secure patient portal websites, HIPAA-compliant Electronic Health Record (EHR) data integrations, and low-latency WebRTC video consulting channels. Every system features end-to-end encrypted databases and audit trails.",
+    subtitle: "Highly Secure Telemetry Systems",
+    desc: "We design secure patient portal websites, secure Electronic Health Record (EHR) data integrations, and low-latency WebRTC video consulting channels. Every system features end-to-end encrypted databases and audit trails.",
     features: [
-      "HIPAA compliance-ready layouts",
+      "Highly secure healthcare layouts",
       "Low-latency audio & video tunnels",
       "EHR database synchronization pipelines",
       "Secure patient registration & chart tools"

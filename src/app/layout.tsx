@@ -69,6 +69,16 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
     creator: "@AkshayInfotech",
   },
+  icons: {
+    icon: [
+      { url: "/logo-icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/logo-icon.png", type: "image/png" },
+    ],
+    shortcut: "/logo-icon.png",
+  },
   robots: {
     index: true,
     follow: true,
@@ -97,7 +107,7 @@ export default function RootLayout({
         "logo": {
           "@type": "ImageObject",
           "@id": "https://akshayinfotech.com/#logo",
-          "url": "https://akshayinfotech.com/logo.svg",
+          "url": "https://akshayinfotech.com/logo-light.png",
           "caption": "Akshay Infotech Logo"
         },
         "sameAs": [
@@ -120,7 +130,7 @@ export default function RootLayout({
         "@id": "https://akshayinfotech.com/#service",
         "name": "Akshay Infotech",
         "url": "https://akshayinfotech.com",
-        "image": "https://akshayinfotech.com/logo.svg",
+        "image": "https://akshayinfotech.com/logo-light.png",
         "priceRange": "$$$",
         "telephone": "+1 (617) 555-0192",
         "email": "info@akshayinfoctech.net",
@@ -144,7 +154,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white`} suppressHydrationWarning>
         <Preloader />
         <ScrollAnimationProvider />
         <Navbar />

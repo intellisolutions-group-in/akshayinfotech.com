@@ -77,6 +77,18 @@ const privacySections = [
     ],
   },
   {
+    id: "data-protection",
+    icon: Globe,
+    color: "#0891B2",
+    title: "Data Protection Standards",
+    items: [
+      { label: "Legal Basis", desc: "We process personal data under legitimate interest, contractual necessity, legal obligation, and explicit consent where required." },
+      { label: "Data Protection Officer", desc: "Our DPO can be reached at info@akshayinfoctech.net for any privacy-related inquiries or complaints." },
+      { label: "Cross-Border Transfers", desc: "Data transfers are protected by standard contractual frameworks ensuring appropriate security measures." },
+      { label: "Supervisory Authority", desc: "Users have the right to file inquiries with relevant regulatory authorities." },
+    ],
+  },
+  {
     id: "security",
     icon: Lock,
     color: "#6366F1",
@@ -85,7 +97,7 @@ const privacySections = [
       { label: "Encryption in Transit", desc: "All data transmitted between your browser and our servers uses TLS 1.3 encryption with HSTS enforced." },
       { label: "Access Controls", desc: "Role-based access control limits data access to authorized personnel only. MFA is required for all internal systems." },
       { label: "Penetration Testing", desc: "We conduct quarterly third-party penetration tests and address findings within defined SLAs." },
-      { label: "Incident Response", desc: "Data breaches affecting personal data are reported to relevant authorities within 72 hours as required by GDPR." },
+      { label: "Incident Response", desc: "Data breaches affecting personal data are reported to relevant authorities in a timely manner according to legal guidelines." },
     ],
   },
 ];
@@ -93,8 +105,8 @@ const privacySections = [
 const securityCards = [
   { icon: Lock, label: "AES-256 Encryption", color: "#3B82F6" },
   { icon: Shield, label: "Zero-Trust Access", color: "#8B5CF6" },
-  { icon: Globe, label: "GDPR Compliant", color: "#059669" },
-  { icon: CheckCircle, label: "ISO 27001 Aligned", color: "#F59E0B" },
+  { icon: Globe, label: "Privacy Aligned", color: "#059669" },
+  { icon: CheckCircle, label: "Security Aligned", color: "#F59E0B" },
 ];
 
 export default function PrivacyPolicyPage() {
@@ -120,7 +132,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="flex items-center justify-center gap-6 mt-6 text-xs text-slate-500">
               <div className="flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" /> Last Updated: June 1, 2026</div>
-              <div className="flex items-center gap-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /> GDPR Compliant</div>
+              <div className="flex items-center gap-1.5"><CheckCircle className="h-3.5 w-3.5 text-emerald-400" /> Privacy Aligned</div>
             </div>
           </motion.div>
         </div>

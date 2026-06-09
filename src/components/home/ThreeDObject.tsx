@@ -111,12 +111,11 @@ export default function ThreeDObject() {
 
     // Animation Loop
     let animationFrameId: number;
-    const clock = new THREE.Clock();
-
+    const startTime = performance.now();
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
 
-      const elapsedTime = clock.getElapsedTime();
+      const elapsedTime = (performance.now() - startTime) / 1000;
 
       // Slow Idle Rotation
       mesh.rotation.y = elapsedTime * 0.18;

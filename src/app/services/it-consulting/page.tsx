@@ -7,6 +7,7 @@ import {
   ArrowRight, Globe, Award, Settings, Database, RefreshCw, Briefcase
 } from "lucide-react";
 import { motion } from "framer-motion";
+import FAQItem from "@/components/shared/FAQItem";
 
 const consultingSteps = [
   {
@@ -159,8 +160,8 @@ export default function ITConsultingPage() {
               <h4 className="text-white font-mono text-sm border-b border-slate-800 pb-2">Technical Debt Assessment</h4>
               <div className="space-y-3 font-mono text-[11px] text-slate-400">
                 <div className="flex justify-between border-b border-slate-850 pb-1.5">
-                  <span>Legacy Hosting Fees:</span>
-                  <span className="text-rose-400">$24,500 / mo</span>
+                  <span>Legacy Node Capacity:</span>
+                  <span className="text-rose-400">80% Inactive / Idle</span>
                 </div>
                 <div className="flex justify-between border-b border-slate-850 pb-1.5">
                   <span>Manual Build Overhead:</span>
@@ -190,11 +191,11 @@ export default function ITConsultingPage() {
             </div>
             
             <div className="lg:order-1 bg-slate-900 p-8 rounded-3xl border border-slate-850 space-y-4">
-              <h4 className="text-white font-mono text-sm border-b border-slate-800 pb-2">Proposed Modernization Costs</h4>
+              <h4 className="text-white font-mono text-sm border-b border-slate-800 pb-2">Proposed Modernization Metrics</h4>
               <div className="space-y-3 font-mono text-[11px] text-slate-400">
                 <div className="flex justify-between border-b border-slate-850 pb-1.5">
-                  <span>Hyperscaler Cloud Cost:</span>
-                  <span className="text-emerald-400">$15,200 / mo</span>
+                  <span>Optimized Node Capacity:</span>
+                  <span className="text-emerald-400">95% Utilized / Active</span>
                 </div>
                 <div className="flex justify-between border-b border-slate-850 pb-1.5">
                   <span>Automated Build Overhead:</span>
@@ -310,6 +311,13 @@ export default function ITConsultingPage() {
               </p>
             </div>
             
+            <div className="border border-slate-800 bg-slate-950/20 p-6 rounded-2xl space-y-3">
+              <div className="text-3xl font-bold text-primary">100%</div>
+              <h4 className="font-bold text-white text-sm">System Alignment</h4>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                System setups align with industry-leading security practices.
+              </p>
+            </div>
 
             <div className="border border-slate-800 bg-slate-950/20 p-6 rounded-2xl space-y-3">
               <div className="text-3xl font-bold text-primary">+24%</div>
@@ -344,13 +352,7 @@ export default function ITConsultingPage() {
 
           <div className="space-y-6">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-slate-900 border border-slate-850 rounded-2xl p-6.5 space-y-2.5">
-                <div className="flex items-center space-x-2 text-sm font-bold text-white">
-                  <HelpCircle className="h-4.5 w-4.5 text-primary shrink-0" />
-                  <span>{faq.q}</span>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pl-7">{faq.a}</p>
-              </div>
+              <FAQItem key={faq.q} faq={faq} iconColor="text-primary" />
             ))}
           </div>
         </div>

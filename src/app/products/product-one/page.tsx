@@ -21,8 +21,8 @@ const features = [
 ];
 
 const useCases = [
-  { client: "Healthcare Provider", sector: "Healthcare Telemetry", outcome: "Synchronized patient databases across three AWS VPC regions while maintaining strict access logging." },
-  { client: "Financial Services Client", sector: "Financial Portals", outcome: "Leveraged KMS integrations to distribute secure access tokens to high-frequency transactional clusters safely." }
+  { client: "MedGroup Healthcare", sector: "Healthcare Telemetry", outcome: "Synchronized patient databases across three AWS VPC regions while maintaining strict data access logging." },
+  { client: "FinCap Trading", sector: "Financial Portals", outcome: "Leveraged KMS integrations to distribute secure access tokens to high-frequency transactional clusters safely." }
 ];
 
 export default function ProductOnePage() {
