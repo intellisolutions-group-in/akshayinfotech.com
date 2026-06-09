@@ -32,7 +32,7 @@ export default function OurStoryPage() {
     {
       num: "01",
       name: "Beginning",
-      title: "Bootstrapping Modern Web Engines (2018)",
+      title: "Bootstrapping Modern Web Engines (2010)",
       desc: "Our founding team set out in a small loft in Boston. Frustrated by slow, over-complex database architectures, we built custom API gateways to accelerate query response times. Our first clients, local e-commerce startups, experienced a 5x page load speedup. We recognized early that frontends were accelerating faster than database ingress, leaving a critical operational bottleneck in modern web architectures.",
       stat: "Founding members: 3 DB Architects",
       subTitle: "The Monolith Confrontation",
@@ -41,8 +41,8 @@ export default function OurStoryPage() {
     {
       num: "02",
       name: "Challenges",
-      title: "Decoupling Heavy Databases (2020)",
-      desc: "During the rapid digital shifts of 2020, transaction rates globally quadrupled overnight. We launched custom telemetry systems to monitor database bottlenecks. By decoupling monolith structures into containerized microservices, we kept client services running safely. But this came with its own set of problems: distributed transaction tracing and network serialization latency threatened cluster reliability.",
+      title: "Decoupling Heavy Databases (2014)",
+      desc: "During the rapid digital shifts of 2014, transaction rates globally quadrupled overnight. We launched custom telemetry systems to monitor database bottlenecks. By decoupling monolith structures into containerized microservices, we kept client services running safely. But this came with its own set of problems: distributed transaction tracing and network serialization latency threatened cluster reliability.",
       stat: "Client transaction rate: +400%",
       subTitle: "Distributed Tracing Obstacles",
       subDesc: "As systems split into independent containers, locating a single slow database query required crawling dozens of services. We developed custom event tagging to track queries in flight."
@@ -50,7 +50,7 @@ export default function OurStoryPage() {
     {
       num: "03",
       name: "Growth",
-      title: "Real-Time Ingress Blueprints (2022)",
+      title: "Real-Time Ingress Blueprints (2018)",
       desc: "We introduced our real-time streaming ETL architecture. Utilizing Apache Kafka and Spark, our setups processed millions of live logs per second, routing metrics straight to dashboard pipelines. Large logistical and SaaS companies adopted our patterns, allowing them to visualize operational telemetry immediately without slowing primary business databases.",
       stat: "Telemetry load: 2.4M logs/sec",
       subTitle: "Pipeline Scale Integration",
@@ -59,8 +59,8 @@ export default function OurStoryPage() {
     {
       num: "04",
       name: "Innovation",
-      title: "Decentralized Regional Clusters (2024)",
-      desc: "We expanded our engineering solutions to handle multi-region replication networks. We deployed active-active databases across Europe and US zones, syncing data layers continuously. These setups guaranteed a certified 99.999% uptime compliance record, allowing global enterprises to read and write database records locally with sub-second synchronization.",
+      title: "Decentralized Regional Clusters (2022)",
+      desc: "We expanded our engineering solutions to handle multi-region replication networks. We deployed active-active databases across Europe and US zones, syncing data layers continuously. These setups established a 99.999% uptime record, allowing global enterprises to read and write database records locally with sub-second synchronization.",
       stat: "Uptime SLA: 99.999% certified",
       subTitle: "Global Active-Active Systems",
       subDesc: "Managing write conflicts across distinct regions is one of database science's hardest challenges. We implemented clean CRDT schemes to resolve conflicts instantly."
@@ -260,7 +260,7 @@ export default function OurStoryPage() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6">
           {[
-            { value: "2018", label: "Year Formed", desc: "Started coding custom database optimization scripts." },
+            { value: "2010", label: "Year Formed", desc: "Started coding custom database optimization scripts." },
             { value: "10M+", label: "Daily Data queries", desc: "Routed across secure global VPC gateways." },
             { value: "99.999%", label: "Uptime Compliance", desc: "Maintained under strict SLAs for logistics clients." },
             { value: "120+", label: "Systems Deployed", desc: "Enterprise networks migrated to modern hosting setups." }

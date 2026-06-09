@@ -38,10 +38,6 @@ const faqs = [
     a: "We structure our design systems inside Figma using variables and tokens that match CSS variables. Interactive states are declared as component variants, providing developers with clear visual guides for coding."
   },
   {
-    q: "What is WCAG 2.1 AA compliance, and why is it important?",
-    a: "WCAG 2.1 AA represents standard web accessibility guidelines. It ensures that color contrast ratios are sufficiently readable, text can scale, keyboard navigation is supported, and button targets are large enough for all users."
-  },
-  {
     q: "Do you run usability testing sessions with real target users?",
     a: "Yes. We create interactive click-through prototypes and run testing sessions with target users, tracking completion rates and user friction to refine layouts before coding."
   },

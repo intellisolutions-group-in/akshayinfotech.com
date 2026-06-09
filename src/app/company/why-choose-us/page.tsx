@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
     {
       icon: UserCheck,
       title: "Senior Engineering Staff",
-      desc: "We assign dedicated mid-to-senior software engineers directly to your workspace. We don't delegate client codebases to inexperienced juniors. Every developer on your project has 5+ years of production experience and holds relevant professional certifications.",
+      desc: "We assign dedicated mid-to-senior software engineers directly to your workspace. We don't delegate client codebases to inexperienced juniors. Every developer on your project has 5+ years of production experience.",
       proof: "Average team experience: 8.2 years",
       details: "Our hiring process includes live architecture challenges, code review exercises, and system design assessments. Only 3% of applicants pass our technical bar."
     },

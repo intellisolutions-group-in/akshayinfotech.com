@@ -42,7 +42,7 @@ export default function CaseStudiesPage() {
 
   const caseStudies = [
     {
-      client: "Aura Logistics Group",
+      client: "Logistics Client",
       industry: "Supply Chain & Transport",
       challenge: "Legacy track-and-trace endpoints experienced system-wide crashes during holiday query spikes, stalling shipping coordination.",
       solution: "Decoupled monolithic server blocks into microservices, deploying Redis cache clusters to offload database reads.",
@@ -53,9 +53,9 @@ export default function CaseStudiesPage() {
       }
     },
     {
-      client: "VeloPay International",
+      client: "Financial Services Client",
       industry: "Financial Services",
-      challenge: "Unencrypted transaction database tables led to security compliance risks and slow transaction times.",
+      challenge: "Unencrypted transaction database tables led to security risks and slow transaction times.",
       solution: "Engineered zero-trust VPN gateways, placing encrypted database nodes under private subnets with HashiCorp Vault key rotation.",
       metrics: {
         uptime: "100% Security Audited",
@@ -64,7 +64,7 @@ export default function CaseStudiesPage() {
       }
     },
     {
-      client: "MediSync Portals",
+      client: "Healthcare Provider",
       industry: "Healthcare & Biotech",
       challenge: "Patient portal databases experienced write-locks during simultaneous record requests, causing login timeouts.",
       solution: "Structured GraphQL query facades and partitioned databases to segment read/write loads.",
@@ -154,15 +154,21 @@ export default function CaseStudiesPage() {
               <div className="border-t border-white/5 pt-6 mt-8 grid grid-cols-3 gap-2 text-center">
                 <div>
                   <div className="text-[10px] text-slate-500 uppercase tracking-wider">Uptime</div>
-                  <div className="text-xs font-bold text-white mt-1">{cs.metrics.uptime.split(" ")[0]}</div>
+                  <div className="text-xs font-bold text-white mt-1">
+                    {cs.metrics?.uptime ? cs.metrics.uptime.split(" ")[0] : "N/A"}
+                  </div>
                 </div>
                 <div>
                   <div className="text-[10px] text-slate-500 uppercase tracking-wider">Savings</div>
-                  <div className="text-xs font-bold text-white mt-1">{cs.metrics.savings.split(" ")[0]}</div>
+                  <div className="text-xs font-bold text-white mt-1">
+                    {cs.metrics?.savings ? cs.metrics.savings.split(" ")[0] : "N/A"}
+                  </div>
                 </div>
                 <div>
                   <div className="text-[10px] text-slate-500 uppercase tracking-wider">Latency</div>
-                  <div className="text-xs font-bold text-white mt-1">{cs.metrics.latency.split(" ")[0]}</div>
+                  <div className="text-xs font-bold text-white mt-1">
+                    {cs.metrics?.latency ? cs.metrics.latency.split(" ")[0] : "N/A"}
+                  </div>
                 </div>
               </div>
             </div>

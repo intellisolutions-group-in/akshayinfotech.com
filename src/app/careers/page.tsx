@@ -44,7 +44,7 @@ const jobs = [
     location: "Remote (India)",
     type: "Full Time",
     summary: "Establish user journeys, design systems in Figma, and build wireframe prototypes for client dashboards.",
-    requirements: ["4+ years digital product design experience", "Mastery of Figma components, variants, and variables", "Strong understanding of accessibility rules (WCAG 2.1)", "Portfolio showing clean data-heavy SaaS dashboards"]
+    requirements: ["4+ years digital product design experience", "Mastery of Figma components, variants, and variables", "Strong understanding of accessibility rules", "Portfolio showing clean data-heavy SaaS dashboards"]
   }
 ];
 

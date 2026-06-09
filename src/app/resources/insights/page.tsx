@@ -31,8 +31,8 @@ export default function KnowledgeHubPage() {
 
   const faqs = [
     {
-      q: "Are the resources and whitepapers updated regularly?",
-      a: "Yes. Our cloud architects and security engineers update the codebase checklists and architectural design guidelines quarterly to account for new security patches and cloud standards."
+      q: "Are the resources updated regularly?",
+      a: "Yes. Our cloud architects and security engineers update the codebase checklists and architectural design guidelines quarterly to account for new security patches and cloud protocols."
     },
     {
       q: "How can I book a detailed review of one of these whitepapers?",

@@ -26,7 +26,6 @@ const privacySections = [
       { label: "Service Delivery", desc: "To fulfill contractual obligations, communicate project updates, and provide technical support." },
       { label: "Product Improvement", desc: "Aggregated analytics help us improve our website UX, identify popular content, and optimize performance." },
       { label: "Marketing", desc: "With your consent, we may send newsletters or service updates. You can unsubscribe at any time." },
-      { label: "Legal Compliance", desc: "To meet regulatory obligations, respond to legal requests, and protect our rights and property." },
     ],
   },
   {

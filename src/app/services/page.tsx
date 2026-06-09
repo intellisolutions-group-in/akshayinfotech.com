@@ -35,8 +35,8 @@ const detailedServices = [
     title: "UI/UX Design",
     icon: Palette,
     summary: "Beautiful, user-centric, and accessible interfaces designed via wireframing, prototyping, and user testing.",
-    desc: "Our design system integrates psychology and user feedback into aesthetic wireframes and high-fidelity mockups. We construct component systems in Figma that match WCAG 2.1 accessibility standards and ensure frictionless user journeys.",
-    features: ["Interactive Figma wireframing & prototyping", "Strict WCAG 2.1 AA accessibility compliance", "Atomic design system creation", "Comprehensive user persona research & heatmaps"],
+    desc: "Our design system integrates psychology and user feedback into aesthetic wireframes and high-fidelity mockups. We construct component systems in Figma that ensure frictionless user journeys.",
+    features: ["Interactive Figma wireframing & prototyping", "Atomic design system creation", "Comprehensive user persona research & heatmaps"],
     tech: ["Figma", "Adobe CC", "Principle", "Tailwind CSS", "Storybook"],
   },
   {

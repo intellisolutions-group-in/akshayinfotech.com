@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import AnalyticalCard from "../shared/AnalyticalCard";
 
 const summarySteps = [
-  { step: "01", name: "Discover", desc: "Map dependencies, API bindings, database schemas, and compliance rules.", icon: Layers },
+  { step: "01", name: "Discover", desc: "Map dependencies, API bindings, and database schemas.", icon: Layers },
   { step: "02", name: "Design", desc: "Craft pixel-perfect Figma wireframes and design token interfaces.", icon: Code },
   { step: "03", name: "Develop", desc: "Write type-safe TypeScript, automate deployment loops, and pass audits.", icon: Terminal },
   { step: "04", name: "Launch", desc: "Implement CDN endpoints, verify search console sitemaps, and bind logs.", icon: Server }

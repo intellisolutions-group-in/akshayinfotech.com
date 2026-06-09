@@ -275,7 +275,7 @@ export default function TechnologiesPage() {
             <div>Monitoring:   Datadog + Sentry + PagerDuty         <span className="text-emerald-400">[OK]</span></div>
             <div>CI/CD:        GitHub Actions (12 active pipelines) <span className="text-emerald-400">[OK]</span></div>
             <div> </div>
-            <div className="text-indigo-400">✓ All systems operational. Stack health: 100%</div>
+            <div className="text-indigo-400">All systems operational. Stack health: 100%</div>
           </div>
         </div>
       </section>
