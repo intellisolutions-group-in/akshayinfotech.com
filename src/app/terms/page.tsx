@@ -52,7 +52,7 @@ const sections = [
     icon: CreditCard,
     color: "#0891B2",
     title: "7. Payment Terms",
-    content: `Payment terms are specified in individual project agreements or statements of work. Standard terms are:\n\n• Project initiation requires a 40% deposit upon contract signing\n• Milestone-based payments are due within 14 days of milestone delivery\n• Final payment of remaining balance is due prior to production deployment\n• Invoices unpaid after 30 days are subject to a 1.5% monthly interest charge\n• Disputed invoices must be raised in writing within 7 days of receipt\n\nRetainer-based engagements are billed monthly in advance. Akshay Infotech reserves the right to pause work on accounts with overdue balances exceeding 30 days.`,
+    content: `Payment terms are specified in individual project agreements or statements of work. Standard terms are:\n\n• Project initiation requires an agreed deposit upon contract signing\n• Milestone-based payments are due within the agreed timeframe of milestone delivery\n• Final payment of remaining balance is due prior to production deployment\n• Invoices unpaid after the due date are subject to standard late interest fees\n• Disputed invoices must be raised in writing within a reasonable window of receipt\n\nRetainer-based engagements are billed monthly in advance. Akshay Infotech reserves the right to pause work on accounts with overdue balances.`,
   },
   {
     id: "disclaimer",
@@ -73,7 +73,7 @@ const sections = [
     icon: Mail,
     color: "#3B82F6",
     title: "10. Contact Information",
-    content: `For questions, concerns, or legal notices regarding these Terms and Conditions, please contact us:\n\nAkshay Infotech Legal Department\nEmail: info@akshayinfoctech.net\nPhone: +1 (555) 019-2834\nAddress: 100 Tech Plaza, San Francisco, CA 94107\n\nFor general inquiries: info@akshayinfoctech.net\nFor security matters: info@akshayinfoctech.net\n\nWe aim to respond to all legal inquiries within 5 business days.`,
+    content: `For questions, concerns, or legal notices regarding these Terms and Conditions, please contact us:\n\nAkshay Infotech Legal Department\nEmail: info@akshayinfoctech.net\nAddress: 100 Tech Plaza, San Francisco, CA 94107\n\nFor general inquiries: info@akshayinfoctech.net\nFor security matters: info@akshayinfoctech.net\n\nWe aim to respond to all legal inquiries in a timely manner.`,
   },
 ];
 

@@ -105,10 +105,10 @@ export default function ResourcesOverview() {
               <p className="text-sm text-text-body leading-relaxed">
                 Discover how we re-architected transactional systems for an enterprise client, migrating relational data into a distributed cloud structure that handles over 10M transactions daily.
               </p>
-              <div className="flex items-center space-x-6 text-xs text-text-muted">
-                <div><strong>Industry:</strong> Fintech</div>
-                <div><strong>Timeline:</strong> 12 Weeks</div>
-              </div>
+                <div className="flex items-center space-x-6 text-xs text-text-muted">
+                  <div><strong>Industry:</strong> Fintech</div>
+                  <div><strong>Engagement:</strong> Enterprise Scale</div>
+                </div>
               <div className="pt-2">
                 <Link
                   href="/resources/case-studies"

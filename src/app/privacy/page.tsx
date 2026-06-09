@@ -11,10 +11,10 @@ const privacySections = [
     color: "#3B82F6",
     title: "Information We Collect",
     items: [
-      { label: "Personal Information", desc: "Name, email, phone number, and company details provided through contact forms, project inquiries, or account registration." },
-      { label: "Technical Data", desc: "IP addresses, browser type, device identifiers, operating system, referral URLs, and pages visited collected automatically via server logs and analytics." },
+      { label: "Personal Information", desc: "Name, email, and company details provided through contact forms, project inquiries, or account registration." },
+      { label: "Technical Data", desc: "Browser type, device identifiers, operating system, referral URLs, and pages visited collected automatically via server logs and analytics." },
       { label: "Communication Data", desc: "Records of correspondence including emails, support tickets, and meeting notes exchanged during project engagements." },
-      { label: "Payment Information", desc: "Billing details processed through secure third-party payment processors. Akshay does not store complete card numbers on our servers." },
+      { label: "Payment Information", desc: "Billing details processed through secure third-party payment processors. We do not store complete card numbers on our servers." },
     ],
   },
   {
@@ -47,10 +47,10 @@ const privacySections = [
     color: "#059669",
     title: "Analytics & Tracking",
     items: [
-      { label: "Tools Used", desc: "We use Google Analytics 4, Vercel Analytics, and internal logging to measure site performance and user behavior." },
-      { label: "Data Anonymization", desc: "IP addresses are anonymized before storage. User IDs are not linked to personally identifiable information in analytics dashboards." },
-      { label: "Retention Period", desc: "Analytics data is retained for 14 months, after which it is automatically deleted from our analytics platforms." },
-      { label: "Opt-Out", desc: "You may opt out of analytics tracking by using browser extensions such as uBlock Origin or the Google Analytics Opt-out Add-on." },
+      { label: "Tools Used", desc: "We use analytics platforms and internal logging to measure site performance and user behavior patterns." },
+      { label: "Data Anonymization", desc: "IP addresses are anonymized before storage. User identifiers are not linked to personally identifiable information in analytics dashboards." },
+      { label: "Retention Period", desc: "Our analytics information is retained only as long as necessary to improve platform performance and user experience in accordance with our internal data management practices." },
+      { label: "Opt-Out", desc: "You may opt out of analytics tracking by using standard browser privacy tools or opt-out mechanisms provided by our analytics platforms." },
     ],
   },
   {
@@ -59,10 +59,10 @@ const privacySections = [
     color: "#EF4444",
     title: "Data Storage & Retention",
     items: [
-      { label: "Storage Location", desc: "Data is stored on AWS servers located in the United States (us-east-1) and replicated to eu-west-1 for redundancy." },
-      { label: "Encryption at Rest", desc: "All stored data is encrypted using AES-256 encryption. Database backups are encrypted and stored in isolated S3 buckets." },
-      { label: "Retention Policy", desc: "Client project data is retained for 5 years post-project completion. Contact form submissions are retained for 2 years." },
-      { label: "Deletion Requests", desc: "Upon verified request, we will delete or anonymize personal data within 30 days, unless retention is required by law." },
+      { label: "Storage Location", desc: "Data is stored on enterprise-grade cloud infrastructure with geographic redundancy and failover capabilities to ensure high availability." },
+      { label: "Encryption at Rest", desc: "All stored data is protected with enterprise-grade encryption. Database backups are secured and stored in isolated, access-controlled environments." },
+      { label: "Retention Policy", desc: "Client project data is retained for a period consistent with applicable legal obligations and our internal data governance policies post-project completion." },
+      { label: "Deletion Requests", desc: "Upon verified request, we will delete or anonymize personal data in a timely manner, unless retention is required by law or legitimate business interest." },
     ],
   },
   {
@@ -95,19 +95,19 @@ const privacySections = [
     color: "#6366F1",
     title: "Security Measures",
     items: [
-      { label: "Encryption in Transit", desc: "All data transmitted between your browser and our servers uses TLS 1.3 encryption with HSTS enforced." },
-      { label: "Access Controls", desc: "Role-based access control limits data access to authorized personnel only. MFA is required for all internal systems." },
-      { label: "Penetration Testing", desc: "We conduct quarterly third-party penetration tests and address findings within defined SLAs." },
-      { label: "Incident Response", desc: "Data breaches affecting personal data are reported to relevant authorities in a timely manner according to legal guidelines." },
+      { label: "Encryption in Transit", desc: "All data transmitted between your browser and our servers uses modern TLS encryption protocols with security best practices enforced." },
+      { label: "Access Controls", desc: "Role-based access control limits data access to authorized personnel only. Multi-factor authentication is required for all internal systems." },
+      { label: "Security Assessments", desc: "We conduct regular third-party security assessments and address findings promptly according to defined remediation standards." },
+      { label: "Incident Response", desc: "Security incidents affecting personal data are handled through our documented incident response plan and reported to relevant authorities in accordance with legal guidelines." },
     ],
   },
 ];
 
 const securityCards = [
-  { icon: Lock, label: "AES-256 Encryption", color: "#3B82F6" },
+  { icon: Lock, label: "Enterprise-Grade Security", color: "#3B82F6" },
   { icon: Shield, label: "Zero-Trust Access", color: "#8B5CF6" },
-  { icon: Globe, label: "Privacy Aligned", color: "#059669" },
-  { icon: CheckCircle, label: "Security Aligned", color: "#F59E0B" },
+  { icon: Globe, label: "Privacy Committed", color: "#059669" },
+  { icon: CheckCircle, label: "Modern Security Architecture", color: "#F59E0B" },
 ];
 
 export default function PrivacyPolicyPage() {

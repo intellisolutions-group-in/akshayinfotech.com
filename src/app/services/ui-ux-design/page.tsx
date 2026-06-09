@@ -252,7 +252,7 @@ export default function UIUXDesignPage() {
               Design Methodology
             </span>
             <h2 className="text-3xl font-extrabold text-white">
-              Creative Discovery & Research Timelines
+              Creative Discovery & Research Methodology
             </h2>
             <p className="text-slate-400 text-sm mt-2 max-w-2xl mx-auto font-light">
               Our designs are based on behavioral research, user interviews, and iterative prototyping.

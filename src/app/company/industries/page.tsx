@@ -29,7 +29,7 @@ export default function IndustriesWeServe() {
       solutions: ["End-to-end encrypted messaging", "FHIR-compliant API gateways", "Real-time vitals dashboards", "Secure audit trail logging"],
       metrics: [
         { label: "Data Protection", value: "100%" },
-        { label: "Data Encryption", value: "AES-256" },
+        { label: "Security Standard", value: "Enterprise" },
         { label: "Avg Response Time", value: "<200ms" }
       ],
       caseStudy: "Built a telemedicine platform processing 50,000+ monthly video consultations with real-time prescription management and insurance verification."
@@ -44,7 +44,7 @@ export default function IndustriesWeServe() {
       solutions: ["Tokenized payment processing", "ML-powered fraud scoring", "Automated compliance reports", "Real-time transaction monitoring"],
       metrics: [
         { label: "Daily Transactions", value: "10M+" },
-        { label: "Fraud Detection", value: "<50ms" },
+        { label: "Fraud Detection", value: "Real-Time" },
         { label: "Security Alignment", value: "100%" }
       ],
       caseStudy: "Architected a payment gateway handling $2.3B in annual transaction volume with 99.999% uptime and real-time fraud scoring."

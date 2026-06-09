@@ -251,8 +251,8 @@ export default function CloudSolutionsPage() {
       <section id="migration" className="py-24 bg-slate-950 border-t border-b border-slate-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-xs font-bold text-sky-400 tracking-wider uppercase mb-2 block">
-              Migration Timeline
+            <span className="text-xs font-bold text-sky-400 tracking-widest uppercase mb-2 block">
+              Integration Process
             </span>
             <h2 className="text-3xl font-extrabold text-white">
               Cloud Integration & Migration Stages

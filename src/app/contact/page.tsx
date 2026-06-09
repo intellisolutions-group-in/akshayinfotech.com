@@ -170,40 +170,37 @@ export default function ContactPage() {
       city: "Boston, USA (Global HQ)",
       street: "75 State Street, Suite 100",
       hours: "9:00 AM - 6:00 PM EST",
-      phone: "+1 (617) 555-0192"
     },
     {
       city: "London, UK",
       street: "12 Workspace Place, Shoreditch",
       hours: "9:00 AM - 6:00 PM GMT",
-      phone: "+44 (20) 7946-0912"
     },
     {
       city: "Munich, Germany",
       street: "Kaufingerstraße 24, Altstadt",
       hours: "9:00 AM - 6:00 PM CET",
-      phone: "+49 (89) 2019-4821"
     }
   ];
 
   const contactProcess = [
     { step: "01", icon: FileText, label: "Form Submission", desc: "You submit your project requirements and core system configurations." },
-    { step: "02", icon: Calendar, label: "Discovery Sync", desc: "We schedule a 30-minute call to audit database latency and infrastructure bounds." },
-    { step: "03", icon: CheckCircle, label: "Technical Blueprint", desc: "We deliver a customized architectural migration spec, detailing tech stack and costs." }
+    { step: "02", icon: Calendar, label: "Discovery Sync", desc: "We schedule a focused call to audit your infrastructure bounds and align on project objectives." },
+    { step: "03", icon: CheckCircle, label: "Technical Blueprint", desc: "We deliver a customized architectural specification, detailing the recommended tech stack and implementation roadmap." }
   ];
 
   const faqs = [
     {
       q: "How fast will I receive a customized technical proposal?",
-      a: "Our systems architects review incoming scopes within 24 hours, scheduling an audit call to align timelines and provide concrete pricing guidelines."
+      a: "Our systems architects review all incoming project scopes promptly, scheduling an initial discovery call to align requirements and provide detailed, concrete proposal guidelines."
     },
     {
       q: "Do you sign Non-Disclosure Agreements (NDAs) before discovery?",
       a: "Yes. We strictly enforce intellectual property rules. We sign standard NDAs before inspecting code repositories or discussing system schemas."
     },
     {
-      q: "Do you offer post-migration scaling retainers?",
-      a: "Yes. We offer 24/7 telemetry support, ongoing query optimization, database syncing audits, and server upgrades under structured service agreements."
+      q: "Do you offer post-delivery support retainers?",
+      a: "Yes. We offer continuous telemetry support, ongoing performance optimization, and system upgrade services under structured long-term service agreements."
     }
   ];
 
