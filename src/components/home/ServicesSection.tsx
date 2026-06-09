@@ -774,11 +774,8 @@ export default function ServicesSection() {
     <section ref={sectionRef} id="services" className="py-28 overflow-visible relative select-none"
       style={{ background: "linear-gradient(160deg, #070B19 0%, #050814 50%, #03050C 100%)" }}>
       
-      {/* Top Blend Transition Overlay */}
-      <div className="absolute top-0 left-0 right-0 h-28 bg-gradient-to-b from-white to-transparent pointer-events-none z-10" />
-
-      {/* Bottom Blend Transition Overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#f8faff] to-transparent pointer-events-none z-10" />
+      {/* Top Section Divider */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-white/5 pointer-events-none z-10" />
 
       {/* Inject custom card floating styles */}
       <style dangerouslySetInnerHTML={{ __html: floatingStyles }} />

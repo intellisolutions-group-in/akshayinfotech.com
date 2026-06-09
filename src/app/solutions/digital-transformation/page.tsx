@@ -209,7 +209,7 @@ export default function DigitalTransformationJourneyPage() {
     },
     {
       q: "How long does a legacy mainframe modernization usually take?",
-      a: "Depending on code complexity and integration dependencies, timeline ranges from 3 to 9 months. Our discovery phase delivers a clear milestone roadmap showing precise integration checkpoints."
+      a: "Depending on code complexity and integration dependencies, timelines vary by scope. Our discovery phase delivers a clear milestone roadmap showing precise integration checkpoints."
     },
     {
       q: "Can we modernize our frontend UI without editing backend business rules?",
@@ -359,8 +359,8 @@ export default function DigitalTransformationJourneyPage() {
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
                 <td className="p-4 font-semibold text-white">Deployment Speed</td>
-                <td className="p-4 text-slate-400 font-light">Manual SFTP file loads every 2-3 weeks</td>
-                <td className="p-4 text-emerald-300 font-bold">Automated CI/CD container triggers in under 5 minutes</td>
+                <td className="p-4 text-slate-400 font-light">Manual SFTP file loads on periodic schedules</td>
+                <td className="p-4 text-emerald-300 font-bold">Automated CI/CD container triggers in minutes</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
                 <td className="p-4 font-semibold text-white">Security Audits</td>

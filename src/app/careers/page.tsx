@@ -14,7 +14,7 @@ const benefits = [
   { icon: GraduationCap, title: "Annual Learn Budget", desc: "Generous allowance every year for books, courses, code bootcamps, and events." },
   { icon: Star, title: "Remote Flexibility", desc: "Work from anywhere in the world. We sponsor co-working desk memberships." },
   { icon: ShieldCheck, title: "Modern Workspaces", desc: "Receive allowances for modern computers, ergo chairs, and key monitors." },
-  { icon: Compass, title: "Generous Time Off", desc: "25 days of paid annual leave plus additional corporate mental rest days." },
+  { icon: Compass, title: "Generous Time Off", desc: "Competitive paid annual leave plus additional corporate mental rest days." },
   { icon: Trophy, title: "Equity & Performance", desc: "Generous early-stage equity grants and annual performance-based scaling bonuses." }
 ];
 
@@ -86,7 +86,7 @@ export default function CareersPage() {
 
   const hiringProcess = [
     { step: "01", label: "Credentials Review", desc: "We evaluate your GitHub repositories, code quality, typing rules, and component modularity." },
-    { step: "02", label: "Systems Architecture", desc: "A 45-minute live technical session mapping database scaling bounds and container clusters." },
+    { step: "02", label: "Systems Architecture", desc: "A focused live technical session mapping database scaling bounds, system architecture, and container cluster design." },
     { step: "03", label: "Cultural Alignment", desc: "A conversation discussing asynchronous deep-work blocks and communication principles." },
     { step: "04", label: "Offer & Welcome", desc: "Receive your tailored compensation offer, equity schedule, and remote office allowance setup." }
   ];
@@ -438,7 +438,7 @@ export default function CareersPage() {
                   </div>
                   <h4 className="text-base font-bold text-white">Application Received</h4>
                   <p className="text-xs text-slate-400 leading-relaxed font-light max-w-xs mx-auto">
-                    Thank you. Our senior engineering executives will review your portfolio credentials and reply in 3-5 business days.
+                    Thank you. Our senior engineering executives will review your portfolio credentials and be in touch shortly.
                   </p>
                 </div>
               )}

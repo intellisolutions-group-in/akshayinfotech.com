@@ -10,8 +10,8 @@ import {
 const metrics = [
   { label: "Threats Blocked", value: 2847391, suffix: "", icon: Shield, color: "#EF4444" },
   { label: "Uptime SLA", value: 99.99, suffix: "%", icon: Activity, color: "#10B981" },
-  { label: "Encryption Keys", value: 4096, suffix: "-bit", icon: Lock, color: "#3B82F6" },
-  { label: "Response Time", value: 4, suffix: "min", icon: Clock, color: "#F59E0B" },
+  { label: "Security Controls", value: 150, suffix: "+", icon: Lock, color: "#3B82F6" },
+  { label: "Continuous Audits", value: 100, suffix: "%", icon: Clock, color: "#F59E0B" },
 ];
 
 const securitySections = [
@@ -49,8 +49,8 @@ const securitySections = [
     desc: "Cloud environments are configured following strict security pillars. All cloud resources are provisioned through Infrastructure-as-Code with automated security checks on every deployment.",
     points: [
       "IAM roles with least-privilege principle enforced across all services",
-      "AWS Config rules for continuous security monitoring",
-      "CloudTrail audit logging for all API calls with 90-day retention",
+      "AWS Config rules for continuous compliance monitoring",
+      "CloudTrail audit logging for all API calls with secure retention policies",
       "S3 bucket policies enforcing encryption and blocking public access by default",
     ],
   },
@@ -62,7 +62,7 @@ const securitySections = [
     desc: "All data is encrypted in transit and at rest using industry-standard cryptographic algorithms. Encryption keys are managed through AWS KMS with automatic rotation policies.",
     points: [
       "TLS 1.3 for all data in transit with HSTS enforced",
-      "AES-256 encryption for all data at rest",
+      "Enterprise-grade encryption for all data at rest",
       "Hardware Security Modules (HSM) for root key storage",
       "End-to-end encryption for sensitive client communications",
     ],
@@ -100,7 +100,7 @@ const securitySections = [
     title: "Incident Response",
     desc: "Our Incident Response Plan (IRP) defines clear escalation paths, roles, and communication protocols for handling security events. We conduct quarterly tabletop exercises to validate our response capabilities.",
     points: [
-      "Defined SLAs: P1 incidents acknowledged within 15 minutes",
+      "Defined SLAs: P1 incidents prioritized with rapid response timelines",
       "Incident breach notification in accordance with standard privacy protocols",
       "Automated incident ticket creation and assignment workflows",
       "Post-incident reviews with root cause analysis documentation",
@@ -113,7 +113,7 @@ const securitySections = [
     title: "Disaster Recovery",
     desc: "Our Disaster Recovery strategy ensures business continuity with defined Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) for all critical systems. Regular DR drills validate our recovery capabilities.",
     points: [
-      "RTO of 4 hours and RPO of 1 hour for Tier-1 systems",
+      "Robust RTO and RPO metrics for all Tier-1 systems",
       "Automated database backups to geographically isolated regions",
       "Blue/green deployment architecture for zero-downtime updates",
       "Monthly DR drills with documented test results and improvement plans",
@@ -314,7 +314,7 @@ export default function SecurityPage() {
           </div>
           <h2 className="text-xl font-bold text-slate-900 mb-3">Responsible Disclosure</h2>
           <p className="text-sm text-slate-500 mb-6 leading-relaxed">
-            Discovered a security vulnerability? We take all reports seriously and will investigate and respond within 24 hours. Please do not disclose vulnerabilities publicly before giving us an opportunity to address them.
+            Discovered a security vulnerability? We take all reports seriously and will investigate and respond promptly. Please do not disclose vulnerabilities publicly before giving us an opportunity to address them.
           </p>
           <a href="mailto:info@akshayinfoctech.net" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-semibold rounded-xl hover:bg-slate-800 transition-colors">
             <Shield className="h-4 w-4" /> Report a Vulnerability

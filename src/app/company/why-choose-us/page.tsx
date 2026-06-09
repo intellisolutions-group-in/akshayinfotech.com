@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
       icon: Heart,
       title: "Post-Release Support Retainers",
       desc: "We sign structured SLA retainers for continuous log monitoring, database scaling checks, system optimization tasks, and feature enhancement sprints. Your systems are never left unsupported after launch.",
-      proof: "4-hour critical incident response SLA",
+      proof: "Rapid critical incident response SLA",
       details: "Our support tiers include weekly health reports, monthly security patches, quarterly performance audits, and annual architecture reviews."
     },
     {
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
       icon: Globe,
       title: "Global Delivery Capability",
       desc: "Our distributed engineering teams operate across US, UK, and European time zones, enabling near-24/7 development coverage. We use async-first communication models to eliminate timezone friction.",
-      proof: "Effective coverage: 18 hours/day across timezones",
+      proof: "Extended coverage across global timezones",
       details: "We maintain development centers in Boston, London, and Munich, with satellite contributors across Asia Pacific for round-the-clock incident response."
     }
   ];
@@ -83,23 +83,23 @@ export default function WhyChooseUs() {
   ];
 
   const testimonials = [
-    { name: "Shreya Patel", role: "Chief Technology Officer", quote: "Akshay rebuilt our entire patient portal in 14 weeks. The secure data integration was baked in from day one — no afterthought security patches needed.", avatar: "SP" },
+    { name: "Shreya Patel", role: "Chief Technology Officer", quote: "Akshay rebuilt our entire patient portal within a tight timeline. The secure data integration was baked in from day one — no afterthought security patches needed.", avatar: "SP" },
     { name: "Madhav Rao", role: "Vice President of Engineering", quote: "Their senior engineers understood our payment processing requirements immediately. We modernised our legacy backend into high-performance microservices without a single minute of downtime.", avatar: "MR" },
     { name: "Esha Sharma", role: "Founder", quote: "The code quality is exceptional. When we brought in external auditors for our due diligence, they praised the documentation and test coverage.", avatar: "ES" }
   ];
 
   const guarantees = [
     { icon: Shield, title: "Security Guarantee", desc: "Zero critical vulnerabilities in production. If our code causes a security breach, we remediate at no cost." },
-    { icon: Clock, title: "SLA Guarantee", desc: "4-hour response for critical incidents, 24-hour for high priority, 72-hour for standard requests." },
-    { icon: Target, title: "Quality Guarantee", desc: "80%+ test coverage enforced. Every release passes automated security scans and performance benchmarks." },
+    { icon: Clock, title: "SLA Guarantee", desc: "Prioritized response for critical incidents, with structured support tiers for all priority levels under contractual SLA agreements." },
+    { icon: Target, title: "Quality Guarantee", desc: "High test coverage enforced on all projects. Every release passes automated security scans and performance benchmarks." },
     { icon: Sparkles, title: "Satisfaction Guarantee", desc: "If you're not satisfied with sprint outputs, we re-scope and re-deliver at no additional charge." }
   ];
 
   const faqs = [
     { q: "How do you ensure consistency when working with distributed teams?", a: "We enforce strict coding standards via ESLint configs, Prettier formatting rules, and comprehensive PR review checklists. Every team member follows identical development environment setups using Docker containers and shared VS Code configuration profiles." },
     { q: "What's your typical project engagement model?", a: "We offer three models: fixed-scope projects with defined deliverables and timelines, dedicated team augmentation with monthly billing, and retainer-based ongoing support contracts. Most enterprise clients start with a fixed-scope project and transition to retainers post-launch." },
-    { q: "Can we interview your engineers before project kickoff?", a: "Absolutely. We encourage clients to interview proposed team members. We provide detailed profiles with portfolio examples, and previous project summaries for every engineer we assign." },
-    { q: "What happens if a key team member needs to be replaced mid-project?", a: "Our knowledge management practices — including comprehensive ADR logs, living documentation, and pair programming sessions — ensure that any team transition is smooth. We guarantee a maximum 5-day handover period for any personnel change." }
+    { q: "Can we interview your engineers before project kickoff?", a: "Absolutely. We encourage clients to interview proposed team members. We provide detailed profiles with portfolio examples, certification records, and previous project summaries for every engineer we assign." },
+    { q: "What happens if a key team member needs to be replaced mid-project?", a: "Our knowledge management practices — including comprehensive ADR logs, living documentation, and pair programming sessions — ensure that any team transition is smooth and fully transparent with minimal disruption." }
   ];
 
   return (

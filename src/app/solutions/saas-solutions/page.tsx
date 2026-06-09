@@ -84,7 +84,7 @@ export default function DataIntelligenceDashboardPage() {
     },
     {
       q: "Is real-time BI reporting fully secure under standard privacy guidelines?",
-      a: "Yes. All data streams can be passed through anonymization pipelines that mask personally identifiable information (PII) before storage. Data is encrypted using AES-256 both inside queues and in the warehouse."
+      a: "Yes. All data streams can be passed through anonymization pipelines that mask personally identifiable information (PII) before storage. Data is encrypted using enterprise-grade encryption both inside queues and in the warehouse."
     }
   ];
 
@@ -250,7 +250,7 @@ export default function DataIntelligenceDashboardPage() {
                     <div className="text-xl font-bold text-white font-mono mt-1.5 flex items-center gap-1.5">
                       100% SECURE
                     </div>
-                    <div className="text-[9px] text-slate-500 mt-1">AES-256 payload encryption</div>
+                    <div className="text-[9px] text-slate-500 mt-1">Enterprise-grade payload encryption</div>
                   </div>
                 </div>                 {/* Main Graph & Tabs Panel */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

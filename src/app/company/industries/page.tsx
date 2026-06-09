@@ -29,10 +29,10 @@ export default function IndustriesWeServe() {
       solutions: ["End-to-end encrypted messaging", "FHIR-compliant API gateways", "Real-time vitals dashboards", "Secure audit trail logging"],
       metrics: [
         { label: "Data Protection", value: "100%" },
-        { label: "Data Encryption", value: "AES-256" },
-        { label: "Avg Response Time", value: "<200ms" }
+        { label: "Security Standard", value: "Enterprise" },
+        { label: "Avg Response Time", value: "Sub-second" }
       ],
-      caseStudy: "Built a telemedicine platform processing 50,000+ monthly video consultations with real-time prescription management and insurance verification."
+      caseStudy: "Built a telemedicine platform processing a high volume of monthly video consultations with real-time prescription management and insurance verification."
     },
     {
       icon: Landmark,
@@ -43,11 +43,11 @@ export default function IndustriesWeServe() {
       challenges: ["Secure payment gateway compliance", "Real-time fraud detection", "Multi-currency settlements", "Regulatory reporting requirements"],
       solutions: ["Tokenized payment processing", "ML-powered fraud scoring", "Automated compliance reports", "Real-time transaction monitoring"],
       metrics: [
-        { label: "Daily Transactions", value: "10M+" },
-        { label: "Fraud Detection", value: "<50ms" },
+        { label: "Daily Transactions", value: "High Volume" },
+        { label: "Fraud Detection", value: "Real-Time" },
         { label: "Security Alignment", value: "100%" }
       ],
-      caseStudy: "Architected a payment gateway handling $2.3B in annual transaction volume with 99.999% uptime and real-time fraud scoring."
+      caseStudy: "Architected a payment gateway handling high volumes of annual transactions with enterprise-level uptime and real-time fraud scoring."
     },
     {
       icon: ShoppingBag,
@@ -58,11 +58,11 @@ export default function IndustriesWeServe() {
       challenges: ["Black Friday traffic spikes", "Real-time inventory sync", "Multi-channel order management", "Personalization at scale"],
       solutions: ["Auto-scaling container clusters", "Event-driven inventory systems", "Headless commerce APIs", "Redis-powered recommendation engine"],
       metrics: [
-        { label: "Peak Checkouts/hr", value: "450K" },
-        { label: "Page Load Speed", value: "<1.2s" },
-        { label: "Cart Abandonment", value: "-35%" }
+        { label: "Peak Checkouts/hr", value: "High Capacity" },
+        { label: "Page Load Speed", value: "Sub-second" },
+        { label: "Cart Abandonment", value: "Reduced" }
       ],
-      caseStudy: "Deployed a headless commerce platform supporting 12 regional storefronts with unified inventory management and sub-second page loads."
+      caseStudy: "Deployed a headless commerce platform supporting multiple regional storefronts with unified inventory management and sub-second page loads."
     },
     {
       icon: Truck,
@@ -73,11 +73,11 @@ export default function IndustriesWeServe() {
       challenges: ["Real-time GPS tracking at scale", "Route optimization algorithms", "Warehouse automation integration", "Last-mile delivery optimization"],
       solutions: ["WebSocket-based live tracking", "Graph-based route planning", "IoT sensor data pipelines", "Predictive delivery ETAs"],
       metrics: [
-        { label: "Active Fleet Units", value: "25K+" },
-        { label: "Route Optimization", value: "23% faster" },
-        { label: "GPS Update Frequency", value: "Every 3s" }
+        { label: "Active Fleet Units", value: "Large Scale" },
+        { label: "Route Optimization", value: "Optimized" },
+        { label: "GPS Update Frequency", value: "Real-Time" }
       ],
-      caseStudy: "Built a fleet management platform tracking 25,000 vehicles across 14 countries with real-time ETA predictions and automated dispatch."
+      caseStudy: "Built a fleet management platform tracking active vehicles across multiple countries with real-time ETA predictions and automated dispatch."
     },
     {
       icon: GraduationCap,
@@ -88,11 +88,11 @@ export default function IndustriesWeServe() {
       challenges: ["Concurrent video streaming", "Adaptive learning paths", "Assessment integrity", "Certificate verification"],
       solutions: ["CDN-optimized video delivery", "AI-driven content recommendations", "Proctored assessment engines", "Blockchain certificate verification"],
       metrics: [
-        { label: "Concurrent Learners", value: "100K+" },
-        { label: "Course Completion", value: "+42%" },
-        { label: "Video Load Time", value: "<800ms" }
+        { label: "Concurrent Learners", value: "High Volume" },
+        { label: "Course Completion", value: "Increased" },
+        { label: "Video Load Time", value: "Rapid" }
       ],
-      caseStudy: "Delivered a corporate training platform serving 100,000+ monthly active learners with personalized learning paths and automated certifications."
+      caseStudy: "Delivered a corporate training platform serving high volumes of monthly active learners with personalized learning paths and automated certifications."
     }
   ];
 

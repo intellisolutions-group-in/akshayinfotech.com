@@ -39,7 +39,7 @@ const plans = [
 ];
 
 const faqs = [
-  { q: "How does billing work for custom developer resources?", a: "Developer allocations are billed on a monthly rolling retainer basis. You can scale up or scale down active engineers assigned to your project with 14 days' notice." },
+  { q: "How does billing work for custom developer resources?", a: "Developer allocations are billed on a monthly rolling retainer basis. You can scale up or scale down active engineers assigned to your project with reasonable advance notice to your dedicated solutions architect." },
   { q: "Are custom integrations included in the plans?", a: "Yes, standard API endpoints and hooks are included. Custom legacy database migrations or custom ERP middleware systems are evaluated and scoped by our architect during onboarding." },
   { q: "How do we scale our development resources?", a: "You can request additional developer allocations or change support response parameters at any time. Adjustments are discussed and applied dynamically by your dedicated solutions architect." }
 ];

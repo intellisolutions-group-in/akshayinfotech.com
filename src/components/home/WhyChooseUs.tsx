@@ -152,7 +152,7 @@ const cards = [
     title: "Fast Execution",
     icon: Rocket,
     desc: "Deliver enterprise solutions efficiently while maintaining quality and scalability.",
-    features: ["Agile 2-week sprints", "Automatic CI/CD pipelines", "Interactive feature staging"],
+    features: ["Optimized development lifecycle", "Automated CI/CD pipelines", "Interactive feature staging"],
     accent: "rgba(59, 130, 246, 0.2)",
     iconBg: "rgba(59, 130, 246, 0.08)",
     iconColor: "#3b82f6",
@@ -204,7 +204,7 @@ const cards = [
     title: "Dedicated Support",
     icon: HeartHandshake,
     desc: "Real-time incident response, proactive systems auditing, and direct communication lines.",
-    features: ["Incident response under 15m", "Proactive system audits", "Direct engineer access"],
+    features: ["Priority incident response", "Proactive system audits", "Direct engineer access"],
     accent: "rgba(59, 130, 246, 0.2)",
     iconBg: "rgba(59, 130, 246, 0.08)",
     iconColor: "#3b82f6",
@@ -499,7 +499,7 @@ export default function WhyChooseUs() {
               className="inline-flex items-center gap-2 text-xs font-bold text-blue-400 tracking-widest uppercase bg-blue-950/40 border border-blue-900/30 px-4 py-1.5 rounded-full mb-3"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-              Storytelling Carousel
+              Our Advantages
             </motion.span>
             
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">

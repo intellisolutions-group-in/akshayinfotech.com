@@ -529,7 +529,7 @@ export default function EnterpriseSolutionsPage() {
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
                 <td className="p-4 font-semibold text-white">Deployment Downtime</td>
-                <td className="p-4 text-slate-400 font-light">1 - 2 hours per version patch release</td>
+                <td className="p-4 text-slate-400 font-light">Hours per version patch release</td>
                 <td className="p-4 text-emerald-300 font-bold">0 seconds downtime (Blue-Green Pipeline)</td>
               </tr>
               <tr className="hover:bg-white/[0.02] transition-colors">
@@ -551,9 +551,9 @@ export default function EnterpriseSolutionsPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { phase: "PHASE 1 - Q3 2026", title: "Autonomous Auto-Scale Rules", desc: "Integrating auto-regressive machine learning models to predict traffic loads 15 minutes before they happen and spin up container nodes in anticipation." },
-            { phase: "PHASE 2 - Q1 2027", title: "Edge Query Processing", desc: "Moving basic indexing and cache retrieval processes from centralized cloud zones to local CDN edge points, lowering database queries to sub-5ms." },
-            { phase: "PHASE 3 - Q4 2027", title: "Zero-Trust Mesh Networking", desc: "Deploying secure sidecar networks across all microservices to encrypt and audit internal traffic queries automatically." }
+            { phase: "PHASE 1", title: "Autonomous Auto-Scale Rules", desc: "Integrating auto-regressive machine learning models to predict traffic loads before they happen and spin up container nodes in anticipation." },
+            { phase: "PHASE 2", title: "Edge Query Processing", desc: "Moving basic indexing and cache retrieval processes from centralized cloud zones to local CDN edge points, lowering database queries to sub-5ms." },
+            { phase: "PHASE 3", title: "Zero-Trust Mesh Networking", desc: "Deploying secure sidecar networks across all microservices to encrypt and audit internal traffic queries automatically." }
           ].map((road, idx) => (
             <div key={idx} className="p-6 bg-slate-900/30 border border-white/5 rounded-2xl relative">
               <span className="text-[10px] font-mono font-bold text-blue-400 block mb-2">{road.phase}</span>

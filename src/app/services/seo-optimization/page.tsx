@@ -23,7 +23,7 @@ const processes = [
 ];
 
 const faqs = [
-  { q: "How long does it take to see organic traffic improvements?", a: "Technical SEO fixes (such as resolving indexing blocks or improving page speeds) can yield improvements in 2 to 4 weeks, while keyword ranking growth typically takes 3 to 6 months." },
+  { q: "How long does it take to see organic traffic improvements?", a: "Technical SEO fixes (such as resolving indexing blocks or improving page speeds) can yield improvements relatively quickly, while keyword ranking growth typically requires a longer strategic commitment." },
   { q: "What is Next.js Metadata API and how does it support SEO?", a: "Next.js Metadata API allows developer teams to configure page metadata, open graph cards, canonical tags, and mobile configurations using type-safe declarations that search engine engines read easily." },
   { q: "Do you perform competitor keyword mapping?", a: "Yes. We perform competitor keyword mapping to locate search layout opportunities and optimize semantic layout copy to capture high-intent organic users." },
 ];

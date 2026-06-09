@@ -189,7 +189,7 @@ resource "aws_security_group_rule" "allow_db" {
               <h4 className="text-white font-mono text-sm border-b border-slate-800 pb-2">Data Encryption Rules</h4>
               <pre className="text-[10px] text-cyan-400 font-mono overflow-x-auto p-4 bg-slate-950 rounded-xl">
 {`const cipher = crypto.createCipheriv(
-  'aes-256-gcm', 
+  'aes-256-gcm', // enterprise-grade cipher
   KMSMasterKey, 
   initializationVector
 );
@@ -310,7 +310,7 @@ encrypted += cipher.final('hex');`}
             </div>
 
             <div className="border border-emerald-950/60 bg-emerald-950/10 p-6 rounded-2xl space-y-3">
-              <div className="text-3xl font-bold text-emerald-400">&lt;5 min</div>
+              <div className="text-3xl font-bold text-emerald-400">Rapid</div>
               <h4 className="font-bold text-white text-sm">Threat Incident Response</h4>
               <p className="text-xs text-slate-400 leading-relaxed">
                 SIEM systems trigger immediate alerts to block malicious IP traffic.

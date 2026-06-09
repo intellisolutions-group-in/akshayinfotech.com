@@ -310,7 +310,7 @@ export default function KnowledgeHubPage() {
       {/* Tech Trends & Forecasts Section */}
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24 text-left">
         <div className="max-w-3xl mb-16">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Technological Forecasts (2026 - 2028)</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Technological Forecasts &amp; Emerging Trends</h2>
           <p className="text-sm text-slate-400 mt-2 font-light">Planned changes and patterns predicted by our technology engineering team.</p>
         </div>
 

@@ -195,7 +195,7 @@ export default function EnterpriseArchitecturePage() {
             <tbody>
               <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">
                 <td className="p-4 font-semibold text-white">Scaling Boot-Up Duration</td>
-                <td className="p-4 text-slate-400 font-light">3 - 5 minutes per VM instance</td>
+                <td className="p-4 text-slate-400 font-light">Minutes per VM instance</td>
                 <td className="p-4 text-emerald-300 font-bold">Sub-3 seconds (Docker Container spawns)</td>
               </tr>
               <tr className="border-b border-white/5 hover:bg-white/[0.02] transition-colors">

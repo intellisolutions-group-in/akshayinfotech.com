@@ -522,8 +522,8 @@ export default function ContactSection() {
       onMouseMove={handleSectionMouseMove}
       className="py-32 bg-[#030303] text-white relative overflow-hidden select-none"
     >
-      {/* Top blending transition: FAQ (white) into Contact (black) */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-[#030303] pointer-events-none z-20" />
+      {/* Top section border */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-white/5 pointer-events-none z-20" />
 
       {/* Three.js Globe in background */}
       <GlobeBackground />

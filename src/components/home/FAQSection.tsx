@@ -8,7 +8,7 @@ import MagneticWrapper from "@/components/ui/MagneticWrapper";
 const faqs = [
   {
     q: "How long does a typical project take?",
-    a: "Project timelines vary based on scope and complexity. A standard web application typically takes 4–8 weeks, while enterprise-level platforms with custom integrations can range from 3–6 months. We always begin with a detailed discovery sprint to give you an accurate timeline.",
+    a: "Project timelines vary based on scope and complexity. We always begin with a detailed discovery session to give you an accurate, realistic timeline tailored to your specific project requirements.",
   },
   {
     q: "What technologies do you work with?",
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: "What does your pricing model look like?",
-    a: "We offer flexible models: fixed-price for well-scoped projects, time-and-materials for agile engagements, and monthly retainers for ongoing product development. All engagements start with a free 30-minute discovery call to assess the best fit.",
+    a: "We offer flexible models: fixed-price for well-scoped projects, time-and-materials for agile engagements, and monthly retainers for ongoing product development. All engagements start with a complimentary discovery consultation to assess the best fit.",
   },
 ];
 
