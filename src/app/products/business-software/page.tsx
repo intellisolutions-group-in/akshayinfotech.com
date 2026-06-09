@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const benefits = [
   { title: "Intelligent Workflows", desc: "Automate repetitive data routing and daily administration tasks with secure rules engine." },
   { title: "Unified CRM Analytics", desc: "Consolidate global customer logs and pipeline metrics into single operational command board." },
-  { title: "Compliance-Grade Access", desc: "Enforce strict security roles and detailed audit logging across all company departments." }
+  { title: "Enterprise-Grade Access", desc: "Enforce strict security roles and detailed audit logging across all company departments." }
 ];
 
 export default function BusinessSoftwarePage() {

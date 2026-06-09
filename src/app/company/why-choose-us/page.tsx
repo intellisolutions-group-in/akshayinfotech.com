@@ -23,7 +23,7 @@ export default function WhyChooseUs() {
     {
       icon: UserCheck,
       title: "Senior Engineering Staff",
-      desc: "We assign dedicated mid-to-senior software engineers directly to your workspace. We don't delegate client codebases to inexperienced juniors. Every developer on your project has 5+ years of production experience and holds relevant professional certifications.",
+      desc: "We assign dedicated mid-to-senior software engineers directly to your workspace. We don't delegate client codebases to inexperienced juniors. Every developer on your project has 5+ years of production experience.",
       proof: "Average team experience: 8.2 years",
       details: "Our hiring process includes live architecture challenges, code review exercises, and system design assessments. Only 3% of applicants pass our technical bar."
     },
@@ -98,8 +98,8 @@ export default function WhyChooseUs() {
   const faqs = [
     { q: "How do you ensure consistency when working with distributed teams?", a: "We enforce strict coding standards via ESLint configs, Prettier formatting rules, and comprehensive PR review checklists. Every team member follows identical development environment setups using Docker containers and shared VS Code configuration profiles." },
     { q: "What's your typical project engagement model?", a: "We offer three models: fixed-scope projects with defined deliverables and timelines, dedicated team augmentation with monthly billing, and retainer-based ongoing support contracts. Most enterprise clients start with a fixed-scope project and transition to retainers post-launch." },
-    { q: "Can we interview your engineers before project kickoff?", a: "Absolutely. We encourage clients to interview proposed team members. We provide detailed profiles with portfolio examples, certification records, and previous project summaries for every engineer we assign." },
-    { q: "What happens if a key team member needs to be replaced mid-project?", a: "Our knowledge management practices — including comprehensive ADR logs, living documentation, and pair programming sessions — ensure that any team transition is smooth and fully transparent with minimal disruption." }
+    { q: "Can we interview your engineers before project kickoff?", a: "Absolutely. We encourage clients to interview proposed team members. We provide detailed profiles with portfolio examples, and previous project summaries for every engineer we assign." },
+    { q: "What happens if a key team member needs to be replaced mid-project?", a: "Our knowledge management practices — including comprehensive ADR logs, living documentation, and pair programming sessions — ensure that any team transition is smooth. We guarantee a maximum 5-day handover period for any personnel change." }
   ];
 
   return (

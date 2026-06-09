@@ -38,7 +38,7 @@ export default function Industries() {
             Built for Industry Demands
           </h2>
           <p className="text-base text-text-body">
-            We engineer secure, compliant, and elastic architectures designed for compliance-heavy sectors.
+            We engineer secure and elastic architectures designed for enterprise sectors.
           </p>
         </div>
 

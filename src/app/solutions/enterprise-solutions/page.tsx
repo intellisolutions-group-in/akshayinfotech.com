@@ -211,21 +211,21 @@ export default function EnterpriseSolutionsPage() {
             </h3>
             <div className="space-y-6 text-left">
               <div className="flex items-start space-x-3.5">
-                <div className="h-5 w-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs shrink-0 mt-0.5">✕</div>
+                <div className="h-5 w-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs shrink-0 mt-0.5">X</div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-200">Monolithic Bottlenecks</h4>
                   <p className="text-xs text-slate-400 font-light mt-1">Monolithic backend clusters experience service-wide crashes during unpredictable user spikes, locking databases and slowing operations.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3.5">
-                <div className="h-5 w-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs shrink-0 mt-0.5">✕</div>
+                <div className="h-5 w-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs shrink-0 mt-0.5">X</div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-200">Database Locks & Query Queues</h4>
                   <p className="text-xs text-slate-400 font-light mt-1">Unoptimized SQL/NoSQL databases with unindexed joins and lack of replication lead to critical query response delays during high load.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3.5">
-                <div className="h-5 w-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs shrink-0 mt-0.5">✕</div>
+                <div className="h-5 w-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs shrink-0 mt-0.5">X</div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-200">Inefficient VM Utilization</h4>
                   <p className="text-xs text-slate-400 font-light mt-1">High cloud server billing caused by inefficient CPU routing and dormant host servers that continue consuming monthly resources.</p>
@@ -242,21 +242,21 @@ export default function EnterpriseSolutionsPage() {
             </h3>
             <div className="space-y-6 text-left">
               <div className="flex items-start space-x-3.5">
-                <div className="h-5 w-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5">✓</div>
+                <div className="h-5 w-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5"><Check className="h-3 w-3" /></div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-200">Horizontal Auto-Scaling Container networks</h4>
                   <p className="text-xs text-slate-300 font-light mt-1">Kubernetes-driven microservices that scale horizontally based on active memory usage thresholds, splitting request load seamlessly.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3.5">
-                <div className="h-5 w-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5">✓</div>
+                <div className="h-5 w-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5"><Check className="h-3 w-3" /></div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-200">Distributed Index Caching</h4>
                   <p className="text-xs text-slate-300 font-light mt-1">Real-time Redis caching nodes caching repetitive endpoint schemas, dropping database load by 75% and freeing indexing queues.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3.5">
-                <div className="h-5 w-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5">✓</div>
+                <div className="h-5 w-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5"><Check className="h-3 w-3" /></div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-200">Dynamic Compute Balancing</h4>
                   <p className="text-xs text-slate-300 font-light mt-1">AI resource mapping scripts shutting down inactive server clusters during off-peak times, directly saving cloud budgets.</p>
@@ -317,7 +317,7 @@ export default function EnterpriseSolutionsPage() {
               <p className="text-[10px] text-slate-500 mt-1 font-light">Cloudflare WAF / Ingress Protection</p>
             </div>
 
-            <div className="hidden md:flex justify-center text-slate-600">➔</div>
+            <div className="hidden md:flex justify-center text-slate-600"><ArrowRight className="h-5 w-5" /></div>
 
             {/* Step 2 */}
             <div className="p-4 bg-slate-900 border border-white/5 rounded-xl text-center">
@@ -326,7 +326,7 @@ export default function EnterpriseSolutionsPage() {
               <p className="text-[10px] text-slate-500 mt-1 font-light">Dynamic load routing balances</p>
             </div>
 
-            <div className="hidden md:flex justify-center text-slate-600">➔</div>
+            <div className="hidden md:flex justify-center text-slate-600"><ArrowRight className="h-5 w-5" /></div>
 
             {/* Step 3 */}
             <div className="p-4 bg-slate-900 border border-white/5 rounded-xl text-center">

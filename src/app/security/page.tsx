@@ -46,7 +46,7 @@ const securitySections = [
     icon: Cloud,
     color: "#059669",
     title: "Cloud Security",
-    desc: "Cloud environments are configured following AWS Well-Architected Framework security pillars. All cloud resources are provisioned through Infrastructure-as-Code with automated compliance checks on every deployment.",
+    desc: "Cloud environments are configured following strict security pillars. All cloud resources are provisioned through Infrastructure-as-Code with automated security checks on every deployment.",
     points: [
       "IAM roles with least-privilege principle enforced across all services",
       "AWS Config rules for continuous compliance monitoring",

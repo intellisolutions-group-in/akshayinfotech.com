@@ -13,7 +13,7 @@ const consultingSteps = [
   {
     phase: "Phase 01",
     title: "Discovery & Enterprise Resource Audit",
-    desc: "We analyze legacy server resource consumption, identify software licenses, review security compliance profiles, and interview team stakeholders."
+    desc: "We analyze legacy server resource consumption, identify software licenses, review security profiles, and interview team stakeholders."
   },
   {
     phase: "Phase 02",
@@ -168,7 +168,7 @@ export default function ITConsultingPage() {
                   <span className="text-rose-400">18 hrs / release</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Security Compliance Risk:</span>
+                  <span>Security Risk:</span>
                   <span className="text-rose-400">High (Legacy OS)</span>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function ITConsultingPage() {
                   <span className="text-emerald-400">0.5 hrs / release</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Security Compliance Risk:</span>
+                  <span>Security Risk:</span>
                   <span className="text-emerald-400">Low (Auto-monitored)</span>
                 </div>
               </div>
