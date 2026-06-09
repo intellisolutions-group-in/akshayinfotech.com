@@ -369,7 +369,7 @@ function WhyPartnerHorizontalCard({
                 </div>
               </div>
 
-              <p className="text-xs md:text-sm text-slate-400 leading-relaxed font-normal">
+              <p className="text-sm md:text-base text-slate-400 leading-relaxed font-normal">
                 {card.desc}
               </p>
             </div>
@@ -399,7 +399,7 @@ function WhyPartnerHorizontalCard({
               {/* Key Features details */}
               <ul className="space-y-2">
                 {card.features.map((feat, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-[11px] text-slate-300 font-medium">
+                  <li key={idx} className="flex items-start gap-2 text-xs md:text-sm text-slate-300 font-medium">
                     <Check className="h-3.5 w-3.5 text-blue-400 shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </li>

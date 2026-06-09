@@ -98,8 +98,8 @@ export default function WhyChooseUs() {
   const faqs = [
     { q: "How do you ensure consistency when working with distributed teams?", a: "We enforce strict coding standards via ESLint configs, Prettier formatting rules, and comprehensive PR review checklists. Every team member follows identical development environment setups using Docker containers and shared VS Code configuration profiles." },
     { q: "What's your typical project engagement model?", a: "We offer three models: fixed-scope projects with defined deliverables and timelines, dedicated team augmentation with monthly billing, and retainer-based ongoing support contracts. Most enterprise clients start with a fixed-scope project and transition to retainers post-launch." },
-    { q: "Can we interview your engineers before project kickoff?", a: "Absolutely. We encourage clients to interview proposed team members. We provide detailed profiles with portfolio examples, certification records, and previous project summaries for every engineer we assign." },
-    { q: "What happens if a key team member needs to be replaced mid-project?", a: "Our knowledge management practices — including comprehensive ADR logs, living documentation, and pair programming sessions — ensure that any team transition is smooth and fully transparent with minimal disruption." }
+    { q: "Can we interview your engineers before project kickoff?", a: "Absolutely. We encourage clients to interview proposed team members. We provide detailed profiles with portfolio examples, and previous project summaries for every engineer we assign." },
+    { q: "What happens if a key team member needs to be replaced mid-project?", a: "Our knowledge management practices — including comprehensive ADR logs, living documentation, and pair programming sessions — ensure that any team transition is smooth. We guarantee a maximum 5-day handover period for any personnel change." }
   ];
 
   return (
@@ -185,10 +185,10 @@ export default function WhyChooseUs() {
                     <span className="text-xs font-mono text-blue-400">{coreReasons[activeReason].proof}</span>
                   </div>
                 </div>
-                <p className="text-sm text-slate-400 leading-relaxed font-light">{coreReasons[activeReason].desc}</p>
+                <p className="text-base text-slate-400 leading-relaxed font-light">{coreReasons[activeReason].desc}</p>
                 <div className="p-4 bg-blue-500/5 border border-blue-500/10 rounded-xl">
-                  <span className="text-[9px] uppercase font-mono tracking-widest text-blue-400 font-bold block mb-1">Deep Dive</span>
-                  <p className="text-xs text-slate-300 leading-relaxed font-light">{coreReasons[activeReason].details}</p>
+                  <span className="text-[10px] uppercase font-mono tracking-widest text-blue-400 font-bold block mb-1">Deep Dive</span>
+                  <p className="text-sm text-slate-300 leading-relaxed font-light">{coreReasons[activeReason].details}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -213,8 +213,8 @@ export default function WhyChooseUs() {
               className="p-6 bg-slate-900/40 border border-white/5 rounded-2xl text-center"
             >
               <div className="text-3xl font-black text-blue-400 font-mono mb-1">{result.metric}</div>
-              <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-2">{result.label}</h4>
-              <p className="text-[10px] text-slate-500 font-light">{result.desc}</p>
+              <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-2">{result.label}</h4>
+              <p className="text-xs text-slate-500 font-light">{result.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -264,12 +264,12 @@ export default function WhyChooseUs() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="p-8 bg-[#090d1f]/60 border border-white/5 rounded-3xl backdrop-blur-md space-y-6 flex flex-col justify-between"
             >
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed italic font-light">&ldquo;{t.quote}&rdquo;</p>
+              <p className="text-sm sm:text-base text-slate-300 leading-relaxed italic font-light">&ldquo;{t.quote}&rdquo;</p>
               <div className="flex items-center gap-4 border-t border-white/5 pt-4">
                 <div className="h-10 w-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center font-bold font-mono text-xs">{t.avatar}</div>
                 <div>
-                  <h5 className="text-xs font-bold text-white">{t.name}</h5>
-                  <p className="text-[10px] text-slate-500 font-mono">{t.role}</p>
+                  <h5 className="text-sm font-bold text-white">{t.name}</h5>
+                  <p className="text-xs text-slate-500 font-mono">{t.role}</p>
                 </div>
               </div>
             </motion.div>
@@ -298,8 +298,8 @@ export default function WhyChooseUs() {
                 <div className="h-10 w-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center">
                   <GIcon className="h-5 w-5" />
                 </div>
-                <h4 className="text-sm font-bold text-white">{g.title}</h4>
-                <p className="text-[11px] text-slate-500 leading-relaxed font-light">{g.desc}</p>
+                <h4 className="text-base font-bold text-white">{g.title}</h4>
+                <p className="text-xs text-slate-500 leading-relaxed font-light">{g.desc}</p>
               </motion.div>
             );
           })}

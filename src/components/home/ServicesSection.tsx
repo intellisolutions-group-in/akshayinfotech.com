@@ -599,12 +599,12 @@ function ServiceCard({ s, index }: { s: ServiceItem; index: number }) {
                 >
                   <Icon className="h-4.5 w-4.5" style={{ color: s.color }} />
                 </div>
-                <h3 className="text-[13px] font-bold text-slate-800 transition-colors duration-300 truncate" style={{ color: isHovered ? s.color : "#1E293B" }}>
+                <h3 className="text-sm md:text-base font-bold text-slate-800 transition-colors duration-300 truncate" style={{ color: isHovered ? s.color : "#1E293B" }}>
                   {s.title}
                 </h3>
               </div>
               
-              <div className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-slate-100/80 border border-slate-200/50 text-[8px] text-slate-500 font-semibold select-none shrink-0">
+              <div className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-slate-100/80 border border-slate-200/50 text-[10px] text-slate-500 font-semibold select-none shrink-0">
                 <span>Live Data</span>
               </div>
             </div>
@@ -615,7 +615,7 @@ function ServiceCard({ s, index }: { s: ServiceItem; index: number }) {
               style={{ transformStyle: "preserve-3d" }}
             >
               {/* Description */}
-              <p className="text-xs text-slate-500 font-normal leading-relaxed" style={{ transform: "translateZ(15px)" }}>
+              <p className="text-sm text-slate-500 font-normal leading-relaxed" style={{ transform: "translateZ(15px)" }}>
                 {s.description}
               </p>
 
@@ -624,11 +624,11 @@ function ServiceCard({ s, index }: { s: ServiceItem; index: number }) {
                 <div className="flex items-start justify-between" style={{ transform: "translateZ(20px)" }}>
                   <div>
                     <div className="text-xl font-black text-slate-800 tracking-tight leading-none">{s.metric}</div>
-                    <div className="text-[8px] text-slate-400 font-bold mt-1 uppercase tracking-wider">{s.metricLabel}</div>
+                    <div className="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-wider">{s.metricLabel}</div>
                   </div>
                   <div className="text-right">
                     <div className="text-xs font-bold text-slate-700 leading-none">{s.change}</div>
-                    <div className="flex items-center justify-end gap-0.5 text-[8px] font-bold mt-1" style={{ color: s.positive ? "#10B981" : "#EF4444" }}>
+                    <div className="flex items-center justify-end gap-0.5 text-[10px] font-bold mt-1" style={{ color: s.positive ? "#10B981" : "#EF4444" }}>
                       {s.positive ? "↑" : "↓"} {s.changeLabel}
                     </div>
                   </div>
@@ -678,7 +678,7 @@ function ServiceCard({ s, index }: { s: ServiceItem; index: number }) {
 
               {/* Action CTA */}
               <div className="pt-2 border-t border-slate-100 flex items-center justify-between" style={{ transform: "translateZ(25px)" }}>
-                <span className="inline-flex items-center text-[10px] font-bold text-blue-600 hover:text-blue-700 tracking-wider uppercase group/btn">
+                <span className="inline-flex items-center text-xs font-bold text-blue-600 hover:text-blue-700 tracking-wider uppercase group/btn">
                   Explore Service
                   <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-0.5" />
                 </span>
