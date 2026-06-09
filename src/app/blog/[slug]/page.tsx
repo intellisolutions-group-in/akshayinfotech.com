@@ -22,7 +22,7 @@ const articles: Record<string, BlogPost> = {
     desc: "A detailed breakdown of server component optimization, route segment configs, code splitting triggers, and modern WebP image sizing rules.",
     category: "Engineering",
     date: "May 25, 2026",
-    author: "Elena Rostova",
+    author: "A. Sharma",
     readTime: "6 min read",
     content: [
       "In modern web development, achieving top-tier page loading speed is not just an vanity metric; it directly correlates with search listings organic visibility and user retention rates. During our recent infrastructure redesign sprint, we set out to target a perfect 100/100 score across all Lighthouse audits.",
@@ -33,17 +33,17 @@ const articles: Record<string, BlogPost> = {
   },
   "secure-telehealth-pipelines": {
     slug: "secure-telehealth-pipelines",
-    title: "Engineering Telehealth Applications: Setting Up HIPAA-Compliant WebRTC Video Consultations",
+    title: "Engineering Telehealth Applications: Setting Up Secure WebRTC Video Consultations",
     desc: "A walkthrough of setting up secure TURN servers, database logging rules, JWT token generation, and secure socket gateways.",
     category: "Security",
     date: "May 18, 2026",
-    author: "Marcus Vance",
+    author: "R. Verma",
     readTime: "9 min read",
     content: [
-      "Building telemedicine platforms requires strict adherence to security and compliance protocols. The Health Insurance Portability and Accountability Act (HIPAA) mandates secure data storage, transit encryption, and comprehensive access audits.",
+      "Building telemedicine platforms requires strict adherence to security protocols. Strict guidelines mandate secure data storage, transit encryption, and comprehensive access audits.",
       "Our team approached the client's WebRTC video consulting platform with a zero-trust network design. Every patient-doctor session is brokered using short-lived JSON Web Tokens (JWT) signed by our internal KMS engine. These tokens grant temporary access keys to secure TURN/STUN servers.",
       "Crucially, none of the video consult stream records are stored on public servers. All ephemeral signaling packets are sent through secure WebSocket tunnels that employ TLS 1.3 encryption. For storage of patient metadata, we configure strict access logs inside AWS RDS instances utilizing KMS keys.",
-      "Additionally, we built automated reporting engines that log every administrative access and configuration update. These logs are stored on immutable storage buckets (WORM), providing clean logs for yearly compliance audits."
+      "Additionally, we built automated reporting engines that log every administrative access and configuration update. These logs are stored on immutable storage buckets (WORM), providing clean logs for yearly security audits."
     ]
   },
   "headless-commerce-conversions": {
@@ -52,7 +52,7 @@ const articles: Record<string, BlogPost> = {
     desc: "Why sub-second page loads directly reduce abandoned carts, and how to connect Next.js APIs to Shopify store catalogs seamlessly.",
     category: "E-Commerce",
     date: "May 10, 2026",
-    author: "Sarah Jenkins",
+    author: "S. Gupta",
     readTime: "8 min read",
     content: [
       "In retail commerce, slow checkout times lead directly to loss of conversions. Research indicates that a one-second delay in page load speeds can reduce conversion parameters by up to 20%.",

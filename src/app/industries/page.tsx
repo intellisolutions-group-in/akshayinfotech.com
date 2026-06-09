@@ -144,7 +144,7 @@ export default function IndustriesPage() {
                     <div className="border-t border-slate-200/50 pt-5">
                       <div className="text-xs font-bold text-primary flex items-center">
                         <ShieldCheck className="h-4.5 w-4.5 mr-1.5" />
-                        <span>Security & Compliance Guaranteed</span>
+                        <span>Security Assured</span>
                       </div>
                     </div>
                   </div>

@@ -46,7 +46,7 @@ export default function KnowledgeHubPage() {
       id: "rp-1",
       category: "cloud",
       title: "Microservices Scalability & Load Management Patterns",
-      author: "Dr. Elena Rostova",
+      author: "A. Sharma",
       date: "May 2026",
       readTime: "12 min read",
       summary: "An in-depth analysis of multi-region database replication patterns, proxy load balancer configs, and Kubernetes container scaling behaviors under massive queries."
@@ -55,16 +55,16 @@ export default function KnowledgeHubPage() {
       id: "rp-2",
       category: "security",
       title: "Zero-Trust Architecture for Distributed Logistics Portals",
-      author: "Marcus Vance",
+      author: "R. Verma",
       date: "April 2026",
       readTime: "18 min read",
-      summary: "Exploring IAM credential lifecycle policies, pen-testing logs, network subnet bounds, and hardware key decryption standards in cloud architectures."
+      summary: "Exploring IAM credential lifecycle policies, pen-testing logs, network subnet bounds, and hardware key decryption protocols in cloud architectures."
     },
     {
       id: "rp-3",
       category: "ai",
       title: "Optimizing Vector Search Indexes for LLM Pipelines",
-      author: "Sarah Jenkins",
+      author: "S. Gupta",
       date: "March 2026",
       readTime: "14 min read",
       summary: "Testing retrieval latency metrics of Pinecone vs pgvector database configurations across 10 million test query streams."
@@ -73,15 +73,15 @@ export default function KnowledgeHubPage() {
 
   const faqs = [
     {
-      q: "Are the resources and whitepapers updated regularly?",
-      a: "Yes. Our cloud architects and security engineers update the codebase checklists and architectural design guidelines quarterly to account for new security patches and cloud standards."
+      q: "Are the resources updated regularly?",
+      a: "Yes. Our cloud architects and security engineers update the codebase checklists and architectural design guidelines quarterly to account for new security patches and cloud protocols."
     },
     {
       q: "Can I distribute the schemas and zip configurations inside my firm?",
       a: "Yes. All downloaded resources are distributed under the MIT license, allowing teams to reference and integrate our blueprints inside their local environments."
     },
     {
-      q: "How can I book a detailed review of one of these whitepapers?",
+      q: "How can I book a detailed review of one of these resources?",
       a: "You can click on any CTA link to request a custom discovery call. Our team will go over the architecture steps in detail."
     }
   ];
@@ -115,7 +115,7 @@ export default function KnowledgeHubPage() {
             Research Portal & Insights
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-none bg-gradient-to-r from-white via-blue-100 to-indigo-300 bg-clip-text text-transparent">
-            Technology Publications <br />& Whitepapers
+            Technology Publications
           </h1>
           <p className="text-base text-slate-400 leading-relaxed font-light">
             In-depth guides, telemetry analysis, and research publications authored by Akshay systems architects. Free resources built to clarify structural scaling queries.
@@ -155,7 +155,7 @@ export default function KnowledgeHubPage() {
                 href="/contact" 
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-400 hover:text-blue-300 transition-colors"
               >
-                Read Whitepaper
+                Read Resource
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
@@ -170,7 +170,7 @@ export default function KnowledgeHubPage() {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between border-b border-white/10 pb-6 mb-8 gap-4">
           <div className="text-left">
-            <h3 className="text-xl font-bold text-white">Research & Whitepapers</h3>
+            <h3 className="text-xl font-bold text-white">Research & Insights</h3>
             <p className="text-xs text-slate-500 font-light mt-1">Deep structural software telemetry studies.</p>
           </div>
 
@@ -227,52 +227,6 @@ export default function KnowledgeHubPage() {
 
       </section>
 
-      {/* Interactive Resource Downloads */}
-      <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Interactive Resource Downloads</h2>
-          <p className="text-sm text-slate-400 mt-2">Download technical guidelines and standard operation blueprints.</p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {[
-            { id: "dl-1", title: "Kubernetes Deploy Checklist", format: "PDF • 2.4 MB" },
-            { id: "dl-2", title: "SSO IAM Integration Schema", format: "ZIP • 8.1 MB" },
-            { id: "dl-3", title: "Aurora MySQL Index Blueprint", format: "PDF • 1.9 MB" }
-          ].map((dl) => {
-            const pct = downloadProgress[dl.id];
-            const isDownloading = pct !== undefined && pct < 100;
-            return (
-              <div key={dl.id} className="p-6 bg-slate-900/40 border border-white/5 rounded-2xl text-left flex flex-col justify-between gap-4 backdrop-blur-md">
-                <div>
-                  <h4 className="text-sm font-bold text-white">{dl.title}</h4>
-                  <span className="text-[10px] text-slate-500 font-mono mt-1 block">{dl.format}</span>
-                </div>
-
-                {pct !== undefined ? (
-                  <div className="space-y-1.5 w-full">
-                    <div className="flex justify-between items-center text-[9px] font-mono text-slate-400">
-                      <span>{isDownloading ? "Downloading..." : "Completed"}</span>
-                      <span>{pct}%</span>
-                    </div>
-                    <div className="w-full h-1 bg-slate-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-blue-500" style={{ width: `${pct}%` }} />
-                    </div>
-                  </div>
-                ) : (
-                  <button
-                    onClick={() => triggerDownload(dl.id)}
-                    className="w-full py-2 bg-blue-600/10 hover:bg-blue-600 border border-blue-500/25 hover:border-blue-500 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer text-blue-400 hover:text-white"
-                  >
-                    <Download className="h-3.5 w-3.5" />
-                    Download File
-                  </button>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
 
       {/* Tech Trends & Forecasts Section */}
       <section className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 mb-24 text-left">

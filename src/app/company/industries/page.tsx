@@ -96,17 +96,8 @@ export default function IndustriesWeServe() {
     }
   ];
 
-  const complianceStandards = [
-    { name: "HIPAA", desc: "Health Insurance Portability and Accountability Act", industries: "Healthcare" },
-    { name: "SOC2 Type II", desc: "Service Organization Control audit certification", industries: "FinTech, SaaS" },
-    { name: "PCI-DSS", desc: "Payment Card Industry Data Security Standard", industries: "E-Commerce, Banking" },
-    { name: "GDPR", desc: "General Data Protection Regulation compliance", industries: "All European clients" },
-    { name: "ISO 27001", desc: "Information Security Management System standard", industries: "Enterprise clients" }
-  ];
-
   const faqs = [
     { q: "Do you have direct domain expertise in my industry?", a: "Our engineering team includes specialists with backgrounds in healthcare IT, financial services, e-commerce platforms, and logistics systems. We pair domain experts with technical architects on every industry-specific project." },
-    { q: "How do you handle industry-specific compliance requirements?", a: "We build compliance into our architecture from day one — not as an afterthought. Our CI/CD pipelines include automated security scans, and we maintain relationships with third-party auditors for SOC2, HIPAA, and PCI-DSS certifications." },
     { q: "Can you work with our existing industry-specific software?", a: "Yes. We regularly integrate with EHR systems (Epic, Cerner), payment processors (Stripe, Adyen), logistics platforms (SAP TM), and e-commerce engines (Shopify Plus, commercetools). Our API-first approach ensures clean integrations." },
     { q: "Do you offer industry benchmarking reports?", a: "Yes. During discovery, we benchmark your current system performance against industry standards and competitor metrics. This data drives our architectural recommendations and helps measure ROI post-launch." }
   ];
@@ -238,39 +229,12 @@ export default function IndustriesWeServe() {
         </AnimatePresence>
       </section>
 
-      {/* ═══════════════ 3. COMPLIANCE TABLE ═══════════════ */}
-      <section className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 mb-24">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Compliance & Certifications</h2>
-          <p className="text-sm text-slate-400 mt-2">Industry-standard security and regulatory certifications we implement.</p>
-        </div>
-        <div className="overflow-x-auto rounded-2xl border border-white/5">
-          <table className="w-full text-left text-xs">
-            <thead>
-              <tr className="bg-slate-900/60">
-                <th className="px-6 py-4 text-violet-400 font-bold uppercase tracking-wider">Standard</th>
-                <th className="px-6 py-4 text-slate-400 font-bold uppercase tracking-wider">Description</th>
-                <th className="px-6 py-4 text-slate-400 font-bold uppercase tracking-wider">Industries</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-white/5">
-              {complianceStandards.map((std, i) => (
-                <tr key={i} className="bg-slate-950/40 hover:bg-slate-900/40 transition-colors">
-                  <td className="px-6 py-4 text-white font-bold font-mono">{std.name}</td>
-                  <td className="px-6 py-4 text-slate-400 font-light">{std.desc}</td>
-                  <td className="px-6 py-4 text-slate-500 font-light">{std.industries}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
 
       {/* ═══════════════ 4. FAQ ═══════════════ */}
       <section className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 mb-24">
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Industry Questions</h2>
-          <p className="text-sm text-slate-400 mt-2">Answers about domain expertise, compliance, and sector integrations.</p>
+          <p className="text-sm text-slate-400 mt-2">Answers about domain expertise, security, and sector integrations.</p>
         </div>
         <div className="space-y-4 text-left">
           {faqs.map((faq, i) => {

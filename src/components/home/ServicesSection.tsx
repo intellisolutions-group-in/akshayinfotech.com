@@ -106,7 +106,7 @@ const services: ServiceItem[] = [
     positive: true,
     chartType: "donut",
     description: "Engineering cohesive design systems, high-fidelity interactive wireframes, and optimized user flows verified by empirical usability studies.",
-    features: ["Usability SUS Score Audits", "Custom Token Design Systems", "Interactive SaaS Prototypes", "Accessible WCAG Compliant"],
+    features: ["Usability SUS Score Audits", "Custom Token Design Systems", "Interactive SaaS Prototypes", "Accessible Design"],
     benefits: ["94% Usability Score (SUS)", "+48% Session Retention"],
   },
   {

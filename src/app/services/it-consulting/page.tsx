@@ -12,7 +12,7 @@ const consultingSteps = [
   {
     phase: "Phase 01",
     title: "Discovery & Enterprise Resource Audit",
-    desc: "We analyze legacy server resource consumption, identify software licenses, review security compliance profiles, and interview team stakeholders."
+    desc: "We analyze legacy server resource consumption, identify software licenses, review security profiles, and interview team stakeholders."
   },
   {
     phase: "Phase 02",
@@ -167,7 +167,7 @@ export default function ITConsultingPage() {
                   <span className="text-rose-400">18 hrs / release</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Security Compliance Risk:</span>
+                  <span>Security Risk:</span>
                   <span className="text-rose-400">High (Legacy OS)</span>
                 </div>
               </div>
@@ -201,7 +201,7 @@ export default function ITConsultingPage() {
                   <span className="text-emerald-400">0.5 hrs / release</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Security Compliance Risk:</span>
+                  <span>Security Risk:</span>
                   <span className="text-emerald-400">Low (Auto-monitored)</span>
                 </div>
               </div>
@@ -310,13 +310,6 @@ export default function ITConsultingPage() {
               </p>
             </div>
             
-            <div className="border border-slate-800 bg-slate-950/20 p-6 rounded-2xl space-y-3">
-              <div className="text-3xl font-bold text-primary">100%</div>
-              <h4 className="font-bold text-white text-sm">Regulatory Compliance</h4>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                System setups align with HIPAA, SOC 2, and PCI-DSS rules.
-              </p>
-            </div>
 
             <div className="border border-slate-800 bg-slate-950/20 p-6 rounded-2xl space-y-3">
               <div className="text-3xl font-bold text-primary">+24%</div>

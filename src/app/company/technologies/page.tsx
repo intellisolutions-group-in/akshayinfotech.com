@@ -266,7 +266,7 @@ export default function TechnologiesPage() {
           </div>
           <div className="font-mono text-[11px] text-slate-400 space-y-1.5">
             <div>$ akshay stack --audit</div>
-            <div className="text-cyan-400">⚡ Scanning active technology stack...</div>
+            <div className="text-cyan-400">Scanning active technology stack...</div>
             <div> </div>
             <div>Frontend:     React 19 + Next.js 15 (Turbopack)  <span className="text-emerald-400">[OK]</span></div>
             <div>Backend:      NestJS 10 + GraphQL Federation      <span className="text-emerald-400">[OK]</span></div>
@@ -275,7 +275,7 @@ export default function TechnologiesPage() {
             <div>Monitoring:   Datadog + Sentry + PagerDuty         <span className="text-emerald-400">[OK]</span></div>
             <div>CI/CD:        GitHub Actions (12 active pipelines) <span className="text-emerald-400">[OK]</span></div>
             <div> </div>
-            <div className="text-indigo-400">✓ All systems operational. Stack health: 100%</div>
+            <div className="text-indigo-400">All systems operational. Stack health: 100%</div>
           </div>
         </div>
       </section>

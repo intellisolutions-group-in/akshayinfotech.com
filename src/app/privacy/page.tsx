@@ -26,7 +26,6 @@ const privacySections = [
       { label: "Service Delivery", desc: "To fulfill contractual obligations, communicate project updates, and provide technical support." },
       { label: "Product Improvement", desc: "Aggregated analytics help us improve our website UX, identify popular content, and optimize performance." },
       { label: "Marketing", desc: "With your consent, we may send newsletters or service updates. You can unsubscribe at any time." },
-      { label: "Legal Compliance", desc: "To meet regulatory obligations, respond to legal requests, and protect our rights and property." },
     ],
   },
   {
@@ -75,18 +74,6 @@ const privacySections = [
       { label: "Right to Rectification", desc: "Request correction of inaccurate or incomplete personal data in our records." },
       { label: "Right to Erasure", desc: "Request deletion of your personal data, subject to our legal retention obligations." },
       { label: "Right to Portability", desc: "Receive your personal data in a machine-readable format (JSON or CSV) upon request." },
-    ],
-  },
-  {
-    id: "gdpr",
-    icon: Globe,
-    color: "#0891B2",
-    title: "GDPR Compliance",
-    items: [
-      { label: "Legal Basis", desc: "We process personal data under legitimate interest, contractual necessity, legal obligation, and explicit consent where required." },
-      { label: "Data Protection Officer", desc: "Our DPO can be reached at info@akshayinfoctech.net for any GDPR-related inquiries or complaints." },
-      { label: "Cross-Border Transfers", desc: "Data transfers outside the EEA are protected by Standard Contractual Clauses (SCCs) approved by the European Commission." },
-      { label: "Supervisory Authority", desc: "EU residents have the right to lodge complaints with their national Data Protection Authority." },
     ],
   },
   {

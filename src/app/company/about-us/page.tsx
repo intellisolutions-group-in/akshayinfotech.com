@@ -65,22 +65,22 @@ export default function AboutUsPage() {
 
   const milestones = [
     {
-      period: "THE BEGINNING (2018)",
+      period: "THE BEGINNING (2010)",
       title: "Bridging Backend Scales & Interfaces",
       desc: "Akshay was founded by database architects who wanted to replace slow enterprise SQL systems with decoupled, low-latency microservice meshes wrapped under fast user interfaces."
     },
     {
-      period: "TRANSITION PHASE (2020)",
+      period: "TRANSITION PHASE (2014)",
       title: "Pivoting to Real-Time Telemetry",
       desc: "We built custom event trackers during the early shifts of global transaction volumes, helping clients monitor server anomalies and trace request paths across isolated clusters."
     },
     {
-      period: "EXPANSION (2022)",
+      period: "EXPANSION (2018)",
       title: "Deploying the Strangler Pattern",
       desc: "We helped high-volume retail portals replace legacy VM server networks, transitioning traffic gradually via Envoy proxy layers without downtime."
     },
     {
-      period: "GLOBAL REACH (2024)",
+      period: "GLOBAL REACH (2022)",
       title: "ISO & SOC2 Telemetry Integration",
       desc: "Consolidated infrastructure layouts under zero-trust credential rules, monitoring query latency limits across 120+ active clusters."
     },
@@ -139,7 +139,7 @@ export default function AboutUsPage() {
           <div className="space-y-6">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">Documenting Our Philosophy</h2>
             <p className="text-sm text-slate-405 leading-relaxed font-light">
-              Founded in 2018, Akshay Infotech emerged from a simple observation: modern business applications grow exponentially, yet database syncs and server configurations lag behind. Traditional setups rely on oversized computing instances to manage spikes, which results in excessive cloud spending.
+              Founded in 2010, Akshay Infotech emerged from a simple observation: modern business applications grow exponentially, yet database syncs and server configurations lag behind. Traditional setups rely on oversized computing instances to manage spikes, which results in excessive cloud spending.
             </p>
             <p className="text-sm text-slate-405 leading-relaxed font-light">
               We replace monoliths with lightweight, containerized microservices and automated database proxies. This ensures that client interfaces render in milliseconds while maintaining zero packet loss during infrastructure migrations.

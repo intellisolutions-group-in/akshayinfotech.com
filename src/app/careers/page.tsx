@@ -23,9 +23,8 @@ const jobs = [
     id: "senior-react-developer",
     title: "Senior React Developer",
     team: "Frontend Engineering",
-    location: "Remote (Global)",
+    location: "Hybrid (Mumbai or Bangalore)",
     type: "Full Time",
-    salary: "$120,000 - $150,000",
     summary: "Lead the development of custom Next.js 15 enterprise web applications, maintaining clean component design systems and typing rules.",
     requirements: ["5+ years React production experience", "Expert TypeScript configuration capabilities", "Solid experience in Next.js App Router and server component architectures", "Ability to audit load performance and Lighthouse scores"]
   },
@@ -33,9 +32,8 @@ const jobs = [
     id: "cloud-devops-engineer",
     title: "Cloud DevOps Engineer",
     team: "Infrastructure Systems",
-    location: "Hybrid (SF or London)",
+    location: "Hybrid (Mumbai or Bangalore)",
     type: "Full Time",
-    salary: "$130,000 - $160,000",
     summary: "Own multi-region AWS and Google Cloud clusters, automated CI/CD deployment pipelines, and Docker container clusters.",
     requirements: ["4+ years AWS cloud architecture experience", "Proficiency in Terraform for Infrastructure-as-Code", "Hands-on orchestration of Kubernetes clusters in production", "Familiarity with Prometheus, Grafana, and security configs"]
   },
@@ -43,11 +41,10 @@ const jobs = [
     id: "lead-ui-ux-designer",
     title: "Lead UI/UX Designer",
     team: "Product Experience",
-    location: "Remote (Global)",
+    location: "Hybrid (Mumbai or Bangalore)",
     type: "Full Time",
-    salary: "$110,000 - $140,000",
     summary: "Establish user journeys, design systems in Figma, and build wireframe prototypes for client dashboards.",
-    requirements: ["4+ years digital product design experience", "Mastery of Figma components, variants, and variables", "Strong understanding of accessibility rules (WCAG 2.1)", "Portfolio showing clean data-heavy SaaS dashboards"]
+    requirements: ["4+ years digital product design experience", "Mastery of Figma components, variants, and variables", "Strong understanding of accessibility rules", "Portfolio showing clean data-heavy SaaS dashboards"]
   }
 ];
 
@@ -95,8 +92,8 @@ export default function CareersPage() {
   ];
 
   const employeeStories = [
-    { name: "Kaelen Mercer", role: "Staff DevOps Architect", quote: "Akshay cut out the standard management friction. I can spend my days refactoring Kubernetes configs and Terraform modules instead of attending endless planning loops.", avatar: "KM" },
-    { name: "Elena Rostova", role: "Chief Systems Architect", quote: "Our engineering guilds are structured to value real technical performance. We run tests, analyze latency logs, and optimize database syncs with complete autonomy.", avatar: "ER" }
+    { name: "K. Mehta", role: "Staff DevOps Architect", quote: "Akshay cut out the standard management friction. I can spend my days refactoring Kubernetes configs and Terraform modules instead of attending endless planning loops.", avatar: "KM" },
+    { name: "A. Sharma", role: "Chief Systems Architect", quote: "Our engineering guilds are structured to value real technical performance. We run tests, analyze latency logs, and optimize database syncs with complete autonomy.", avatar: "AS" }
   ];
 
   const handleOpenForm = (jobTitle: string) => {
@@ -186,7 +183,7 @@ export default function CareersPage() {
             <h4 className="text-lg font-bold text-white">Interactive Terminal Mock</h4>
             <div className="bg-slate-950 p-4 rounded-xl border border-white/10 font-mono text-[11px] text-slate-400 space-y-1">
               <div>$ akshay team --status</div>
-              <div className="text-indigo-400">⚡ Retrieving active developer guild metrics...</div>
+              <div className="text-indigo-400">Retrieving active developer guild metrics...</div>
               <div>- Database latency target: &lt;15ms [OK]</div>
               <div>- Concurrent test pipeline slots: 24 [OK]</div>
               <div>- Asynchronous deep work: ACTIVE</div>
@@ -293,8 +290,6 @@ export default function CareersPage() {
                     <span className="flex items-center gap-1"><MapPin className="h-3.5 w-3.5 text-indigo-400" /> {job.location}</span>
                     <span>•</span>
                     <span>{job.team}</span>
-                    <span>•</span>
-                    <span>{job.salary}</span>
                   </div>
                 </div>
                 <button

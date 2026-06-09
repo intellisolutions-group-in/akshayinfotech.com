@@ -9,7 +9,7 @@ import AnalyticalCard from "../../../components/shared/AnalyticalCard";
 
 const features = [
   { title: "Headless Storefronts", desc: "Build decoupled Next.js interfaces that pull products from headless Shopify, Strapi, or BigCommerce APIs for lightning-fast loads." },
-  { title: "PCI-DSS Compliant Payments", desc: "Embed secure checkout gateways using Stripe Elements, Apple Pay, and PayPal with custom middleware token checks." },
+  { title: "Secure Payments", desc: "Embed secure checkout gateways using Stripe Elements, Apple Pay, and PayPal with custom middleware token checks." },
   { title: "Real-Time Inventory Hooks", desc: "Automate stock syncs with inventory warehouses (ERP/WMS) using secure, low-latency webhooks." },
   { title: "Global Multi-Currency Engine", desc: "Implement automated country routing, localized currency conversions, tax rules, and international languages." },
 ];

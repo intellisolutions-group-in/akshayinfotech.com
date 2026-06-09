@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import AnalyticalCard from "../shared/AnalyticalCard";
 
 const summaryIndustries = [
-  { id: "healthcare", title: "Healthcare", icon: Heart, desc: "HIPAA-compliant video consults and telemetry databases." },
+  { id: "healthcare", title: "Healthcare", icon: Heart, desc: "Secure video consults and telemetry databases." },
   { id: "saas", title: "SaaS Platforms", icon: Layers, desc: "Multi-tenant subscriptions, analytics dashboards, and billing." },
   { id: "fintech", title: "FinTech Systems", icon: TrendingUp, desc: "Secure transaction logs, Plaid integrations, and access tokens." },
   { id: "education", title: "Education Portals", icon: GraduationCap, desc: "Student dashboard systems and collaborative folders." },
@@ -38,7 +38,7 @@ export default function Industries() {
             Built for Industry Demands
           </h2>
           <p className="text-base text-text-body">
-            We engineer secure, compliant, and elastic architectures designed for compliance-heavy sectors.
+            We engineer secure and elastic architectures designed for enterprise sectors.
           </p>
         </div>
 

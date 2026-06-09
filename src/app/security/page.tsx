@@ -46,10 +46,10 @@ const securitySections = [
     icon: Cloud,
     color: "#059669",
     title: "Cloud Security",
-    desc: "Cloud environments are configured following AWS Well-Architected Framework security pillars. All cloud resources are provisioned through Infrastructure-as-Code with automated compliance checks on every deployment.",
+    desc: "Cloud environments are configured following strict security pillars. All cloud resources are provisioned through Infrastructure-as-Code with automated security checks on every deployment.",
     points: [
       "IAM roles with least-privilege principle enforced across all services",
-      "AWS Config rules for continuous compliance monitoring",
+      "AWS Config rules for continuous security monitoring",
       "CloudTrail audit logging for all API calls with 90-day retention",
       "S3 bucket policies enforcing encryption and blocking public access by default",
     ],
@@ -101,7 +101,7 @@ const securitySections = [
     desc: "Our Incident Response Plan (IRP) defines clear escalation paths, roles, and communication protocols for handling security events. We conduct quarterly tabletop exercises to validate our response capabilities.",
     points: [
       "Defined SLAs: P1 incidents acknowledged within 15 minutes",
-      "GDPR-compliant breach notification within 72 hours",
+      "Breach notification within 72 hours",
       "Automated incident ticket creation and assignment workflows",
       "Post-incident reviews with root cause analysis documentation",
     ],
@@ -121,14 +121,6 @@ const securitySections = [
   },
 ];
 
-const complianceItems = [
-  { label: "SOC 2 Type II", status: "In Progress", color: "#F59E0B" },
-  { label: "ISO 27001", status: "Aligned", color: "#10B981" },
-  { label: "GDPR", status: "Compliant", color: "#10B981" },
-  { label: "CCPA", status: "Compliant", color: "#10B981" },
-  { label: "OWASP Top 10", status: "Addressed", color: "#10B981" },
-  { label: "PCI DSS", status: "Partial", color: "#3B82F6" },
-];
 
 function AnimatedMetric({ target, suffix, decimals = 0 }: { target: number; suffix: string; decimals?: number }) {
   const [count, setCount] = useState(0);
@@ -279,32 +271,6 @@ export default function SecurityPage() {
         </div>
       </section>
 
-      {/* Compliance Grid */}
-      <section className="py-20 bg-slate-950 border-t border-white/5">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-extrabold text-white mb-3">Compliance & Certifications</h2>
-            <p className="text-sm text-white/50">Our security program is aligned with globally recognized frameworks and standards</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {complianceItems.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.92 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="flex items-center justify-between rounded-2xl bg-white/5 border border-white/10 px-5 py-4"
-              >
-                <span className="text-sm font-semibold text-white/80">{item.label}</span>
-                <span className="text-[10px] font-bold px-2.5 py-1 rounded-full" style={{ background: `${item.color}20`, color: item.color }}>
-                  {item.status}
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Report a Vulnerability CTA */}
       <section className="py-16 bg-white border-t border-slate-100">

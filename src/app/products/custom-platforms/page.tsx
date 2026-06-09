@@ -62,7 +62,7 @@ export default function CustomPlatformsPage() {
 
             <div className="lg:col-span-5 bg-slate-50 border border-slate-100 rounded-3xl p-8 space-y-4">
               <h3 className="text-sm font-bold text-text-main uppercase tracking-wider">
-                Technology Standard
+                Technology Stack
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["Next.js / React", "Node.js Backends", "FastAPI Python", "PostgreSQL", "Tailwind CSS", "Docker Clusters", "Stripe Checkout"].map((t) => (

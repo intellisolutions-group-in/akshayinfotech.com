@@ -41,10 +41,6 @@ const faqs = [
     a: "We use parameter binding and execute queries through ORMs (like Prisma) to prevent input variables from running as database command scripts. We run validation routines on all API requests before processing data."
   },
   {
-    q: "What industry compliance configurations do you support?",
-    a: "We configure systems to align with HIPAA health data guidelines, PCI-DSS payment rules, SOC 2 Type II trust principles, and general GDPR privacy specifications."
-  },
-  {
     q: "How do you conduct penetration tests and vulnerability checks?",
     a: "We run automated vulnerability scans and conduct manual penetration tests to audit system access controls, VPC firewall settings, and API authentication logic before applications deploy."
   }
@@ -165,34 +161,6 @@ resource "aws_security_group_rule" "allow_db" {
             </div>
           </div>
 
-          {/* Compliance Auditing */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
-            <div className="lg:order-2 space-y-4">
-              <span className="text-xs font-bold text-emerald-400 tracking-widest uppercase">Compliance & Audits</span>
-              <h3 className="text-2xl font-bold text-white">Regulatory Framework Integrations</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                We align systems with regulatory requirements: configuring HIPAA access logs, PCI-DSS encryption rules, SOC 2 audit procedures, and general GDPR privacy settings. We implement key management services to secure encryption variables.
-              </p>
-              <ul className="space-y-2 text-xs text-slate-400">
-                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-emerald-400 mr-2" /> HIPAA-compliant database logs</li>
-                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-emerald-400 mr-2" /> PCI-DSS payment key security</li>
-                <li className="flex items-center"><CheckCircle className="h-4 w-4 text-emerald-400 mr-2" /> KMS encryption key cycles</li>
-              </ul>
-            </div>
-            
-            <div className="lg:order-1 bg-slate-900 p-8 rounded-3xl border border-slate-850 space-y-4">
-              <h4 className="text-white font-mono text-sm border-b border-slate-800 pb-2">Data Encryption Rules</h4>
-              <pre className="text-[10px] text-cyan-400 font-mono overflow-x-auto p-4 bg-slate-950 rounded-xl">
-{`const cipher = crypto.createCipheriv(
-  'aes-256-gcm', 
-  KMSMasterKey, 
-  initializationVector
-);
-let encrypted = cipher.update(sensitiveData, 'utf8', 'hex');
-encrypted += cipher.final('hex');`}
-              </pre>
-            </div>
-          </div>
 
         </div>
       </section>
@@ -312,13 +280,6 @@ encrypted += cipher.final('hex');`}
               </p>
             </div>
 
-            <div className="border border-emerald-950/60 bg-emerald-950/10 p-6 rounded-2xl space-y-3">
-              <div className="text-3xl font-bold text-emerald-400">100%</div>
-              <h4 className="font-bold text-white text-sm">Regulatory Compliance</h4>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                Configurations align with HIPAA, SOC 2, and PCI-DSS requirements.
-              </p>
-            </div>
           </div>
         </div>
       </section>

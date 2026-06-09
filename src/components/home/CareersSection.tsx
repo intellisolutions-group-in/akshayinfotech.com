@@ -27,7 +27,7 @@ const benefits = [
 const jobs = [
   {
     role: "Senior React Developer",
-    type: "Full Time / Remote",
+    type: "Full Time / Hybrid",
     team: "Engineering",
   },
   {
@@ -37,7 +37,7 @@ const jobs = [
   },
   {
     role: "Lead UI/UX Designer",
-    type: "Full Time / Remote",
+    type: "Full Time / Hybrid",
     team: "Design",
   },
 ];

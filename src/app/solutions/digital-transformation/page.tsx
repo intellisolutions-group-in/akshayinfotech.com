@@ -91,7 +91,6 @@ export default function DigitalTransformationJourneyPage() {
       description: "Fully automated CI/CD pipelines let developers release feature patches daily. Zero-trust security meshes audit database ingress rules automatically.",
       metrics: [
         { label: "Release Frequency", val: "Daily Updates" },
-        { label: "Compliance Auditing", val: "SOC2 Verified" },
         { label: "Platform SLA", val: "99.999% SLA" }
       ],
       color: "from-emerald-500/20 to-teal-500/10",

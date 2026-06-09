@@ -8,28 +8,20 @@ import AnalyticalCard from "../shared/AnalyticalCard";
 
 const previewPlans = [
   {
-    name: "Starter",
-    price: "$49",
-    period: "/month",
+    name: "Free Plan",
+    price: "Free",
+    period: "",
     desc: "Perfect for scaling startups needing specialized developers.",
     features: ["Dedicated React developer resources", "Weekly sprint progress reviews", "Direct Slack channel integration", "Standard 8/5 email support"],
     popular: false
   },
   {
-    name: "Growth",
-    price: "$199",
-    period: "/month",
-    desc: "Designed for rapid product scaling and multi-platform launches.",
-    features: ["Multiple developer sprint allocations", "Full-time project manager support", "DevOps container cluster setups", "Priority 24/7 Slack support"],
-    popular: true
-  },
-  {
     name: "Enterprise",
     price: "Custom",
     period: "",
-    desc: "Compliance-heavy architecture audits and dedicated clusters.",
-    features: ["HIPAA & FinTech compliance audits", "Dedicated cloud replication databases", "Dedicated infrastructure engineers", "Custom SLA response guarantees"],
-    popular: false
+    desc: "Enterprise architecture audits and dedicated clusters.",
+    features: ["FinTech architecture audits", "Dedicated cloud replication databases", "Dedicated infrastructure engineers", "Custom SLA response guarantees"],
+    popular: true
   }
 ];
 

@@ -83,7 +83,7 @@ export default function DataIntelligenceDashboardPage() {
       a: "We implement dynamic partition replication and local storage buffers. If consumer microservices or database sync targets slow down, the message broker buffers incoming logs safely, scaling up consumers to clear the backlog."
     },
     {
-      q: "Is real-time BI reporting fully secure under GDPR and HIPAA?",
+      q: "Is real-time BI reporting fully secure?",
       a: "Yes. All data streams can be passed through anonymization pipelines that mask personally identifiable information (PII) before storage. Data is encrypted using AES-256 both inside queues and in the warehouse."
     }
   ];
@@ -246,7 +246,7 @@ export default function DataIntelligenceDashboardPage() {
                     <div className="text-[9px] text-emerald-400 mt-1">Healthy buffers maintained</div>
                   </div>
                   <div className="p-4 bg-slate-900/50 border border-white/5 rounded-2xl text-left">
-                    <div className="text-[10px] uppercase font-bold text-slate-400">SOC2 Audit Check</div>
+                    <div className="text-[10px] uppercase font-bold text-slate-400">Security Audit Check</div>
                     <div className="text-xl font-bold text-white font-mono mt-1.5 flex items-center gap-1.5">
                       100% SECURE
                     </div>
@@ -342,7 +342,7 @@ export default function DataIntelligenceDashboardPage() {
                           ClickHouse table structures have automatically optimized partitions, routing queries to index 2a.
                         </p>
                         <p className="text-[11px] text-emerald-400 font-semibold flex items-center gap-1">
-                          ✔ Database lock risk: 0.00%
+                          <ChevronRight className="h-3 w-3 inline text-emerald-400" /> Database lock risk: 0.00%
                         </p>
                       </div>
                     </div>
@@ -377,14 +377,14 @@ export default function DataIntelligenceDashboardPage() {
             </h3>
             <div className="space-y-6 text-left">
               <div className="flex items-start space-x-3.5">
-                <div className="h-5 w-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs shrink-0 mt-0.5">✕</div>
+                <div className="h-5 w-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs shrink-0 mt-0.5">X</div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-200">Database Thread Locking</h4>
                   <p className="text-xs text-slate-400 font-light mt-1">If thousands of devices write telemetry rows straight to standard SQL databases, tables lock up and reject queries.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3.5">
-                <div className="h-5 w-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs shrink-0 mt-0.5">✕</div>
+                <div className="h-5 w-5 rounded-full bg-red-500/20 flex items-center justify-center text-red-400 text-xs shrink-0 mt-0.5">X</div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-200">Stale Report Generation</h4>
                   <p className="text-xs text-slate-400 font-light mt-1">Processing data in slow batches means dashboards update every few hours, causing delayed critical choices.</p>
@@ -400,14 +400,14 @@ export default function DataIntelligenceDashboardPage() {
             </h3>
             <div className="space-y-6 text-left">
               <div className="flex items-start space-x-3.5">
-                <div className="h-5 w-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5">✓</div>
+                <div className="h-5 w-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5">+</div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-200">Kafka Buffer Queueing</h4>
                   <p className="text-xs text-slate-300 font-light mt-1">Ingesting data streams into partition topics, keeping database nodes isolated from write bottlenecks.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3.5">
-                <div className="h-5 w-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5">✓</div>
+                <div className="h-5 w-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs shrink-0 mt-0.5">+</div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-200">ClickHouse Columnar Storage</h4>
                   <p className="text-xs text-slate-300 font-light mt-1">Storing indexes column by column, enabling complex aggregations over millions of rows to return in milliseconds.</p>
