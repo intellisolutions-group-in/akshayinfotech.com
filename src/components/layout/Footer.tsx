@@ -127,7 +127,7 @@ export default function Footer() {
           {/* Bottom Divider & Copyright inside capsule */}
           <div className="w-full border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/35 space-y-4 sm:space-y-0">
             <div>
-              &copy; {currentYear} Akshay Infotech. All rights reserved.
+              &copy; 2011-{currentYear} Akshay Infotech. All rights reserved.
             </div>
             <div className="flex space-x-6">
               <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
