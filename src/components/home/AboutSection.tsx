@@ -138,7 +138,7 @@ function MissionTab() {
                 style={{ background: `${h.color}15`, color: h.color }}>
                 <Icon className="h-4 w-4" />
               </div>
-              <span className="text-[11px] font-semibold text-slate-700 leading-tight">{h.label}</span>
+              <span className="text-xs sm:text-sm font-semibold text-slate-700 leading-tight">{h.label}</span>
             </motion.div>
           );
         })}
@@ -189,7 +189,7 @@ function VisionTab() {
                 <span className="text-[10px] font-black text-purple-600 tracking-wider uppercase bg-purple-50 px-1.5 py-0.5 rounded">{item.year}</span>
                 <span className="text-xs font-bold text-slate-800">{item.title}</span>
               </div>
-              <p className="text-[11px] text-slate-500 leading-relaxed">{item.desc}</p>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
             </div>
           </motion.div>
         ))}
@@ -234,7 +234,7 @@ function ValueCard({ v, i }: { v: typeof coreValues[0]; i: number }) {
             onClick={() => setExpanded(!expanded)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-1 text-[9px] font-bold tracking-wider uppercase px-2 py-1 rounded-lg transition-all duration-200 cursor-pointer shrink-0"
+            className="flex items-center gap-1 text-[10.5px] font-bold tracking-wider uppercase px-2 py-1 rounded-lg transition-all duration-200 cursor-pointer shrink-0"
             style={{
               background: expanded ? `${v.color}15` : "rgba(241,245,249,0.8)",
               color: expanded ? v.color : "#64748B",
@@ -251,7 +251,7 @@ function ValueCard({ v, i }: { v: typeof coreValues[0]; i: number }) {
         </div>
 
         {/* Preview text — always visible, 2 lines */}
-        <p className="text-[10.5px] text-slate-500 leading-relaxed line-clamp-2">
+        <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-2">
           {v.desc}
         </p>
       </div>
@@ -271,7 +271,7 @@ function ValueCard({ v, i }: { v: typeof coreValues[0]; i: number }) {
           style={{ borderTop: `1px solid ${v.color}20` }}
         >
           <div className="pt-3">
-            <p className="text-[11px] text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
               {v.desc}
             </p>
             {/* Decorative accent line */}

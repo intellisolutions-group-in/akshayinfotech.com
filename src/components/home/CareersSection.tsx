@@ -82,7 +82,7 @@ export default function CareersSection() {
                       <h3 className="text-sm font-bold text-text-main mb-1">
                         {benefit.title}
                       </h3>
-                      <p className="text-xs text-text-muted leading-relaxed">
+                      <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
                         {benefit.desc}
                       </p>
                     </div>
@@ -124,7 +124,7 @@ export default function CareersSection() {
 
             {/* Quick Openings Cards */}
             <div className="space-y-3">
-              <h3 className="text-xs font-bold text-text-muted tracking-wider uppercase mb-1">
+              <h3 className="text-[13px] sm:text-sm font-bold text-text-muted tracking-wider uppercase mb-1">
                 Featured Openings
               </h3>
               
@@ -145,7 +145,7 @@ export default function CareersSection() {
                       <h4 className="text-sm font-bold text-text-main group-hover:text-primary transition-colors">
                         {job.role}
                       </h4>
-                      <p className="text-[11px] text-text-muted">
+                      <p className="text-xs text-text-muted">
                         {job.team} &bull; {job.type}
                       </p>
                     </div>

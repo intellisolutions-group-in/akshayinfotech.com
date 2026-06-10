@@ -293,8 +293,8 @@ export default function AboutUsPage() {
               <div className="h-10 w-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
                 <Layers className="h-5 w-5" />
               </div>
-              <h4 className="text-sm font-bold text-white">Structural Decoupling</h4>
-              <p className="text-[11px] text-slate-500 leading-relaxed font-light">
+              <h4 className="text-base sm:text-lg font-bold text-white">Structural Decoupling</h4>
+              <p className="text-xs sm:text-sm text-slate-350 leading-relaxed font-normal">
                 Monolith servers force everything into single compute frames. We break database tables into modular microservices that sync across zone arrays dynamically.
               </p>
             </div>
@@ -302,8 +302,8 @@ export default function AboutUsPage() {
               <div className="h-10 w-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
                 <Zap className="h-5 w-5" />
               </div>
-              <h4 className="text-sm font-bold text-white">Immediate Query Delivery</h4>
-              <p className="text-[11px] text-slate-500 leading-relaxed font-light">
+              <h4 className="text-base sm:text-lg font-bold text-white">Immediate Query Delivery</h4>
+              <p className="text-xs sm:text-sm text-slate-350 leading-relaxed font-normal">
                 By integrating Redis caches and Kafka brokers, queries bypass heavy table locks and land in client screens in single-digit milliseconds.
               </p>
             </div>
@@ -366,8 +366,8 @@ export default function AboutUsPage() {
                 <div className="h-10 w-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
                   <ValIcon className="h-5 w-5" />
                 </div>
-                <h4 className="text-base font-bold text-white">{val.title}</h4>
-                <p className="text-xs text-slate-400 leading-relaxed font-light">{val.desc}</p>
+                <h4 className="text-lg font-bold text-white">{val.title}</h4>
+                <p className="text-sm text-slate-300 leading-relaxed font-normal">{val.desc}</p>
               </div>
             );
           })}
@@ -422,11 +422,11 @@ export default function AboutUsPage() {
                       transition={{ duration: 0.55 }}
                       className="p-6 bg-slate-900/40 border border-white/5 rounded-2xl"
                     >
-                      <span className="text-[9px] font-mono font-bold text-blue-400 block mb-1">
+                      <span className="text-xs font-mono font-bold text-blue-400 block mb-1">
                         {milestone.period}
                       </span>
-                      <h4 className="text-base font-bold text-white mb-2">{milestone.title}</h4>
-                      <p className="text-xs text-slate-400 font-light leading-relaxed">{milestone.desc}</p>
+                      <h4 className="text-lg font-bold text-white mb-2">{milestone.title}</h4>
+                      <p className="text-sm text-slate-300 font-normal leading-relaxed">{milestone.desc}</p>
                     </motion.div>
                   </div>
                 </div>
@@ -448,11 +448,11 @@ export default function AboutUsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {industries.map((ind, i) => (
             <div key={i} className="p-8 bg-slate-900/40 border border-white/5 rounded-2xl relative overflow-hidden backdrop-blur-md">
-              <h3 className="text-lg font-bold text-white mb-2">{ind.name}</h3>
-              <p className="text-xs text-slate-400 font-light leading-relaxed mb-6">{ind.desc}</p>
+              <h3 className="text-xl font-bold text-white mb-2">{ind.name}</h3>
+              <p className="text-sm text-slate-300 font-normal leading-relaxed mb-6">{ind.desc}</p>
               <div className="flex justify-between items-center border-t border-white/5 pt-4">
-                <span className="text-[10px] font-mono text-blue-400 uppercase font-bold">{ind.metric}</span>
-                <span className="text-[10px] font-mono text-slate-500 uppercase">{ind.latency}</span>
+                <span className="text-xs font-mono text-blue-400 uppercase font-bold">{ind.metric}</span>
+                <span className="text-xs font-mono text-slate-400 uppercase">{ind.latency}</span>
               </div>
             </div>
           ))}

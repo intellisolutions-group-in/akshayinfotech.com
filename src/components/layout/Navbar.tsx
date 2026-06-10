@@ -178,12 +178,12 @@ export default function Navbar() {
                                 <SubIcon className="h-4.5 w-4.5" />
                               </div>
                               <div>
-                                <h5 className={`text-[12px] font-bold transition-colors leading-tight ${
+                                <h5 className={`text-[13px] sm:text-sm font-bold transition-colors leading-tight ${
                                   useDarkNavbar ? "text-slate-200 group-hover/item:text-blue-400" : "text-text-main group-hover/item:text-primary"
                                 }`}>
                                   {subItem.name}
                                 </h5>
-                                <p className={`text-[10px] mt-0.5 leading-normal font-medium ${
+                                <p className={`text-xs mt-0.5 leading-normal font-medium ${
                                   useDarkNavbar ? "text-slate-400" : "text-text-muted"
                                 }`}>
                                   {subItem.desc}

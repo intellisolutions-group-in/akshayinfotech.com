@@ -87,14 +87,14 @@ export default function PricingPage() {
                   }`}
                 >
                   {plan.popular && (
-                    <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full shadow-xs">
+                    <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full shadow-xs">
                       Most Popular
                     </span>
                   )}
 
                   <div>
                     <h3 className="text-lg font-bold text-text-main mb-2">{plan.name}</h3>
-                    <p className="text-xs text-text-body leading-relaxed mb-6">{plan.desc}</p>
+                    <p className="text-xs sm:text-sm text-text-body leading-relaxed mb-6">{plan.desc}</p>
                     
                     <div className="flex items-baseline mb-6 border-b border-slate-100 pb-6">
                       <span className="text-4xl font-extrabold text-text-main">{plan.price}</span>
@@ -103,7 +103,7 @@ export default function PricingPage() {
 
                     <ul className="space-y-3.5">
                       {plan.features.map((feat) => (
-                        <li key={feat} className="flex items-start space-x-2.5 text-xs text-text-body">
+                        <li key={feat} className="flex items-start space-x-2.5 text-xs sm:text-sm text-text-body">
                           <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
@@ -114,7 +114,7 @@ export default function PricingPage() {
                   <div className="pt-8">
                     <Link
                       href="/contact"
-                      className={`flex items-center justify-center w-full px-5 py-3.5 text-xs font-bold rounded-xl shadow-xs transition-colors ${
+                      className={`flex items-center justify-center w-full px-5 py-3.5 text-xs sm:text-sm font-bold rounded-xl shadow-xs transition-colors ${
                         plan.popular
                           ? "text-white bg-primary hover:bg-primary/95"
                           : "text-text-main bg-slate-50 hover:bg-slate-100 border border-slate-200/60"

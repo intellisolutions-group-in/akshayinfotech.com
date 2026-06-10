@@ -503,7 +503,7 @@ function DonutChart({ color }: { color: string }) {
       </svg>
       
       {/* Legend Items */}
-      <div className="w-full grid grid-cols-3 gap-1 px-1 mt-1 text-[9px] text-white/50 border-t border-white/5 pt-2">
+      <div className="w-full grid grid-cols-3 gap-1 px-1 mt-1 text-xs text-white/50 border-t border-white/5 pt-2">
         <div className="flex items-center gap-1">
           <span className="w-1.5 h-1.5 rounded-full bg-[#14B8A6] shrink-0" />
           <span className="truncate">Research</span>
@@ -562,11 +562,11 @@ function GlowingOrbChart({ color }: { color: string }) {
  
         {/* Text inside the orb */}
         <text x="100" y="47" textAnchor="middle" fontSize="11" fontWeight="800" fill="white">99.9%</text>
-        <text x="100" y="56" textAnchor="middle" fontSize="5.5" fontWeight="600" fill="#22D3EE" letterSpacing="0.5">UPTIME</text>
+        <text x="100" y="56" textAnchor="middle" fontSize="7" fontWeight="600" fill="#22D3EE" letterSpacing="0.5">UPTIME</text>
  
         {/* Left and Right labels */}
-        <text x="50" y="52" textAnchor="end" fontSize="7.5" fontWeight="bold" fill="#22D3EE">↑ 19%</text>
-        <text x="150" y="52" textAnchor="start" fontSize="7.5" fontWeight="bold" fill="#22D3EE">+$1,450</text>
+        <text x="50" y="52" textAnchor="end" fontSize="9" fontWeight="bold" fill="#22D3EE">↑ 19%</text>
+        <text x="150" y="52" textAnchor="start" fontSize="9" fontWeight="bold" fill="#22D3EE">+$1,450</text>
       </svg>
     </div>
   );
@@ -578,8 +578,8 @@ function ServiceCard({ s, index }: { s: ServiceItem; index: number }) {
   return (
     <Link href={s.href} className="block">
       <AnalyticalCard
-        initialHeight={420}
-        expandedHeight={420}
+        initialHeight={480}
+        expandedHeight={480}
         stableLayout={true}
         containerClassName={`service-card float-card-${index} w-full cursor-pointer`}
         glowColor={`rgba(${s.rgbColor}, 0.15)`}
@@ -604,7 +604,7 @@ function ServiceCard({ s, index }: { s: ServiceItem; index: number }) {
                 </h3>
               </div>
               
-              <div className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-slate-100/80 border border-slate-200/50 text-[10px] text-slate-500 font-semibold select-none shrink-0">
+              <div className="flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-slate-100/80 border border-slate-200/50 text-xs text-slate-500 font-semibold select-none shrink-0">
                 <span>Live Data</span>
               </div>
             </div>
@@ -624,11 +624,11 @@ function ServiceCard({ s, index }: { s: ServiceItem; index: number }) {
                 <div className="flex items-start justify-between" style={{ transform: "translateZ(20px)" }}>
                   <div>
                     <div className="text-xl font-black text-slate-800 tracking-tight leading-none">{s.metric}</div>
-                    <div className="text-[10px] text-slate-400 font-bold mt-1 uppercase tracking-wider">{s.metricLabel}</div>
+                    <div className="text-xs text-slate-400 font-bold mt-1 uppercase tracking-wider">{s.metricLabel}</div>
                   </div>
                   <div className="text-right">
                     <div className="text-xs font-bold text-slate-700 leading-none">{s.change}</div>
-                    <div className="flex items-center justify-end gap-0.5 text-[10px] font-bold mt-1" style={{ color: s.positive ? "#10B981" : "#EF4444" }}>
+                    <div className="flex items-center justify-end gap-0.5 text-xs font-bold mt-1" style={{ color: s.positive ? "#10B981" : "#EF4444" }}>
                       {s.positive ? "↑" : "↓"} {s.changeLabel}
                     </div>
                   </div>
