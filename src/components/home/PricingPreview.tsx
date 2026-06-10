@@ -60,7 +60,7 @@ export default function PricingPreview() {
                 {(isHovered) => (
                   <div className="h-full flex flex-col justify-between w-full relative">
                     {isPopular && (
-                       <span className="absolute -top-9 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full z-20 shadow-sm">
+                       <span className="absolute -top-9 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full z-20 shadow-sm">
                         Most Popular
                       </span>
                     )}
@@ -71,7 +71,7 @@ export default function PricingPreview() {
                       }`}>
                         {plan.name}
                       </h3>
-                      <p className="text-xs text-text-body leading-relaxed mb-4">{plan.desc}</p>
+                      <p className="text-xs sm:text-sm text-text-body leading-relaxed mb-4">{plan.desc}</p>
                       
                       <div className="flex items-baseline mb-4 border-b border-slate-100/80 pb-4">
                         <span className="text-4xl font-extrabold text-text-main">{plan.price}</span>
@@ -89,7 +89,7 @@ export default function PricingPreview() {
                     >
                       <ul className="space-y-3.5 mt-2">
                         {plan.features.map((feat) => (
-                          <li key={feat} className="flex items-start space-x-2.5 text-xs text-text-body">
+                          <li key={feat} className="flex items-start space-x-2.5 text-xs sm:text-sm text-text-body">
                             <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                             <span>{feat}</span>
                           </li>
@@ -99,7 +99,7 @@ export default function PricingPreview() {
                       <div className="pt-6">
                         <Link
                           href="/pricing"
-                          className={`flex items-center justify-center w-full px-5 py-3 text-xs font-bold rounded-xl shadow-xs transition-colors ${
+                          className={`flex items-center justify-center w-full px-5 py-3 text-xs sm:text-sm font-bold rounded-xl shadow-xs transition-colors ${
                             isPopular
                               ? "text-white bg-primary hover:bg-primary/95"
                               : "text-text-main bg-slate-50 hover:bg-slate-100 border border-slate-200/60"

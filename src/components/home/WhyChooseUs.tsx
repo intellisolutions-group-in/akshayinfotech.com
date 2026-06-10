@@ -364,7 +364,7 @@ function WhyPartnerHorizontalCard({
                   <Icon className="h-6 w-6" />
                 </motion.div>
                 <div>
-                  <span className="text-[10px] font-bold text-blue-400 tracking-wider uppercase">Benefit {card.number}</span>
+                  <span className="text-xs font-bold text-blue-400 tracking-wider uppercase">Benefit {card.number}</span>
                   <h3 className="text-lg md:text-xl font-bold text-white leading-tight">{card.title}</h3>
                 </div>
               </div>
@@ -378,7 +378,7 @@ function WhyPartnerHorizontalCard({
               <div className="pt-2">
                 <Link
                   href={card.ctaHref}
-                  className="inline-flex items-center text-xs font-bold text-blue-400 hover:text-blue-300 tracking-wider uppercase group/btn"
+                  className="inline-flex items-center text-sm font-bold text-blue-400 hover:text-blue-300 tracking-wider uppercase group/btn"
                 >
                   {card.ctaText}
                   <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
@@ -399,7 +399,7 @@ function WhyPartnerHorizontalCard({
               {/* Key Features details */}
               <ul className="space-y-2">
                 {card.features.map((feat, idx) => (
-                  <li key={idx} className="flex items-start gap-2 text-xs md:text-sm text-slate-300 font-medium">
+                  <li key={idx} className="flex items-start gap-2 text-sm text-slate-300 font-medium">
                     <Check className="h-3.5 w-3.5 text-blue-400 shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </li>
@@ -541,10 +541,10 @@ export default function WhyChooseUs() {
           
           {/* Active Card Label */}
           <div className="text-center">
-            <span className="text-[10px] font-mono font-semibold text-slate-500 uppercase tracking-widest">
+            <span className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-widest">
               Benefit {cards[activeIndex].number} of {cards.length}
             </span>
-            <h4 className="text-xs font-bold text-blue-400 tracking-wide mt-1">
+            <h4 className="text-sm font-bold text-blue-400 tracking-wide mt-1">
               {cards[activeIndex].title}
             </h4>
           </div>

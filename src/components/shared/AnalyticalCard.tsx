@@ -161,7 +161,7 @@ export default function AnalyticalCard({
 
           {/* Category / Badge */}
           {badge && (
-            <span className="inline-flex items-center gap-1 text-[9px] font-bold tracking-wider text-blue-600 uppercase bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-md self-start">
+            <span className="inline-flex items-center gap-1 text-[10.5px] font-bold tracking-wider text-blue-600 uppercase bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-md self-start">
               <Sparkles className="h-2.5 w-2.5" />
               {badge}
             </span>
@@ -183,7 +183,7 @@ export default function AnalyticalCard({
               </div>
             )}
             <h3
-              className="text-sm font-bold text-slate-800 leading-snug tracking-tight transition-colors duration-300"
+              className="text-base font-bold text-slate-800 leading-snug tracking-tight transition-colors duration-300"
               style={{
                 transform: hoverActive ? "translateZ(18px)" : "translateZ(5px)",
                 color: hoverActive ? "#2563EB" : "#1E293B",
@@ -208,14 +208,14 @@ export default function AnalyticalCard({
             // Static content in compact/mobile mode
             <div className="space-y-3.5 mt-2">
               {description && (
-                <p className="text-xs text-slate-500 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal">
                   {description}
                 </p>
               )}
               {features && features.length > 0 && (
                 <ul className="space-y-1.5 pt-1">
                   {features.map((feat, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
+                    <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-slate-600 font-medium">
                       <span className="h-3.5 w-3.5 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
                         <Check className="h-2.5 w-2.5 text-blue-600" />
                       </span>
@@ -227,7 +227,7 @@ export default function AnalyticalCard({
               {benefits && benefits.length > 0 && (
                 <ul className="space-y-1.5 pt-1 border-t border-slate-100/80">
                   {benefits.map((ben, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-[10px] text-slate-400 font-semibold tracking-wide uppercase">
+                    <li key={idx} className="flex items-center gap-2 text-xs text-slate-400 font-semibold tracking-wide uppercase">
                       <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 shrink-0" />
                       <span>{ben}</span>
                     </li>
@@ -238,7 +238,7 @@ export default function AnalyticalCard({
                 <div className="pt-2">
                   <Link
                     href={ctaHref}
-                    className="inline-flex items-center text-[11px] font-bold text-blue-600 hover:text-blue-700 tracking-wider uppercase group/btn"
+                    className="inline-flex items-center text-xs sm:text-sm font-bold text-blue-600 hover:text-blue-700 tracking-wider uppercase group/btn"
                   >
                     {ctaText}
                     <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-0.5" />
@@ -262,7 +262,7 @@ export default function AnalyticalCard({
                       initial={{ y: 8, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ delay: 0.05, duration: 0.3 }}
-                      className="text-xs text-slate-500 leading-relaxed font-normal"
+                      className="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal"
                     >
                       {description}
                     </motion.p>
@@ -276,7 +276,7 @@ export default function AnalyticalCard({
                       className="space-y-1.5 pt-1"
                     >
                       {features.map((feat, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
+                        <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-slate-600 font-medium">
                           <span className="h-3.5 w-3.5 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
                             <Check className="h-2.5 w-2.5 text-blue-600" />
                           </span>
@@ -294,7 +294,7 @@ export default function AnalyticalCard({
                       className="space-y-1.5 pt-1 border-t border-slate-100/80"
                     >
                       {benefits.map((ben, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-[10px] text-slate-400 font-semibold tracking-wide uppercase">
+                        <li key={idx} className="flex items-center gap-2 text-xs text-slate-400 font-semibold tracking-wide uppercase">
                           <span className="h-1.5 w-1.5 rounded-full bg-indigo-500 shrink-0" />
                           <span>{ben}</span>
                         </li>
@@ -311,7 +311,7 @@ export default function AnalyticalCard({
                     >
                       <Link
                         href={ctaHref}
-                        className="inline-flex items-center text-[11px] font-bold text-blue-600 hover:text-blue-700 tracking-wider uppercase group/btn"
+                        className="inline-flex items-center text-xs sm:text-sm font-bold text-blue-600 hover:text-blue-700 tracking-wider uppercase group/btn"
                       >
                         {ctaText}
                         <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-0.5" />
@@ -353,14 +353,14 @@ export default function AnalyticalCard({
           />
           {category && (
             <div className="absolute top-3 left-3 z-10">
-              <span className="text-[9px] font-bold tracking-wider text-blue-600 uppercase bg-white/95 border border-slate-100 backdrop-blur-md px-2 py-0.5 rounded-md shadow-sm">
+              <span className="text-xs font-bold tracking-wider text-blue-600 uppercase bg-white/95 border border-slate-100 backdrop-blur-md px-2 py-0.5 rounded-md shadow-sm">
                 {category}
               </span>
             </div>
           )}
           {readTime && (
             <div className="absolute bottom-3 right-3 z-10">
-              <span className="text-[8px] font-semibold text-slate-500 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded-md border border-slate-100/50 shadow-sm uppercase">
+              <span className="text-[10px] font-semibold text-slate-500 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded-md border border-slate-100/50 shadow-sm uppercase">
                 {readTime}
               </span>
             </div>
@@ -371,12 +371,12 @@ export default function AnalyticalCard({
         <div className="flex flex-col justify-between flex-grow gap-3 pb-3">
           <div className="space-y-2">
             <h3
-              className="text-sm font-bold leading-snug line-clamp-2 transition-colors duration-300"
+              className="text-base font-bold leading-snug line-clamp-2 transition-colors duration-300"
               style={{ color: hoverActive ? "#2563EB" : "#1E293B" }}
             >
               {title}
             </h3>
-            <p className="text-xs text-slate-500 leading-relaxed line-clamp-5">
+            <p className="text-xs sm:text-sm text-slate-500 leading-relaxed line-clamp-5">
               {description}
             </p>
           </div>
@@ -386,7 +386,7 @@ export default function AnalyticalCard({
             <div className="pt-2 border-t border-slate-100/60">
               <Link
                 href={ctaHref}
-                className="inline-flex items-center gap-1.5 text-[10px] font-bold text-blue-600 hover:text-blue-700 tracking-wider uppercase group/btn"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-600 hover:text-blue-700 tracking-wider uppercase group/btn"
               >
                 {ctaText || "Read Article"}
                 <span
